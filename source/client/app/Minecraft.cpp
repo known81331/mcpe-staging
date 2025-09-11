@@ -102,6 +102,35 @@ Minecraft::Minecraft() :
 	m_lastInteractTime = 0;
 }
 
+Minecraft::~Minecraft()
+{
+	SAFE_DELETE(m_options);
+	SAFE_DELETE(m_pNetEventCallback);
+	SAFE_DELETE(m_pRakNetInstance);
+	SAFE_DELETE(m_pLevelRenderer);
+	SAFE_DELETE(m_pGameRenderer);
+	SAFE_DELETE(m_pParticleEngine);
+    SAFE_DELETE(EntityRenderDispatcher::instance);
+	m_pSoundEngine->destroy();
+	SAFE_DELETE(m_pSoundEngine);
+	SAFE_DELETE(m_pGameMode);
+	SAFE_DELETE(m_pFont);
+	SAFE_DELETE(m_pTextures);
+    
+	if (m_pLevel)
+	{
+		LevelStorage* pStor = m_pLevel->getLevelStorage();
+		SAFE_DELETE(pStor);
+		delete m_pLevel;
+	}
+    
+	SAFE_DELETE(m_pUser);
+	SAFE_DELETE(m_pLevelStorageSource);
+	SAFE_DELETE(m_pInputHolder);
+    
+	//@BUG: potentially leaking a CThread instance if this is destroyed early?
+}
+
 int Minecraft::getLicenseId()
 {
 	if (m_licenseID < 0)
@@ -269,6 +298,7 @@ void Minecraft::setGameMode(GameType gameType)
 {
 	if (m_pLevel)
 	{
+        SAFE_DELETE(m_pGameMode);
 		m_pGameMode = createGameMode(gameType, *m_pLevel);
 		m_pGameMode->initLevel(m_pLevel);
 	}
@@ -843,36 +873,6 @@ void Minecraft::init()
 	}
 }
 
-Minecraft::~Minecraft()
-{
-	SAFE_DELETE(m_options);
-	SAFE_DELETE(m_pNetEventCallback);
-	SAFE_DELETE(m_pRakNetInstance);
-	SAFE_DELETE(m_pLevelRenderer);
-	SAFE_DELETE(m_pGameRenderer);
-	SAFE_DELETE(m_pParticleEngine);
-	m_pSoundEngine->destroy();
-	SAFE_DELETE(m_pSoundEngine);
-	SAFE_DELETE(m_pGameMode);
-	SAFE_DELETE(m_pFont);
-	SAFE_DELETE(m_pTextures);
-
-	if (m_pLevel)
-	{
-		LevelStorage* pStor = m_pLevel->getLevelStorage();
-		if (pStor)
-			delete pStor;
-		if (m_pLevel)
-			delete m_pLevel;
-	}
-
-	SAFE_DELETE(m_pUser);
-	SAFE_DELETE(m_pLevelStorageSource);
-	SAFE_DELETE(m_pInputHolder);
-
-	//@BUG: potentially leaking a CThread instance if this is destroyed early?
-}
-
 void Minecraft::prepareLevel(const std::string& unused)
 {
 	field_DA0 = 1;
@@ -895,13 +895,13 @@ void Minecraft::prepareLevel(const std::string& unused)
 			float time1 = getTimeS();
 
 			// generating all the chunks at once
-			(void)m_pLevel->getTile(TilePos(i, (C_MAX_Y + C_MIN_Y) / 2, j));
+			(void)pLevel->getTile(TilePos(i, (C_MAX_Y + C_MIN_Y) / 2, j));
 
 			if (time1 != -1.0f)
 				getTimeS();
 
 			float time2 = getTimeS();
-			if (m_pLevel->field_B0C)
+			if (pLevel->field_B0C)
 			{
 				//while (m_pLevel->updateLights());
 				m_pLevel->updateLights();
@@ -915,7 +915,7 @@ void Minecraft::prepareLevel(const std::string& unused)
 	if (startTime != -1.0f)
 		getTimeS();
 
-	m_pLevel->setUpdateLights(1);
+	pLevel->setUpdateLights(1);
 
 	startTime = getTimeS();
 
@@ -924,7 +924,7 @@ void Minecraft::prepareLevel(const std::string& unused)
 	{
 		for (cp.z = 0; cp.z < C_MAX_CHUNKS_Z; cp.z++)
 		{
-			LevelChunk* pChunk = m_pLevel->getChunk(cp);
+			LevelChunk* pChunk = pLevel->getChunk(cp);
 			if (!pChunk)
 				continue;
 
@@ -941,17 +941,17 @@ void Minecraft::prepareLevel(const std::string& unused)
 
 	field_DA0 = 3;
 
-	if (m_pLevel->field_B0C)
+	if (pLevel->field_B0C)
 	{
-		m_pLevel->setInitialSpawn();
-		m_pLevel->saveLevelData();
-		m_pLevel->getChunkSource()->saveAll();
-		m_pLevel->saveGame();
+		pLevel->setInitialSpawn();
+		pLevel->saveLevelData();
+		pLevel->getChunkSource()->saveAll();
+		pLevel->saveGame();
 	}
 	else
 	{
-		m_pLevel->saveLevelData();
-		m_pLevel->loadEntities();
+		pLevel->saveLevelData();
+		pLevel->loadEntities();
 	}
 
 	m_progressPercent = -1;
@@ -959,7 +959,7 @@ void Minecraft::prepareLevel(const std::string& unused)
 
 	startTime = getTimeS();
 
-	m_pLevel->prepare();
+	pLevel->prepare();
 
 	if (startTime != -1.0f)
 		getTimeS();
