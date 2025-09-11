@@ -85,21 +85,22 @@ void ItemInHandRenderer::renderItem(ItemInstance* inst)
     else
     {
         std::string toBind;
+        bool isTerrain = inst->m_itemID <= C_MAX_TILES;
         if (inst->m_itemID <= C_MAX_TILES)
             toBind = C_TERRAIN_NAME;
         else
-            toBind = "gui/items.png";
+            toBind = "items-opaque.png";
         m_pMinecraft->m_pTextures->loadAndBindTexture(toBind);
         
         constexpr float C_RATIO     = 1.0f / 256.0f;
         constexpr float C_RATIO_2   = 1.0f / 512.0f;
         constexpr float C_ONE_PIXEL = 1.0f / 16.0f;
         
-        int textureX = inst->getIcon() % 16 * 16;
-        int textureY = inst->getIcon() / 16 * 16;
+        int textureX = inst->getIcon() % (isTerrain ? 32 : 16) * 16;
+        int textureY = inst->getIcon() / (isTerrain ? 32 : 16) * 16;
         
-        float texU_1 = C_RATIO * float(textureX + 0.0f);
-        float texU_2 = C_RATIO * float(textureX + 15.99f);
+        float texU_1 = C_RATIO * float(textureX + 0.0f) * (isTerrain ? 0.5f : 1.f);
+        float texU_2 = C_RATIO * float(textureX + 15.99f) * (isTerrain ? 0.5f : 1.f);
         float texV_1 = C_RATIO * float(textureY + 0.0f);
         float texV_2 = C_RATIO * float(textureY + 15.99f);
         
@@ -129,17 +130,17 @@ void ItemInHandRenderer::renderItem(ItemInstance* inst)
         t.normal(-1.0f, 0.0f, 0.0f);
         for (int i = 0; i < 16; i++)
         {
-            t.vertexUV(i * C_ONE_PIXEL, 0.0f, -C_ONE_PIXEL, Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_2);
-            t.vertexUV(i * C_ONE_PIXEL, 0.0f, 0.0f,         Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_2);
-            t.vertexUV(i * C_ONE_PIXEL, 1.0f, 0.0f,         Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_1);
-            t.vertexUV(i * C_ONE_PIXEL, 1.0f, -C_ONE_PIXEL, Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_1);
+            t.vertexUV(i * C_ONE_PIXEL + (isTerrain ? C_ONE_PIXEL : 0.f), 0.0f, -C_ONE_PIXEL, Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_2);
+            t.vertexUV(i * C_ONE_PIXEL + (isTerrain ? C_ONE_PIXEL : 0.f), 0.0f, 0.0f,         Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_2);
+            t.vertexUV(i * C_ONE_PIXEL + (isTerrain ? C_ONE_PIXEL : 0.f), 1.0f, 0.0f,         Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_1);
+            t.vertexUV(i * C_ONE_PIXEL + (isTerrain ? C_ONE_PIXEL : 0.f), 1.0f, -C_ONE_PIXEL, Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_1);
         }
         for (int i = 0; i < 16; i++)
         {
-            t.vertexUV((i + 1) * C_ONE_PIXEL, 1.0f, -C_ONE_PIXEL, Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_1);
-            t.vertexUV((i + 1) * C_ONE_PIXEL, 1.0f, 0.0f,         Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_1);
-            t.vertexUV((i + 1) * C_ONE_PIXEL, 0.0f, 0.0f,         Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_2);
-            t.vertexUV((i + 1) * C_ONE_PIXEL, 0.0f, -C_ONE_PIXEL, Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_2);
+            t.vertexUV((i + 1) * C_ONE_PIXEL + (isTerrain ? C_ONE_PIXEL : 0.f), 1.0f, -C_ONE_PIXEL, Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_1);
+            t.vertexUV((i + 1) * C_ONE_PIXEL + (isTerrain ? C_ONE_PIXEL : 0.f), 1.0f, 0.0f,         Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_1);
+            t.vertexUV((i + 1) * C_ONE_PIXEL + (isTerrain ? C_ONE_PIXEL : 0.f), 0.0f, 0.0f,         Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_2);
+            t.vertexUV((i + 1) * C_ONE_PIXEL + (isTerrain ? C_ONE_PIXEL : 0.f), 0.0f, -C_ONE_PIXEL, Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_2);
         }
         
         SHADE_IF_NEEDED(0.6f);
@@ -315,8 +316,9 @@ void ItemInHandRenderer::tick()
 	m_oHeight = m_height;
 
 	int itemID = m_pMinecraft->m_pLocalPlayer->m_pInventory->getSelectedItemId();
+    int auxValue = m_pMinecraft->m_pLocalPlayer->m_pInventory->getSelectedItem()->getAuxValue();
 
-	bool bSameItem = itemID == m_selectedItem.m_itemID;
+	bool bSameItem = itemID == m_selectedItem.m_itemID && auxValue == m_selectedItem.getAuxValue();
 
 	float b = bSameItem ? 1.0f : 0.0f;
 
@@ -328,8 +330,10 @@ void ItemInHandRenderer::tick()
 
 	m_height += a;
 
-	if (m_height < 0.1f)
+	if (m_height < 0.1f) {
 		m_selectedItem.m_itemID = itemID;
+        m_selectedItem.setAuxValue(auxValue);
+    }
 }
 
 void ItemInHandRenderer::turn(const Vec2& rot)

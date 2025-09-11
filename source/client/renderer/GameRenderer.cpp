@@ -277,9 +277,21 @@ void GameRenderer::setupClearColor(float f)
 	field_60 = fogColor.x;
 	field_64 = fogColor.y;
 
-	field_60 = fogColor.x + (skyColor.x - fogColor.x) * x1;
-	field_64 = fogColor.y + (skyColor.y - fogColor.y) * x1;
-	field_68 = fogColor.z + (skyColor.z - fogColor.z) * x1;
+    float d0 = Mth::sin(pLevel->getTimeOfDay(f)) > 0.5f ? -1.0f : 1.0f;
+	float dot = Mth::Max(pMob->getLookAngle(f).dot(Vec3(d0, 0.0f, 0.0f)), 0.0f);
+	if (dot > 0.0f) {
+		float *sunriseColor = pLevel->m_pDimension->getSunriseColor(pLevel->getTimeOfDay(f), f);
+		if (sunriseColor) { 
+			dot *= sunriseColor[3];
+			fogColor.x = fogColor.x * (1.0F - dot) + sunriseColor[0] * dot;
+			fogColor.y = fogColor.y * (1.0F - dot) + sunriseColor[1] * dot;
+			fogColor.z = fogColor.z * (1.0F - dot) + sunriseColor[2] * dot;
+		}
+	}
+	
+	field_64 = fogColor.y;// + (skyColor.y - fogColor.y) * x1;
+	field_60 = fogColor.x;// + (skyColor.x - fogColor.x) * x1;
+	field_68 = fogColor.z;// + (skyColor.z - fogColor.z) * x1;
 
 	if (pMob->isUnderLiquid(Material::water))
 	{
@@ -310,6 +322,11 @@ void GameRenderer::setupClearColor(float f)
 		field_64 = g;
 		field_68 = b;
 	}
+	
+	//float* suntrise = pLevel->m_pDimension->getSunriseColor(pLevel->getTimeOfDay(f), f);
+	//field_60 = suntrise[0];
+	//field_64 = suntrise[1];
+	//field_68 = suntrise[2];
 
 	glClearColor(field_60, field_64, field_68, 1.0f);
 }
@@ -876,8 +893,8 @@ void GameRenderer::prepareAndRenderClouds(LevelRenderer* pLR, float f)
 	glFogf(GL_FOG_START, field_8 * 0.2f);
 	glFogf(GL_FOG_END,   field_8 * 0.75f);
 	pLR->renderSky(f);
-	glFogf(GL_FOG_START, field_8 * 4.2f * 0.6f);
-	glFogf(GL_FOG_END,   field_8 * 4.2f);
+	glFogf(GL_FOG_START, field_8 * 0.5f * 4.2f * 0.6f);
+	glFogf(GL_FOG_END,   field_8 * 0.5f * 4.2f);
 	pLR->renderClouds(f);
 	glFogf(GL_FOG_START, field_8 * 0.6f);
 	glFogf(GL_FOG_END,   field_8);

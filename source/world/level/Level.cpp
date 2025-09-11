@@ -1255,6 +1255,39 @@ bool Level::canSeeSky(const TilePos& pos) const
 	return pChunk->isSkyLit(pos);
 }
 
+
+
+
+Vec3 hsv2rgb(float H, float S, float V) {
+	float r, g, b;
+	
+	float h = H;
+	float s = S;
+	float v = V;
+	
+	int i = floor(h * 6);
+	float f = h * 6 - i;
+	float p = v * (1 - s);
+	float q = v * (1 - f * s);
+	float t = v * (1 - (1 - f) * s);
+	
+	switch (i % 6) {
+		case 0: r = v, g = t, b = p; break;
+		case 1: r = q, g = v, b = p; break;
+		case 2: r = p, g = v, b = t; break;
+		case 3: r = p, g = q, b = v; break;
+		case 4: r = t, g = p, b = v; break;
+		case 5: r = v, g = p, b = q; break;
+	}
+	
+	Vec3 color;
+	color.x = r;
+	color.y = g;
+	color.z = b;
+	
+	return color;
+}
+
 Vec3 Level::getSkyColor(Entity* pEnt, float f) const
 {
 	Vec3 result;
@@ -1273,8 +1306,16 @@ Vec3 Level::getSkyColor(Entity* pEnt, float f) const
 	Mth::floor(pEnt->m_pos.x);
 	Mth::floor(pEnt->m_pos.z);
 
+	/*
 	result.x = result.z * 0.6f;
 	result.y = result.x;
+	*/
+
+
+	Vec3 hsl = hsv2rgb(0.62222224f, 0.5f, 1.0f); 
+	result.x = result.z * hsl.x;
+	result.y = result.z * hsl.y;
+	result.z = result.z * hsl.z;	
 
 	return result;
 }
@@ -1493,6 +1534,7 @@ void Level::tick()
 
 	int time = getTime() + 1;
 	_setTime(time); // Bypasses the normally-required update to LevelListeners
+
 
 	for (std::vector<LevelListener*>::iterator it = m_levelListeners.begin(); it != m_levelListeners.end(); it++)
 	{

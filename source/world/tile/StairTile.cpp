@@ -26,7 +26,7 @@ StairTile::StairTile(int id, Tile* pTile) : Tile(id, pTile->m_TextureFrame, pTil
 
 void StairTile::addAABBs(const Level* level, const TilePos& pos, const AABB* aabb, std::vector<AABB>& out)
 {
-	int data = level->getData(pos);
+	int data = level->getData(pos) & 0x0F;
 	switch (data)
 	{
 		case 0:
@@ -108,11 +108,96 @@ int StairTile::getTexture(Facing::Name face) const
 
 int StairTile::getTexture(Facing::Name face, int b) const
 {
+	
+	if (m_ID == TILE_STAIRS_WOOD) {
+		switch (b)
+		{
+			case 0:
+				return TEXTURE_PLANKS;
+			case 1:
+				return TEXTURE_PLANKS_SPRUCE;
+			case 2:
+				return TEXTURE_PLANKS_BIRCH;
+			case 3:
+				return TEXTURE_PLANKS_JUNGLE;
+			case 4:
+				return TEXTURE_PLANKS_ACACIA;
+			case 5:
+				return TEXTURE_PLANKS_DARK_OAK;
+		}
+	}
+	else if (m_ID == TILE_STAIRS_STONE) {
+		switch (b)
+		{
+			case 0:
+				return TEXTURE_STONEBRICK;
+			case 1:
+				return TEXTURE_MOSSY_STONE;
+			case 2:
+				return TEXTURE_BRICK_STONE_1;
+			case 3:
+				return TEXTURE_BRICK_STONE_2;
+			case 4:
+				return TEXTURE_BRICK_STONE_3;
+			case 5:
+				return TEXTURE_BRICKS;
+			case 6:
+				return TEXTURE_SANDSTONE_BOTTOM;
+			case 7:
+				return TEXTURE_SANDSTONE_TOP;
+			case 8:
+				return TEXTURE_SANDSTONE_SIDE;
+
+		}
+	}
 	return m_pParent->getTexture(face, b);
 }
 
 int StairTile::getTexture(const LevelSource* level, const TilePos& pos, Facing::Name face) const
 {
+	int b = (level->getData(pos) >> 4) & 0x0F;
+	
+	if (m_ID == TILE_STAIRS_WOOD) {
+		switch (b)
+		{
+			case 0:
+				return TEXTURE_PLANKS;
+			case 1:
+				return TEXTURE_PLANKS_SPRUCE;
+			case 2:
+				return TEXTURE_PLANKS_BIRCH;
+			case 3:
+				return TEXTURE_PLANKS_JUNGLE;
+			case 4:
+				return TEXTURE_PLANKS_ACACIA;
+			case 5:
+				return TEXTURE_PLANKS_DARK_OAK;
+		}
+	}
+	else if (m_ID == TILE_STAIRS_STONE) {
+		switch (b)
+		{
+			case 0:
+				return TEXTURE_STONEBRICK;
+			case 1:
+				return TEXTURE_MOSSY_STONE;
+			case 2:
+				return TEXTURE_BRICK_STONE_1;
+			case 3:
+				return TEXTURE_BRICK_STONE_2;
+			case 4:
+				return TEXTURE_BRICK_STONE_3;
+			case 5:
+				return TEXTURE_BRICKS;
+			case 6:
+				return TEXTURE_SANDSTONE_BOTTOM;
+			case 7:
+				return TEXTURE_SANDSTONE_TOP;
+			case 8:
+				return TEXTURE_SANDSTONE_SIDE;
+
+		}
+	}
 	return m_pParent->getTexture(level, pos, face);
 }
 
@@ -211,13 +296,13 @@ void StairTile::setPlacedBy(Level* level, const TilePos& pos, Mob* mob)
 {
 	int rot = Mth::floor(0.5f + (mob->m_rot.x * 4.0f / 360.0f)) & 3;
 
-	int data = 0;
+	int data = ((uint8_t)level->getData(pos)) << 4; //0;
 
 	switch (rot)
 	{
-		case 0: data = 2; break;
-		case 1: data = 1; break;
-		case 2: data = 3; break;
+		case 0: data += 2; break;
+		case 1: data += 1; break;
+		case 2: data += 3; break;
 	}
 
 	level->setData(pos, data);

@@ -354,10 +354,21 @@ const char* gSplashes[] =
 	"Also try Noita!"
 };
 
+
+ImageDef bbbtndeff = {
+    // 0.6.x button preset
+    //0, 26, 75, 75,
+    //75, 26, 75, 75,
+
+    218, 0, 27, 27, 4, 6,
+    218, 0, 27, 27, 4, 6,
+    "gui/touchgui.png"
+};
+
 StartMenuScreen::StartMenuScreen() :
-	m_startButton  (2,   0, 0, 160, 24, "Start Game"),
+	m_startButton  (2,   0, 0, 120, 36, "Play"),
 	m_joinButton   (3,   0, 0, 160, 24, "Join Game"),
-	m_optionsButton(4,   0, 0,  78, 22, "Options"),
+	m_optionsButton(4, "", bbbtndeff),
 	m_testButton   (999, 0, 0,  78, 22, "Test"),
 	m_buyButton    (5,   0, 0,  78, 22, "Buy")
 {
@@ -436,12 +447,12 @@ void StartMenuScreen::init()
 {
 	int yPos = m_height / 2;
 
-	m_joinButton.m_yPos = yPos + 25;
+	m_joinButton.m_yPos = yPos + 60;
 	m_startButton.m_yPos = yPos - 3;
 
 	yPos += 55;
 
-	m_optionsButton.m_yPos = yPos;
+	m_optionsButton.m_yPos = m_height - 50 - 2;
 	m_testButton.m_yPos = yPos;
 	m_buyButton.m_yPos = yPos;
 
@@ -449,18 +460,19 @@ void StartMenuScreen::init()
 
 	int x1 = m_width - m_joinButton.m_width;
 
+	m_optionsButton.m_width = m_optionsButton.m_height = 50;
 	m_joinButton.m_xPos = x1 / 2;
-	m_optionsButton.m_xPos = x1 / 2;
+	m_optionsButton.m_xPos = m_width - 50 -2; // x1 / 2;
 	m_buyButton.m_xPos = x1 / 2 + m_optionsButton.m_width + 4;
 	m_testButton.m_xPos = x1 / 2 + m_optionsButton.m_width + 4;
 
 	// add the buttons to the screen:
 	m_buttons.push_back(&m_startButton);
-	m_buttons.push_back(&m_joinButton);
+	//m_buttons.push_back(&m_joinButton);
 	m_buttons.push_back(&m_optionsButton);
 
 #if defined(DEMO) || defined(CAN_QUIT)
-	m_buttons.push_back(&m_buyButton);
+	//m_buttons.push_back(&m_buyButton);
 #endif
 
 	for (int i = 0; i < int(m_buttons.size()); i++)
@@ -469,7 +481,7 @@ void StartMenuScreen::init()
 	field_154 = "\xFFMojang AB";
 	field_16C = m_width - 1 - m_pFont->width(field_154);
 
-	field_170 = "v0.1.0 alpha"
+	field_170 = "v0.9.0 alpha"
 #ifdef DEMO
 		" (Demo)"
 #endif
@@ -495,8 +507,8 @@ void StartMenuScreen::drawLegacyTitle()
 
 	bool crampedMode = false;
 	//int titleYPos = 4;
-	//int titleYPos = 30; // -- MC Java position
-	int titleYPos = 15;
+	int titleYPos = 30; // -- MC Java position
+	//int titleYPos = 15;
 
 	int id = tx->loadTexture("gui/title.png", true);
 	Texture* pTex = tx->getTemporaryTextureData(id);
@@ -516,7 +528,7 @@ void StartMenuScreen::drawLegacyTitle()
 		if (m_width * 3 / 4 < width)
 		{
 			crampedMode = true;
-			titleYPos = 4;
+			titleYPos = 15;
 		}
 
 		Tesselator& t = Tesselator::instance;
@@ -556,8 +568,8 @@ void StartMenuScreen::render(int a, int b, float c)
 	else
 		draw3dTitle(c);
 
-	drawString(m_pFont, field_170, field_188, 58 + titleYPos, 0xFFCCCCCC);
-	drawString(m_pFont, field_154, field_16C, m_height - 10, 0x00FFFFFF);
+	drawString(m_pFont, field_170, 2, m_height - 20, 0x00FFFFFF);
+	drawString(m_pFont, field_154, 2, m_height - 10, 0x00FFFFFF);
 
 	// Draw the splash text, if we have enough room.
 #ifndef TITLE_CROP_MODE
@@ -645,7 +657,7 @@ void StartMenuScreen::draw3dTitle(float f)
 		glScalef(0.89f, 1.0f, 0.4f);
 		glTranslatef(-Width * 0.5f, -Height * 0.5f, 0.0f);
 
-		m_pMinecraft->m_pTextures->loadAndBindTexture("terrain.png");
+		m_pMinecraft->m_pTextures->loadAndBindTexture("terrain-atlas.tga");
 		if (i == 0) {
 			m_pMinecraft->m_pTextures->loadAndBindTexture("gui/black.png");
 		}

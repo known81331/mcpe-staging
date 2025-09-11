@@ -1,0 +1,6 @@
+/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build/CMakeFiles/reminecraftpe-core.dir
+/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build/CMakeFiles/edit_cache.dir
+/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build/CMakeFiles/rebuild_cache.dir
+/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build/raknet/CMakeFiles/raknet.dir
+/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build/raknet/CMakeFiles/edit_cache.dir
+/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build/raknet/CMakeFiles/rebuild_cache.dir

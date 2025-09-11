@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build/cmake_install.cmake",
+		"/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build/raknet/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

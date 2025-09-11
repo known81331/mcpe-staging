@@ -1,0 +1,963 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "raknet/libraknet.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/."
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88,
+				89,
+				90,
+				91,
+				92,
+				93,
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102,
+				103,
+				104,
+				105,
+				106,
+				107,
+				108,
+				109
+			]
+		}
+	],
+	"id" : "raknet::@e15f696e14216647865e",
+	"name" : "raknet",
+	"nameOnDisk" : "libraknet.a",
+	"paths" : 
+	{
+		"build" : "raknet",
+		"source" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88,
+				89,
+				90,
+				91,
+				92,
+				93,
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102,
+				103,
+				104,
+				105,
+				106,
+				107,
+				108,
+				109
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VariadicSQLParser.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SuperFastHash.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VariableListDeltaTracker.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/StatisticsHistory.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SendToThread.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SignaledEvent.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ReplicaManager3.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/IncrementalReadInterface.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Getche.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Berkley_NativeClient.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/WSAStartupSingleton.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DataCompressor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakMemoryOverride.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CommandParserInterface.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/GetTime.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Berkley.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketOutputWindowLogger.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DynDNS.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/LocklessTypes.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPForwarder.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakString.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SimpleMutex.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Itoa.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VitaIncludes.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TableSerializer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/EpochTimeToString.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ConnectionGraph2.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/EmailSender.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPProxyCoordinator.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPProxyClient.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CloudClient.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ReadyEvent.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/MessageFilter.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TCPInterface.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PS4Includes.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatPunchthroughClient.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetStatistics.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketConsoleLogger.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_NativeClient.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketLogger.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Gets.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatPunchthroughServer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FileOperations.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CheckSum.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/HTTPConnection.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatTypeDetectionServer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_Table.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketizedTCP.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RelayPlugin.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ThreadsafePacketLogger.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Rand.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/GridSectorizer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_BytePool.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FullyConnectedMesh2.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SocketLayer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakWString.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPProxyServer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/StringTable.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DR_SHA1.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/LinuxStrings.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VariableDeltaSerializer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CloudServer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RPC4Plugin.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketFileLogger.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CloudCommon.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SecureHandshake.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FormatString.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_PS4.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_ByteQueue.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NetworkIDObject.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PluginInterface2.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_WindowsStore8.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RandSync.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakPeer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetTransport2.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Windows_Linux_360.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatTypeDetectionClient.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ConsoleServer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TelnetTransport.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Base64Encoder.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TeamManager.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakThread.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DirectoryDeltaTransfer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CCRakNetSlidingWindow.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Router2.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/StringCompressor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ReliabilityLayer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Vita.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatTypeDetectionCommon.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Rackspace.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetCommandParser.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/LogCommandParser.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/BitStream.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/HTTPConnection2.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Windows_Linux.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetTypes.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_PS3_PS4.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FileListTransfer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FileList.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TwoWayAuthentication.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/_FindFirst.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_HuffmanEncodingTree.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/gettimeofday.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NetworkIDManager.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TeamBalancer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CCRakNetUDT.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_360_720.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakSleep.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

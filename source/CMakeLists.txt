@@ -87,14 +87,17 @@ add_library(reminecraftpe-core STATIC
     client/gui/screens/IngameBlockSelectionScreen.cpp
     client/gui/screens/PauseScreen.cpp
     client/gui/screens/DeathScreen.cpp
+    client/gui/screens/PaneCraftingScreen.cpp
     client/gui/components/ScrolledSelectionList.cpp
     client/gui/components/AvailableGamesList.cpp
     client/gui/components/RolledSelectionList.cpp
     client/gui/components/Button.cpp
+    client/gui/components/ImageButton.cpp
     client/gui/components/TextInputBox.cpp
     client/gui/components/SmallButton.cpp
     client/gui/components/WorldSelectionList.cpp
     client/gui/components/OptionList.cpp
+    client/gui/components/RecipeList.cpp
     client/gui/Gui.cpp
     client/gui/GuiComponent.cpp
     client/model/PolygonQuad.cpp
@@ -267,6 +270,7 @@ add_library(reminecraftpe-core STATIC
     world/item/TilePlanterItem.cpp
     world/item/CameraItem.cpp
     world/item/TileItem.cpp
+    world/item/AuxDataTileItem.cpp
     world/item/Inventory.cpp
     world/item/DoorItem.cpp
     world/item/ItemInstance.cpp
@@ -288,12 +292,16 @@ add_library(reminecraftpe-core STATIC
     world/tile/GrassTile.cpp
     world/tile/HalfTransparentTile.cpp
     world/tile/ClothTile.cpp
+    world/tile/CactusTile.cpp
+    world/tile/CarpetTile.cpp
     world/tile/TorchTile.cpp
     world/tile/MetalTile.cpp
     world/tile/SpongeTile.cpp
     world/tile/GlassTile.cpp
     world/tile/SandTile.cpp
     world/tile/Tile.cpp
+    world/tile/FurnaceTile.cpp
+    world/tile/WorkbenchTile.cpp
     world/tile/ClayTile.cpp
     world/tile/StoneTile.cpp
     world/tile/LadderTile.cpp

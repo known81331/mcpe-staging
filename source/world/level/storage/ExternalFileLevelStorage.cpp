@@ -236,7 +236,7 @@ LevelChunk* ExternalFileLevelStorage::load(Level* level, const ChunkPos& pos)
 	pBitStream->Read((char*)pData, 16 * 16 * 128 * sizeof(TileID));
 
 	LevelChunk* pChunk = new LevelChunk(level, pData, pos);
-	pBitStream->Read((char*)pChunk->m_tileData, 16 * 16 * 128 / 2);
+	pBitStream->Read((char*)pChunk->m_tileData, 16 * 16 * 128);
 
 	if (m_pLevelData->getStorageVersion() >= 1)
 	{
@@ -335,7 +335,7 @@ void ExternalFileLevelStorage::save(Level* level, LevelChunk* chunk)
 
 	RakNet::BitStream bs;
 	bs.Write((const char*)chunk->m_pBlockData, 16 * 16 * 128 * sizeof(TileID));
-	bs.Write((const char*)chunk->m_tileData,   16 * 16 * 128 / 2);
+	bs.Write((const char*)chunk->m_tileData,   16 * 16 * 128);
 
 	if (m_pLevelData->getStorageVersion() >= 1)
 	{

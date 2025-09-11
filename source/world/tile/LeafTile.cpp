@@ -202,7 +202,7 @@ int LeafTile::getColor(const LevelSource* level, const TilePos& pos) const
 int LeafTile::getTexture(Facing::Name face, int data) const
 {
 	if ((data & C_LEAF_TYPE_MASK) == 1)
-		return m_TextureFrame + 80;
+		return TEXTURE_LEAVES_TRANSPARENT_SPRUCE;
 
 	return m_TextureFrame;
 }

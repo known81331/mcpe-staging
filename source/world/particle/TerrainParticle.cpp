@@ -53,12 +53,12 @@ void TerrainParticle::render(Tesselator& t, float f, float a4, float a5, float a
 	constexpr float C_MAGIC_1 = 0.015609f; // @BUG: Slightly bigger than 1/64.0f
 
 	int texture = field_DC;
-	int texX = texture % 16;
+	int texX = texture % 32;
 	if (texture < 0)
-		texture += 15;
+		texture += 32;
 
-	float texU_1 = (float(texX)         + 0.25f * field_E0) / 16.0f;
-	float texV_1 = (float(texture >> 4) + 0.25f * field_E4) / 16.0f;
+	float texU_1 = (float(texX)         + 0.125f * field_E0) / 32.0f;
+	float texV_1 = (float(texture >> 5) + 0.25f * field_E4) / 16.0f;
 
 	float posX = Mth::Lerp(m_oPos.x, m_pos.x, f) - xOff;
 	float posY = Mth::Lerp(m_oPos.y, m_pos.y, f) - yOff;

@@ -96,6 +96,8 @@ void ItemRenderer::render(Entity* pEntity, float x, float y, float z, float a, f
 
 		bindTexture(pItemInstance->m_itemID < C_MAX_TILES ? C_TERRAIN_NAME : C_ITEMS_NAME);
 
+		bool isTerrain = pItemInstance->m_itemID < C_MAX_TILES;
+
 		for (int i = 0; i < itemsToRender; i++)
 		{
 			glPushMatrix();
@@ -117,10 +119,18 @@ void ItemRenderer::render(Entity* pEntity, float x, float y, float z, float a, f
 			t.color(bright, bright, bright);
 #endif
 			t.normal(0.0f, 1.0f, 0.0f);
-			t.vertexUV(-0.5f, -0.25f, 0.0f, float(16 * (icon % 16))     / 256.0f, float(16 * (icon / 16 + 1)) / 256.0f);
-			t.vertexUV(+0.5f, -0.25f, 0.0f, float(16 * (icon % 16 + 1)) / 256.0f, float(16 * (icon / 16 + 1)) / 256.0f);
-			t.vertexUV(+0.5f, +0.75f, 0.0f, float(16 * (icon % 16 + 1)) / 256.0f, float(16 * (icon / 16))     / 256.0f);
-			t.vertexUV(-0.5f, +0.75f, 0.0f, float(16 * (icon % 16))     / 256.0f, float(16 * (icon / 16))     / 256.0f);
+			if (isTerrain) {
+				t.vertexUV(-0.5f, -0.25f, 0.0f, float(16 * (icon % 32))     / 512.0f, float(16 * (icon / 32 + 1)) / 256.0f);
+				t.vertexUV(+0.5f, -0.25f, 0.0f, float(16 * (icon % 32 + 1)) / 512.0f, float(16 * (icon / 32 + 1)) / 256.0f);
+				t.vertexUV(+0.5f, +0.75f, 0.0f, float(16 * (icon % 32 + 1)) / 512.0f, float(16 * (icon / 32))     / 256.0f);
+				t.vertexUV(-0.5f, +0.75f, 0.0f, float(16 * (icon % 32))     / 512.0f, float(16 * (icon / 32))     / 256.0f);
+			}
+			else {
+				t.vertexUV(-0.5f, -0.25f, 0.0f, float(16 * (icon % 16))     / 256.0f, float(16 * (icon / 16 + 1)) / 256.0f);
+				t.vertexUV(+0.5f, -0.25f, 0.0f, float(16 * (icon % 16 + 1)) / 256.0f, float(16 * (icon / 16 + 1)) / 256.0f);
+				t.vertexUV(+0.5f, +0.75f, 0.0f, float(16 * (icon % 16 + 1)) / 256.0f, float(16 * (icon / 16))     / 256.0f);
+				t.vertexUV(-0.5f, +0.75f, 0.0f, float(16 * (icon % 16))     / 256.0f, float(16 * (icon / 16))     / 256.0f);
+			}
 
 			t.draw();
 
@@ -258,11 +268,25 @@ void ItemRenderer::renderGuiItem(Font* font, Textures* textures, ItemInstance* i
 	{
 		// @BUG: The last bound texture will be the texture that ALL items will take. This is because begin and end calls
 		// have been void'ed by a  t.voidBeginAndEndCalls call in Gui::render.
-		if (instance->m_itemID <= 255)
+		if (instance->m_itemID <= 255) {
 			textures->loadAndBindTexture(C_TERRAIN_NAME);
-		else
-			textures->loadAndBindTexture(C_ITEMS_NAME);
+			Tesselator& t = Tesselator::instance;
 
-		blit(x, y, 16 * (instance->getIcon() % 16), 16 * (instance->getIcon() / 16), 16, 16);
+			float ex = float(x), ey = float(y);
+			float uw = float(16), uh = float(16);
+			float vx = float(16 * (instance->getIcon() % 32)), vy = float(16 * (instance->getIcon() / 32));
+
+			t.begin();
+			t.vertexUV(ex,      ey + uh, 0.0f, float(vx)      / 512.0f, float(vy + uh) / 256.0f);
+			t.vertexUV(ex + 16, ey + uh, 0.0f, float(vx + uw) / 512.0f, float(vy + uh) / 256.0f);
+			t.vertexUV(ex + 16, ey,      0.0f, float(vx + uw) / 512.0f, float(vy)      / 256.0f);
+			t.vertexUV(ex,      ey,      0.0f, float(vx)      / 512.0f, float(vy)      / 256.0f);
+			t.draw();
+
+		}
+		else {
+			textures->loadAndBindTexture(C_ITEMS_NAME);
+			blit(x, y, 16 * (instance->getIcon() % 16), 16 * (instance->getIcon() / 16), 16, 16);
+		}
 	}
 }

@@ -625,7 +625,7 @@ void Minecraft::respawnPlayer(Player* player)
 
 std::string Minecraft::getVersionString() const
 {
-	return "v0.1.0 alpha";
+	return "v0.9.0 alpha";
 }
 
 void Minecraft::_reloadInput()
@@ -903,7 +903,8 @@ void Minecraft::prepareLevel(const std::string& unused)
 			float time2 = getTimeS();
 			if (m_pLevel->field_B0C)
 			{
-				while (m_pLevel->updateLights());
+				//while (m_pLevel->updateLights());
+				m_pLevel->updateLights();
 			}
 
 			if (time2 != -1.0f)

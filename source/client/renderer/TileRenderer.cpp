@@ -120,7 +120,7 @@ float TileRenderer::getWaterHeight(const TilePos& pos, const Material* pCheckMtl
 
 bool TileRenderer::canRender(int renderShape)
 {
-	return renderShape == SHAPE_SOLID || renderShape == SHAPE_STAIRS;
+	return renderShape == SHAPE_SOLID || renderShape == SHAPE_STAIRS || renderShape == SHAPE_CACTUS;
 }
 
 // @NOTE: This sucks! Very badly! But it's how they did it.
@@ -131,8 +131,8 @@ void TileRenderer::renderEast(Tile* tile, const Vec3& pos, int texture)
 	if (m_textureOverride >= 0)
 		texture = m_textureOverride;
 
-	float texX = float(16 * (texture % 16));
-	float texY = float(16 * (texture / 16));
+	float texX = float(16 * (texture % 32));
+	float texY = float(16 * (texture / 32));
 
 	float texU_l, texU_r, texV_u, texV_d;
 
@@ -140,19 +140,19 @@ void TileRenderer::renderEast(Tile* tile, const Vec3& pos, int texture)
 
 	if (aabb.min.z < 0.0f || aabb.max.z > 1.0f)
 	{
-		texU_l = C_RATIO * (texX);
-		texU_r = C_RATIO * (texX + 15.99f);
+		texU_l = C_RATIO*0.5f * (texX);
+		texU_r = C_RATIO*0.5f * (texX + 15.99f);
 	}
 	// if flipping on the Z coordinate
 	else if (field_8)
 	{
-		texU_r = C_RATIO * (texX + aabb.min.z * 16);
-		texU_l = C_RATIO * (texX + aabb.max.z * 16 - 0.01f);
+		texU_r = C_RATIO*0.5f * (texX + aabb.min.z * 16);
+		texU_l = C_RATIO*0.5f * (texX + aabb.max.z * 16 - 0.01f);
 	}
 	else
 	{
-		texU_l = C_RATIO * (texX + aabb.min.z * 16);
-		texU_r = C_RATIO * (texX + aabb.max.z * 16 - 0.01f);
+		texU_l = C_RATIO*0.5f * (texX + aabb.min.z * 16);
+		texU_r = C_RATIO*0.5f * (texX + aabb.max.z * 16 - 0.01f);
 	}
 
 	if (aabb.min.y < 0.0f || aabb.max.y > 1.0f)
@@ -194,8 +194,8 @@ void TileRenderer::renderWest(Tile* tile, const Vec3& pos, int texture)
 	if (m_textureOverride >= 0)
 		texture = m_textureOverride;
 
-	float texX = float(16 * (texture % 16));
-	float texY = float(16 * (texture / 16));
+	float texX = float(16 * (texture % 32));
+	float texY = float(16 * (texture / 32));
 
 	float texU_l, texU_r, texV_u, texV_d;
 
@@ -203,19 +203,19 @@ void TileRenderer::renderWest(Tile* tile, const Vec3& pos, int texture)
 
 	if (aabb.min.z < 0.0f || aabb.max.z > 1.0f)
 	{
-		texU_l = C_RATIO * (texX);
-		texU_r = C_RATIO * (texX + 15.99f);
+		texU_l = C_RATIO*0.5f * (texX);
+		texU_r = C_RATIO*0.5f * (texX + 15.99f);
 	}
 	// if flipping on the Z coordinate
 	else if (field_8)
 	{
-		texU_r = C_RATIO * (texX + aabb.min.z * 16);
-		texU_l = C_RATIO * (texX + aabb.max.z * 16 - 0.01f);
+		texU_r = C_RATIO*0.5f * (texX + aabb.min.z * 16);
+		texU_l = C_RATIO*0.5f * (texX + aabb.max.z * 16 - 0.01f);
 	}
 	else
 	{
-		texU_l = C_RATIO * (texX + aabb.min.z * 16);
-		texU_r = C_RATIO * (texX + aabb.max.z * 16 - 0.01f);
+		texU_l = C_RATIO*0.5f * (texX + aabb.min.z * 16);
+		texU_r = C_RATIO*0.5f * (texX + aabb.max.z * 16 - 0.01f);
 	}
 
 	if (aabb.min.y < 0.0f || aabb.max.y>1.0f)
@@ -257,8 +257,8 @@ void TileRenderer::renderSouth(Tile* tile, const Vec3& pos, int texture)
 	if (m_textureOverride >= 0)
 		texture = m_textureOverride;
 
-	float texX = float(16 * (texture % 16));
-	float texY = float(16 * (texture / 16));
+	float texX = float(16 * (texture % 32));
+	float texY = float(16 * (texture / 32));
 
 	float texU_l, texU_r, texV_u, texV_d;
 
@@ -266,19 +266,19 @@ void TileRenderer::renderSouth(Tile* tile, const Vec3& pos, int texture)
 
 	if (aabb.min.x < 0.0f || aabb.max.x > 1.0f)
 	{
-		texU_l = C_RATIO * (texX);
-		texU_r = C_RATIO * (texX + 15.99f);
+		texU_l = C_RATIO*0.5f * (texX);
+		texU_r = C_RATIO*0.5f * (texX + 15.99f);
 	}
 	// if flipping on the X coordinate
 	else if (field_8)
 	{
-		texU_r = C_RATIO * (texX + aabb.min.x * 16);
-		texU_l = C_RATIO * (texX + aabb.max.x * 16 - 0.01f);
+		texU_r = C_RATIO*0.5f * (texX + aabb.min.x * 16);
+		texU_l = C_RATIO*0.5f * (texX + aabb.max.x * 16 - 0.01f);
 	}
 	else
 	{
-		texU_l = C_RATIO * (texX + aabb.min.x * 16);
-		texU_r = C_RATIO * (texX + aabb.max.x * 16 - 0.01f);
+		texU_l = C_RATIO*0.5f * (texX + aabb.min.x * 16);
+		texU_r = C_RATIO*0.5f * (texX + aabb.max.x * 16 - 0.01f);
 	}
 
 	if (aabb.min.y < 0.0f || aabb.max.y>1.0f)
@@ -320,8 +320,8 @@ void TileRenderer::renderNorth(Tile* tile, const Vec3& pos, int texture)
 	if (m_textureOverride >= 0)
 		texture = m_textureOverride;
 
-	float texX = float(16 * (texture % 16));
-	float texY = float(16 * (texture / 16));
+	float texX = float(16 * (texture % 32));
+	float texY = float(16 * (texture / 32));
 
 	float texU_l, texU_r, texV_u, texV_d;
 
@@ -329,19 +329,19 @@ void TileRenderer::renderNorth(Tile* tile, const Vec3& pos, int texture)
 
 	if (aabb.min.x < 0.0f || aabb.max.x > 1.0f)
 	{
-		texU_l = C_RATIO * (texX);
-		texU_r = C_RATIO * (texX + 15.99f);
+		texU_l = C_RATIO*0.5f * (texX);
+		texU_r = C_RATIO*0.5f * (texX + 15.99f);
 	}
 	// if flipping on the X coordinate
 	else if (field_8)
 	{
-		texU_r = C_RATIO * (texX + aabb.min.x * 16);
-		texU_l = C_RATIO * (texX + aabb.max.x * 16 - 0.01f);
+		texU_r = C_RATIO*0.5f* (texX + aabb.min.x * 16);
+		texU_l = C_RATIO*0.5f * (texX + aabb.max.x * 16 - 0.01f);
 	}
 	else
 	{
-		texU_l = C_RATIO * (texX + aabb.min.x * 16);
-		texU_r = C_RATIO * (texX + aabb.max.x * 16 - 0.01f);
+		texU_l = C_RATIO*0.5f * (texX + aabb.min.x * 16);
+		texU_r = C_RATIO*0.5f * (texX + aabb.max.x * 16 - 0.01f);
 	}
 
 	if (aabb.min.y < 0.0f || aabb.max.y>1.0f)
@@ -383,8 +383,8 @@ void TileRenderer::renderFaceDown(Tile* tile, const Vec3& pos, int texture)
 	if (m_textureOverride >= 0)
 		texture = m_textureOverride;
 
-	float texX = float(16 * (texture % 16));
-	float texY = float(16 * (texture / 16));
+	float texX = float(16 * (texture % 32));
+	float texY = float(16 * (texture / 32));
 
 	float texU_1, texU_2, texV_1, texV_2;
 
@@ -392,13 +392,13 @@ void TileRenderer::renderFaceDown(Tile* tile, const Vec3& pos, int texture)
 
 	if (aabb.min.x >= 0.0f && aabb.max.x <= 1.0f)
 	{
-		texU_1 = C_RATIO * (texX + 16.0f * aabb.min.x);
-		texU_2 = C_RATIO * (texX + 16.0f * aabb.max.x - 0.01f);
+		texU_1 = C_RATIO*0.5f * (texX + 16.0f * aabb.min.x);
+		texU_2 = C_RATIO*0.5f * (texX + 16.0f * aabb.max.x - 0.01f);
 	}
 	else
 	{
-		texU_1 = C_RATIO * (texX);
-		texU_2 = C_RATIO * (texX + 15.99f);
+		texU_1 = C_RATIO*0.5f * (texX);
+		texU_2 = C_RATIO*0.5f * (texX + 15.99f);
 	}
 
 	if (aabb.min.z >= 0.0f && aabb.max.z <= 1.0f)
@@ -440,8 +440,8 @@ void TileRenderer::renderFaceUp(Tile* tile, const Vec3& pos, int texture)
 	if (m_textureOverride >= 0)
 		texture = m_textureOverride;
 
-	float texX = float(16 * (texture % 16));
-	float texY = float(16 * (texture / 16));
+	float texX = float(16 * (texture % 32));
+	float texY = float(16 * (texture / 32));
 
 	float texU_1, texU_2, texV_1, texV_2;
 
@@ -449,13 +449,13 @@ void TileRenderer::renderFaceUp(Tile* tile, const Vec3& pos, int texture)
 
 	if (aabb.min.x >= 0.0f && aabb.max.x <= 1.0f)
 	{
-		texU_1 = C_RATIO * (texX + 16.0f * aabb.min.x);
-		texU_2 = C_RATIO * (texX + 16.0f * aabb.max.x - 0.01f);
+		texU_1 = C_RATIO*0.5f * (texX + 16.0f * aabb.min.x);
+		texU_2 = C_RATIO*0.5f * (texX + 16.0f * aabb.max.x - 0.01f);
 	}
 	else
 	{
-		texU_1 = C_RATIO * (texX);
-		texU_2 = C_RATIO * (texX + 15.99f);
+		texU_1 = C_RATIO*0.5f * (texX);
+		texU_2 = C_RATIO*0.5f * (texX + 15.99f);
 	}
 
 	if (aabb.min.z >= 0.0f && aabb.max.z <= 1.0f)
@@ -498,11 +498,11 @@ void TileRenderer::tesselateCrossTexture(Tile* tile, int data, const Vec3& pos)
 	if (texture < 0)
 		texture = tile->getTexture(Facing::DOWN, data);
 
-	float texX = float(16 * (texture % 16));
-	float texY = float(16 * (texture / 16));
+	float texX = float(16 * (texture % 32));
+	float texY = float(16 * (texture / 32));
 
 	// calculate U and V coordinates
-	float texU_l = texX * C_RATIO, texU_r = (texX + 15.99f) * C_RATIO;
+	float texU_l = texX * C_RATIO * 0.5f, texU_r = (texX + 15.99f) * C_RATIO * 0.5f;
 	float texV_u = texY * C_RATIO, texV_d = (texY + 15.99f) * C_RATIO;
 
 	float cenX = pos.x + 0.5f, cenZ = pos.z + 0.5f;
@@ -586,7 +586,7 @@ bool TileRenderer::tesselateBlockInWorld(Tile* tile, const TilePos& pos, float r
 		if (m_bFancyGrass && texture == TEXTURE_GRASS_SIDE && this->m_textureOverride < 0)
 		{
 			t.color(topR * 0.8f * fLight, topG * 0.8f * fLight, topB * 0.8f * fLight);
-			renderNorth(tile, pos, TEXTURE_NONE84);
+			renderNorth(tile, pos, TEXTURE_GRASS_GENERIC);
 		}
 	}
 
@@ -605,7 +605,7 @@ bool TileRenderer::tesselateBlockInWorld(Tile* tile, const TilePos& pos, float r
 		if (m_bFancyGrass && texture == TEXTURE_GRASS_SIDE && this->m_textureOverride < 0)
 		{
 			t.color(topR * 0.8f * fLight, topG * 0.8f * fLight, topB * 0.8f * fLight);
-			renderSouth(tile, pos, TEXTURE_NONE84);
+			renderSouth(tile, pos, TEXTURE_GRASS_GENERIC);
 		}
 	}
 
@@ -624,7 +624,7 @@ bool TileRenderer::tesselateBlockInWorld(Tile* tile, const TilePos& pos, float r
 		if (m_bFancyGrass && texture == TEXTURE_GRASS_SIDE && this->m_textureOverride < 0)
 		{
 			t.color(topR * 0.6f * fLight, topG * 0.6f * fLight, topB * 0.6f * fLight);
-			renderWest(tile, pos, TEXTURE_NONE84);
+			renderWest(tile, pos, TEXTURE_GRASS_GENERIC);
 		}
 	}
 
@@ -643,7 +643,7 @@ bool TileRenderer::tesselateBlockInWorld(Tile* tile, const TilePos& pos, float r
 		if (m_bFancyGrass && texture == TEXTURE_GRASS_SIDE && this->m_textureOverride < 0)
 		{
 			t.color(topR * 0.6f * fLight, topG * 0.6f * fLight, topB * 0.6f * fLight);
-			renderEast(tile, pos, TEXTURE_NONE84);
+			renderEast(tile, pos, TEXTURE_GRASS_GENERIC);
 		}
 	}
 
@@ -669,6 +669,102 @@ bool TileRenderer::tesselateBlockInWorld(Tile* tile, const TilePos& pos)
 
 	return tesselateBlockInWorld(tile, pos, r, g, b);
 }
+
+
+bool TileRenderer::tesselateCactusInWorld(Tile* tile, const TilePos& pos)
+{
+	Tesselator& t = Tesselator::instance;
+
+	static constexpr float C_RATIO = 1.0f / 256.0f;
+
+	int texture = tile->getTexture(Facing::NORTH);
+
+	float texX = float(16 * (texture % 32));
+	float texY = float(16 * (texture / 32));
+
+	// calculate U and V coordinates
+	float texU_l = texX * C_RATIO * 0.5f, texU_r = (texX + 15.99f) * C_RATIO * 0.5f;
+	float texV_u = texY * C_RATIO, texV_d = (texY + 15.99f) * C_RATIO;
+
+	float cenX = pos.x, cenZ = pos.z;
+	
+	float x1 = cenX, x2 = cenX+1.f;
+	float z1 = cenZ, z2 = cenZ+1.f;
+
+
+	float bright = tile->getBrightness(m_pLevelSource, pos.west()) * 0.6f;
+	t.color(bright, bright, bright);
+
+	// face 1
+	t.vertexUV(x1+0.0625f, pos.y + 1, z1, texU_l, texV_u);
+	t.vertexUV(x1+0.0625f, pos.y + 0, z1, texU_l, texV_d);
+	t.vertexUV(x1+0.0625f, pos.y + 0, z2, texU_r, texV_d);
+	t.vertexUV(x1+0.0625f, pos.y + 1, z2, texU_r, texV_u);
+
+	bright = tile->getBrightness(m_pLevelSource, pos.east()) * 0.6f;
+	t.color(bright, bright, bright);
+	// face 2
+	t.vertexUV(x2-0.0625f, pos.y + 1, z2, texU_l, texV_u);
+	t.vertexUV(x2-0.0625f, pos.y + 0, z2, texU_l, texV_d);
+	t.vertexUV(x2-0.0625f, pos.y + 0, z1, texU_r, texV_d);
+	t.vertexUV(x2-0.0625f, pos.y + 1, z1, texU_r, texV_u);
+
+	bright = tile->getBrightness(m_pLevelSource, pos.north()) * 0.8f;
+	t.color(bright, bright, bright);
+	// face 3
+	t.vertexUV(x2, pos.y + 1, z1+0.0625f, texU_l, texV_u);
+	t.vertexUV(x2, pos.y + 0, z1+0.0625f, texU_l, texV_d);
+	t.vertexUV(x1, pos.y + 0, z1+0.0625f, texU_r, texV_d);
+	t.vertexUV(x1, pos.y + 1, z1+0.0625f, texU_r, texV_u);
+
+	bright = tile->getBrightness(m_pLevelSource, pos.south()) * 0.8f;
+	t.color(bright, bright, bright);
+	// face 4
+	t.vertexUV(x1, pos.y + 1, z2-0.0625f, texU_l, texV_u);
+	t.vertexUV(x1, pos.y + 0, z2-0.0625f, texU_l, texV_d);
+	t.vertexUV(x2, pos.y + 0, z2-0.0625f, texU_r, texV_d);
+	t.vertexUV(x2, pos.y + 1, z2-0.0625f, texU_r, texV_u);
+
+	bright = tile->getBrightness(m_pLevelSource, pos.above());
+	t.color(bright, bright, bright);
+
+	texture = tile->getTexture(Facing::UP, 0);
+
+	texX = float(16 * (texture % 32));
+	texY = float(16 * (texture / 32));
+
+	// calculate U and V coordinates
+	texU_l = texX * C_RATIO * 0.5f; texU_r = (texX + 15.99f) * C_RATIO * 0.5f;
+	texV_u = texY * C_RATIO; texV_d = (texY + 15.99f) * C_RATIO;
+
+	// face 5
+	t.vertexUV(x1, pos.y + 1, z1, texU_l, texV_u);
+	t.vertexUV(x1, pos.y + 1, z2, texU_l, texV_d);
+	t.vertexUV(x2, pos.y + 1, z2, texU_r, texV_d);
+	t.vertexUV(x2, pos.y + 1, z1, texU_r, texV_u);
+
+
+	bright = tile->getBrightness(m_pLevelSource, pos.below()) * 0.5f;
+	t.color(bright, bright, bright);
+
+	texture = tile->getTexture(Facing::DOWN, 0);
+
+	texX = float(16 * (texture % 32));
+	texY = float(16 * (texture / 32));
+
+	// calculate U and V coordinates
+	texU_l = texX * C_RATIO * 0.5f; texU_r = (texX + 15.99f) * C_RATIO * 0.5f;
+	texV_u = texY * C_RATIO; texV_d = (texY + 15.99f) * C_RATIO;
+
+	// face 6
+	t.vertexUV(x2, pos.y, z1, texU_r, texV_u);
+	t.vertexUV(x2, pos.y, z2, texU_r, texV_d);
+	t.vertexUV(x1, pos.y, z2, texU_l, texV_d);
+	t.vertexUV(x1, pos.y, z1, texU_l, texV_u);
+
+	return true;
+}
+
 
 bool TileRenderer::tesselateCrossInWorld(Tile* tile, const TilePos& pos)
 {
@@ -895,7 +991,7 @@ bool TileRenderer::tesselateStairsInWorld(Tile* tile, const TilePos& pos)
 {
 	bool bRenderedAnything = false;
 
-	switch (m_pLevelSource->getData(pos))
+	switch (m_pLevelSource->getData(pos) & 0x0F)
 	{
 		case 0:
 		{
@@ -1009,12 +1105,12 @@ void TileRenderer::tesselateTorch(Tile* tile, const Vec3& pos, float a, float b)
 
 	// @TODO: Clean up a bit more
 
-	float texX = float(16 * (texture % 16));
-	float texY = float(16 * (texture / 16));
+	float texX = float(16 * (texture % 32));
+	float texY = float(16 * (texture / 32));
 
-	float texU_1 = texX * C_RATIO;
-	float texU_2 = (texX + 15.99f) * C_RATIO;
-	float texV_1 = (texY * C_RATIO) + 1.0f / 32.0f;
+	float texU_1 = texX * C_RATIO*0.5f;
+	float texU_2 = (texX + 15.99f) * C_RATIO * 0.5f;
+	float texV_1 = (texY * C_RATIO*0.5f) + 1.0f / 32.0f;
 	float texV_2 = (texY + 15.99f) * C_RATIO;
 
 	float x1 = pos.x + C_HALF_TILE, z1 = pos.z + C_HALF_TILE;
@@ -1054,8 +1150,8 @@ void TileRenderer::tesselateTorch(Tile* tile, const Vec3& pos, float a, float b)
 	float y_2 = pos.y + 1.0f; // Top
 	float y_3 = pos.y + 0.0f; // Bottom
 
-	float texU_3 = texU_1 + 0.027344f;
-	float texU_4 = texU_1 + 0.035156f;
+	float texU_3 = texU_1 + 0.027344f*0.5f;
+	float texU_4 = texU_1 + 0.035156f*0.5f;
 	float texV_3 = texY * C_RATIO;
 	float texV_4 = texY * C_RATIO + 0.023438f;
 
@@ -1136,9 +1232,9 @@ bool TileRenderer::tesselateLadderInWorld(Tile* tile, const TilePos& pos)
 	float texX = float(16 * (texture % 16));
 	float texY = float(16 * (texture / 16));
 
-	float texU_1 = C_RATIO * texX;
+	float texU_1 = C_RATIO*0.5f * texX;
 	float texU_2 = C_RATIO * (texX + 15.99f);
-	float texV_1 = C_RATIO * texY;
+	float texV_1 = C_RATIO*0.5f * texY;
 	float texV_2 = C_RATIO * (texY + 15.99f);
 
 	switch (m_pLevelSource->getData(pos))
@@ -1185,11 +1281,11 @@ bool TileRenderer::tesselateFireInWorld(Tile* tile, const TilePos& pos)
 
 	FireTile* pFireTile = (FireTile*)Tile::fire;
 
-	float texX = float(16 * (texture % 16));
-	float texY = float(16 * (texture / 16));
+	float texX = float(16 * (texture % 32));
+	float texY = float(16 * (texture / 32));
 
-	float texU_1 = C_RATIO * (texX);
-	float texU_2 = C_RATIO * (texX + 15.99f);
+	float texU_1 = C_RATIO * (texX) * 0.5f;
+	float texU_2 = C_RATIO * (texX + 15.99f) * 0.5f;
 	float texV_1 = C_RATIO * (texY);
 	float texV_2 = C_RATIO * (texY + 15.99f);
 	float xf = float(pos.x), yf = float(pos.y), zf = float(pos.z);
@@ -1353,6 +1449,12 @@ bool TileRenderer::tesselateInWorld(Tile* tile, const TilePos& pos)
 			return tesselateDoorInWorld(tile, pos);
 		case SHAPE_STAIRS:
 			return tesselateStairsInWorld(tile, pos);
+		//case SHAPE_CHEST:
+		//	return tesselateChestInWorld(tile, pos);
+		//case SHAPE_FENCE:
+		//	return tesselateFenceInWorld(tile, pos);
+		case SHAPE_CACTUS:
+			return tesselateCactusInWorld(tile, pos);
 	}
 
 	return false;
@@ -2500,6 +2602,41 @@ void TileRenderer::renderTile(Tile* tile, int data, float bright, bool preshade)
 			t.addOffset(0.5f, 0.5f, 0.5f);
 			break;
 		}
+		case SHAPE_CACTUS: 
+		{
+			AABB oldAABB = tile->m_aabb;
+			glTranslatef(-0.5f, -0.5f, -0.5f);
+			t.begin();
+			SHADE_DEFINE;
+			SHADE_PREPARE;
+			SHADE_IF_NEEDED(1.0f);
+			t.normal(0.0f, 1.0f, 0.0f);
+			tile->m_aabb = AABB(0.f, 0.0f, 0.f, 1.f, 1.0f, 1.f);
+			renderFaceDown(tile, Vec3::ZERO, tile->getTexture(Facing::UP, data));
+			SHADE_FIXUP_GRASS;
+			SHADE_IF_NEEDED(0.5f);
+			t.normal(0.0f, -1.0f, 0.0f);
+			tile->m_aabb = AABB(0.0f, 0.0f, 0.f, 1.f, 1.0f, 1.f);
+			IF_NEEDED(renderFaceUp(tile, Vec3::ZERO, tile->getTexture(Facing::DOWN, data)));
+			SHADE_IF_NEEDED(0.8f);
+			t.normal(0.0f, 0.0f, -1.0f);
+			tile->m_aabb = AABB(0.f, 0.0f, 0.0625f, 1.f, 1.0f, 1.f);
+			IF_NEEDED(renderNorth(tile, Vec3::ZERO, tile->getTexture(Facing::NORTH, data)));
+			t.normal(0.0f, 0.0f, 1.0f);
+			tile->m_aabb = AABB(0.f, 0.0f, 0.f, 1.f, 1.0f, 1.f-0.0625f);
+			IF_NEEDED(renderSouth(tile, Vec3::ZERO, tile->getTexture(Facing::SOUTH, data)));
+			SHADE_IF_NEEDED(0.6f);
+			t.normal(-1.0f, 0.0f, 0.0f);
+			tile->m_aabb = AABB(0.0625f, 0.f, 0.f, 1.f, 1.0f, 1.f);
+			IF_NEEDED(renderWest (tile, Vec3::ZERO, tile->getTexture(Facing::WEST, data)));
+			t.normal(1.0f, 0.0f, 0.0f);
+			tile->m_aabb = AABB(0.f, 0.f, 0.f, 1.f-0.0625f, 1.0f, 1.f);
+			IF_NEEDED(renderEast (tile, Vec3::ZERO, tile->getTexture(Facing::EAST, data)));
+			SHADE_IF_NEEDED(1.0f);
+			t.draw();
+			glTranslatef(0.5f, 0.5f, 0.5f);
+			break;
+		}
 	}
 }
 
@@ -2708,22 +2845,22 @@ bool TileRenderer::tesselateBlockInWorldWithAmbienceOcclusionV2(Tile* tile, cons
 
 			switch (dir) {
 				case Facing::DOWN:
-					renderFaceUp(tile, pos, TEXTURE_NONE84);
+					renderFaceUp(tile, pos, TEXTURE_GRASS_GENERIC);
 					break;
 				case Facing::UP:
-					renderFaceDown(tile, pos, TEXTURE_NONE84);
+					renderFaceDown(tile, pos, TEXTURE_GRASS_GENERIC);
 					break;
 				case Facing::NORTH:
-					renderNorth(tile, pos, TEXTURE_NONE84);
+					renderNorth(tile, pos, TEXTURE_GRASS_GENERIC);
 					break;
 				case Facing::SOUTH:
-					renderSouth(tile, pos, TEXTURE_NONE84);
+					renderSouth(tile, pos, TEXTURE_GRASS_GENERIC);
 					break;
 				case Facing::WEST:
-					renderWest(tile, pos, TEXTURE_NONE84);
+					renderWest(tile, pos, TEXTURE_GRASS_GENERIC);
 					break;
 				case Facing::EAST:
-					renderEast(tile, pos, TEXTURE_NONE84);
+					renderEast(tile, pos, TEXTURE_GRASS_GENERIC);
 					break;
 			}
 		}

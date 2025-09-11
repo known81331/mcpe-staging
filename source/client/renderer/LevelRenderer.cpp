@@ -1140,6 +1140,12 @@ void LevelRenderer::renderSky(float alpha)
 
 	drawArrayVT(m_skyBuffer, m_skyBufferCount, sizeof(Tesselator::Vertex));
 
+
+	glColor4f(sc.x * 0.2f + 0.04f, sc.y * 0.2f + 0.04f, sc.z * 0.6f + 0.1f, 1.0f);
+	glDisable(GL_TEXTURE_2D);
+	drawArrayVT(m_darkBuffer, m_darkBufferCount, sizeof(Tesselator::Vertex));
+	glEnable(GL_TEXTURE_2D);
+
 	glDisable(GL_FOG);
 	glDisable(GL_ALPHA_TEST);
 
@@ -1224,9 +1230,6 @@ void LevelRenderer::renderSky(float alpha)
 	glEnable(GL_FOG);
 	glPopMatrix();
 
-	glColor4f(sc.x * 0.2f + 0.04f, sc.y * 0.2f + 0.04f, sc.z * 0.6f + 0.1f, 1.0f);
-	glDisable(GL_TEXTURE_2D);
-	drawArrayVT(m_darkBuffer, m_darkBufferCount, sizeof(Tesselator::Vertex));
 	glEnable(GL_TEXTURE_2D);
 
 	glDepthMask(true);

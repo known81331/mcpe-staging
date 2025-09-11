@@ -8,12 +8,12 @@
 
 #include "world/level/Level.hpp"
 #include "world/item/TileItem.hpp"
+#include "world/item/AuxDataTileItem.hpp"
 #include "world/entity/ItemEntity.hpp"
 
 // Include tile definitions here
 #include "SandStoneTile.hpp"
 #include "SandTile.hpp"
-#include "SandStoneTile.hpp"
 #include "HalfTransparentTile.hpp"
 #include "GlassTile.hpp"
 #include "GravelTile.hpp"
@@ -49,6 +49,9 @@
 #include "BookshelfTile.hpp"
 #include "WireTile.hpp"
 #include "RocketLauncherTile.hpp"
+#include "WorkbenchTile.hpp"
+#include "FurnaceTile.hpp"
+#include "CactusTile.hpp"
 
 std::string Tile::TILE_DESCRIPTION_PREFIX = "tile.";
 
@@ -190,6 +193,24 @@ int Tile::getTexture(Facing::Name face) const
 
 int Tile::getTexture(Facing::Name face, int data) const
 {
+	if (m_ID == TILE_WOOD) {
+		switch (data)
+		{
+			case 1:
+				return TEXTURE_PLANKS_SPRUCE;
+			case 2:
+				return TEXTURE_PLANKS_BIRCH;
+			case 3:
+				return TEXTURE_PLANKS_JUNGLE;
+			case 4:
+				return TEXTURE_PLANKS_ACACIA;
+			case 5:
+				return TEXTURE_PLANKS_DARK_OAK;
+		}
+	}
+	
+
+
 	return getTexture(face);
 }
 
@@ -372,23 +393,35 @@ void Tile::initTiles()
 		->setSoundType(Tile::SOUND_METAL)
 		->setDescriptionId("blockLapis");
 
-	Tile::sandStone = (new SandStoneTile(TILE_SANDSTONE, TEXTURE_SANDSTONE_SIDE, Material::stone))
+	Tile::sandStone = (new SandStoneTile(TILE_SANDSTONE, TEXTURE_BRICK_SAND_3, Material::stone))
 		->init()
 		->setSoundType(Tile::SOUND_STONE)
 		->setDestroyTime(0.8f)
 		->setDescriptionId("sandStone");
 
-	Tile::cloth = (new ClothTile(TILE_CLOTH, 0xCF))
+	Tile::stained_hardened_clay = (new ClothTile(TILE_STAINED_HARDENED_CLAY, 0))
 		->init()
 		->setDestroyTime(0.8f)
-		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("cloth");
+		->setSoundType(Tile::SOUND_STONE)
+		->setDescriptionId("stained_hardened_clay");
+
+	Tile::hardened_clay = (new Tile(TILE_HARDENED_CLAY, TEXTURE_HARDENED_CLAY, Material::stone))
+		->init()
+		->setDestroyTime(0.8f)
+		->setSoundType(Tile::SOUND_STONE)
+		->setDescriptionId("hardened_clay");
 
 	Tile::flower = (new Bush(TILE_FLOWER, TEXTURE_FLOWER))
 		->init()
 		->setDestroyTime(0.0f)
 		->setSoundType(Tile::SOUND_GRASS)
 		->setDescriptionId("flower");
+
+	Tile::shortgrass = (new Bush(TILE_SHORTGRASS, TEXTURE_GRASS))
+		->init()
+		->setDestroyTime(0.0f)
+		->setSoundType(Tile::SOUND_GRASS)
+		->setDescriptionId("shortgrass");
 
 	Tile::rose = (new Bush(TILE_ROSE, TEXTURE_ROSE))
 		->init()
@@ -495,6 +528,21 @@ void Tile::initTiles()
 		->setSoundType(Tile::SOUND_METAL)
 		->setDescriptionId("blockEmerald");
 
+
+	Tile::workbench = (new WorkbenchTile(TILE_WORKBENCH, 0, Material::wood))
+		->init()
+		->setDestroyTime(2.0f)
+		->setExplodeable(5.0f)
+		->setSoundType(Tile::SOUND_WOOD)
+		->setDescriptionId("workbench");
+
+	Tile::furnace = (new FurnaceTile(TILE_FURNACE, 0, Material::stone))
+		->init()
+		->setDestroyTime(2.0f)
+		->setExplodeable(5.0f)
+		->setSoundType(Tile::SOUND_STONE)
+		->setDescriptionId("furnace");
+
 	Tile::farmland = (new FarmTile(TILE_FARMLAND, Material::dirt))
 		->init()
 		->setDestroyTime(0.6f)
@@ -559,12 +607,12 @@ void Tile::initTiles()
 		->setDescriptionId("snow");
 
 	// @TODO: CactusTile class
-	/*Tile::cactus = (new CactusTile(TILE_CACTUS, TEXTURE_CACTUS, Material::cactus))
+	Tile::cactus = (new CactusTile(TILE_CACTUS, TEXTURE_CACTUS_SIDE, Material::cactus))
 		->init()
 		->setDestroyTime(0.4f)
 		->setLightBlock(3)
 		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("cactus");*/
+		->setDescriptionId("cactus");
 
 	Tile::clay = (new ClayTile(TILE_CLAY, TEXTURE_CLAY, Material::clay))
 		->init()
@@ -618,8 +666,15 @@ void Tile::initTiles()
 		->setSoundType(Tile::SOUND_GRASS)
 		->setDescriptionId("leaves");
 
-	Tile::info_reserved6 = (new Tile(TEXTURE_LAVA_PLACEHOLDER, Material::dirt))
+	Tile::info_reserved6 = (new Tile(TEXTURE_INFO_UPDATEGAME1, Material::dirt))
 		->init();
+
+
+	Tile::cloth = (new ClothTile(TILE_CLOTH, 0))
+		->init()
+		->setDestroyTime(0.8f)
+		->setSoundType(Tile::SOUND_CLOTH)
+		->setDescriptionId("cloth");
 
 	Tile::fire = (new FireTile(TILE_FIRE, TEXTURE_FIRE1))
 		->init()
@@ -758,7 +813,7 @@ void Tile::initTiles()
 	for (int i = 0; i < C_MAX_TILES; i++)
 	{
 		if (Tile::tiles[i] && !Item::items[i])
-			Item::items[i] = new TileItem(i - C_MAX_TILES);
+			Item::items[i] = new AuxDataTileItem(i - C_MAX_TILES);
 	}
 }
 
@@ -1150,6 +1205,9 @@ Tile
 	*Tile::ice,
 	*Tile::snow,
 	*Tile::clay,
+	*Tile::workbench,
+	*Tile::furnace,
+	*Tile::wheat,
 	*Tile::farmland,
 	*Tile::stoneSlab,
 	*Tile::stoneSlabHalf,
@@ -1208,5 +1266,9 @@ Tile
 	*Tile::lapisBlock,
 	*Tile::bookshelf,
 	*Tile::mossStone,
+	*Tile::hardened_clay,
+	*Tile::stained_hardened_clay,
+	*Tile::cactus,
 	*Tile::cryingObsidian,
+	*Tile::shortgrass,
 	*Tile::rocketLauncher;

@@ -29,24 +29,17 @@ Vec3 Dimension::getFogColor(float a, float b)
 	float x1 = cosf(a * M_PI * 2.0f);
 	float x2 = x1 * 2 + 0.5f;
 
-	if (x2 < 0.0f)
-		return Vec3(0.045176f, 0.050824f, 0.09f);
+	//if (x2 < 0.0f)
+	//	return Vec3(0.045176f, 0.050824f, 0.09f);
+
+	x2 = Mth::clamp(x2, 0.0f, 1.0f);
 
 	Vec3 v;
-	v.z = 1;
 
-	if (x2 <= 1.0f)
-	{
-		float p = (x2 * 0.94f) + 0.06f;
-		v.x = p * 0.75294f;
-		v.y = p * 0.84706f;
-		v.z = (x2 * 0.91f) + 0.09f;
-	}
-	else
-	{
-		v.x = 0.75294f;
-		v.y = 0.84706f;
-	}
+	float p = (x2 * 0.94f) + 0.06f;
+	v.x = p * 0.5019608f;
+	v.y = p * 0.85490197;
+	v.z = p;
 
 	return v;
 }
@@ -66,6 +59,8 @@ float* Dimension::getSunriseColor(float a, float b)
 		m_sunriseColor[1] = norm * norm * 0.7f + 0.2f;
 		m_sunriseColor[2] = norm * norm * 0.0f + 0.2f;
 		m_sunriseColor[3] = alpha * alpha;
+
+	//	printf("sunriseColor: %f, %f, %f, %f\n", m_sunriseColor[0], m_sunriseColor[1], m_sunriseColor[2], m_sunriseColor[3]);
 
 		return m_sunriseColor;
 	}

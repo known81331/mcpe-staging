@@ -8,6 +8,7 @@
 
 #include "TopSnowTile.hpp"
 #include "world/level/Level.hpp"
+#include "world/entity/FallingTile.hpp"
 
 TopSnowTile::TopSnowTile(int a, int b, Material* c) : Tile(a, b, c)
 {
@@ -40,6 +41,63 @@ int TopSnowTile::getResourceCount(Random* random) const
 	return 0;
 }
 
+
+bool TopSnowTile::isFree(Level* level, const TilePos& pos)
+{
+	TileID tile = level->getTile(pos);
+	if (!tile)
+		return true;
+
+	if (tile == Tile::fire->m_ID)
+		return true;
+
+	if (Tile::tiles[tile]->m_pMaterial == Material::water)
+		return true;
+
+	if (Tile::tiles[tile]->m_pMaterial == Material::lava)
+		return true;
+
+	return false;
+}
+
+
+
+void TopSnowTile::checkSlide(Level* level, const TilePos& pos)
+{
+	//TileID tile = level->getTile(pos.below());
+
+	if (!isFree(level, pos.below()))
+		// standing on something, don't fall
+		return;
+
+	if (pos.y <= 0)
+		return;
+
+	if (!level->hasChunksAt(TilePos(pos.x - 32, pos.y - 32, pos.z - 32), TilePos(pos.x + 32, pos.y + 32, pos.z + 32)))
+	{
+		level->setTile(pos, 0);
+
+		int y2;
+		for (y2 = pos.y - 1; y2 >= 0; y2--)
+		{
+			if (!isFree(level, TilePos(pos.x, y2, pos.z)))
+				break;
+		}
+
+		if (y2 > -1)
+			level->setTile(TilePos(pos.x, y2 + 1, pos.z), m_ID);
+	}
+	else
+	{
+		// The original code attempts to spawn a falling tile entity, but it fails since it's not a player.
+		// The falling sand tile
+#if defined(ORIGINAL_CODE) || defined(ENH_ALLOW_SAND_GRAVITY)
+		level->addEntity(new FallingTile(level, Vec3(float(pos.x) + 0.5f, float(pos.y) + 0.5f, float(pos.z) + 0.5f), m_ID));
+#endif
+	}
+}
+
+
 bool TopSnowTile::mayPlace(const Level* level, const TilePos& pos) const
 {
 	TileID tile = level->getTile(pos.below());
@@ -62,6 +120,7 @@ bool TopSnowTile::checkCanSurvive(Level* level, const TilePos& pos)
 
 void TopSnowTile::neighborChanged(Level* level, const TilePos& pos, TileID tile)
 {
+	checkSlide(level, pos);
 	checkCanSurvive(level, pos);
 }
 

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "raknet",
+		"source" : "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet"
+	}
+}

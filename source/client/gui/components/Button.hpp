@@ -27,7 +27,7 @@ public:
 	int  getYImage(bool bHovered);
 	void released(int xPos, int yPos);
 	void renderBg(Minecraft*, int, int);
-	void render(Minecraft*, int xPos, int yPos);
+	virtual void render(Minecraft*, int xPos, int yPos);
 
 public:
 	int m_width;
@@ -39,6 +39,7 @@ public:
 	bool m_bEnabled;
 	bool m_bVisible;
 	bool field_36;
+	bool m_bHoverable;
 
 #ifndef ORIGINAL_CODE
 	int m_lastX;

@@ -46,6 +46,7 @@ public:
 	bool tesselateLadderInWorld(Tile*, const TilePos& pos);
 	bool tesselateTorchInWorld(Tile*, const TilePos& pos);
 	bool tesselateDoorInWorld(Tile*, const TilePos& pos);
+	bool tesselateCactusInWorld(Tile*, const TilePos& pos);
 #ifndef ORIGINAL_CODE
 	bool tesselateFireInWorld(Tile*, const TilePos& pos);
 #endif

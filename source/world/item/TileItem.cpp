@@ -53,6 +53,8 @@ bool TileItem::useOn(ItemInstance* instance, Player* player, Level* level, const
 
 	Tile* pTile = Tile::tiles[m_tile];
 
+	printf("%d %d\n", instance->getAuxValue(), getLevelDataForAuxValue(instance->getAuxValue()));
+
 	if (!level->setTileAndData(tp, m_tile, getLevelDataForAuxValue(instance->getAuxValue())))
 		return true;
 

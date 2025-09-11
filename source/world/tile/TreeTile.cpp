@@ -31,15 +31,36 @@ int TreeTile::getSpawnResourcesAuxValue(int x) const
 
 int TreeTile::getTexture(Facing::Name face, int data) const
 {
-	if (face == Facing::UP || face == Facing::DOWN)
+	if (face == Facing::UP || face == Facing::DOWN) {
+		switch (data)
+		{
+		case 1:
+			return TEXTURE_LOG_SPRUCE_TOP;
+		case 2:
+			return TEXTURE_LOG_BIRCH_TOP;
+		case 3:
+			return TEXTURE_LOG_JUNGLE_TOP;
+		case 4:
+			return TEXTURE_LOG_ACACIA_TOP;
+		case 5:
+			return TEXTURE_LOG_DARK_OAK_TOP;
+		}
+
 		return TEXTURE_LOG_TOP;
+	}
 
 	switch (data)
 	{
 	case 1:
-		return TEXTURE_LOG_SPRUCE;
+		return TEXTURE_LOG_SPRUCE_SIDE;
 	case 2:
-		return TEXTURE_LOG_BIRCH;
+		return TEXTURE_LOG_BIRCH_SIDE;
+	case 3:
+		return TEXTURE_LOG_JUNGLE_SIDE;
+	case 4:
+		return TEXTURE_LOG_ACACIA_SIDE;
+	case 5:
+		return TEXTURE_LOG_DARK_OAK_SIDE;
 	}
 
 	return TEXTURE_LOG_SIDE;

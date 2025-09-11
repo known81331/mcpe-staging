@@ -25,5 +25,8 @@ public:
 	bool shouldRenderFace(const LevelSource*, const TilePos& pos, Facing::Name face) const override;
 	void tick(Level*, const TilePos& pos, Random*) override;
 
+	void checkSlide(Level* level, const TilePos& pos);
+	static bool isFree(Level* level, const TilePos& pos);
+
 	bool checkCanSurvive(Level*, const TilePos& pos);
 };

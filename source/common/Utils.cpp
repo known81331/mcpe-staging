@@ -165,12 +165,12 @@ bool DeleteDirectory(const std::string& name2, bool unused)
 
 const char* GetTerrainName()
 {
-	return "terrain.png";
+	return "terrain-atlas.tga";
 }
 
 const char* GetItemsName()
 {
-	return "gui/items.png";
+	return "items-opaque.png";
 }
 
 const char* GetGUIBlocksName()

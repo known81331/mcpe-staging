@@ -7,6 +7,7 @@
  ********************************************************************/
 
 #include "IngameBlockSelectionScreen.hpp"
+#include "PaneCraftingScreen.hpp"
 #include "PauseScreen.hpp"
 #include "client/app/Minecraft.hpp"
 #include "client/renderer/entity/ItemRenderer.hpp"
@@ -14,7 +15,9 @@
 std::string g_sNotAvailableInDemoVersion = "Not available in the demo version";
 
 IngameBlockSelectionScreen::IngameBlockSelectionScreen() :
-	m_btnPause(0, "Pause")
+	m_btnPause(0, "Pause"),
+	m_btnArmor(1, "Armor"),
+	m_btnCrafting(2, "Craft")
 {
 	m_selectedSlot = 0;
 }
@@ -43,10 +46,10 @@ int IngameBlockSelectionScreen::getSelectedSlot(int x, int y)
 		return -1;
 
 	int idx = (x - left) / 20;
-	if (idx > 8)
+	if (idx > 17)
 		return -1;
 
-	return idx + 9 * slotsHeight - 9 * ((y - top) / 22);
+	return idx + 18 * slotsHeight - 18 * ((y - top) / 22);
 }
 
 int IngameBlockSelectionScreen::getSlotPosX(int x)
@@ -61,8 +64,9 @@ int IngameBlockSelectionScreen::getSlotPosY(int y)
 
 int IngameBlockSelectionScreen::getSlotsHeight()
 {
-	return (getInventory()->getNumSlots() + 8) / 9;
+	return (getInventory()->getNumSlots() + 8) / 19 + 1;
 }
+
 
 bool IngameBlockSelectionScreen::isAllowed(int slot)
 {
@@ -71,14 +75,26 @@ bool IngameBlockSelectionScreen::isAllowed(int slot)
 
 void IngameBlockSelectionScreen::init()
 {
-	m_btnPause.m_width = 40;
-	m_btnPause.m_xPos = 0;
+	
+	m_btnCrafting.m_width = 40;
+	m_btnCrafting.m_xPos = 0; //m_pMinecraft->width-40;
+	m_btnCrafting.m_yPos = 0;
+
+	m_btnArmor.m_width = 40;
+	m_btnArmor.m_xPos = 40; //m_pMinecraft->width-80;
+	m_btnArmor.m_yPos = 0;
+
+	m_btnPause.m_width = m_btnPause.m_height = 19;
+	m_btnPause.m_xPos = m_width-19;
 	m_btnPause.m_yPos = 0;
 #if TARGET_OS_IPHONE != 0
 	if (m_pMinecraft->isTouchscreen())
 		m_buttons.push_back(&m_btnPause);
 #endif
 	
+	m_buttons.push_back(&m_btnCrafting);
+	m_buttons.push_back(&m_btnArmor);
+
 	Inventory* pInv = getInventory();
 
 	int nItems = pInv->getNumItems();
@@ -112,16 +128,18 @@ void IngameBlockSelectionScreen::renderSlots()
 	glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
 	m_pMinecraft->m_pTextures->loadAndBindTexture("gui/gui.png");
 
-	for (int y = 0; y != -22 * getSlotsHeight(); y -= 22)
+	for (int y = 0; y != -22 * getSlotsHeight(); y -= 22) {
 		blit(m_width / 2 - 182 / 2, m_height - 3 - getBottomY() + y, 0, 0, 182, 22, 0, 0);
+		blit(m_width / 2 + 89, m_height - 3 - getBottomY() + y, 0, 0, 182, 22, 0, 0);
+	}
 
 	if (m_selectedSlot >= 0)
-		blit(m_width / 2 - 92 + 20 * (m_selectedSlot % 9), m_height - 4 - getBottomY() - 22 * (m_selectedSlot / 9), 0, 22, 24, 22, 0, 0);
+		blit(m_width / 2 - 92 + 20 * (m_selectedSlot % 18), m_height - 4 - getBottomY() - 22 * (m_selectedSlot / 18), 0, 22, 24, 22, 0, 0);
 
 	for (int y = 0, index = 0; y < getSlotsHeight(); y++)
 	{
 		int posY = getSlotPosY(y);
-		for (int x = 0; x < 9; x++)
+		for (int x = 0; x < 18; x++)
 		{
 			int posX = getSlotPosX(x);
 			renderSlot(index++, posX, posY, 0.0f);
@@ -160,6 +178,10 @@ void IngameBlockSelectionScreen::buttonClicked(Button* pButton)
 {
 	if (pButton->m_buttonId == m_btnPause.m_buttonId)
 		m_pMinecraft->setScreen(new PauseScreen);
+
+
+	if (pButton->m_buttonId == m_btnCrafting.m_buttonId)
+		m_pMinecraft->setScreen(new PaneCraftingScreen);
 }
 
 void IngameBlockSelectionScreen::mouseClicked(int x, int y, int type)

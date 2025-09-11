@@ -1,0 +1,139 @@
+/********************************************************************
+	Minecraft: Pocket Edition - Decompilation Project
+	Copyright (C) 2023 iProgramInCpp
+	
+	The following code is licensed under the BSD 1 clause license.
+	SPDX-License-Identifier: BSD-1-Clause
+ ********************************************************************/
+
+#include "CactusTile.hpp"
+#include "world/level/Level.hpp"
+#include "world/entity/FallingTile.hpp"
+
+CactusTile::CactusTile(int a, int b, Material* c) : Tile(a, b, c)
+{
+	setShape(0.125, 0, 0.125, 0.875, 0.9375f, 0.875);
+	setTicking(true);
+}
+
+int CactusTile::getRenderShape() const
+{
+	return SHAPE_CACTUS;
+}
+
+AABB* CactusTile::getAABB(const Level* lvl, const TilePos& pos)
+{
+	return Tile::getAABB(lvl, pos); //&m_aabb;
+}
+
+bool CactusTile::isCubeShaped() const
+{
+	return false;
+}
+
+bool CactusTile::isSolidRender() const
+{
+	return false;
+}
+
+int CactusTile::getResource(int x, Random* random) const
+{
+	return m_ID;
+}
+
+int CactusTile::getResourceCount(Random* random) const
+{
+	return 1;
+}
+
+
+int CactusTile::getTexture(Facing::Name face, int data) const
+{
+	if (face == Facing::UP)
+		return TEXTURE_CACTUS_TOP;
+	if (face == Facing::DOWN)
+		return TEXTURE_CACTUS_BOTTOM;
+
+	return TEXTURE_CACTUS_SIDE;
+}
+	
+
+
+bool CactusTile::isFree(Level* level, const TilePos& pos)
+{
+	TileID tile = level->getTile(pos);
+	if (!tile)
+		return true;
+
+	if (tile == Tile::fire->m_ID)
+		return true;
+
+	if (Tile::tiles[tile]->m_pMaterial == Material::water)
+		return true;
+
+	if (Tile::tiles[tile]->m_pMaterial == Material::lava)
+		return true;
+
+	return false;
+}
+
+
+bool CactusTile::mayPlace(const Level* level, const TilePos& pos) const
+{
+	TileID tile = level->getTile(pos.below());
+
+	if (!tile || !Tile::tiles[tile]->isSolidRender() && Tile::tiles[tile]->m_ID != m_ID)
+		return false;
+
+	
+	tile = level->getTile(pos.east());
+	if (tile)
+		return false;
+	tile = level->getTile(pos.west());
+	if (tile)
+		return false;
+	tile = level->getTile(pos.south());
+	if (tile)
+		return false;
+	tile = level->getTile(pos.north());
+	if (tile)
+		return false;
+
+	return level->getMaterial(pos.below())->blocksMotion();
+}
+
+bool CactusTile::checkCanSurvive(Level* level, const TilePos& pos)
+{
+	if (mayPlace(level, pos))
+		return true;
+
+	spawnResources(level, pos, level->getData(pos));
+	level->setTile(pos, TILE_AIR);
+	return false;
+}
+
+void CactusTile::neighborChanged(Level* level, const TilePos& pos, TileID tile)
+{
+	checkCanSurvive(level, pos);
+}
+
+bool CactusTile::shouldRenderFace(const LevelSource* level, const TilePos& pos, Facing::Name face) const
+{
+	if (face == Facing::UP)
+		return true;
+
+	if (level->getMaterial(pos) == m_pMaterial)
+		return false;
+
+	return Tile::shouldRenderFace(level, pos, face);
+}
+
+void CactusTile::tick(Level* level, const TilePos& pos, Random* random)
+{
+	checkCanSurvive(level, pos);
+	if (level->getBrightness(LightLayer::Block, pos) > 11)
+	{
+		spawnResources(level, pos, level->getData(pos));
+		level->setTile(pos, TILE_AIR);
+	}
+}

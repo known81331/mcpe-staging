@@ -180,11 +180,11 @@ void Gui::render(float f, bool bHaveScreen, int mouseX, int mouseY)
 		//renderPumpkin(width, height);
 	}
 
-#ifndef ENH_TRANSPARENT_HOTBAR
+//#ifndef ENH_TRANSPARENT_HOTBAR
 	glColor4f(1.0f, 1.0f, 1.0f, 0.5f);
-#else
-	glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
-#endif
+//#else
+	//glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+//#endif
 
 	Textures* textures = mc->m_pTextures;
 
@@ -192,21 +192,34 @@ void Gui::render(float f, bool bHaveScreen, int mouseX, int mouseY)
 
 	field_4 = -90.0f;
 
-#ifdef ENH_TRANSPARENT_HOTBAR
+//#ifdef ENH_TRANSPARENT_HOTBAR
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-#endif
+//#endif
+
+	// chat
+	blit(width - 18, 0, 200, 82, 18, 18, 18, 18); // chat
 
 	int nSlots = getNumSlots();
 	int hotbarWidth = 2 + nSlots * 20;
 
 	// hotbar
 	int cenX = width / 2;
-	blit(cenX - hotbarWidth / 2, height - 22, 0, 0, hotbarWidth, 22, 0, 0);
+	blit(cenX - hotbarWidth / 2, height - 22, 0, 0, hotbarWidth-2, 22, 0, 0);
+	blit(cenX + hotbarWidth / 2 -2, height - 22, 180, 0, 2, 22, 0, 0);
 
 	Inventory* inventory = player->m_pInventory;
 
+	glColor4f(1.0f, 1.0f, 1.0f, 1.f);
+
 	// selection mark
 	blit(cenX - 1 - hotbarWidth / 2 + 20 * inventory->m_selectedHotbarSlot, height - 23, 0, 22, 24, 22, 0, 0);
+
+	if (inventory) {
+		ItemInstance* item = inventory->getSelectedItem();
+		std::string str = item ? item->getItem()->getName() : "EMPTY";
+		m_pMinecraft->m_pFont->drawShadow(str, cenX - m_pMinecraft->m_pFont->width(str) / 2, height-40, 0xFFFFFFFF);
+	}
+
 
 	textures->loadAndBindTexture("gui/icons.png");
 
@@ -360,9 +373,9 @@ void Gui::render(float f, bool bHaveScreen, int mouseX, int mouseY)
 		}
 	}
 
-	textures->loadAndBindTexture("gui/gui_blocks.png");
+	textures->loadAndBindTexture("gui/gui.png");
 
-	int diff = mc->isTouchscreen();
+	int diff = 1; //mc->isTouchscreen();
 
 	int slotX = cenX - hotbarWidth / 2 + 3;
 	for (int i = 0; i < nSlots - diff; i++)
@@ -385,10 +398,10 @@ void Gui::render(float f, bool bHaveScreen, int mouseX, int mouseY)
 	field_A3C = false;
 
 	// blit the "more items" button
-	if (mc->isTouchscreen())
+	//if (mc->isTouchscreen())
 	{
-		textures->loadAndBindTexture(C_TERRAIN_NAME);
-		blit(cenX + hotbarWidth / 2 - 19, height - 19, 208, 208, 16, 16, 0, 0);
+		textures->loadAndBindTexture("gui/gui.png");
+		blit(cenX + hotbarWidth / 2 - 19 + 1, height - 19 + 6, 228, 248, 14, 4, 28, 8);
 	}
 
 	// render messages
@@ -431,6 +444,7 @@ void Gui::renderSlot(int slot, int x, int y, float f)
     }
 
     ItemRenderer::renderGuiItem(m_pMinecraft->m_pFont, m_pMinecraft->m_pTextures, pInst, x, y, true);
+
     if (var6 > 0.0f)
         glPopMatrix();
 
@@ -559,9 +573,9 @@ void Gui::renderMessages(bool bShowAll)
 	//int width = Minecraft::width * InvGuiScale,
 	int height = int(ceilf(Minecraft::height * InvGuiScale));
 
-	int topEdge = height - 49;
+	int topEdge = 49;
 
-	for (int i = 0; i < int(m_guiMessages.size()); i++)
+	for (int i = int(m_guiMessages.size())-1; i >= 0; i--)
 	{
 		GuiMessage& msg = m_guiMessages[i];
 		if (!bShowAll && msg.field_18 > 199)
@@ -592,7 +606,7 @@ void Gui::renderMessages(bool bShowAll)
 		glEnable(GL_BLEND);
 		m_pMinecraft->m_pFont->drawShadow(msg.msg, 2, topEdge + 1, textColor);
 
-		topEdge -= 9;
+		topEdge += 9;
 	}
 
 	glDisable(GL_BLEND);
@@ -608,7 +622,7 @@ int Gui::getNumSlots()
 
 int Gui::getNumUsableSlots()
 {
-	return getNumSlots() - m_pMinecraft->isTouchscreen();
+	return getNumSlots() - 1 ; //- m_pMinecraft->isTouchscreen();
 }
 
 RectangleArea Gui::getRectangleArea(bool b)

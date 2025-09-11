@@ -18,9 +18,9 @@ int SandStoneTile::getTexture(Facing::Name face) const
 	switch (face)
 	{
 	case Facing::DOWN:
-		return TEXTURE_SANDSTONE_BOTTOM;
+		return TEXTURE_BRICK_SAND_5;
 	case Facing::UP:
-		return TEXTURE_SANDSTONE_TOP;
+		return TEXTURE_BRICK_SAND_4;
 	}
 
 	return m_TextureFrame;

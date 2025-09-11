@@ -74,7 +74,7 @@ LevelChunk::LevelChunk(Level* pLevel, TileID* pData, const ChunkPos& pos)
 	// I have not the slightest idea as to why...
 	/*if (pData)
 	{*/
-	m_tileDataCnt = 0x4000;
+	m_tileDataCnt = 0x8000;
 	field_4 = 0x8000;
 	m_tileData = new uint8_t[m_tileDataCnt];
 	memset(m_tileData, 0, m_tileDataCnt);
@@ -621,10 +621,12 @@ bool LevelChunk::setTile(const ChunkTilePos& pos, TileID tile)
 	}
 
 	// clear the data value of the block
-	if (index & 1)
-		m_tileData[index >> 1] &= 0xF;
-	else
-		m_tileData[index >> 1] &= 0xF0;
+	//if (index & 1)
+	//	m_tileData[index >> 1] &= 0xF;
+	//else
+	//	m_tileData[index >> 1] &= 0xF0;
+
+	m_tileData[index] = 0;
 
 	if (Tile::lightBlock[tile])
 	{
@@ -656,8 +658,8 @@ bool LevelChunk::setTileAndData(const ChunkTilePos& pos, TileID tile, int data)
 {
 	CheckPosition(pos);
 
-	assert((data & ~0xF) == 0);
-	data &= 0xF;
+	assert((data & ~0xFF) == 0);
+	data &= 0xFF;
 
 	int index = MakeBlockDataIndex(pos);
 
@@ -682,10 +684,12 @@ bool LevelChunk::setTileAndData(const ChunkTilePos& pos, TileID tile, int data)
 	}
 
 	// update the data value of the block
-	if (index & 1)
-		m_tileData[index >> 1] = (m_tileData[index >> 1] & 0x0F) | (data << 4);
-	else
-		m_tileData[index >> 1] = (m_tileData[index >> 1] & 0xF0) | (data);
+	//if (index & 1)
+	//	m_tileData[index >> 1] = (m_tileData[index >> 1] & 0x0F) | (data << 4);
+	//else
+	//	m_tileData[index >> 1] = (m_tileData[index >> 1] & 0xF0) | (data);
+
+	m_tileData[index] = data;
 
 	if (m_pLevel->m_pDimension->field_E)
 	{
@@ -725,26 +729,33 @@ int LevelChunk::getData(const ChunkTilePos& pos)
 
 	int index = MakeBlockDataIndex(pos);
 
-	uint8_t data = m_tileData[index >> 1];
-	if (index & 1)
-		return data >> 4;
-	return data & 0xF;
+	//uint8_t data = m_tileData[index >> 1];
+	//if (index & 1)
+	//	return data >> 4;
+	//return data & 0xF;
+
+
+	uint8_t data = m_tileData[index];
+	return data;
 }
 
 void LevelChunk::setData(const ChunkTilePos& pos, int data)
 {
 	CheckPosition(pos);
 
-	assert((data & ~0xF) == 0);
-	data &= 0xF;
+	assert((data & ~0xFF) == 0);
+	//data &= 0xFF;
 
 	int index = MakeBlockDataIndex(pos);
 
-	uint8_t& xdata = m_tileData[index >> 1];
-	if (index & 1)
-		xdata = (xdata & 0x0F) | (data << 4);
-	else
-		xdata = (xdata & 0xF0) | (data);
+	uint8_t& xdata = m_tileData[index];
+	//uint8_t& xdata = m_tileData[index>>1];
+	//if (index & 1)
+	//	xdata = (xdata & 0x0F) | (data << 4);
+	//else
+	//	xdata = (xdata & 0xF0) | (data);
+
+	xdata = data & 0xFF;
 }
 
 // seems to set block data in 8192 block (4*16*128) chunks for some reason ?
@@ -823,7 +834,7 @@ int LevelChunk::setBlocksAndData(uint8_t* pData, int a3, int a4, int a5, int a6,
 
 		for (int x3 = a5; x3 < a8; x3++)
 		{
-			uint8_t* dst = &m_tileData[MakeBlockDataIndex(ChunkTilePos(x1, a4, x3)) >> 1];
+			uint8_t* dst = &m_tileData[MakeBlockDataIndex(ChunkTilePos(x1, a4, x3))];
 			memcpy(dst, src, x5);
 			src += x5;
 			a9 += x5;
@@ -904,7 +915,7 @@ int LevelChunk::getBlocksAndData(uint8_t* pData, int a3, int a4, int a5, int a6,
 
 		for (int x3 = a5; x3 < a8; x3++)
 		{
-			uint8_t* src = &m_tileData[MakeBlockDataIndex(ChunkTilePos(x1, a4, x3)) >> 1];
+			uint8_t* src = &m_tileData[MakeBlockDataIndex(ChunkTilePos(x1, a4, x3))];
 			memcpy(dst, src, x5);
 			dst += x5;
 			a9 += x5;

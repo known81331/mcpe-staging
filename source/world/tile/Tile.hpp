@@ -214,6 +214,13 @@ public: // static variables
 		* door_iron,
 		* info_updateGame1,
 		* info_updateGame2,
+		* workbench,
+		* furnace,
+		* wheat,
+		* cactus,
+		* shortgrass,
+		* hardened_clay,
+		* stained_hardened_clay,
 		// custom additions here
 		* sapling,
 		* sponge,
