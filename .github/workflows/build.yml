@@ -25,18 +25,6 @@ jobs:
                 gcc-aarch64-linux-gnu g++-aarch64-linux-gnu \
                 libopenal-dev libsdl2-dev zlib1g-dev
     
-          - name: Configure (ARMv7 / Raspberry Pi OS 32-bit)
-            run: |
-              mkdir build-armhf
-              cd build-armhf
-              cmake -GNinja \
-                -DCMAKE_SYSTEM_NAME=Linux \
-                -DCMAKE_SYSTEM_PROCESSOR=arm \
-                -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc \
-                -DCMAKE_CXX_COMPILER=arm-linux-gnueabihf-g++ \
-                ..
-              cmake --build .
-    
           - name: Configure (ARM64 / Raspberry Pi OS 64-bit)
             run: |
               mkdir build-arm64
