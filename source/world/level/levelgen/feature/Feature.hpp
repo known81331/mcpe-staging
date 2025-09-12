@@ -55,6 +55,16 @@ private:
 	int m_ID;
 };
 
+class GrassFeature : public Feature
+{
+public:
+	GrassFeature(int id);
+	bool place(Level*, Random*, const TilePos& pos) override;
+
+private:
+	int m_ID;
+};
+
 class SpringFeature : public Feature
 {
 public:

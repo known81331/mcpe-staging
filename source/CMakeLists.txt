@@ -254,6 +254,7 @@ add_library(reminecraftpe-core STATIC
     world/level/levelgen/feature/OreFeature.cpp
     world/level/levelgen/feature/ClayFeature.cpp
     world/level/levelgen/feature/FlowerFeature.cpp
+    world/level/levelgen/feature/GrassFeature.cpp
     world/level/levelgen/feature/SpruceFeature.cpp
     world/level/levelgen/biome/Biome.cpp
     world/level/levelgen/biome/BiomeSource.cpp

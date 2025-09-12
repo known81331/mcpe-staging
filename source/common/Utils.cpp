@@ -37,7 +37,7 @@
 
 int g_TimeSecondsOnInit = 0;
 
-#if (!defined(USE_SDL) || defined(_WIN32)) && !defined(ANDROID) && !MC_PLATFORM_MAC
+#if !__APPLE__ && (!defined(USE_SDL) || defined(_WIN32)) && !defined(ANDROID) && !MC_PLATFORM_MAC
 
 DIR* opendir(const char* name)
 {

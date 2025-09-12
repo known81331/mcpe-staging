@@ -499,6 +499,16 @@ void RandomLevelSource::postProcess(ChunkSource* src, const ChunkPos& pos)
 		FlowerFeature(Tile::flower->m_ID).place(m_pLevel, &m_random, TilePos(tp.x + 8 + xo, yo, tp.z + 8 + zo));
 	}
 
+	for (int i = 0; i < 25+treeCount*2; i++)
+
+	//if (m_random.nextInt(3) == 0)
+	{
+		int xo = m_random.nextInt(32);
+		int yo = m_random.nextInt(128);
+		int zo = m_random.nextInt(32);
+		GrassFeature(Tile::shortgrass->m_ID).place(m_pLevel, &m_random, TilePos(tp.x + 8 + xo, yo, tp.z + 8 + zo));
+	}
+
 	if (m_random.nextInt(2) == 0)
 	{
 		int xo = m_random.nextInt(16);

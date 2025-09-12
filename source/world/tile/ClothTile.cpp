@@ -11,7 +11,6 @@
 
 ClothTile::ClothTile(int id, int type) : Tile(id, TEXTURE_CLOTH_RED, Material::cloth)
 {
-	field_6C = type;
 
 	//m_TextureFrame = getTexture(Facing::DOWN, type);
 

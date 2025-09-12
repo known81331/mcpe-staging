@@ -114,7 +114,7 @@ int StairTile::getTexture(Facing::Name face, int b) const
 		{
 			case 0:
 				return TEXTURE_PLANKS;
-			case 1:
+			case 5:
 				return TEXTURE_PLANKS_SPRUCE;
 			case 2:
 				return TEXTURE_PLANKS_BIRCH;
@@ -122,7 +122,7 @@ int StairTile::getTexture(Facing::Name face, int b) const
 				return TEXTURE_PLANKS_JUNGLE;
 			case 4:
 				return TEXTURE_PLANKS_ACACIA;
-			case 5:
+			case 1:
 				return TEXTURE_PLANKS_DARK_OAK;
 		}
 	}
@@ -157,48 +157,8 @@ int StairTile::getTexture(const LevelSource* level, const TilePos& pos, Facing::
 {
 	int b = (level->getData(pos) >> 4) & 0x0F;
 	
-	if (m_ID == TILE_STAIRS_WOOD) {
-		switch (b)
-		{
-			case 0:
-				return TEXTURE_PLANKS;
-			case 1:
-				return TEXTURE_PLANKS_SPRUCE;
-			case 2:
-				return TEXTURE_PLANKS_BIRCH;
-			case 3:
-				return TEXTURE_PLANKS_JUNGLE;
-			case 4:
-				return TEXTURE_PLANKS_ACACIA;
-			case 5:
-				return TEXTURE_PLANKS_DARK_OAK;
-		}
-	}
-	else if (m_ID == TILE_STAIRS_STONE) {
-		switch (b)
-		{
-			case 0:
-				return TEXTURE_STONEBRICK;
-			case 1:
-				return TEXTURE_MOSSY_STONE;
-			case 2:
-				return TEXTURE_BRICK_STONE_1;
-			case 3:
-				return TEXTURE_BRICK_STONE_2;
-			case 4:
-				return TEXTURE_BRICK_STONE_3;
-			case 5:
-				return TEXTURE_BRICKS;
-			case 6:
-				return TEXTURE_SANDSTONE_BOTTOM;
-			case 7:
-				return TEXTURE_SANDSTONE_TOP;
-			case 8:
-				return TEXTURE_SANDSTONE_SIDE;
-
-		}
-	}
-	return m_pParent->getTexture(level, pos, face);
+	return getTexture(face, b);
+	//return m_pParent->getTexture(level, pos, face);
 }
 
 AABB StairTile::getTileAABB(const Level* level, const TilePos& pos)

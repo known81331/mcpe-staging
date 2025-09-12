@@ -48,12 +48,12 @@ bool TileItem::useOn(ItemInstance* instance, Player* player, Level* level, const
 	if (!instance->m_count)
 		return false;
 
+		printf("%d %d %d\n", tp.x, tp.y, tp.z);
 	if (!level->mayPlace(m_tile, tp, false))
 		return false;
 
 	Tile* pTile = Tile::tiles[m_tile];
-
-	printf("%d %d\n", instance->getAuxValue(), getLevelDataForAuxValue(instance->getAuxValue()));
+	
 
 	if (!level->setTileAndData(tp, m_tile, getLevelDataForAuxValue(instance->getAuxValue())))
 		return true;

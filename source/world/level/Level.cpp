@@ -1390,6 +1390,9 @@ bool Level::mayPlace(TileID tile, const TilePos& pos, bool b) const
 	if (pOldTile || tile <= 0)
 		return false;
 
+	if (pos.y < 0 || pos.y >= C_MAX_Y)
+		return false;
+
 	return pTile->mayPlace(this, pos);
 }
 

@@ -189,13 +189,5 @@ std::string AppPlatform_iOS::getAssetPath(const std::string &path) const
 
 std::string AppPlatform_iOS::getPatchData()
 {
-	std::ifstream ifs(getAssetPath("patches/patch_data.txt").c_str());
-	if (!ifs.is_open())
-		return "";
-	
-	std::stringstream ss;
-	ss << ifs.rdbuf();
-	ifs.close();
-	
-	return ss.str();
+    return "";
 }

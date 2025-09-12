@@ -80,26 +80,18 @@ bool CactusTile::isFree(Level* level, const TilePos& pos)
 
 bool CactusTile::mayPlace(const Level* level, const TilePos& pos) const
 {
+	if (level->getMaterial(pos.relative(Facing::NORTH))->isSolid())
+		return false;
+	if (level->getMaterial(pos.relative(Facing::SOUTH))->isSolid())
+		return false;
+	if (level->getMaterial(pos.relative(Facing::EAST))->isSolid())
+		return false;
+	if (level->getMaterial(pos.relative(Facing::WEST))->isSolid())
+		return false;
+
 	TileID tile = level->getTile(pos.below());
 
-	if (!tile || !Tile::tiles[tile]->isSolidRender() && Tile::tiles[tile]->m_ID != m_ID)
-		return false;
-
-	
-	tile = level->getTile(pos.east());
-	if (tile)
-		return false;
-	tile = level->getTile(pos.west());
-	if (tile)
-		return false;
-	tile = level->getTile(pos.south());
-	if (tile)
-		return false;
-	tile = level->getTile(pos.north());
-	if (tile)
-		return false;
-
-	return level->getMaterial(pos.below())->blocksMotion();
+	return Tile::mayPlace(level, pos) && (tile == Tile::sand->m_ID || tile == m_ID);
 }
 
 bool CactusTile::checkCanSurvive(Level* level, const TilePos& pos)

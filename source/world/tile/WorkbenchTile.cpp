@@ -46,8 +46,17 @@ int WorkbenchTile::getResourceCount(Random* random) const
 
 int WorkbenchTile::use(Level* level, const TilePos& pos, Player* player)
 {
-	if (player) {
+	if (player->isSneaking() && player->getSelectedItem())
+	{
+		return false;
 	}
-
-
+	if (level->m_bIsOnline) 
+	{
+		return true;
+	}
+	else 
+	{
+		player->startCrafting(pos);
+		return true;
+	}
 }

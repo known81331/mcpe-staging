@@ -1471,6 +1471,12 @@
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/. -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/.. -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/GrassFeature.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/world/level/levelgen/feature/GrassFeature.cpp",
+  "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/world/level/levelgen/feature/GrassFeature.cpp",
+  "output": "CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/GrassFeature.cpp.o"
+},
+{
+  "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
   "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/. -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/.. -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/SpruceFeature.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/world/level/levelgen/feature/SpruceFeature.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/world/level/levelgen/feature/SpruceFeature.cpp",
   "output": "CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/SpruceFeature.cpp.o"

@@ -417,7 +417,7 @@ void Tile::initTiles()
 		->setSoundType(Tile::SOUND_GRASS)
 		->setDescriptionId("flower");
 
-	Tile::shortgrass = (new Bush(TILE_SHORTGRASS, TEXTURE_GRASS))
+	Tile::shortgrass = (new Bush(TILE_SHORTGRASS, TEXTURE_GRASS_GENERIC))
 		->init()
 		->setDestroyTime(0.0f)
 		->setSoundType(Tile::SOUND_GRASS)
@@ -683,99 +683,6 @@ void Tile::initTiles()
 		->setSoundType(Tile::SOUND_WOOD)  // @NOTE: Setting fire's sound to Wood
 		->setDescriptionId("fire");
 	
-
-	// @TODO: Remove these in favor of what can be found below in 0.2.1
-
-	Tile::cloth_00 = (new ClothTile(TILE_CLOTH_00, 15))
-		->init()
-		->setDestroyTime(0.8f)
-		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("cloth");
-
-	Tile::cloth_10 = (new ClothTile(TILE_CLOTH_10, 14))
-		->init()
-		->setDestroyTime(0.8f)
-		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("cloth");
-
-	Tile::cloth_20 = (new ClothTile(TILE_CLOTH_20, 13))
-		->init()
-		->setDestroyTime(0.8f)
-		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("cloth");
-
-	Tile::cloth_30 = (new ClothTile(TILE_CLOTH_30, 12))
-		->init()
-		->setDestroyTime(0.8f)
-		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("cloth");
-
-	Tile::cloth_40 = (new ClothTile(TILE_CLOTH_40, 11))
-		->init()
-		->setDestroyTime(0.8f)
-		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("cloth");
-
-	Tile::cloth_50 = (new ClothTile(TILE_CLOTH_50, 10))
-		->init()
-		->setDestroyTime(0.8f)
-		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("cloth");
-
-	Tile::cloth_60 = (new ClothTile(TILE_CLOTH_60, 9))
-		->init()
-		->setDestroyTime(0.8f)
-		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("cloth");
-
-	Tile::cloth_70 = (new ClothTile(TILE_CLOTH_70, 8))
-		->init()
-		->setDestroyTime(0.8f)
-		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("cloth");
-
-	Tile::cloth_01 = (new ClothTile(TILE_CLOTH_01, 7))
-		->init()
-		->setDestroyTime(0.8f)
-		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("cloth");
-
-	Tile::cloth_11 = (new ClothTile(TILE_CLOTH_11, 6))
-		->init()
-		->setDestroyTime(0.8f)
-		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("cloth");
-
-	Tile::cloth_21 = (new ClothTile(TILE_CLOTH_21, 5))
-		->init()
-		->setDestroyTime(0.8f)
-		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("cloth");
-
-	Tile::cloth_31 = (new ClothTile(TILE_CLOTH_31, 4))
-		->init()
-		->setDestroyTime(0.8f)
-		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("cloth");
-
-	Tile::cloth_41 = (new ClothTile(TILE_CLOTH_41, 3))
-		->init()
-		->setDestroyTime(0.8f)
-		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("cloth");
-
-	Tile::cloth_51 = (new ClothTile(TILE_CLOTH_51, 2))
-		->init()
-		->setDestroyTime(0.8f)
-		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("cloth");
-
-	Tile::cloth_61 = (new ClothTile(TILE_CLOTH_61, 1))
-		->init()
-		->setDestroyTime(0.8f)
-		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("cloth");
-
 	// custom additions here
 
 	Tile::sapling = (new Sapling(TILE_SAPLING, TEXTURE_SAPLING))
@@ -1079,6 +986,10 @@ void Tile::handleEntityInside(Level* pLevel, const TilePos& pos, const Entity* p
 
 float Tile::getDestroyProgress(Player* player) const
 {
+	if (player->isCreative()) {
+		return 1.0f;
+	}
+		
 	if (m_hardness < 0.0f)
 		return 0.0f;
 

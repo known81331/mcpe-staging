@@ -8,6 +8,7 @@
 
 #include "LocalPlayer.hpp"
 #include "client/app/Minecraft.hpp"
+#include "client/gui/screens/PaneCraftingScreen.hpp"
 #include "nbt/CompoundTag.hpp"
 
 int dword_250ADC, dword_250AE0;
@@ -283,4 +284,9 @@ void LocalPlayer::readAdditionalSaveData(const CompoundTag& tag)
 	Player::readAdditionalSaveData(tag);
 
 	m_score = tag.getInt32("Score");
+}
+
+void LocalPlayer::startCrafting(const TilePos& pos)
+{
+	m_pMinecraft->setScreen(new PaneCraftingScreen());
 }

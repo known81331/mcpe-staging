@@ -100,7 +100,7 @@ void ItemInHandRenderer::renderItem(ItemInstance* inst)
         int textureY = inst->getIcon() / (isTerrain ? 32 : 16) * 16;
         
         float texU_1 = C_RATIO * float(textureX + 0.0f) * (isTerrain ? 0.5f : 1.f);
-        float texU_2 = C_RATIO * float(textureX + 15.99f) * (isTerrain ? 0.5f : 1.f);
+        float texU_2 = C_RATIO * float(textureX + 16.f) * (isTerrain ? 0.5f : 1.f);
         float texV_1 = C_RATIO * float(textureY + 0.0f);
         float texV_2 = C_RATIO * float(textureY + 15.99f);
         
@@ -130,17 +130,17 @@ void ItemInHandRenderer::renderItem(ItemInstance* inst)
         t.normal(-1.0f, 0.0f, 0.0f);
         for (int i = 0; i < 16; i++)
         {
-            t.vertexUV(i * C_ONE_PIXEL + (isTerrain ? C_ONE_PIXEL : 0.f), 0.0f, -C_ONE_PIXEL, Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_2);
-            t.vertexUV(i * C_ONE_PIXEL + (isTerrain ? C_ONE_PIXEL : 0.f), 0.0f, 0.0f,         Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_2);
-            t.vertexUV(i * C_ONE_PIXEL + (isTerrain ? C_ONE_PIXEL : 0.f), 1.0f, 0.0f,         Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_1);
-            t.vertexUV(i * C_ONE_PIXEL + (isTerrain ? C_ONE_PIXEL : 0.f), 1.0f, -C_ONE_PIXEL, Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_1);
+            t.vertexUV(i * C_ONE_PIXEL, 0.0f, -C_ONE_PIXEL, Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_2);
+            t.vertexUV(i * C_ONE_PIXEL, 0.0f, 0.0f,         Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_2);
+            t.vertexUV(i * C_ONE_PIXEL, 1.0f, 0.0f,         Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_1);
+            t.vertexUV(i * C_ONE_PIXEL, 1.0f, -C_ONE_PIXEL, Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_1);
         }
         for (int i = 0; i < 16; i++)
         {
-            t.vertexUV((i + 1) * C_ONE_PIXEL + (isTerrain ? C_ONE_PIXEL : 0.f), 1.0f, -C_ONE_PIXEL, Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_1);
-            t.vertexUV((i + 1) * C_ONE_PIXEL + (isTerrain ? C_ONE_PIXEL : 0.f), 1.0f, 0.0f,         Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_1);
-            t.vertexUV((i + 1) * C_ONE_PIXEL + (isTerrain ? C_ONE_PIXEL : 0.f), 0.0f, 0.0f,         Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_2);
-            t.vertexUV((i + 1) * C_ONE_PIXEL + (isTerrain ? C_ONE_PIXEL : 0.f), 0.0f, -C_ONE_PIXEL, Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_2);
+            t.vertexUV((i + 1) * C_ONE_PIXEL, 1.0f, -C_ONE_PIXEL, Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_1);
+            t.vertexUV((i + 1) * C_ONE_PIXEL, 1.0f, 0.0f,         Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_1);
+            t.vertexUV((i + 1) * C_ONE_PIXEL, 0.0f, 0.0f,         Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_2);
+            t.vertexUV((i + 1) * C_ONE_PIXEL, 0.0f, -C_ONE_PIXEL, Mth::Lerp(texU_2, texU_1, i * C_ONE_PIXEL) - C_RATIO_2, texV_2);
         }
         
         SHADE_IF_NEEDED(0.6f);
@@ -293,9 +293,9 @@ void ItemInHandRenderer::renderTex(float f, int texture)
 #else
 #  define MULT 16 *
 #endif
-	float texX = MULT float(texture % 16), texY = MULT float(texture / 16);
-	float texU_1 =  texX           / 256.0f - 1 / 128.0f;
-	float texU_2 = (texX + 15.99f) / 256.0f + 1 / 128.0f;
+	float texX = MULT float(texture % 32), texY = MULT float(texture / 32);
+	float texU_1 = ( texX           / 256.0f - 1 / 128.0f) * 0.5f;
+	float texU_2 = ((texX + 15.99f) / 256.0f + 1 / 128.0f) * 0.5f;
 	float texV_1 =  texY           / 256.0f - 1 / 128.0f;
 	float texV_2 = (texY + 15.99f) / 256.0f + 1 / 128.0f;
 

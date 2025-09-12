@@ -389,7 +389,7 @@ void Player::setRespawnPos(const TilePos& pos)
 
 void Player::startCrafting(const TilePos& pos)
 {
-
+	
 }
 
 void Player::startStonecutting(const TilePos& pos)

@@ -114,8 +114,14 @@ void Font::drawSlow(const std::string& str, int x, int y, int colorI, bool bShad
 	if (alpf == 0.0f)
 		alpf = 1.0f;
 
+
 	glColor4f(float(red) / 255.0f, float(grn) / 255.0f, float(blu) / 255.0f, alpf);
 	glPushMatrix();
+
+	if (alpf < 1.0f) {
+		glEnable(GL_BLEND);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	}
 
 	Tesselator& t = Tesselator::instance;
 	t.begin();
@@ -141,6 +147,9 @@ void Font::drawSlow(const std::string& str, int x, int y, int colorI, bool bShad
 	}
 
 	t.draw();
+
+	if (alpf < 1.0f)
+		glDisable(GL_BLEND);
 
 	glPopMatrix();
 }

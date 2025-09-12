@@ -214,12 +214,6 @@ void Gui::render(float f, bool bHaveScreen, int mouseX, int mouseY)
 	// selection mark
 	blit(cenX - 1 - hotbarWidth / 2 + 20 * inventory->m_selectedHotbarSlot, height - 23, 0, 22, 24, 22, 0, 0);
 
-	if (inventory) {
-		ItemInstance* item = inventory->getSelectedItem();
-		std::string str = item ? item->getItem()->getName() : "EMPTY";
-		m_pMinecraft->m_pFont->drawShadow(str, cenX - m_pMinecraft->m_pFont->width(str) / 2, height-40, 0xFFFFFFFF);
-	}
-
 
 	textures->loadAndBindTexture("gui/icons.png");
 
@@ -408,6 +402,25 @@ void Gui::render(float f, bool bHaveScreen, int mouseX, int mouseY)
 	if (m_bRenderMessages)
 	{
 		renderMessages(false);
+	}
+
+	if (inventory) {
+		ItemInstance* item = inventory->getSelectedItem();
+		static int alpha = 0x00;
+		static int oid = item->getId(), oaux = item->getAuxValue();
+		if (item && (item->getId() != oid || item->getAuxValue() != oaux)) {
+			alpha = 768;
+			oid = item->getId();
+			oaux = item->getAuxValue();
+		}
+
+		if (alpha > 0) {
+			std::string str = item ? item->getItem()->getName() : "";
+			m_pMinecraft->m_pFont->drawShadow(str, cenX - m_pMinecraft->m_pFont->width(str) / 2, height-40, 0x00FFFFFF + ((alpha > 0xff ? 0xff : alpha) << 24));
+			alpha -= 8;
+		}
+
+
 	}
 }
 
@@ -615,7 +628,7 @@ void Gui::renderMessages(bool bShowAll)
 int Gui::getNumSlots()
 {
 	if (m_pMinecraft->isTouchscreen())
-		return 4;
+		return 8;
 
 	return 9;
 }
