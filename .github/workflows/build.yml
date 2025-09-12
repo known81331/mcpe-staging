@@ -23,7 +23,8 @@ jobs:
                 cmake ninja-build \
                 gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf \
                 gcc-aarch64-linux-gnu g++-aarch64-linux-gnu \
-                libopenal-dev libsdl2-dev zlib1g-dev
+                libopenal-dev libsdl2-dev zlib1g-dev \
+                zlib1g-dev:arm64 libsdl2-dev:arm64 libopenal-dev:arm64
     
           - name: Configure (ARM64 / Raspberry Pi OS 64-bit)
             run: |
