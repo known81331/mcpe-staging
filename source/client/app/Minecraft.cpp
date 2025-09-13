@@ -878,7 +878,7 @@ void Minecraft::prepareLevel(const std::string& unused)
 {
 	field_DA0 = 1;
 
-	float startTime = getTimeS();
+	float startTime = float(getTimeS());
 	Level* pLevel = m_pLevel;
 
 	if (!pLevel->field_B0C)
@@ -893,7 +893,7 @@ void Minecraft::prepareLevel(const std::string& unused)
 			// this looks like some kind of progress tracking
 			m_progressPercent = i2 / (C_MAX_CHUNKS_X * C_MAX_CHUNKS_Z);
 
-			float time1 = getTimeS();
+			float time1 = float(getTimeS());
 
 			// generating all the chunks at once
 			(void)pLevel->getTile(TilePos(i, (C_MAX_Y + C_MIN_Y) / 2, j));
@@ -918,7 +918,7 @@ void Minecraft::prepareLevel(const std::string& unused)
 
 	pLevel->setUpdateLights(1);
 
-	startTime = getTimeS();
+	startTime = float(getTimeS());
 
 	ChunkPos cp(0, 0);
 	for (cp.x = 0; cp.x < C_MAX_CHUNKS_X; cp.x++)
@@ -958,7 +958,7 @@ void Minecraft::prepareLevel(const std::string& unused)
 	m_progressPercent = -1;
 	field_DA0 = 2;
 
-	startTime = getTimeS();
+	startTime = float(getTimeS());
 
 	pLevel->prepare();
 
@@ -1038,7 +1038,7 @@ float Minecraft::getBestScaleForThisScreenSize(int width, int height)
 
 void Minecraft::generateLevel(const std::string& unused, Level* pLevel)
 {
-	float time = getTimeS(); //@UNUSED
+	float time = float(getTimeS()); //@UNUSED
 
 	prepareLevel(unused);
 
