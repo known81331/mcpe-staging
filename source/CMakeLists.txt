@@ -295,6 +295,7 @@ add_library(reminecraftpe-core STATIC
     world/tile/ClothTile.cpp
     world/tile/CactusTile.cpp
     world/tile/CarpetTile.cpp
+    world/tile/WoodTile.cpp
     world/tile/TorchTile.cpp
     world/tile/MetalTile.cpp
     world/tile/SpongeTile.cpp

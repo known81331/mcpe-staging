@@ -80,6 +80,7 @@ bool CactusTile::isFree(Level* level, const TilePos& pos)
 
 bool CactusTile::mayPlace(const Level* level, const TilePos& pos) const
 {
+
 	if (level->getMaterial(pos.relative(Facing::NORTH))->isSolid())
 		return false;
 	if (level->getMaterial(pos.relative(Facing::SOUTH))->isSolid())
@@ -96,17 +97,27 @@ bool CactusTile::mayPlace(const Level* level, const TilePos& pos) const
 
 bool CactusTile::checkCanSurvive(Level* level, const TilePos& pos)
 {
-	if (mayPlace(level, pos))
-		return true;
 
-	spawnResources(level, pos, level->getData(pos));
-	level->setTile(pos, TILE_AIR);
-	return false;
+	if (level->getMaterial(pos.relative(Facing::NORTH))->isSolid())
+		return false;
+	if (level->getMaterial(pos.relative(Facing::SOUTH))->isSolid())
+		return false;
+	if (level->getMaterial(pos.relative(Facing::EAST))->isSolid())
+		return false;
+	if (level->getMaterial(pos.relative(Facing::WEST))->isSolid())
+		return false;
+
+	TileID tile = level->getTile(pos.below());
+
+	return (tile == Tile::sand->m_ID || tile == m_ID);
 }
 
 void CactusTile::neighborChanged(Level* level, const TilePos& pos, TileID tile)
 {
-	checkCanSurvive(level, pos);
+	if (!checkCanSurvive(level, pos)) {
+		spawnResources(level, pos, level->getData(pos));
+		level->setTile(pos, TILE_AIR);
+	}
 }
 
 bool CactusTile::shouldRenderFace(const LevelSource* level, const TilePos& pos, Facing::Name face) const

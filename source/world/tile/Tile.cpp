@@ -52,6 +52,7 @@
 #include "WorkbenchTile.hpp"
 #include "FurnaceTile.hpp"
 #include "CactusTile.hpp"
+#include "WoodTile.hpp"
 
 std::string Tile::TILE_DESCRIPTION_PREFIX = "tile.";
 
@@ -193,23 +194,6 @@ int Tile::getTexture(Facing::Name face) const
 
 int Tile::getTexture(Facing::Name face, int data) const
 {
-	if (m_ID == TILE_WOOD) {
-		switch (data)
-		{
-			case 1:
-				return TEXTURE_PLANKS_SPRUCE;
-			case 2:
-				return TEXTURE_PLANKS_BIRCH;
-			case 3:
-				return TEXTURE_PLANKS_JUNGLE;
-			case 4:
-				return TEXTURE_PLANKS_ACACIA;
-			case 5:
-				return TEXTURE_PLANKS_DARK_OAK;
-		}
-	}
-	
-
 
 	return getTexture(face);
 }
@@ -287,7 +271,7 @@ void Tile::initTiles()
 		->setSoundType(Tile::SOUND_STONE)
 		->setDescriptionId("stonebrick");
 
-	Tile::wood = (new Tile(TILE_WOOD, TEXTURE_PLANKS, Material::wood))
+	Tile::wood = (new WoodTile(TILE_WOOD, 0))
 		->init()
 		->setDestroyTime(2.0f)
 		->setExplodeable(5.0f)

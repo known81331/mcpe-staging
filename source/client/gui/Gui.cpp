@@ -371,6 +371,7 @@ void Gui::render(float f, bool bHaveScreen, int mouseX, int mouseY)
 
 	int diff = 1; //mc->isTouchscreen();
 
+	glDisable(GL_DEPTH_TEST);
 	int slotX = cenX - hotbarWidth / 2 + 3;
 	for (int i = 0; i < nSlots - diff; i++)
 	{
@@ -386,6 +387,7 @@ void Gui::render(float f, bool bHaveScreen, int mouseX, int mouseY)
 
 		slotX += 20;
 	}
+	glEnable(GL_DEPTH_TEST);
 
 #undef DIFF
 
