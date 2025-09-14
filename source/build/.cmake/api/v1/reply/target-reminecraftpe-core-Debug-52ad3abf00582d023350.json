@@ -33,13 +33,13 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 342,
+				"line" : 343,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 338,
+				"line" : 339,
 				"parent" : 0
 			}
 		]
@@ -393,7 +393,8 @@
 				319,
 				320,
 				321,
-				322
+				322,
+				323
 			]
 		}
 	],
@@ -740,7 +741,8 @@
 				319,
 				320,
 				321,
-				322
+				322,
+				323
 			]
 		}
 	],
@@ -2340,6 +2342,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "world/item/DoorItem.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "world/item/DyePowderItem.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

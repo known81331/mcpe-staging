@@ -1386,6 +1386,7 @@ bool Level::mayPlace(TileID tile, const TilePos& pos, bool b) const
 		pOldTile == Tile::lava      ||
 		pOldTile == Tile::calmLava  ||
 		pOldTile == Tile::fire      ||
+		pOldTile == Tile::shortgrass||
 		pOldTile == Tile::topSnow)
 		return true;
 

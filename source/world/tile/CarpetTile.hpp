@@ -15,7 +15,6 @@ class CarpetTile : public Tile
 public:
 	CarpetTile(int id, int texture, Material* pMtl);
 
-	AABB* getAABB(const Level*, const TilePos& pos) override;
 	bool isCubeShaped() const override;
 	bool isSolidRender() const override;
 	int getResource(int, Random*) const override;
@@ -23,7 +22,9 @@ public:
 	bool mayPlace(const Level*, const TilePos& pos) const override;
 	void neighborChanged(Level*, const TilePos& pos, TileID tile) override;
 	bool shouldRenderFace(const LevelSource*, const TilePos& pos, Facing::Name face) const override;
-	void tick(Level*, const TilePos& pos, Random*) override;
+
+	int getTexture(Facing::Name face) const override;
+	int getTexture(Facing::Name face, int data) const override;
 
 	static bool isFree(Level* level, const TilePos& pos);
 

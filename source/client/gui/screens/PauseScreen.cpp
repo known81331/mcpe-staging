@@ -25,7 +25,7 @@ PauseScreen::PauseScreen() :
 
 void PauseScreen::init()
 {
-	bool bAddVisibleButton = m_pMinecraft->m_pRakNetInstance && m_pMinecraft->m_pRakNetInstance->m_bIsHost;
+	bool bAddVisibleButton = false; //m_pMinecraft->m_pRakNetInstance && m_pMinecraft->m_pRakNetInstance->m_bIsHost;
 	
 	int nButtons = 2;
 
@@ -36,30 +36,36 @@ void PauseScreen::init()
 	nButtons++;
 #endif
 
-	int currY = 48, inc = 32;
+	int currY = 48, inc = 40;
 
 	bool cramped = m_height < currY + inc * nButtons + 10; // also add some padding
 	if (cramped)
 		inc = 25;
 
-	m_btnQuit.m_width = 160;
-	m_btnBack.m_width = 160;
-	m_btnVisible.m_width = 160;
-	m_btnQuitAndCopy.m_width = 160;
+	m_btnQuit.m_width = 120;
+	m_btnBack.m_width = 120;
+	m_btnVisible.m_width = 120;
+	m_btnQuitAndCopy.m_width = 120;
+
+	m_btnQuit.m_height = 32;
+	m_btnBack.m_height = 32;
+	m_btnVisible.m_height = 32;
+	m_btnQuitAndCopy.m_height = 32;
+	m_btnOptions.m_height = 32;
 
 	m_btnBack.m_yPos = currY; currY += inc;
 	m_btnQuit.m_yPos = currY; currY += inc;
-	m_btnBack.m_xPos = (m_width - 160) / 2;
-	m_btnQuit.m_xPos = (m_width - 160) / 2;
-	m_btnVisible.m_xPos = (m_width - 160) / 2;
-	m_btnQuitAndCopy.m_xPos = (m_width - 160) / 2;
+	m_btnBack.m_xPos =        20;
+	m_btnQuit.m_xPos =        20;
+	m_btnVisible.m_xPos =     20;
+	m_btnQuitAndCopy.m_xPos = 20;
 
 	m_btnVisible.m_yPos =
 	m_btnQuitAndCopy.m_yPos = currY;
 
 #ifdef ENH_ADD_OPTIONS_PAUSE
 	// TODO: when visible or quit&copy are on, lower this
-	m_btnOptions.m_width = 160;
+	m_btnOptions.m_width = 120;
 	m_btnOptions.m_yPos = currY;
 	m_btnOptions.m_xPos = m_btnBack.m_xPos;
 #endif
@@ -120,7 +126,7 @@ void PauseScreen::render(int a, int b, float c)
 {
 	renderBackground();
 
-	drawCenteredString(m_pFont, "Game menu", m_width / 2, 24, 0xFFFFFF);
+	drawCenteredString(m_pFont, "Game menu", 75, 30, 0xFFFFFF);
 	Screen::render(a, b, c);
 }
 

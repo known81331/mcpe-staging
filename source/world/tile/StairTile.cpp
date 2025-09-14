@@ -142,11 +142,11 @@ int StairTile::getTexture(Facing::Name face, int b) const
 			case 5:
 				return TEXTURE_BRICKS;
 			case 6:
-				return TEXTURE_SANDSTONE_BOTTOM;
+				return TEXTURE_BRICK_SAND_1;
 			case 7:
-				return TEXTURE_SANDSTONE_TOP;
+				return TEXTURE_BRICK_SAND_4;
 			case 8:
-				return TEXTURE_SANDSTONE_SIDE;
+				return TEXTURE_BRICK_SAND_5;
 
 		}
 	}

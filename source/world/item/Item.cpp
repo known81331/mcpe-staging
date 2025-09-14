@@ -13,6 +13,7 @@
 #include "TileItem.hpp"
 #include "TilePlanterItem.hpp"
 #include "RocketItem.hpp"
+#include "DyePowderItem.hpp"
 
 #define ITEM(x) ((x) - 256)
 
@@ -470,9 +471,13 @@ void Item::initItems()
 		->setIcon(8, 5)
 		->setDescriptionId("clock");
 		
+	Item::dye_powder = (new DyePowderItem(ITEM_DYE_POWDER))
+		->setIcon(11, 3)
+		->setDescriptionId("dye_powder");
+		
 	Item::yellowDust = NEW_ITEM(ITEM_YELLOW_DUST)
 		->setIcon(0, 6)
-		->setDescriptionId("clock");
+		->setDescriptionId("yellowDust");
 		
 	Item::fish_raw = NEW_ITEM(ITEM_FISH_RAW)
 		->setIcon(11, 5)
@@ -480,10 +485,6 @@ void Item::initItems()
 		
 	Item::fish_cooked = NEW_ITEM(ITEM_FISH_COOKED)
 		->setIcon(10, 5)
-		->setDescriptionId("clock");
-		
-	Item::dye_powder = NEW_ITEM(ITEM_DYE_POWDER)
-		->setIcon(11, 3)
 		->setDescriptionId("clock");
 		
 	Item::cake = NEW_ITEM(ITEM_CAKE)

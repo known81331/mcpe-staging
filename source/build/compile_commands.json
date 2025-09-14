@@ -1597,6 +1597,12 @@
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/. -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/.. -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o CMakeFiles/reminecraftpe-core.dir/world/item/DyePowderItem.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/world/item/DyePowderItem.cpp",
+  "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/world/item/DyePowderItem.cpp",
+  "output": "CMakeFiles/reminecraftpe-core.dir/world/item/DyePowderItem.cpp.o"
+},
+{
+  "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
   "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/. -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/.. -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o CMakeFiles/reminecraftpe-core.dir/world/item/ItemInstance.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/world/item/ItemInstance.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/world/item/ItemInstance.cpp",
   "output": "CMakeFiles/reminecraftpe-core.dir/world/item/ItemInstance.cpp.o"
@@ -1939,661 +1945,661 @@
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/VariadicSQLParser.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VariadicSQLParser.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/VariadicSQLParser.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VariadicSQLParser.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VariadicSQLParser.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/VariadicSQLParser.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/SuperFastHash.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SuperFastHash.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/SuperFastHash.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SuperFastHash.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SuperFastHash.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/SuperFastHash.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/VariableListDeltaTracker.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VariableListDeltaTracker.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/VariableListDeltaTracker.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VariableListDeltaTracker.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VariableListDeltaTracker.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/VariableListDeltaTracker.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/StatisticsHistory.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/StatisticsHistory.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/StatisticsHistory.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/StatisticsHistory.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/StatisticsHistory.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/StatisticsHistory.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/SendToThread.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SendToThread.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/SendToThread.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SendToThread.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SendToThread.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/SendToThread.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/SignaledEvent.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SignaledEvent.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/SignaledEvent.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SignaledEvent.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SignaledEvent.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/SignaledEvent.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/ReplicaManager3.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ReplicaManager3.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/ReplicaManager3.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ReplicaManager3.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ReplicaManager3.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/ReplicaManager3.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/IncrementalReadInterface.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/IncrementalReadInterface.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/IncrementalReadInterface.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/IncrementalReadInterface.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/IncrementalReadInterface.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/IncrementalReadInterface.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/Getche.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Getche.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/Getche.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Getche.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Getche.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/Getche.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_Berkley_NativeClient.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Berkley_NativeClient.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_Berkley_NativeClient.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Berkley_NativeClient.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Berkley_NativeClient.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakNetSocket2_Berkley_NativeClient.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/WSAStartupSingleton.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/WSAStartupSingleton.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/WSAStartupSingleton.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/WSAStartupSingleton.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/WSAStartupSingleton.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/WSAStartupSingleton.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/DataCompressor.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DataCompressor.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/DataCompressor.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DataCompressor.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DataCompressor.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/DataCompressor.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakMemoryOverride.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakMemoryOverride.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakMemoryOverride.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakMemoryOverride.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakMemoryOverride.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakMemoryOverride.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/CommandParserInterface.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CommandParserInterface.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/CommandParserInterface.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CommandParserInterface.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CommandParserInterface.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/CommandParserInterface.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/GetTime.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/GetTime.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/GetTime.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/GetTime.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/GetTime.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/GetTime.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_Berkley.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Berkley.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_Berkley.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Berkley.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Berkley.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakNetSocket2_Berkley.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/PacketOutputWindowLogger.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketOutputWindowLogger.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/PacketOutputWindowLogger.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketOutputWindowLogger.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketOutputWindowLogger.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/PacketOutputWindowLogger.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/DynDNS.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DynDNS.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/DynDNS.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DynDNS.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DynDNS.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/DynDNS.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/LocklessTypes.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/LocklessTypes.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/LocklessTypes.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/LocklessTypes.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/LocklessTypes.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/LocklessTypes.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/UDPForwarder.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPForwarder.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/UDPForwarder.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPForwarder.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPForwarder.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/UDPForwarder.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakString.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakString.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakString.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakString.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakString.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakString.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/SimpleMutex.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SimpleMutex.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/SimpleMutex.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SimpleMutex.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SimpleMutex.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/SimpleMutex.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/Itoa.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Itoa.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/Itoa.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Itoa.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Itoa.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/Itoa.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/VitaIncludes.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VitaIncludes.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/VitaIncludes.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VitaIncludes.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VitaIncludes.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/VitaIncludes.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/TableSerializer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TableSerializer.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/TableSerializer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TableSerializer.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TableSerializer.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/TableSerializer.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/EpochTimeToString.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/EpochTimeToString.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/EpochTimeToString.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/EpochTimeToString.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/EpochTimeToString.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/EpochTimeToString.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/ConnectionGraph2.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ConnectionGraph2.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/ConnectionGraph2.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ConnectionGraph2.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ConnectionGraph2.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/ConnectionGraph2.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/EmailSender.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/EmailSender.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/EmailSender.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/EmailSender.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/EmailSender.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/EmailSender.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/UDPProxyCoordinator.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPProxyCoordinator.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/UDPProxyCoordinator.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPProxyCoordinator.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPProxyCoordinator.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/UDPProxyCoordinator.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/UDPProxyClient.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPProxyClient.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/UDPProxyClient.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPProxyClient.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPProxyClient.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/UDPProxyClient.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/CloudClient.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CloudClient.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/CloudClient.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CloudClient.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CloudClient.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/CloudClient.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/ReadyEvent.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ReadyEvent.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/ReadyEvent.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ReadyEvent.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ReadyEvent.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/ReadyEvent.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/MessageFilter.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/MessageFilter.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/MessageFilter.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/MessageFilter.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/MessageFilter.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/MessageFilter.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/TCPInterface.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TCPInterface.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/TCPInterface.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TCPInterface.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TCPInterface.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/TCPInterface.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/PS4Includes.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PS4Includes.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/PS4Includes.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PS4Includes.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PS4Includes.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/PS4Includes.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/NatPunchthroughClient.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatPunchthroughClient.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/NatPunchthroughClient.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatPunchthroughClient.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatPunchthroughClient.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/NatPunchthroughClient.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakNetStatistics.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetStatistics.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakNetStatistics.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetStatistics.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetStatistics.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakNetStatistics.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/PacketConsoleLogger.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketConsoleLogger.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/PacketConsoleLogger.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketConsoleLogger.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketConsoleLogger.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/PacketConsoleLogger.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_NativeClient.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_NativeClient.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_NativeClient.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_NativeClient.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_NativeClient.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakNetSocket2_NativeClient.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/PacketLogger.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketLogger.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/PacketLogger.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketLogger.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketLogger.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/PacketLogger.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/Gets.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Gets.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/Gets.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Gets.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Gets.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/Gets.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/NatPunchthroughServer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatPunchthroughServer.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/NatPunchthroughServer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatPunchthroughServer.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatPunchthroughServer.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/NatPunchthroughServer.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/FileOperations.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FileOperations.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/FileOperations.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FileOperations.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FileOperations.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/FileOperations.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/CheckSum.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CheckSum.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/CheckSum.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CheckSum.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CheckSum.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/CheckSum.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/HTTPConnection.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/HTTPConnection.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/HTTPConnection.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/HTTPConnection.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/HTTPConnection.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/HTTPConnection.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/NatTypeDetectionServer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatTypeDetectionServer.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/NatTypeDetectionServer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatTypeDetectionServer.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatTypeDetectionServer.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/NatTypeDetectionServer.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakNetSocket.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakNetSocket.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakNetSocket.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/DS_Table.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_Table.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/DS_Table.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_Table.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_Table.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/DS_Table.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakNetSocket2.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakNetSocket2.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakNetSocket2.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/PacketizedTCP.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketizedTCP.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/PacketizedTCP.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketizedTCP.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketizedTCP.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/PacketizedTCP.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RelayPlugin.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RelayPlugin.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RelayPlugin.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RelayPlugin.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RelayPlugin.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RelayPlugin.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/ThreadsafePacketLogger.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ThreadsafePacketLogger.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/ThreadsafePacketLogger.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ThreadsafePacketLogger.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ThreadsafePacketLogger.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/ThreadsafePacketLogger.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/Rand.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Rand.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/Rand.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Rand.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Rand.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/Rand.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/GridSectorizer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/GridSectorizer.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/GridSectorizer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/GridSectorizer.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/GridSectorizer.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/GridSectorizer.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/DS_BytePool.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_BytePool.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/DS_BytePool.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_BytePool.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_BytePool.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/DS_BytePool.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/FullyConnectedMesh2.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FullyConnectedMesh2.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/FullyConnectedMesh2.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FullyConnectedMesh2.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FullyConnectedMesh2.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/FullyConnectedMesh2.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/SocketLayer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SocketLayer.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/SocketLayer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SocketLayer.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SocketLayer.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/SocketLayer.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakWString.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakWString.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakWString.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakWString.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakWString.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakWString.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/UDPProxyServer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPProxyServer.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/UDPProxyServer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPProxyServer.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPProxyServer.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/UDPProxyServer.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/StringTable.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/StringTable.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/StringTable.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/StringTable.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/StringTable.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/StringTable.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/DR_SHA1.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DR_SHA1.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/DR_SHA1.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DR_SHA1.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DR_SHA1.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/DR_SHA1.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/LinuxStrings.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/LinuxStrings.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/LinuxStrings.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/LinuxStrings.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/LinuxStrings.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/LinuxStrings.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/VariableDeltaSerializer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VariableDeltaSerializer.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/VariableDeltaSerializer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VariableDeltaSerializer.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VariableDeltaSerializer.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/VariableDeltaSerializer.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/CloudServer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CloudServer.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/CloudServer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CloudServer.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CloudServer.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/CloudServer.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RPC4Plugin.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RPC4Plugin.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RPC4Plugin.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RPC4Plugin.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RPC4Plugin.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RPC4Plugin.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/PacketFileLogger.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketFileLogger.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/PacketFileLogger.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketFileLogger.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketFileLogger.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/PacketFileLogger.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/CloudCommon.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CloudCommon.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/CloudCommon.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CloudCommon.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CloudCommon.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/CloudCommon.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/SecureHandshake.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SecureHandshake.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/SecureHandshake.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SecureHandshake.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SecureHandshake.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/SecureHandshake.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/FormatString.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FormatString.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/FormatString.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FormatString.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FormatString.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/FormatString.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_PS4.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_PS4.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_PS4.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_PS4.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_PS4.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakNetSocket2_PS4.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/DS_ByteQueue.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_ByteQueue.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/DS_ByteQueue.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_ByteQueue.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_ByteQueue.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/DS_ByteQueue.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/NetworkIDObject.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NetworkIDObject.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/NetworkIDObject.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NetworkIDObject.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NetworkIDObject.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/NetworkIDObject.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/PluginInterface2.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PluginInterface2.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/PluginInterface2.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PluginInterface2.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PluginInterface2.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/PluginInterface2.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_WindowsStore8.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_WindowsStore8.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_WindowsStore8.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_WindowsStore8.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_WindowsStore8.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakNetSocket2_WindowsStore8.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RandSync.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RandSync.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RandSync.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RandSync.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RandSync.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RandSync.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakPeer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakPeer.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakPeer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakPeer.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakPeer.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakPeer.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakNetTransport2.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetTransport2.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakNetTransport2.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetTransport2.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetTransport2.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakNetTransport2.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_Windows_Linux_360.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Windows_Linux_360.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_Windows_Linux_360.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Windows_Linux_360.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Windows_Linux_360.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakNetSocket2_Windows_Linux_360.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/NatTypeDetectionClient.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatTypeDetectionClient.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/NatTypeDetectionClient.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatTypeDetectionClient.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatTypeDetectionClient.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/NatTypeDetectionClient.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/ConsoleServer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ConsoleServer.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/ConsoleServer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ConsoleServer.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ConsoleServer.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/ConsoleServer.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/TelnetTransport.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TelnetTransport.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/TelnetTransport.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TelnetTransport.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TelnetTransport.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/TelnetTransport.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/Base64Encoder.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Base64Encoder.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/Base64Encoder.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Base64Encoder.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Base64Encoder.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/Base64Encoder.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/TeamManager.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TeamManager.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/TeamManager.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TeamManager.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TeamManager.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/TeamManager.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakThread.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakThread.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakThread.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakThread.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakThread.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakThread.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/DirectoryDeltaTransfer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DirectoryDeltaTransfer.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/DirectoryDeltaTransfer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DirectoryDeltaTransfer.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DirectoryDeltaTransfer.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/DirectoryDeltaTransfer.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/CCRakNetSlidingWindow.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CCRakNetSlidingWindow.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/CCRakNetSlidingWindow.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CCRakNetSlidingWindow.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CCRakNetSlidingWindow.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/CCRakNetSlidingWindow.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/Router2.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Router2.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/Router2.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Router2.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Router2.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/Router2.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/StringCompressor.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/StringCompressor.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/StringCompressor.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/StringCompressor.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/StringCompressor.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/StringCompressor.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/ReliabilityLayer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ReliabilityLayer.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/ReliabilityLayer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ReliabilityLayer.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ReliabilityLayer.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/ReliabilityLayer.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_Vita.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Vita.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_Vita.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Vita.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Vita.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakNetSocket2_Vita.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/NatTypeDetectionCommon.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatTypeDetectionCommon.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/NatTypeDetectionCommon.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatTypeDetectionCommon.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatTypeDetectionCommon.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/NatTypeDetectionCommon.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/Rackspace.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Rackspace.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/Rackspace.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Rackspace.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Rackspace.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/Rackspace.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakNetCommandParser.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetCommandParser.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakNetCommandParser.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetCommandParser.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetCommandParser.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakNetCommandParser.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/LogCommandParser.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/LogCommandParser.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/LogCommandParser.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/LogCommandParser.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/LogCommandParser.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/LogCommandParser.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/BitStream.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/BitStream.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/BitStream.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/BitStream.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/BitStream.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/BitStream.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/HTTPConnection2.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/HTTPConnection2.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/HTTPConnection2.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/HTTPConnection2.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/HTTPConnection2.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/HTTPConnection2.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_Windows_Linux.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Windows_Linux.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_Windows_Linux.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Windows_Linux.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Windows_Linux.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakNetSocket2_Windows_Linux.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakNetTypes.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetTypes.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakNetTypes.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetTypes.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetTypes.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakNetTypes.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_PS3_PS4.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_PS3_PS4.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_PS3_PS4.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_PS3_PS4.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_PS3_PS4.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakNetSocket2_PS3_PS4.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/FileListTransfer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FileListTransfer.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/FileListTransfer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FileListTransfer.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FileListTransfer.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/FileListTransfer.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/FileList.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FileList.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/FileList.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FileList.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FileList.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/FileList.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/TwoWayAuthentication.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TwoWayAuthentication.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/TwoWayAuthentication.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TwoWayAuthentication.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TwoWayAuthentication.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/TwoWayAuthentication.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/_FindFirst.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/_FindFirst.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/_FindFirst.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/_FindFirst.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/_FindFirst.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/_FindFirst.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/DS_HuffmanEncodingTree.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_HuffmanEncodingTree.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/DS_HuffmanEncodingTree.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_HuffmanEncodingTree.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_HuffmanEncodingTree.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/DS_HuffmanEncodingTree.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/gettimeofday.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/gettimeofday.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/gettimeofday.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/gettimeofday.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/gettimeofday.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/gettimeofday.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/NetworkIDManager.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NetworkIDManager.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/NetworkIDManager.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NetworkIDManager.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NetworkIDManager.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/NetworkIDManager.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/TeamBalancer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TeamBalancer.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/TeamBalancer.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TeamBalancer.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TeamBalancer.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/TeamBalancer.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/CCRakNetUDT.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CCRakNetUDT.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/CCRakNetUDT.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CCRakNetUDT.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CCRakNetUDT.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/CCRakNetUDT.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_360_720.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_360_720.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakNetSocket2_360_720.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_360_720.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_360_720.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakNetSocket2_360_720.cpp.o"
 },
 {
   "directory": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/build",
-  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -std=gnu++11 -o raknet/CMakeFiles/raknet.dir/RakSleep.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakSleep.cpp",
+  "command": "/usr/bin/clang++ -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/. -g -o raknet/CMakeFiles/raknet.dir/RakSleep.cpp.o -c /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakSleep.cpp",
   "file": "/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakSleep.cpp",
   "output": "raknet/CMakeFiles/raknet.dir/RakSleep.cpp.o"
 }

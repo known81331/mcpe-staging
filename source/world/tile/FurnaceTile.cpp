@@ -16,30 +16,27 @@ FurnaceTile::FurnaceTile(int a, int b, Material* c) : Tile(a, b, c)
 int FurnaceTile::getTexture(Facing::Name face, int data) const
 {
 
-	int doorDir = 5;
+	// 5, 4, 3 ,2
+	// 4, 5, 3, 2
+	Facing::Name facing = Facing::Name((int)(Facing::EAST) - data);
 
-	if (doorDir == face)
+	if (face == facing)
 		return TEXTURE_FURNACE_FRONT;
-
 
 	switch (face)
 	{
-	case Facing::NORTH:
-	case Facing::WEST:
-	case Facing::SOUTH:
-	case Facing::EAST:	
-		return TEXTURE_FURNACE_SIDE;
 	case Facing::UP:
-	default:
+	case Facing::DOWN:
 		return TEXTURE_FURNACE_TOP;
 	}
 
-	return m_TextureFrame;
+	return TEXTURE_FURNACE_SIDE;
 }
 
 
 int FurnaceTile::getTexture(Facing::Name face) const
 {
+	Facing::Name facing = Facing::EAST;
 
 	switch (face)
 	{
@@ -60,13 +57,32 @@ int FurnaceTile::getTexture(Facing::Name face) const
 
 int FurnaceTile::getResource(int data, Random* random) const
 {
-	return 0; // would be Book
+	return Tile::furnace->m_ID; // would be Book
 }
 
 int FurnaceTile::getResourceCount(Random* random) const
 {
 	return 1;
 }
+
+
+void FurnaceTile::setPlacedBy(Level* level, const TilePos& pos, Mob* mob)
+{
+	int rot = Mth::floor(0.5f + (mob->m_rot.x * 4.0f / 360.0f)) & 3;
+
+	int data = ((uint8_t)level->getData(pos)); //0;
+
+	switch (rot)
+	{
+		case 0: data = 3; break;
+		case 1: data = 0; break;
+		case 2: data = 2; break;
+		default: data = 1; break;
+	}
+
+	level->setData(pos, data);
+}
+
 
 
 int FurnaceTile::use(Level* level, const TilePos& pos, Player* player)

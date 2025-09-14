@@ -53,6 +53,7 @@
 #include "FurnaceTile.hpp"
 #include "CactusTile.hpp"
 #include "WoodTile.hpp"
+#include "CarpetTile.hpp"
 
 std::string Tile::TILE_DESCRIPTION_PREFIX = "tile.";
 
@@ -377,7 +378,7 @@ void Tile::initTiles()
 		->setSoundType(Tile::SOUND_METAL)
 		->setDescriptionId("blockLapis");
 
-	Tile::sandStone = (new SandStoneTile(TILE_SANDSTONE, TEXTURE_BRICK_SAND_3, Material::stone))
+	Tile::sandStone = (new SandStoneTile(TILE_SANDSTONE, TEXTURE_BRICK_SAND_1, Material::stone))
 		->init()
 		->setSoundType(Tile::SOUND_STONE)
 		->setDestroyTime(0.8f)
@@ -570,7 +571,7 @@ void Tile::initTiles()
 		->setSoundType(Tile::SOUND_STONE)
 		->setDescriptionId("oreRedstone");
 
-	Tile::topSnow = (new TopSnowTile(TILE_TOPSNOW, TEXTURE_SNOW, Material::snow))
+	Tile::topSnow = (new TopSnowTile(TILE_TOPSNOW, TEXTURE_SNOW, Material::topSnow))
 		->init()
 		->setDestroyTime(0.1f)
 		->setSoundType(Tile::SOUND_CLOTH)
@@ -675,6 +676,14 @@ void Tile::initTiles()
 	Tile::cloth_60 = Tile::cloth;
 	Tile::cloth_61 = Tile::cloth;
 	Tile::cloth_70 = Tile::cloth;
+
+
+
+	Tile::carpet = (new CarpetTile(TILE_CARPET, TEXTURE_CLOTH_WHITE, Material::decoration))
+		->init()
+		->setDestroyTime(0.8f)
+		->setSoundType(Tile::SOUND_CLOTH)
+		->setDescriptionId("carpet");
 
 	Tile::fire = (new FireTile(TILE_FIRE, TEXTURE_FIRE1))
 		->init()
@@ -1162,6 +1171,7 @@ Tile
 	*Tile::water,
 	*Tile::lava,
 	*Tile::fire,
+	*Tile::carpet,
 	*Tile::invisible_bedrock,
 	*Tile::goldBlock,
 	*Tile::ironBlock,

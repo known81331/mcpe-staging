@@ -12,14 +12,9 @@
 
 CarpetTile::CarpetTile(int a, int b, Material* c) : Tile(a, b, c)
 {
-	setShape(0, 0, 0, 1, 0.1f, 1);
-	setTicking(true);
+	setShape(0, 0, 0, 1, 0.05f, 1);
 }
 
-AABB* CarpetTile::getAABB(const Level*, const TilePos& pos)
-{
-	return nullptr;
-}
 
 bool CarpetTile::isCubeShaped() const
 {
@@ -33,45 +28,33 @@ bool CarpetTile::isSolidRender() const
 
 int CarpetTile::getResource(int x, Random* random) const
 {
-	return 0;
+	return 1;
 }
 
 int CarpetTile::getResourceCount(Random* random) const
 {
-	return 0;
+	return 1;
 }
 
-/*
+
+int CarpetTile::getTexture(Facing::Name face) const
+{
+	return getTexture(face, 0);
+}
+
 int CarpetTile::getTexture(Facing::Name face, int data) const
 {
-	return m_TextureFrame + ((field_6C > 0) ? field_6C : data);
+	return m_TextureFrame + ((0 > 0) ? 0 : data);
 }
-*/
-
-bool CarpetTile::isFree(Level* level, const TilePos& pos)
-{
-	TileID tile = level->getTile(pos);
-	if (!tile)
-		return true;
-
-	if (tile == Tile::fire->m_ID)
-		return true;
-
-	if (Tile::tiles[tile]->m_pMaterial == Material::water)
-		return true;
-
-	if (Tile::tiles[tile]->m_pMaterial == Material::lava)
-		return true;
-
-	return false;
-}
-
 
 bool CarpetTile::mayPlace(const Level* level, const TilePos& pos) const
 {
 	TileID tile = level->getTile(pos.below());
 
-	if (!tile || !Tile::tiles[tile]->isSolidRender())
+	if ((tile == Tile::carpet->m_ID) )
+		return true;
+		
+	if (!tile || ( !Tile::tiles[tile]->isSolidRender() ) )
 		return false;
 
 	return level->getMaterial(pos.below())->blocksMotion();
@@ -101,13 +84,4 @@ bool CarpetTile::shouldRenderFace(const LevelSource* level, const TilePos& pos, 
 		return false;
 
 	return Tile::shouldRenderFace(level, pos, face);
-}
-
-void CarpetTile::tick(Level* level, const TilePos& pos, Random* random)
-{
-	if (level->getBrightness(LightLayer::Block, pos) > 11)
-	{
-		spawnResources(level, pos, level->getData(pos));
-		level->setTile(pos, TILE_AIR);
-	}
 }

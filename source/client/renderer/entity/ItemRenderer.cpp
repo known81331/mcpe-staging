@@ -276,6 +276,10 @@ void ItemRenderer::renderGuiItem(Font* font, Textures* textures, ItemInstance* i
 			float uw = float(16), uh = float(16);
 			float vx = float(16 * (instance->getIcon() % 32)), vy = float(16 * (instance->getIcon() / 32));
 
+			if (instance->getId() == Tile::torch->m_ID) {
+				ey -= 3;
+			}
+
 			t.begin();
 			t.vertexUV(ex,      ey + uh, 0.0f, float(vx)      / 512.0f, float(vy + uh) / 256.0f);
 			t.vertexUV(ex + 16, ey + uh, 0.0f, float(vx + uw) / 512.0f, float(vy + uh) / 256.0f);

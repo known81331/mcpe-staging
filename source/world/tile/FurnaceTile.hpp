@@ -21,4 +21,5 @@ public:
 	int getTexture(Facing::Name face, int data) const override;
 	int getResource(int data, Random* random) const override;
 	int getResourceCount(Random* random) const override;
+	virtual void setPlacedBy(Level*, const TilePos& pos, Mob*) override;
 };

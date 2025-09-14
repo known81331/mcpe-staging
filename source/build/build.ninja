@@ -2177,6 +2177,14 @@ build CMakeFiles/reminecraftpe-core.dir/world/item/DoorItem.cpp.o: CXX_COMPILER_
   OBJECT_DIR = CMakeFiles/reminecraftpe-core.dir
   OBJECT_FILE_DIR = CMakeFiles/reminecraftpe-core.dir/world/item
 
+build CMakeFiles/reminecraftpe-core.dir/world/item/DyePowderItem.cpp.o: CXX_COMPILER__reminecraftpe-core_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/world/item/DyePowderItem.cpp || cmake_object_order_depends_target_reminecraftpe-core
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles/reminecraftpe-core.dir/world/item/DyePowderItem.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/. -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/.. -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
+  OBJECT_DIR = CMakeFiles/reminecraftpe-core.dir
+  OBJECT_FILE_DIR = CMakeFiles/reminecraftpe-core.dir/world/item
+
 build CMakeFiles/reminecraftpe-core.dir/world/item/ItemInstance.cpp.o: CXX_COMPILER__reminecraftpe-core_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/source/world/item/ItemInstance.cpp || cmake_object_order_depends_target_reminecraftpe-core
   CONFIG = Debug
   DEP_FILE = CMakeFiles/reminecraftpe-core.dir/world/item/ItemInstance.cpp.o.d
@@ -2641,7 +2649,7 @@ build CMakeFiles/reminecraftpe-core.dir/renderer/GL/GL.cpp.o: CXX_COMPILER__remi
 #############################################
 # Link the static library libreminecraftpe-core.a
 
-build libreminecraftpe-core.a: CXX_STATIC_LIBRARY_LINKER__reminecraftpe-core_Debug CMakeFiles/reminecraftpe-core.dir/common/CThread.cpp.o CMakeFiles/reminecraftpe-core.dir/common/DataIO.cpp.o CMakeFiles/reminecraftpe-core.dir/common/Logger.cpp.o CMakeFiles/reminecraftpe-core.dir/common/Matrix.cpp.o CMakeFiles/reminecraftpe-core.dir/common/Mth.cpp.o CMakeFiles/reminecraftpe-core.dir/common/Random.cpp.o CMakeFiles/reminecraftpe-core.dir/common/SmoothFloat.cpp.o CMakeFiles/reminecraftpe-core.dir/common/Timer.cpp.o CMakeFiles/reminecraftpe-core.dir/common/Util.cpp.o CMakeFiles/reminecraftpe-core.dir/common/Utils.cpp.o CMakeFiles/reminecraftpe-core.dir/client/app/App.cpp.o CMakeFiles/reminecraftpe-core.dir/client/app/AppPlatform.cpp.o CMakeFiles/reminecraftpe-core.dir/client/app/Minecraft.cpp.o CMakeFiles/reminecraftpe-core.dir/client/app/NinecraftApp.cpp.o CMakeFiles/reminecraftpe-core.dir/client/options/Options.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/LevelRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/Culler.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/TntRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/MobRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/FallingTileRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/EntityRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/ItemRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/TripodCameraRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/ItemSpriteRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/EntityRenderDispatcher.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/HumanoidMobRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/SpiderRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/ArrowRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/SheepRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/SheepFurRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/CreeperRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/CowRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/PigRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/ChickenRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/RocketRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/RenderList.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/Chunk.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/RenderChunk.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/Frustum.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/ItemInHandRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/DynamicTexture.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/GameRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/Textures.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/FrustumCuller.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/LightUpdate.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/Font.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/WaterSideTexture.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/Tesselator.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/TileRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/LightLayer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/Lighting.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/WaterTexture.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/PatchManager.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/LavaTexture.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/LavaSideTexture.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/FireTexture.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/FoliageColor.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/GrassColor.cpp.o CMakeFiles/reminecraftpe-core.dir/client/sound/SoundData.cpp.o CMakeFiles/reminecraftpe-core.dir/client/sound/SoundPathRepository.cpp.o CMakeFiles/reminecraftpe-core.dir/client/sound/SoundStream.cpp.o CMakeFiles/reminecraftpe-core.dir/client/sound/SoundSystem.cpp.o CMakeFiles/reminecraftpe-core.dir/client/sound/SoundRepository.cpp.o CMakeFiles/reminecraftpe-core.dir/client/sound/SoundEngine.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/Screen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/OptionsScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/StartMenuScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/ConvertWorldScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/CreateWorldScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/DirectConnectScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/DisconnectionScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/SelectWorldScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/SavingWorldScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/InvalidLicenseScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/ConfirmScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/DeleteWorldScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/DeathScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/ChatScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/RenameMPLevelScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/ProgressScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/JoinGameScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/IngameBlockSelectionScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/PauseScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/PaneCraftingScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/ScrolledSelectionList.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/AvailableGamesList.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/RolledSelectionList.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/Button.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/ImageButton.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/TextInputBox.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/SmallButton.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/WorldSelectionList.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/OptionList.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/RecipeList.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/Gui.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/GuiComponent.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/PolygonQuad.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/Model.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/Cube.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/ModelPart.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/QuadrupedModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/PigModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/SheepModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/HumanoidModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/SpiderModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/ZombieModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/SkeletonModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/SheepFurModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/CreeperModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/CowModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/ChickenModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/Controller.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/ControllerBuildInput.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/ControllerMoveInput.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/ControllerTurnInput.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/Mouse.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/Keyboard.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/MouseBuildInput.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/MouseTurnInput.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/KeyboardInput.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/ITurnInput.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/IBuildInput.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/IncludeExcludeArea.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/MouseHandler.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/PolygonArea.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/RectangleArea.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/MouseDevice.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/Multitouch.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/CustomInputHolder.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/IInputHolder.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/IMoveInput.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/ITouchScreenModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/TouchAreaModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/TouchInputHolder.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/TouchscreenInput_TestFps.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/UnifiedTurnBuild.cpp.o CMakeFiles/reminecraftpe-core.dir/client/network/ClientSideNetworkHandler.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/CompoundTag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/DoubleTag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/EndTag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/FloatTag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/Int8ArrayTag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/Int8Tag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/Int16Tag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/Int32ArrayTag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/Int32Tag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/Int64ArrayTag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/Int64Tag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/ListTag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/NbtIo.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/StringTag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/Tag.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/UpdateBlockPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/RequestChunkPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/PlayerEquipmentPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/ChunkDataPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/LevelDataPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/PlaceBlockPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/LoginPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/LoginStatusPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/ReadyPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/SetTimePacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/StartGamePacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/RemoveEntityPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/AddPlayerPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/RemoveBlockPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/MovePlayerPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/MessagePacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/ServerSideNetworkHandler.cpp.o CMakeFiles/reminecraftpe-core.dir/network/RakIO.cpp.o CMakeFiles/reminecraftpe-core.dir/network/RakNetInstance.cpp.o CMakeFiles/reminecraftpe-core.dir/network/MinecraftPackets.cpp.o CMakeFiles/reminecraftpe-core.dir/network/NetEventCallback.cpp.o CMakeFiles/reminecraftpe-core.dir/network/PacketUtil.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/synth/Synth.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/synth/ImprovedNoise.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/synth/PerlinNoise.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/path/Node.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/path/Path.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/path/BinaryHeap.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/path/PathFinder.cpp.o CMakeFiles/reminecraftpe-core.dir/world/phys/HitResult.cpp.o CMakeFiles/reminecraftpe-core.dir/world/phys/Vec2.cpp.o CMakeFiles/reminecraftpe-core.dir/world/phys/Vec3.cpp.o CMakeFiles/reminecraftpe-core.dir/world/phys/AABB.cpp.o CMakeFiles/reminecraftpe-core.dir/world/gamemode/SurvivalMode.cpp.o CMakeFiles/reminecraftpe-core.dir/world/gamemode/GameMode.cpp.o CMakeFiles/reminecraftpe-core.dir/world/gamemode/CreativeMode.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Mob.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/LocalPlayer.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Player.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/PrimedTnt.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Entity.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/FallingTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/TripodCamera.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/ItemEntity.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/PathfinderMob.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Animal.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Skeleton.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Spider.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Zombie.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Arrow.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/WaterAnimal.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Monster.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Rocket.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/EntityFactory.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/MobFactory.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Chicken.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Cow.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Creeper.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Pig.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Sheep.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/SynchedEntityData.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/EntityCategories.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/EntityType.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/EntityTypeDescriptor.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/MobCategory.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/MobSpawner.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/Dimension.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/Material.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/LevelListener.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/TickNextTickData.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/TilePos.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/Explosion.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/LevelStorageSource.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/MemoryLevelStorageSource.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/LevelData.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/ExternalFileLevelStorage.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/RegionFile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/LevelStorage.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/MemoryLevelStorage.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/ChunkStorage.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/LevelSource.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/MemoryChunkStorage.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/ExternalFileLevelStorageSource.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/BirchFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/LargeFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/Feature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/LargeCaveFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/SpringFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/TreeFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/PineFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/ReedsFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/OreFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/ClayFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/FlowerFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/GrassFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/SpruceFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/biome/Biome.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/biome/BiomeSource.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/chunk/RandomLevelSource.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/chunk/LevelChunk.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/chunk/ChunkCache.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/chunk/ChunkPos.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/chunk/ChunkSource.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/chunk/EmptyLevelChunk.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/chunk/PerformanceTestChunkSource.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/chunk/TestChunkSource.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/Level.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/Region.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/TilePlanterItem.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/CameraItem.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/TileItem.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/AuxDataTileItem.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/Inventory.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/DoorItem.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/ItemInstance.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/RocketItem.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/Item.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/RedDustParticle.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/TerrainParticle.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/BubbleParticle.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/ExplodeParticle.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/ParticleEngine.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/FlameParticle.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/SmokeParticle.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/Particle.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/LavaParticle.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/FireworkParticle.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/InvisibleTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/Sapling.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/TreeTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/GrassTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/HalfTransparentTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/ClothTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/CactusTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/CarpetTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/WoodTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/TorchTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/MetalTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/SpongeTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/GlassTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/SandTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/Tile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/FurnaceTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/WorkbenchTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/ClayTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/StoneTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/LadderTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/IceTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/TopSnowTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/ReedTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/Bush.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/RedStoneOreTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/DirtTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/LiquidTileStatic.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/BookshelfTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/TntTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/OreTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/StairTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/SandStoneTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/FireTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/StoneSlabTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/LiquidTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/GravelTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/LiquidTileDynamic.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/TransparentTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/LeafTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/ObsidianTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/FarmTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/DoorTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/RocketLauncherTile.cpp.o CMakeFiles/reminecraftpe-core.dir/renderer/GL/GL.cpp.o || raknet/libraknet.a
+build libreminecraftpe-core.a: CXX_STATIC_LIBRARY_LINKER__reminecraftpe-core_Debug CMakeFiles/reminecraftpe-core.dir/common/CThread.cpp.o CMakeFiles/reminecraftpe-core.dir/common/DataIO.cpp.o CMakeFiles/reminecraftpe-core.dir/common/Logger.cpp.o CMakeFiles/reminecraftpe-core.dir/common/Matrix.cpp.o CMakeFiles/reminecraftpe-core.dir/common/Mth.cpp.o CMakeFiles/reminecraftpe-core.dir/common/Random.cpp.o CMakeFiles/reminecraftpe-core.dir/common/SmoothFloat.cpp.o CMakeFiles/reminecraftpe-core.dir/common/Timer.cpp.o CMakeFiles/reminecraftpe-core.dir/common/Util.cpp.o CMakeFiles/reminecraftpe-core.dir/common/Utils.cpp.o CMakeFiles/reminecraftpe-core.dir/client/app/App.cpp.o CMakeFiles/reminecraftpe-core.dir/client/app/AppPlatform.cpp.o CMakeFiles/reminecraftpe-core.dir/client/app/Minecraft.cpp.o CMakeFiles/reminecraftpe-core.dir/client/app/NinecraftApp.cpp.o CMakeFiles/reminecraftpe-core.dir/client/options/Options.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/LevelRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/Culler.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/TntRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/MobRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/FallingTileRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/EntityRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/ItemRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/TripodCameraRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/ItemSpriteRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/EntityRenderDispatcher.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/HumanoidMobRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/SpiderRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/ArrowRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/SheepRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/SheepFurRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/CreeperRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/CowRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/PigRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/ChickenRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/entity/RocketRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/RenderList.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/Chunk.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/RenderChunk.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/Frustum.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/ItemInHandRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/DynamicTexture.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/GameRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/Textures.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/FrustumCuller.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/LightUpdate.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/Font.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/WaterSideTexture.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/Tesselator.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/TileRenderer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/LightLayer.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/Lighting.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/WaterTexture.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/PatchManager.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/LavaTexture.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/LavaSideTexture.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/FireTexture.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/FoliageColor.cpp.o CMakeFiles/reminecraftpe-core.dir/client/renderer/GrassColor.cpp.o CMakeFiles/reminecraftpe-core.dir/client/sound/SoundData.cpp.o CMakeFiles/reminecraftpe-core.dir/client/sound/SoundPathRepository.cpp.o CMakeFiles/reminecraftpe-core.dir/client/sound/SoundStream.cpp.o CMakeFiles/reminecraftpe-core.dir/client/sound/SoundSystem.cpp.o CMakeFiles/reminecraftpe-core.dir/client/sound/SoundRepository.cpp.o CMakeFiles/reminecraftpe-core.dir/client/sound/SoundEngine.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/Screen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/OptionsScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/StartMenuScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/ConvertWorldScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/CreateWorldScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/DirectConnectScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/DisconnectionScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/SelectWorldScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/SavingWorldScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/InvalidLicenseScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/ConfirmScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/DeleteWorldScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/DeathScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/ChatScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/RenameMPLevelScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/ProgressScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/JoinGameScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/IngameBlockSelectionScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/PauseScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/screens/PaneCraftingScreen.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/ScrolledSelectionList.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/AvailableGamesList.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/RolledSelectionList.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/Button.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/ImageButton.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/TextInputBox.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/SmallButton.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/WorldSelectionList.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/OptionList.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/components/RecipeList.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/Gui.cpp.o CMakeFiles/reminecraftpe-core.dir/client/gui/GuiComponent.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/PolygonQuad.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/Model.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/Cube.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/ModelPart.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/QuadrupedModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/PigModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/SheepModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/HumanoidModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/SpiderModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/ZombieModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/SkeletonModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/SheepFurModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/CreeperModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/CowModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/model/ChickenModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/Controller.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/ControllerBuildInput.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/ControllerMoveInput.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/ControllerTurnInput.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/Mouse.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/Keyboard.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/MouseBuildInput.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/MouseTurnInput.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/KeyboardInput.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/ITurnInput.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/IBuildInput.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/IncludeExcludeArea.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/MouseHandler.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/PolygonArea.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/RectangleArea.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/MouseDevice.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/Multitouch.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/CustomInputHolder.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/IInputHolder.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/IMoveInput.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/ITouchScreenModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/TouchAreaModel.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/TouchInputHolder.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/TouchscreenInput_TestFps.cpp.o CMakeFiles/reminecraftpe-core.dir/client/player/input/UnifiedTurnBuild.cpp.o CMakeFiles/reminecraftpe-core.dir/client/network/ClientSideNetworkHandler.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/CompoundTag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/DoubleTag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/EndTag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/FloatTag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/Int8ArrayTag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/Int8Tag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/Int16Tag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/Int32ArrayTag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/Int32Tag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/Int64ArrayTag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/Int64Tag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/ListTag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/NbtIo.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/StringTag.cpp.o CMakeFiles/reminecraftpe-core.dir/nbt/Tag.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/UpdateBlockPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/RequestChunkPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/PlayerEquipmentPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/ChunkDataPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/LevelDataPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/PlaceBlockPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/LoginPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/LoginStatusPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/ReadyPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/SetTimePacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/StartGamePacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/RemoveEntityPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/AddPlayerPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/RemoveBlockPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/MovePlayerPacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/packets/MessagePacket.cpp.o CMakeFiles/reminecraftpe-core.dir/network/ServerSideNetworkHandler.cpp.o CMakeFiles/reminecraftpe-core.dir/network/RakIO.cpp.o CMakeFiles/reminecraftpe-core.dir/network/RakNetInstance.cpp.o CMakeFiles/reminecraftpe-core.dir/network/MinecraftPackets.cpp.o CMakeFiles/reminecraftpe-core.dir/network/NetEventCallback.cpp.o CMakeFiles/reminecraftpe-core.dir/network/PacketUtil.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/synth/Synth.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/synth/ImprovedNoise.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/synth/PerlinNoise.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/path/Node.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/path/Path.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/path/BinaryHeap.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/path/PathFinder.cpp.o CMakeFiles/reminecraftpe-core.dir/world/phys/HitResult.cpp.o CMakeFiles/reminecraftpe-core.dir/world/phys/Vec2.cpp.o CMakeFiles/reminecraftpe-core.dir/world/phys/Vec3.cpp.o CMakeFiles/reminecraftpe-core.dir/world/phys/AABB.cpp.o CMakeFiles/reminecraftpe-core.dir/world/gamemode/SurvivalMode.cpp.o CMakeFiles/reminecraftpe-core.dir/world/gamemode/GameMode.cpp.o CMakeFiles/reminecraftpe-core.dir/world/gamemode/CreativeMode.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Mob.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/LocalPlayer.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Player.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/PrimedTnt.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Entity.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/FallingTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/TripodCamera.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/ItemEntity.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/PathfinderMob.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Animal.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Skeleton.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Spider.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Zombie.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Arrow.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/WaterAnimal.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Monster.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Rocket.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/EntityFactory.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/MobFactory.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Chicken.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Cow.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Creeper.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Pig.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/Sheep.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/SynchedEntityData.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/EntityCategories.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/EntityType.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/EntityTypeDescriptor.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/MobCategory.cpp.o CMakeFiles/reminecraftpe-core.dir/world/entity/MobSpawner.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/Dimension.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/Material.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/LevelListener.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/TickNextTickData.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/TilePos.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/Explosion.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/LevelStorageSource.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/MemoryLevelStorageSource.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/LevelData.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/ExternalFileLevelStorage.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/RegionFile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/LevelStorage.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/MemoryLevelStorage.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/ChunkStorage.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/LevelSource.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/MemoryChunkStorage.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/storage/ExternalFileLevelStorageSource.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/BirchFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/LargeFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/Feature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/LargeCaveFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/SpringFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/TreeFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/PineFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/ReedsFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/OreFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/ClayFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/FlowerFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/GrassFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/feature/SpruceFeature.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/biome/Biome.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/biome/BiomeSource.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/chunk/RandomLevelSource.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/chunk/LevelChunk.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/chunk/ChunkCache.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/chunk/ChunkPos.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/chunk/ChunkSource.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/chunk/EmptyLevelChunk.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/chunk/PerformanceTestChunkSource.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/levelgen/chunk/TestChunkSource.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/Level.cpp.o CMakeFiles/reminecraftpe-core.dir/world/level/Region.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/TilePlanterItem.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/CameraItem.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/TileItem.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/AuxDataTileItem.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/Inventory.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/DoorItem.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/DyePowderItem.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/ItemInstance.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/RocketItem.cpp.o CMakeFiles/reminecraftpe-core.dir/world/item/Item.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/RedDustParticle.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/TerrainParticle.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/BubbleParticle.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/ExplodeParticle.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/ParticleEngine.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/FlameParticle.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/SmokeParticle.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/Particle.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/LavaParticle.cpp.o CMakeFiles/reminecraftpe-core.dir/world/particle/FireworkParticle.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/InvisibleTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/Sapling.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/TreeTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/GrassTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/HalfTransparentTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/ClothTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/CactusTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/CarpetTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/WoodTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/TorchTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/MetalTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/SpongeTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/GlassTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/SandTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/Tile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/FurnaceTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/WorkbenchTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/ClayTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/StoneTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/LadderTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/IceTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/TopSnowTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/ReedTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/Bush.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/RedStoneOreTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/DirtTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/LiquidTileStatic.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/BookshelfTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/TntTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/OreTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/StairTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/SandStoneTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/FireTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/StoneSlabTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/LiquidTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/GravelTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/LiquidTileDynamic.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/TransparentTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/LeafTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/ObsidianTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/FarmTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/DoorTile.cpp.o CMakeFiles/reminecraftpe-core.dir/world/tile/RocketLauncherTile.cpp.o CMakeFiles/reminecraftpe-core.dir/renderer/GL/GL.cpp.o || raknet/libraknet.a
   CONFIG = Debug
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles/reminecraftpe-core.dir
@@ -2691,7 +2699,7 @@ build cmake_object_order_depends_target_raknet: phony || .
 build raknet/CMakeFiles/raknet.dir/VariadicSQLParser.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VariadicSQLParser.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/VariadicSQLParser.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2699,7 +2707,7 @@ build raknet/CMakeFiles/raknet.dir/VariadicSQLParser.cpp.o: CXX_COMPILER__raknet
 build raknet/CMakeFiles/raknet.dir/SuperFastHash.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SuperFastHash.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/SuperFastHash.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2707,7 +2715,7 @@ build raknet/CMakeFiles/raknet.dir/SuperFastHash.cpp.o: CXX_COMPILER__raknet_uns
 build raknet/CMakeFiles/raknet.dir/VariableListDeltaTracker.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VariableListDeltaTracker.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/VariableListDeltaTracker.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2715,7 +2723,7 @@ build raknet/CMakeFiles/raknet.dir/VariableListDeltaTracker.cpp.o: CXX_COMPILER_
 build raknet/CMakeFiles/raknet.dir/StatisticsHistory.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/StatisticsHistory.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/StatisticsHistory.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2723,7 +2731,7 @@ build raknet/CMakeFiles/raknet.dir/StatisticsHistory.cpp.o: CXX_COMPILER__raknet
 build raknet/CMakeFiles/raknet.dir/SendToThread.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SendToThread.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/SendToThread.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2731,7 +2739,7 @@ build raknet/CMakeFiles/raknet.dir/SendToThread.cpp.o: CXX_COMPILER__raknet_unsc
 build raknet/CMakeFiles/raknet.dir/SignaledEvent.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SignaledEvent.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/SignaledEvent.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2739,7 +2747,7 @@ build raknet/CMakeFiles/raknet.dir/SignaledEvent.cpp.o: CXX_COMPILER__raknet_uns
 build raknet/CMakeFiles/raknet.dir/ReplicaManager3.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ReplicaManager3.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/ReplicaManager3.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2747,7 +2755,7 @@ build raknet/CMakeFiles/raknet.dir/ReplicaManager3.cpp.o: CXX_COMPILER__raknet_u
 build raknet/CMakeFiles/raknet.dir/IncrementalReadInterface.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/IncrementalReadInterface.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/IncrementalReadInterface.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2755,7 +2763,7 @@ build raknet/CMakeFiles/raknet.dir/IncrementalReadInterface.cpp.o: CXX_COMPILER_
 build raknet/CMakeFiles/raknet.dir/Getche.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Getche.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/Getche.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2763,7 +2771,7 @@ build raknet/CMakeFiles/raknet.dir/Getche.cpp.o: CXX_COMPILER__raknet_unscanned_
 build raknet/CMakeFiles/raknet.dir/RakNetSocket2_Berkley_NativeClient.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Berkley_NativeClient.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakNetSocket2_Berkley_NativeClient.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2771,7 +2779,7 @@ build raknet/CMakeFiles/raknet.dir/RakNetSocket2_Berkley_NativeClient.cpp.o: CXX
 build raknet/CMakeFiles/raknet.dir/WSAStartupSingleton.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/WSAStartupSingleton.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/WSAStartupSingleton.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2779,7 +2787,7 @@ build raknet/CMakeFiles/raknet.dir/WSAStartupSingleton.cpp.o: CXX_COMPILER__rakn
 build raknet/CMakeFiles/raknet.dir/DataCompressor.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DataCompressor.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/DataCompressor.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2787,7 +2795,7 @@ build raknet/CMakeFiles/raknet.dir/DataCompressor.cpp.o: CXX_COMPILER__raknet_un
 build raknet/CMakeFiles/raknet.dir/RakMemoryOverride.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakMemoryOverride.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakMemoryOverride.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2795,7 +2803,7 @@ build raknet/CMakeFiles/raknet.dir/RakMemoryOverride.cpp.o: CXX_COMPILER__raknet
 build raknet/CMakeFiles/raknet.dir/CommandParserInterface.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CommandParserInterface.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/CommandParserInterface.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2803,7 +2811,7 @@ build raknet/CMakeFiles/raknet.dir/CommandParserInterface.cpp.o: CXX_COMPILER__r
 build raknet/CMakeFiles/raknet.dir/GetTime.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/GetTime.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/GetTime.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2811,7 +2819,7 @@ build raknet/CMakeFiles/raknet.dir/GetTime.cpp.o: CXX_COMPILER__raknet_unscanned
 build raknet/CMakeFiles/raknet.dir/RakNetSocket2_Berkley.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Berkley.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakNetSocket2_Berkley.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2819,7 +2827,7 @@ build raknet/CMakeFiles/raknet.dir/RakNetSocket2_Berkley.cpp.o: CXX_COMPILER__ra
 build raknet/CMakeFiles/raknet.dir/PacketOutputWindowLogger.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketOutputWindowLogger.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/PacketOutputWindowLogger.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2827,7 +2835,7 @@ build raknet/CMakeFiles/raknet.dir/PacketOutputWindowLogger.cpp.o: CXX_COMPILER_
 build raknet/CMakeFiles/raknet.dir/DynDNS.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DynDNS.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/DynDNS.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2835,7 +2843,7 @@ build raknet/CMakeFiles/raknet.dir/DynDNS.cpp.o: CXX_COMPILER__raknet_unscanned_
 build raknet/CMakeFiles/raknet.dir/LocklessTypes.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/LocklessTypes.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/LocklessTypes.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2843,7 +2851,7 @@ build raknet/CMakeFiles/raknet.dir/LocklessTypes.cpp.o: CXX_COMPILER__raknet_uns
 build raknet/CMakeFiles/raknet.dir/UDPForwarder.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPForwarder.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/UDPForwarder.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2851,7 +2859,7 @@ build raknet/CMakeFiles/raknet.dir/UDPForwarder.cpp.o: CXX_COMPILER__raknet_unsc
 build raknet/CMakeFiles/raknet.dir/RakString.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakString.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakString.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2859,7 +2867,7 @@ build raknet/CMakeFiles/raknet.dir/RakString.cpp.o: CXX_COMPILER__raknet_unscann
 build raknet/CMakeFiles/raknet.dir/SimpleMutex.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SimpleMutex.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/SimpleMutex.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2867,7 +2875,7 @@ build raknet/CMakeFiles/raknet.dir/SimpleMutex.cpp.o: CXX_COMPILER__raknet_unsca
 build raknet/CMakeFiles/raknet.dir/Itoa.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Itoa.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/Itoa.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2875,7 +2883,7 @@ build raknet/CMakeFiles/raknet.dir/Itoa.cpp.o: CXX_COMPILER__raknet_unscanned_De
 build raknet/CMakeFiles/raknet.dir/VitaIncludes.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VitaIncludes.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/VitaIncludes.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2883,7 +2891,7 @@ build raknet/CMakeFiles/raknet.dir/VitaIncludes.cpp.o: CXX_COMPILER__raknet_unsc
 build raknet/CMakeFiles/raknet.dir/TableSerializer.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TableSerializer.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/TableSerializer.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2891,7 +2899,7 @@ build raknet/CMakeFiles/raknet.dir/TableSerializer.cpp.o: CXX_COMPILER__raknet_u
 build raknet/CMakeFiles/raknet.dir/EpochTimeToString.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/EpochTimeToString.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/EpochTimeToString.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2899,7 +2907,7 @@ build raknet/CMakeFiles/raknet.dir/EpochTimeToString.cpp.o: CXX_COMPILER__raknet
 build raknet/CMakeFiles/raknet.dir/ConnectionGraph2.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ConnectionGraph2.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/ConnectionGraph2.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2907,7 +2915,7 @@ build raknet/CMakeFiles/raknet.dir/ConnectionGraph2.cpp.o: CXX_COMPILER__raknet_
 build raknet/CMakeFiles/raknet.dir/EmailSender.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/EmailSender.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/EmailSender.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2915,7 +2923,7 @@ build raknet/CMakeFiles/raknet.dir/EmailSender.cpp.o: CXX_COMPILER__raknet_unsca
 build raknet/CMakeFiles/raknet.dir/UDPProxyCoordinator.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPProxyCoordinator.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/UDPProxyCoordinator.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2923,7 +2931,7 @@ build raknet/CMakeFiles/raknet.dir/UDPProxyCoordinator.cpp.o: CXX_COMPILER__rakn
 build raknet/CMakeFiles/raknet.dir/UDPProxyClient.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPProxyClient.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/UDPProxyClient.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2931,7 +2939,7 @@ build raknet/CMakeFiles/raknet.dir/UDPProxyClient.cpp.o: CXX_COMPILER__raknet_un
 build raknet/CMakeFiles/raknet.dir/CloudClient.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CloudClient.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/CloudClient.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2939,7 +2947,7 @@ build raknet/CMakeFiles/raknet.dir/CloudClient.cpp.o: CXX_COMPILER__raknet_unsca
 build raknet/CMakeFiles/raknet.dir/ReadyEvent.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ReadyEvent.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/ReadyEvent.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2947,7 +2955,7 @@ build raknet/CMakeFiles/raknet.dir/ReadyEvent.cpp.o: CXX_COMPILER__raknet_unscan
 build raknet/CMakeFiles/raknet.dir/MessageFilter.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/MessageFilter.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/MessageFilter.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2955,7 +2963,7 @@ build raknet/CMakeFiles/raknet.dir/MessageFilter.cpp.o: CXX_COMPILER__raknet_uns
 build raknet/CMakeFiles/raknet.dir/TCPInterface.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TCPInterface.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/TCPInterface.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2963,7 +2971,7 @@ build raknet/CMakeFiles/raknet.dir/TCPInterface.cpp.o: CXX_COMPILER__raknet_unsc
 build raknet/CMakeFiles/raknet.dir/PS4Includes.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PS4Includes.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/PS4Includes.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2971,7 +2979,7 @@ build raknet/CMakeFiles/raknet.dir/PS4Includes.cpp.o: CXX_COMPILER__raknet_unsca
 build raknet/CMakeFiles/raknet.dir/NatPunchthroughClient.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatPunchthroughClient.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/NatPunchthroughClient.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2979,7 +2987,7 @@ build raknet/CMakeFiles/raknet.dir/NatPunchthroughClient.cpp.o: CXX_COMPILER__ra
 build raknet/CMakeFiles/raknet.dir/RakNetStatistics.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetStatistics.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakNetStatistics.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2987,7 +2995,7 @@ build raknet/CMakeFiles/raknet.dir/RakNetStatistics.cpp.o: CXX_COMPILER__raknet_
 build raknet/CMakeFiles/raknet.dir/PacketConsoleLogger.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketConsoleLogger.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/PacketConsoleLogger.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -2995,7 +3003,7 @@ build raknet/CMakeFiles/raknet.dir/PacketConsoleLogger.cpp.o: CXX_COMPILER__rakn
 build raknet/CMakeFiles/raknet.dir/RakNetSocket2_NativeClient.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_NativeClient.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakNetSocket2_NativeClient.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3003,7 +3011,7 @@ build raknet/CMakeFiles/raknet.dir/RakNetSocket2_NativeClient.cpp.o: CXX_COMPILE
 build raknet/CMakeFiles/raknet.dir/PacketLogger.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketLogger.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/PacketLogger.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3011,7 +3019,7 @@ build raknet/CMakeFiles/raknet.dir/PacketLogger.cpp.o: CXX_COMPILER__raknet_unsc
 build raknet/CMakeFiles/raknet.dir/Gets.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Gets.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/Gets.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3019,7 +3027,7 @@ build raknet/CMakeFiles/raknet.dir/Gets.cpp.o: CXX_COMPILER__raknet_unscanned_De
 build raknet/CMakeFiles/raknet.dir/NatPunchthroughServer.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatPunchthroughServer.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/NatPunchthroughServer.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3027,7 +3035,7 @@ build raknet/CMakeFiles/raknet.dir/NatPunchthroughServer.cpp.o: CXX_COMPILER__ra
 build raknet/CMakeFiles/raknet.dir/FileOperations.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FileOperations.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/FileOperations.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3035,7 +3043,7 @@ build raknet/CMakeFiles/raknet.dir/FileOperations.cpp.o: CXX_COMPILER__raknet_un
 build raknet/CMakeFiles/raknet.dir/CheckSum.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CheckSum.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/CheckSum.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3043,7 +3051,7 @@ build raknet/CMakeFiles/raknet.dir/CheckSum.cpp.o: CXX_COMPILER__raknet_unscanne
 build raknet/CMakeFiles/raknet.dir/HTTPConnection.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/HTTPConnection.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/HTTPConnection.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3051,7 +3059,7 @@ build raknet/CMakeFiles/raknet.dir/HTTPConnection.cpp.o: CXX_COMPILER__raknet_un
 build raknet/CMakeFiles/raknet.dir/NatTypeDetectionServer.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatTypeDetectionServer.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/NatTypeDetectionServer.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3059,7 +3067,7 @@ build raknet/CMakeFiles/raknet.dir/NatTypeDetectionServer.cpp.o: CXX_COMPILER__r
 build raknet/CMakeFiles/raknet.dir/RakNetSocket.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakNetSocket.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3067,7 +3075,7 @@ build raknet/CMakeFiles/raknet.dir/RakNetSocket.cpp.o: CXX_COMPILER__raknet_unsc
 build raknet/CMakeFiles/raknet.dir/DS_Table.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_Table.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/DS_Table.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3075,7 +3083,7 @@ build raknet/CMakeFiles/raknet.dir/DS_Table.cpp.o: CXX_COMPILER__raknet_unscanne
 build raknet/CMakeFiles/raknet.dir/RakNetSocket2.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakNetSocket2.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3083,7 +3091,7 @@ build raknet/CMakeFiles/raknet.dir/RakNetSocket2.cpp.o: CXX_COMPILER__raknet_uns
 build raknet/CMakeFiles/raknet.dir/PacketizedTCP.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketizedTCP.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/PacketizedTCP.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3091,7 +3099,7 @@ build raknet/CMakeFiles/raknet.dir/PacketizedTCP.cpp.o: CXX_COMPILER__raknet_uns
 build raknet/CMakeFiles/raknet.dir/RelayPlugin.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RelayPlugin.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RelayPlugin.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3099,7 +3107,7 @@ build raknet/CMakeFiles/raknet.dir/RelayPlugin.cpp.o: CXX_COMPILER__raknet_unsca
 build raknet/CMakeFiles/raknet.dir/ThreadsafePacketLogger.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ThreadsafePacketLogger.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/ThreadsafePacketLogger.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3107,7 +3115,7 @@ build raknet/CMakeFiles/raknet.dir/ThreadsafePacketLogger.cpp.o: CXX_COMPILER__r
 build raknet/CMakeFiles/raknet.dir/Rand.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Rand.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/Rand.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3115,7 +3123,7 @@ build raknet/CMakeFiles/raknet.dir/Rand.cpp.o: CXX_COMPILER__raknet_unscanned_De
 build raknet/CMakeFiles/raknet.dir/GridSectorizer.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/GridSectorizer.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/GridSectorizer.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3123,7 +3131,7 @@ build raknet/CMakeFiles/raknet.dir/GridSectorizer.cpp.o: CXX_COMPILER__raknet_un
 build raknet/CMakeFiles/raknet.dir/DS_BytePool.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_BytePool.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/DS_BytePool.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3131,7 +3139,7 @@ build raknet/CMakeFiles/raknet.dir/DS_BytePool.cpp.o: CXX_COMPILER__raknet_unsca
 build raknet/CMakeFiles/raknet.dir/FullyConnectedMesh2.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FullyConnectedMesh2.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/FullyConnectedMesh2.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3139,7 +3147,7 @@ build raknet/CMakeFiles/raknet.dir/FullyConnectedMesh2.cpp.o: CXX_COMPILER__rakn
 build raknet/CMakeFiles/raknet.dir/SocketLayer.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SocketLayer.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/SocketLayer.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3147,7 +3155,7 @@ build raknet/CMakeFiles/raknet.dir/SocketLayer.cpp.o: CXX_COMPILER__raknet_unsca
 build raknet/CMakeFiles/raknet.dir/RakWString.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakWString.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakWString.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3155,7 +3163,7 @@ build raknet/CMakeFiles/raknet.dir/RakWString.cpp.o: CXX_COMPILER__raknet_unscan
 build raknet/CMakeFiles/raknet.dir/UDPProxyServer.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/UDPProxyServer.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/UDPProxyServer.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3163,7 +3171,7 @@ build raknet/CMakeFiles/raknet.dir/UDPProxyServer.cpp.o: CXX_COMPILER__raknet_un
 build raknet/CMakeFiles/raknet.dir/StringTable.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/StringTable.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/StringTable.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3171,7 +3179,7 @@ build raknet/CMakeFiles/raknet.dir/StringTable.cpp.o: CXX_COMPILER__raknet_unsca
 build raknet/CMakeFiles/raknet.dir/DR_SHA1.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DR_SHA1.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/DR_SHA1.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3179,7 +3187,7 @@ build raknet/CMakeFiles/raknet.dir/DR_SHA1.cpp.o: CXX_COMPILER__raknet_unscanned
 build raknet/CMakeFiles/raknet.dir/LinuxStrings.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/LinuxStrings.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/LinuxStrings.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3187,7 +3195,7 @@ build raknet/CMakeFiles/raknet.dir/LinuxStrings.cpp.o: CXX_COMPILER__raknet_unsc
 build raknet/CMakeFiles/raknet.dir/VariableDeltaSerializer.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/VariableDeltaSerializer.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/VariableDeltaSerializer.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3195,7 +3203,7 @@ build raknet/CMakeFiles/raknet.dir/VariableDeltaSerializer.cpp.o: CXX_COMPILER__
 build raknet/CMakeFiles/raknet.dir/CloudServer.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CloudServer.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/CloudServer.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3203,7 +3211,7 @@ build raknet/CMakeFiles/raknet.dir/CloudServer.cpp.o: CXX_COMPILER__raknet_unsca
 build raknet/CMakeFiles/raknet.dir/RPC4Plugin.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RPC4Plugin.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RPC4Plugin.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3211,7 +3219,7 @@ build raknet/CMakeFiles/raknet.dir/RPC4Plugin.cpp.o: CXX_COMPILER__raknet_unscan
 build raknet/CMakeFiles/raknet.dir/PacketFileLogger.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PacketFileLogger.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/PacketFileLogger.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3219,7 +3227,7 @@ build raknet/CMakeFiles/raknet.dir/PacketFileLogger.cpp.o: CXX_COMPILER__raknet_
 build raknet/CMakeFiles/raknet.dir/CloudCommon.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CloudCommon.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/CloudCommon.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3227,7 +3235,7 @@ build raknet/CMakeFiles/raknet.dir/CloudCommon.cpp.o: CXX_COMPILER__raknet_unsca
 build raknet/CMakeFiles/raknet.dir/SecureHandshake.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/SecureHandshake.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/SecureHandshake.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3235,7 +3243,7 @@ build raknet/CMakeFiles/raknet.dir/SecureHandshake.cpp.o: CXX_COMPILER__raknet_u
 build raknet/CMakeFiles/raknet.dir/FormatString.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FormatString.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/FormatString.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3243,7 +3251,7 @@ build raknet/CMakeFiles/raknet.dir/FormatString.cpp.o: CXX_COMPILER__raknet_unsc
 build raknet/CMakeFiles/raknet.dir/RakNetSocket2_PS4.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_PS4.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakNetSocket2_PS4.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3251,7 +3259,7 @@ build raknet/CMakeFiles/raknet.dir/RakNetSocket2_PS4.cpp.o: CXX_COMPILER__raknet
 build raknet/CMakeFiles/raknet.dir/DS_ByteQueue.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_ByteQueue.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/DS_ByteQueue.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3259,7 +3267,7 @@ build raknet/CMakeFiles/raknet.dir/DS_ByteQueue.cpp.o: CXX_COMPILER__raknet_unsc
 build raknet/CMakeFiles/raknet.dir/NetworkIDObject.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NetworkIDObject.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/NetworkIDObject.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3267,7 +3275,7 @@ build raknet/CMakeFiles/raknet.dir/NetworkIDObject.cpp.o: CXX_COMPILER__raknet_u
 build raknet/CMakeFiles/raknet.dir/PluginInterface2.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/PluginInterface2.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/PluginInterface2.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3275,7 +3283,7 @@ build raknet/CMakeFiles/raknet.dir/PluginInterface2.cpp.o: CXX_COMPILER__raknet_
 build raknet/CMakeFiles/raknet.dir/RakNetSocket2_WindowsStore8.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_WindowsStore8.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakNetSocket2_WindowsStore8.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3283,7 +3291,7 @@ build raknet/CMakeFiles/raknet.dir/RakNetSocket2_WindowsStore8.cpp.o: CXX_COMPIL
 build raknet/CMakeFiles/raknet.dir/RandSync.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RandSync.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RandSync.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3291,7 +3299,7 @@ build raknet/CMakeFiles/raknet.dir/RandSync.cpp.o: CXX_COMPILER__raknet_unscanne
 build raknet/CMakeFiles/raknet.dir/RakPeer.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakPeer.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakPeer.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3299,7 +3307,7 @@ build raknet/CMakeFiles/raknet.dir/RakPeer.cpp.o: CXX_COMPILER__raknet_unscanned
 build raknet/CMakeFiles/raknet.dir/RakNetTransport2.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetTransport2.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakNetTransport2.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3307,7 +3315,7 @@ build raknet/CMakeFiles/raknet.dir/RakNetTransport2.cpp.o: CXX_COMPILER__raknet_
 build raknet/CMakeFiles/raknet.dir/RakNetSocket2_Windows_Linux_360.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Windows_Linux_360.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakNetSocket2_Windows_Linux_360.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3315,7 +3323,7 @@ build raknet/CMakeFiles/raknet.dir/RakNetSocket2_Windows_Linux_360.cpp.o: CXX_CO
 build raknet/CMakeFiles/raknet.dir/NatTypeDetectionClient.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatTypeDetectionClient.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/NatTypeDetectionClient.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3323,7 +3331,7 @@ build raknet/CMakeFiles/raknet.dir/NatTypeDetectionClient.cpp.o: CXX_COMPILER__r
 build raknet/CMakeFiles/raknet.dir/ConsoleServer.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ConsoleServer.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/ConsoleServer.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3331,7 +3339,7 @@ build raknet/CMakeFiles/raknet.dir/ConsoleServer.cpp.o: CXX_COMPILER__raknet_uns
 build raknet/CMakeFiles/raknet.dir/TelnetTransport.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TelnetTransport.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/TelnetTransport.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3339,7 +3347,7 @@ build raknet/CMakeFiles/raknet.dir/TelnetTransport.cpp.o: CXX_COMPILER__raknet_u
 build raknet/CMakeFiles/raknet.dir/Base64Encoder.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Base64Encoder.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/Base64Encoder.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3347,7 +3355,7 @@ build raknet/CMakeFiles/raknet.dir/Base64Encoder.cpp.o: CXX_COMPILER__raknet_uns
 build raknet/CMakeFiles/raknet.dir/TeamManager.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TeamManager.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/TeamManager.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3355,7 +3363,7 @@ build raknet/CMakeFiles/raknet.dir/TeamManager.cpp.o: CXX_COMPILER__raknet_unsca
 build raknet/CMakeFiles/raknet.dir/RakThread.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakThread.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakThread.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3363,7 +3371,7 @@ build raknet/CMakeFiles/raknet.dir/RakThread.cpp.o: CXX_COMPILER__raknet_unscann
 build raknet/CMakeFiles/raknet.dir/DirectoryDeltaTransfer.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DirectoryDeltaTransfer.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/DirectoryDeltaTransfer.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3371,7 +3379,7 @@ build raknet/CMakeFiles/raknet.dir/DirectoryDeltaTransfer.cpp.o: CXX_COMPILER__r
 build raknet/CMakeFiles/raknet.dir/CCRakNetSlidingWindow.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CCRakNetSlidingWindow.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/CCRakNetSlidingWindow.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3379,7 +3387,7 @@ build raknet/CMakeFiles/raknet.dir/CCRakNetSlidingWindow.cpp.o: CXX_COMPILER__ra
 build raknet/CMakeFiles/raknet.dir/Router2.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Router2.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/Router2.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3387,7 +3395,7 @@ build raknet/CMakeFiles/raknet.dir/Router2.cpp.o: CXX_COMPILER__raknet_unscanned
 build raknet/CMakeFiles/raknet.dir/StringCompressor.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/StringCompressor.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/StringCompressor.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3395,7 +3403,7 @@ build raknet/CMakeFiles/raknet.dir/StringCompressor.cpp.o: CXX_COMPILER__raknet_
 build raknet/CMakeFiles/raknet.dir/ReliabilityLayer.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/ReliabilityLayer.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/ReliabilityLayer.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3403,7 +3411,7 @@ build raknet/CMakeFiles/raknet.dir/ReliabilityLayer.cpp.o: CXX_COMPILER__raknet_
 build raknet/CMakeFiles/raknet.dir/RakNetSocket2_Vita.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Vita.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakNetSocket2_Vita.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3411,7 +3419,7 @@ build raknet/CMakeFiles/raknet.dir/RakNetSocket2_Vita.cpp.o: CXX_COMPILER__rakne
 build raknet/CMakeFiles/raknet.dir/NatTypeDetectionCommon.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NatTypeDetectionCommon.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/NatTypeDetectionCommon.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3419,7 +3427,7 @@ build raknet/CMakeFiles/raknet.dir/NatTypeDetectionCommon.cpp.o: CXX_COMPILER__r
 build raknet/CMakeFiles/raknet.dir/Rackspace.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/Rackspace.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/Rackspace.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3427,7 +3435,7 @@ build raknet/CMakeFiles/raknet.dir/Rackspace.cpp.o: CXX_COMPILER__raknet_unscann
 build raknet/CMakeFiles/raknet.dir/RakNetCommandParser.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetCommandParser.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakNetCommandParser.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3435,7 +3443,7 @@ build raknet/CMakeFiles/raknet.dir/RakNetCommandParser.cpp.o: CXX_COMPILER__rakn
 build raknet/CMakeFiles/raknet.dir/LogCommandParser.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/LogCommandParser.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/LogCommandParser.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3443,7 +3451,7 @@ build raknet/CMakeFiles/raknet.dir/LogCommandParser.cpp.o: CXX_COMPILER__raknet_
 build raknet/CMakeFiles/raknet.dir/BitStream.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/BitStream.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/BitStream.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3451,7 +3459,7 @@ build raknet/CMakeFiles/raknet.dir/BitStream.cpp.o: CXX_COMPILER__raknet_unscann
 build raknet/CMakeFiles/raknet.dir/HTTPConnection2.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/HTTPConnection2.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/HTTPConnection2.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3459,7 +3467,7 @@ build raknet/CMakeFiles/raknet.dir/HTTPConnection2.cpp.o: CXX_COMPILER__raknet_u
 build raknet/CMakeFiles/raknet.dir/RakNetSocket2_Windows_Linux.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_Windows_Linux.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakNetSocket2_Windows_Linux.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3467,7 +3475,7 @@ build raknet/CMakeFiles/raknet.dir/RakNetSocket2_Windows_Linux.cpp.o: CXX_COMPIL
 build raknet/CMakeFiles/raknet.dir/RakNetTypes.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetTypes.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakNetTypes.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3475,7 +3483,7 @@ build raknet/CMakeFiles/raknet.dir/RakNetTypes.cpp.o: CXX_COMPILER__raknet_unsca
 build raknet/CMakeFiles/raknet.dir/RakNetSocket2_PS3_PS4.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_PS3_PS4.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakNetSocket2_PS3_PS4.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3483,7 +3491,7 @@ build raknet/CMakeFiles/raknet.dir/RakNetSocket2_PS3_PS4.cpp.o: CXX_COMPILER__ra
 build raknet/CMakeFiles/raknet.dir/FileListTransfer.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FileListTransfer.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/FileListTransfer.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3491,7 +3499,7 @@ build raknet/CMakeFiles/raknet.dir/FileListTransfer.cpp.o: CXX_COMPILER__raknet_
 build raknet/CMakeFiles/raknet.dir/FileList.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/FileList.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/FileList.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3499,7 +3507,7 @@ build raknet/CMakeFiles/raknet.dir/FileList.cpp.o: CXX_COMPILER__raknet_unscanne
 build raknet/CMakeFiles/raknet.dir/TwoWayAuthentication.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TwoWayAuthentication.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/TwoWayAuthentication.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3507,7 +3515,7 @@ build raknet/CMakeFiles/raknet.dir/TwoWayAuthentication.cpp.o: CXX_COMPILER__rak
 build raknet/CMakeFiles/raknet.dir/_FindFirst.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/_FindFirst.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/_FindFirst.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3515,7 +3523,7 @@ build raknet/CMakeFiles/raknet.dir/_FindFirst.cpp.o: CXX_COMPILER__raknet_unscan
 build raknet/CMakeFiles/raknet.dir/DS_HuffmanEncodingTree.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/DS_HuffmanEncodingTree.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/DS_HuffmanEncodingTree.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3523,7 +3531,7 @@ build raknet/CMakeFiles/raknet.dir/DS_HuffmanEncodingTree.cpp.o: CXX_COMPILER__r
 build raknet/CMakeFiles/raknet.dir/gettimeofday.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/gettimeofday.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/gettimeofday.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3531,7 +3539,7 @@ build raknet/CMakeFiles/raknet.dir/gettimeofday.cpp.o: CXX_COMPILER__raknet_unsc
 build raknet/CMakeFiles/raknet.dir/NetworkIDManager.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/NetworkIDManager.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/NetworkIDManager.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3539,7 +3547,7 @@ build raknet/CMakeFiles/raknet.dir/NetworkIDManager.cpp.o: CXX_COMPILER__raknet_
 build raknet/CMakeFiles/raknet.dir/TeamBalancer.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/TeamBalancer.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/TeamBalancer.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3547,7 +3555,7 @@ build raknet/CMakeFiles/raknet.dir/TeamBalancer.cpp.o: CXX_COMPILER__raknet_unsc
 build raknet/CMakeFiles/raknet.dir/CCRakNetUDT.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/CCRakNetUDT.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/CCRakNetUDT.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3555,7 +3563,7 @@ build raknet/CMakeFiles/raknet.dir/CCRakNetUDT.cpp.o: CXX_COMPILER__raknet_unsca
 build raknet/CMakeFiles/raknet.dir/RakNetSocket2_360_720.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakNetSocket2_360_720.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakNetSocket2_360_720.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir
@@ -3563,7 +3571,7 @@ build raknet/CMakeFiles/raknet.dir/RakNetSocket2_360_720.cpp.o: CXX_COMPILER__ra
 build raknet/CMakeFiles/raknet.dir/RakSleep.cpp.o: CXX_COMPILER__raknet_unscanned_Debug /Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/RakSleep.cpp || cmake_object_order_depends_target_raknet
   CONFIG = Debug
   DEP_FILE = raknet/CMakeFiles/raknet.dir/RakSleep.cpp.o.d
-  FLAGS = -g -std=gnu++11
+  FLAGS = -g
   INCLUDES = -I/Users/apple/Downloads/mc_2/mcpe_lockinn/mcpe/thirdparty/raknet/.
   OBJECT_DIR = raknet/CMakeFiles/raknet.dir
   OBJECT_FILE_DIR = raknet/CMakeFiles/raknet.dir

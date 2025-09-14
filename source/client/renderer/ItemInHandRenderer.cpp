@@ -66,6 +66,9 @@ void ItemInHandRenderer::renderItem(ItemInstance* inst)
         }
         
         glColor4f(red, grn, blu, alp);
+
+        glTranslatef(0.f, (1.f - Tile::tiles[inst->m_itemID]->m_aabb.max.y) * 0.5f, 0.f);
+
         
         m_pMinecraft->m_pTextures->loadAndBindTexture(C_TERRAIN_NAME);
         

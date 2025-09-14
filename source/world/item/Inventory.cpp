@@ -38,7 +38,7 @@ void Inventory::prepareCreativeInventory()
 	addCreativeItem(Tile::stairs_stone->m_ID, 2 );
 	addCreativeItem(Tile::stairs_stone->m_ID, 3 );
 	addCreativeItem(Tile::stairs_stone->m_ID, 4 );
-	addCreativeItem(Tile::stairs_stone->m_ID, 6);
+	addCreativeItem(Tile::stairs_stone->m_ID, 6 );
 	addCreativeItem(Tile::stairs_stone->m_ID, 7 );
 	addCreativeItem(Tile::stairs_stone->m_ID, 8 );
 	addCreativeItem(Tile::wood->m_ID,1);
@@ -78,6 +78,23 @@ void Inventory::prepareCreativeInventory()
 	addCreativeItem(Tile::cloth->m_ID,14);
 	addCreativeItem(Tile::cloth->m_ID,15);
 
+	addCreativeItem(Tile::carpet->m_ID,0);
+	addCreativeItem(Tile::carpet->m_ID,1);
+	addCreativeItem(Tile::carpet->m_ID,2);
+	addCreativeItem(Tile::carpet->m_ID,3);
+	addCreativeItem(Tile::carpet->m_ID,4);
+	addCreativeItem(Tile::carpet->m_ID,5);
+	addCreativeItem(Tile::carpet->m_ID,6);
+	addCreativeItem(Tile::carpet->m_ID,7);
+	addCreativeItem(Tile::carpet->m_ID,8);
+	addCreativeItem(Tile::carpet->m_ID,9);
+	addCreativeItem(Tile::carpet->m_ID,10);
+	addCreativeItem(Tile::carpet->m_ID,11);
+	addCreativeItem(Tile::carpet->m_ID,12);
+	addCreativeItem(Tile::carpet->m_ID,13);
+	addCreativeItem(Tile::carpet->m_ID,14);
+	addCreativeItem(Tile::carpet->m_ID,15);
+
 	addCreativeItem(Tile::glass->m_ID);
 	addCreativeItem(Tile::stairs_wood->m_ID);
 	addCreativeItem(Tile::stairs_wood->m_ID,1);
@@ -94,7 +111,6 @@ void Inventory::prepareCreativeInventory()
 	addCreativeItem(Tile::rose->m_ID);
 	addCreativeItem(Tile::mushroom1->m_ID);
 	addCreativeItem(Tile::mushroom2->m_ID);
-	addCreativeItem(Tile::reeds->m_ID);
 	addCreativeItem(Tile::obsidian->m_ID);
 	addCreativeItem(Tile::workbench->m_ID);
 	addCreativeItem(Tile::furnace->m_ID);
@@ -126,14 +142,26 @@ void Inventory::prepareCreativeInventory()
 	addCreativeItem(Tile::lapisBlock->m_ID);
 	addCreativeItem(Tile::sponge->m_ID);
 	addCreativeItem(Tile::sapling->m_ID);
-	addCreativeItem(Tile::cryingObsidian->m_ID);
-	addCreativeItem(Tile::rocketLauncher->m_ID);
+//	addCreativeItem(Tile::cryingObsidian->m_ID);
+//	addCreativeItem(Tile::rocketLauncher->m_ID);
+	
+	//addCreativeItem(Tile::wheat->m_ID);
+	addCreativeItem(Tile::snow->m_ID);
+	addCreativeItem(Tile::ice->m_ID);
+	addCreativeItem(Tile::farmland->m_ID);
+	addCreativeItem(Tile::topSnow->m_ID);
+	addCreativeItem(Tile::lapisOre->m_ID);
+	addCreativeItem(Tile::coalOre->m_ID);
 	addCreativeItem(Tile::redStoneOre->m_ID);
+	addCreativeItem(Tile::ironOre->m_ID);
+	addCreativeItem(Tile::goldOre->m_ID);
+	addCreativeItem(Tile::emeraldOre->m_ID);
+	addCreativeItem(Tile::unbreakable->m_ID);
 	
 	// test stuff
-	addCreativeItem(Tile::water->m_ID);
-	addCreativeItem(Tile::lava->m_ID);
-	addCreativeItem(Tile::fire->m_ID);
+	//addCreativeItem(Tile::water->m_ID);
+	//addCreativeItem(Tile::lava->m_ID);
+	//addCreativeItem(Tile::fire->m_ID);
 
 	// items
 	addCreativeItem(Item::shovel_iron->m_itemID);
@@ -227,7 +255,25 @@ void Inventory::prepareCreativeInventory()
 	addCreativeItem(Item::yellowDust->m_itemID);
 	addCreativeItem(Item::fish_raw->m_itemID);
 	addCreativeItem(Item::fish_cooked->m_itemID);
-	addCreativeItem(Item::dye_powder->m_itemID);
+
+	addCreativeItem(Item::dye_powder->m_itemID,0);
+	addCreativeItem(Item::dye_powder->m_itemID,1);
+	addCreativeItem(Item::dye_powder->m_itemID,2);
+	addCreativeItem(Item::dye_powder->m_itemID,3);
+	addCreativeItem(Item::dye_powder->m_itemID,4);
+	addCreativeItem(Item::dye_powder->m_itemID,5);
+	addCreativeItem(Item::dye_powder->m_itemID,6);
+	addCreativeItem(Item::dye_powder->m_itemID,7);
+	addCreativeItem(Item::dye_powder->m_itemID,8);
+	addCreativeItem(Item::dye_powder->m_itemID,9);
+	addCreativeItem(Item::dye_powder->m_itemID,10);
+	addCreativeItem(Item::dye_powder->m_itemID,11);
+	addCreativeItem(Item::dye_powder->m_itemID,12);
+	addCreativeItem(Item::dye_powder->m_itemID,13);
+	addCreativeItem(Item::dye_powder->m_itemID,14);
+	addCreativeItem(Item::dye_powder->m_itemID,15);
+
+
 	addCreativeItem(Item::bone->m_itemID);
 	addCreativeItem(Item::sugar->m_itemID);
 	addCreativeItem(Item::cake->m_itemID);

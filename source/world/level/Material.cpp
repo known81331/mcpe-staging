@@ -71,7 +71,7 @@ void Material::initMaterials()
 	ice        = new Material();
 	topSnow    = new DecorationMaterial();
 	snow       = new Material();
-	cactus     = new Material();
+	cactus     = new DecorationMaterial();
 	clay       = new Material();
 	vegetable  = new Material();
 	portal     = new Material();

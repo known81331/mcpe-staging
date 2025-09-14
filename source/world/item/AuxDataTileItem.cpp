@@ -34,8 +34,9 @@ int AuxDataTileItem::getLevelDataForAuxValue(int x) {
 bool AuxDataTileItem::useOn(ItemInstance* instance, Player* player, Level* level, const TilePos& pos, Facing::Name face)
 {
 	TilePos tp(pos);
+	TileID tile = level->getTile(pos);
 
-	if (level->getTile(pos) == Tile::topSnow->m_ID)
+	if(tile == Tile::shortgrass->m_ID || tile == Tile::topSnow->m_ID)
 	{
 		face = Facing::DOWN;
 	}

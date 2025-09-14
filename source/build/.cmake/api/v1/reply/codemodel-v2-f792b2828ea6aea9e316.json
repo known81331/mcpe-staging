@@ -74,14 +74,14 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "raknet::@e15f696e14216647865e",
-					"jsonFile" : "target-raknet-Debug-8824d3ea5e84a4d01709.json",
+					"jsonFile" : "target-raknet-Debug-7e7db0a2ffc0168b70b6.json",
 					"name" : "raknet",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "reminecraftpe-core::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-reminecraftpe-core-Debug-5520b3272cf8e4855d95.json",
+					"jsonFile" : "target-reminecraftpe-core-Debug-52ad3abf00582d023350.json",
 					"name" : "reminecraftpe-core",
 					"projectIndex" : 0
 				}

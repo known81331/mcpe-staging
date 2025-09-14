@@ -121,10 +121,10 @@ void Button::render(Minecraft* pMinecraft, int xPos, int yPos)
 #else
 if (!m_bVisible) return;
 
-#if !TARGET_OS_IPHONE && !TARGET_OS_ANDROID
-if (m_bHoverable)
-	field_36 = clicked(pMinecraft, xPos, yPos);
-#endif
+//#if !TARGET_OS_IPHONE && !TARGET_OS_ANDROID
+	if (pMinecraft->useController() || pMinecraft->isTouchscreen())
+		field_36 = clicked(pMinecraft, xPos, yPos);
+//#endif
 
 	Font* pFont = pMinecraft->m_pFont;
 	Textures* pTexs = pMinecraft->m_pTextures;
@@ -135,35 +135,35 @@ if (m_bHoverable)
 	int iYPos = 64; //20 * getYImage(field_36) + 46;
     
     if (!field_36) {
-        blit(m_xPos, m_yPos, 16, iYPos, 5, 13, 5, 22);
+        blit(m_xPos, m_yPos, 16, iYPos, 3, 13, 5, 22);
         blit(m_xPos+2, m_yPos, 20, iYPos, m_width-2, 13, 5, 22);
-        blit(m_xPos + m_width - 10, m_yPos, 22, iYPos, 10, 13, 10, 22);
+        blit(m_xPos + m_width - 8, m_yPos, 22, iYPos, 8, 13, 10, 22);
         
         iYPos = 68;
         
-        blit(m_xPos, m_yPos+6, 16, iYPos, 5, m_height-6, 5, 8);
+        blit(m_xPos, m_yPos+6, 16, iYPos, 3, m_height-6, 5, 8);
         blit(m_xPos+2, m_yPos+6, 20, iYPos, m_width-2, m_height-6, 5, 8);
-        blit(m_xPos + m_width - 10, m_yPos+6, 22, iYPos, 10, m_height-6, 10, 8);
+        blit(m_xPos + m_width - 8, m_yPos+6, 22, iYPos, 8, m_height-6, 10, 8);
         
-        blit(m_xPos, m_yPos+m_height-10, 16, iYPos, 5, 13, 5, 16);
-        blit(m_xPos+2, m_yPos+m_height-10, 20, iYPos, m_width-2, 13, 5, 16);
-        blit(m_xPos + m_width - 10, m_yPos+m_height-10, 22, iYPos, 10, 13, 10, 16);
+        blit(m_xPos, m_yPos+m_height-10, 16, iYPos, 3, 13, 5, 15);
+        blit(m_xPos+2, m_yPos+m_height-10, 20, iYPos, m_width-2, 13, 5, 15);
+        blit(m_xPos + m_width - 8, m_yPos+m_height-10, 22, iYPos, 8, 13, 10, 15);
         
     }
     else {
-        blit(m_xPos, m_yPos, 0, iYPos, 5, 13, 5, 15);
+        blit(m_xPos, m_yPos, 0, iYPos, 3, 13, 5, 15);
         blit(m_xPos+2, m_yPos, 2, iYPos, m_width-2, 13, 5, 15);
-        blit(m_xPos + m_width - 10, m_yPos, 6, iYPos, 10, 13, 10, 15);
+        blit(m_xPos + m_width - 8, m_yPos, 6, iYPos, 8, 13, 10, 15);
         
         iYPos = 68;
         
-        blit(m_xPos, m_yPos+6, 0, iYPos, 5, m_height-10, 5, 6);
+        blit(m_xPos, m_yPos+6, 0, iYPos, 3, m_height-10, 5, 6);
         blit(m_xPos+2, m_yPos+6, 2, iYPos, m_width-2, m_height-10, 5, 6);
-        blit(m_xPos + m_width - 10, m_yPos+6, 6, iYPos, 10, m_height-10, 10, 6);
+        blit(m_xPos + m_width - 8, m_yPos+6, 6, iYPos, 8, m_height-10, 10, 6);
         
-        blit(m_xPos, m_yPos+m_height-10, 0, iYPos, 5, 10, 5, 10);
+        blit(m_xPos, m_yPos+m_height-10, 0, iYPos, 3, 10, 5, 10);
         blit(m_xPos+2, m_yPos+m_height-10, 2, iYPos, m_width-2, 10, 5, 10);
-        blit(m_xPos + m_width - 10, m_yPos+m_height-10, 6, iYPos, 10, 10, 10, 10);
+        blit(m_xPos + m_width - 8, m_yPos+m_height-10, 6, iYPos, 8, 10, 10, 10);
     }
     
 	renderBg(pMinecraft, xPos, yPos);

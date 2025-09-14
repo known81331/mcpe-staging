@@ -33,6 +33,8 @@
 		18865A622E73301D00CA2A44 /* spritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 18865A602E73301C00CA2A44 /* spritesheet.png */; };
 		18865A632E73301D00CA2A44 /* touchgui2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18865A612E73301D00CA2A44 /* touchgui2.png */; };
 		18865A652E73345D00CA2A44 /* touchgui.png in Resources */ = {isa = PBXBuildFile; fileRef = 18865A642E73345C00CA2A44 /* touchgui.png */; };
+		188CBF3C2E76919C0026A78E /* DyePowderItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 188CBF3A2E76919B0026A78E /* DyePowderItem.cpp */; };
+		188CBF3D2E76919C0026A78E /* DyePowderItem.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 188CBF3B2E76919B0026A78E /* DyePowderItem.hpp */; };
 		8406FD2A2AF181B800B09C1D /* GL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840DD6542AC810620006A435 /* GL.cpp */; };
 		8406FD2C2AF1820700B09C1D /* MinecraftPackets.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 840DD63B2AC810620006A435 /* MinecraftPackets.hpp */; };
 		8406FD2D2AF1820700B09C1D /* NetEventCallback.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 840DD63D2AC810620006A435 /* NetEventCallback.hpp */; };
@@ -1218,6 +1220,8 @@
 		18865A602E73301C00CA2A44 /* spritesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spritesheet.png; sourceTree = "<group>"; };
 		18865A612E73301D00CA2A44 /* touchgui2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touchgui2.png; sourceTree = "<group>"; };
 		18865A642E73345C00CA2A44 /* touchgui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touchgui.png; sourceTree = "<group>"; };
+		188CBF3A2E76919B0026A78E /* DyePowderItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DyePowderItem.cpp; sourceTree = "<group>"; };
+		188CBF3B2E76919B0026A78E /* DyePowderItem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DyePowderItem.hpp; sourceTree = "<group>"; };
 		8406FD292AF1814500B09C1D /* libRenderer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRenderer.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		840DD5792AC810620006A435 /* KeyCodes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KeyCodes.hpp; sourceTree = "<group>"; };
 		840DD57A2AC810620006A435 /* SDLKeyCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLKeyCodes.h; sourceTree = "<group>"; };
@@ -2867,6 +2871,8 @@
 				840DD6702AC810620006A435 /* CameraItem.cpp */,
 				840DD6732AC810620006A435 /* DoorItem.hpp */,
 				840DD6722AC810620006A435 /* DoorItem.cpp */,
+				188CBF3A2E76919B0026A78E /* DyePowderItem.cpp */,
+				188CBF3B2E76919B0026A78E /* DyePowderItem.hpp */,
 				840DD6752AC810620006A435 /* Inventory.hpp */,
 				840DD6742AC810620006A435 /* Inventory.cpp */,
 				840DD6772AC810620006A435 /* Item.hpp */,
@@ -4301,6 +4307,7 @@
 				84BF63A12AF186C8008A9995 /* ExternalFileLevelStorageSource.hpp in Headers */,
 				84BF63A22AF186C8008A9995 /* LevelData.hpp in Headers */,
 				84BF63A32AF186C8008A9995 /* LevelSource.hpp in Headers */,
+				188CBF3D2E76919C0026A78E /* DyePowderItem.hpp in Headers */,
 				84BF63A42AF186C8008A9995 /* LevelStorage.hpp in Headers */,
 				8445E7A82D769329008DC834 /* Sheep.hpp in Headers */,
 				84BF63A52AF186C8008A9995 /* LevelStorageSource.hpp in Headers */,
@@ -5323,6 +5330,7 @@
 				84AA8B782B32F3B5003F5B82 /* Animal.cpp in Sources */,
 				84AA8B7A2B32F3B5003F5B82 /* Chicken.cpp in Sources */,
 				84B1E03B2E04FD7900ED000A /* Skeleton.cpp in Sources */,
+				188CBF3C2E76919C0026A78E /* DyePowderItem.cpp in Sources */,
 				84AA8B7C2B32F3B5003F5B82 /* Cow.cpp in Sources */,
 				84AA8B7E2B32F3B5003F5B82 /* Creeper.cpp in Sources */,
 				84AA8B8A2B32F3B5003F5B82 /* Monster.cpp in Sources */,

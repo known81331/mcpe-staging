@@ -277,6 +277,7 @@ add_library(reminecraftpe-core STATIC
     world/item/AuxDataTileItem.cpp
     world/item/Inventory.cpp
     world/item/DoorItem.cpp
+    world/item/DyePowderItem.cpp
     world/item/ItemInstance.cpp
     world/item/RocketItem.cpp
     world/item/Item.cpp

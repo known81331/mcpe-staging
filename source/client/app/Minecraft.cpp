@@ -329,16 +329,24 @@ void Minecraft::handleBuildAction(const BuildActionIntention& action)
 	case HitResult::ENTITY:
 		if (action.isAttack())
 		{
+			ItemInstance* pItem = getSelectedItem();
 			m_pGameMode->attack(player, m_hitResult.m_pEnt);
 			m_lastBlockBreakTime = getTimeMs();
+
+			if (Mob* pMob = dynamic_cast<Mob*>(m_hitResult.m_pEnt))
+				pItem->hurtEnemy(pMob);
 		}
 		else if (action.isInteract() && canInteract)
 		{
+			ItemInstance* pItem = getSelectedItem();
 			if (m_hitResult.m_pEnt->interactPreventDefault())
 				bInteract = false;
 
 			m_pGameMode->interact(player, m_hitResult.m_pEnt);
 			m_lastInteractTime = getTimeMs();
+
+			if (Mob* pMob = dynamic_cast<Mob*>(m_hitResult.m_pEnt))
+				pItem->interactEnemy(pMob);
 		}
 		break;
 	case HitResult::TILE:

@@ -180,6 +180,7 @@ public: // static variables
 		* cloth_41,
 		* cloth_51,
 		* cloth_61,
+		* carpet,
 		* flower,
 		* rose,
 		* mushroom1,
