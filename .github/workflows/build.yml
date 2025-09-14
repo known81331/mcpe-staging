@@ -83,7 +83,7 @@ jobs:
             with:
                 submodules: true
           - name: Install MacPorts
-            uses: melusina-org/setup-macports@v1
+            uses: melusina-org/setup-macports@v1.1.4
           - name: Install Dependencies
             run: |
                 port selfupdate
