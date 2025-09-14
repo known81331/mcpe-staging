@@ -59,9 +59,6 @@ float* Dimension::getSunriseColor(float a, float b)
 		m_sunriseColor[1] = norm * norm * 0.7f + 0.2f;
 		m_sunriseColor[2] = norm * norm * 0.0f + 0.2f;
 		m_sunriseColor[3] = alpha * alpha;
-
-	//	printf("sunriseColor: %f, %f, %f, %f\n", m_sunriseColor[0], m_sunriseColor[1], m_sunriseColor[2], m_sunriseColor[3]);
-
 		return m_sunriseColor;
 	}
 	return nullptr;

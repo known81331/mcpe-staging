@@ -22,6 +22,12 @@ Biome
 * Biome::iceDesert,
 * Biome::tundra;
 
+
+std::unordered_map<uint32_t, int> Biome::monsterList;
+std::unordered_map<uint32_t, int> Biome::creatureList;
+std::unordered_map<uint32_t, int> Biome::waterCreatureList;
+std::unordered_map<uint32_t, int> nullCreatureList;
+
 Biome* Biome::map[4096];
 
 Biome* Biome::_getBiome(float temp, float hum)
@@ -144,6 +150,22 @@ Biome* Biome::setName(const std::string & name)
 	return this;
 }
 
+ std::unordered_map<uint32_t, int> Biome::getMobs(MobCategory* category)
+{
+	return creatureList;
+  if (category->getBaseType() == MobCategory::monster.getBaseType()) {
+    return monsterList;
+  }
+  if (category->getBaseType() == MobCategory::creature.getBaseType()) {
+    return creatureList;
+  }
+  if (category->getBaseType() == MobCategory::waterCreature.getBaseType()) {
+    return waterCreatureList;
+  }
+  
+  return nullCreatureList;
+}
+
 void Biome::initBiomes()
 {
 	rainForest = (new RainforestBiome)
@@ -200,6 +222,20 @@ void Biome::initBiomes()
 		->setLeafColor(0xC4D339);
 
 	recalc();
+
+
+    monsterList.insert(std::make_pair(EntityType::SPIDER,   10));
+    monsterList.insert(std::make_pair(EntityType::ZOMBIE,   10));
+    monsterList.insert(std::make_pair(EntityType::SKELETON, 10));
+    monsterList.insert(std::make_pair(EntityType::CREEPER,  10));
+    monsterList.insert(std::make_pair(EntityType::SLIME,    10));
+
+    creatureList.insert(std::make_pair(EntityType::SHEEP,   12));
+    creatureList.insert(std::make_pair(EntityType::PIG,     10));
+    creatureList.insert(std::make_pair(EntityType::CHICKEN, 10));
+    creatureList.insert(std::make_pair(EntityType::COW,      8));
+	
+    waterCreatureList.insert(std::make_pair(EntityType::SQUID, 10));
 }
 
 Feature* RainforestBiome::getTreeFeature(Random* pRandom)
@@ -231,3 +267,4 @@ Feature* TaigaBiome::getTreeFeature(Random* pRandom)
 	
 	return new SpruceFeature;
 }
+

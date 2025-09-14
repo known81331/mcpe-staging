@@ -352,13 +352,13 @@ void Minecraft::handleBuildAction(const BuildActionIntention& action)
 			player->swing();
 
 			// @BUG: This is only done on the client side.
-			//bool extinguished = m_pLevel->extinguishFire(player, m_hitResult.m_tilePos, m_hitResult.m_hitSide);
+			bool extinguished = m_pLevel->extinguishFire(player, m_hitResult.m_tilePos, m_hitResult.m_hitSide);
 
 			// Allows fire to be extinguished *without* destroying blocks
 			// @BUG: Hits sometimes pass through fire when done from above
-			//if (extinguished) break;
+			if (extinguished) break;
 
-			if (pTile != Tile::unbreakable || (player->field_B94 >= 100 && !m_hitResult.m_bUnk24))
+			if (pTile || (player->field_B94 >= 100 && !m_hitResult.m_bUnk24))
 			{
 				bool destroyed = false;
 				if (action.isDestroyStart())
@@ -376,8 +376,8 @@ void Minecraft::handleBuildAction(const BuildActionIntention& action)
 
 				if (destroyed)
 				{
-					/*if (isVibrateOnBlockBreakOptionEnabledOrWhatever)
-						platform()->vibrate(24);*/
+					//if (isVibrateOnBlockBreakOptionEnabledOrWhatever)
+						platform()->vibrate(24);
 				}
 			}
 		}
@@ -406,7 +406,8 @@ void Minecraft::handleBuildAction(const BuildActionIntention& action)
 
 					Facing::Name hitSide = m_hitResult.m_hitSide;
 
-					if (m_pLevel->getTile(m_hitResult.m_tilePos) == Tile::topSnow->m_ID)
+					TileID tile = m_pLevel->getTile(tp);
+					if (tile == Tile::shortgrass->m_ID || tile == Tile::topSnow->m_ID)
 					{
 						hitSide = Facing::DOWN;
 					}

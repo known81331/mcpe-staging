@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.16.0)
 project(reminecraftpe-core)
 
+#set (CMAKE_CXX_STANDARD 17)
+
 # Build
 add_library(reminecraftpe-core STATIC
     common/CThread.cpp
@@ -222,6 +224,7 @@ add_library(reminecraftpe-core STATIC
     world/entity/EntityType.cpp
     world/entity/EntityTypeDescriptor.cpp
     world/entity/MobCategory.cpp
+    world/entity/MobSpawner.cpp
     world/level/Dimension.cpp
     world/level/Material.cpp
     world/level/LevelListener.cpp

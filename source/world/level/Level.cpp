@@ -11,6 +11,7 @@
 #include <algorithm>
 #include "common/Util.hpp"
 #include "world/level/levelgen/chunk/ChunkCache.hpp"
+#include "world/entity/MobSpawner.hpp"
 #include "Explosion.hpp"
 #include "Region.hpp"
 
@@ -52,6 +53,7 @@ Level::Level(LevelStorage* pStor, const std::string& name, int32_t seed, int sto
 	m_pDimension->init(this);
 
 	m_pPathFinder = new PathFinder();
+	m_pMobSpawner = new MobSpawner();
 
 	m_pChunkSource = createChunkSource();
 	updateSkyBrightness();
@@ -1530,6 +1532,8 @@ int LASTTICKED = 0;
 
 void Level::tick()
 {
+
+	m_pMobSpawner->tick(this, m_difficulty > 0, true);
 	m_pChunkSource->tick();
 
 #ifdef ENH_RUN_DAY_NIGHT_CYCLE
@@ -1582,6 +1586,20 @@ void Level::tickEntities()
 				delete pEnt;
 		}
 	}
+}
+
+int Level::getEntityCountOfCategory(EntityCategories::CategoriesMask category) const
+{
+	int count = 0;
+	for (std::vector<Entity*>::const_iterator it = m_entities.begin(); it != m_entities.end(); it++)
+	{
+		Entity* pEnt = *it;
+		//if (pEnt->getDescriptor().getCategories().contains(category))
+			count++;
+
+		//printf("%x %x\n", pEnt->getDescriptor().getCategories().getCategoryMask(), category);
+	}
+	return count;
 }
 
 HitResult Level::clip(Vec3 v1, Vec3 v2, bool flag) const

@@ -36,35 +36,33 @@ int IngameBlockSelectionScreen::getBottomY()
 int IngameBlockSelectionScreen::getSelectedSlot(int x, int y)
 {
 	int slotsHeight = getSlotsHeight();
-	int bottom = m_height - getBottomY();
-	int top = bottom - slotsHeight * 22;
-	int left = m_width / 2 - 87;
+	int top = slotsHeight * 10;
+	int left = 2;
 
-	if (y < top)
+	if (y < 22)
 		return -1;
 	if (x < left)
 		return -1;
 
 	int idx = (x - left) / 20;
-	if (idx > 17)
-		return -1;
+	int idy = (float)(y)/top * slotsHeight / 2 -1;
 
-	return idx + 18 * slotsHeight - 18 * ((y - top) / 22);
+	return idx + ((m_width/20) ) * idy;
 }
 
 int IngameBlockSelectionScreen::getSlotPosX(int x)
 {
-	return m_width / 2 - 88 + 20 * x;
+	return 20 * x+2;
 }
 
 int IngameBlockSelectionScreen::getSlotPosY(int y)
 {
-	return m_height - getBottomY() - 22 * y;
+	return 20 * y + 22;
 }
 
 int IngameBlockSelectionScreen::getSlotsHeight()
 {
-	return (getInventory()->getNumSlots() + 8) / 19 + 1;
+	return getInventory()->getNumSlots() / (m_width/20) + 1;
 }
 
 
@@ -129,20 +127,22 @@ void IngameBlockSelectionScreen::renderSlots()
 	m_pMinecraft->m_pTextures->loadAndBindTexture("gui/gui.png");
 
 	for (int y = 0; y != -22 * getSlotsHeight(); y -= 22) {
-		blit(m_width / 2 - 182 / 2, m_height - 3 - getBottomY() + y, 0, 0, 182, 22, 0, 0);
-		blit(m_width / 2 + 89, m_height - 3 - getBottomY() + y, 0, 0, 182, 22, 0, 0);
+	//	blit(0, m_height - 3 - getBottomY() + y, 0, 0, 182, 22, 0, 0);
+	//	blit(89, m_height - 3 - getBottomY() + y, 0, 0, 182, 22, 0, 0);
 	}
 
 	if (m_selectedSlot >= 0)
-		blit(m_width / 2 - 92 + 20 * (m_selectedSlot % 18), m_height - 4 - getBottomY() - 22 * (m_selectedSlot / 18), 0, 22, 24, 22, 0, 0);
+		blit(20 * (m_selectedSlot % (m_width/20)),  20 * (m_selectedSlot / (m_width/20)) + 22, 0, 22, 24, 22, 0, 0);
 
 	for (int y = 0, index = 0; y < getSlotsHeight(); y++)
 	{
-		int posY = getSlotPosY(y);
-		for (int x = 0; x < 18; x++)
+		int posY = getSlotPosY(y) + 4;
+
+		for (int x = 0; x < m_width/20; x++)
 		{
-			int posX = getSlotPosX(x);
+			int posX = getSlotPosX(x) + 2;
 			renderSlot(index++, posX, posY, 0.0f);
+		//	m_pMinecraft->m_pFont->drawShadow(std::to_string(x), posX, posY, 0xFFFFFFFF);
 		}
 	}
 }

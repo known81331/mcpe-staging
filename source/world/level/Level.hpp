@@ -31,6 +31,7 @@
 class Dimension;
 class Level;
 class LevelListener;
+class MobSpawner;
 
 typedef std::vector<Entity*> EntityVector;
 typedef std::vector<AABB> AABBVector;
@@ -168,6 +169,8 @@ public:
 	Player* getNearestPlayer(const Vec3& pos, float, bool) const;
 	Player* getNearestAttackablePlayer(const Entity&, float) const;
 	Player* getNearestAttackablePlayer(const Vec3& pos, float, const Entity*) const;
+	int getEntityCount() const { return (int)m_entities.size(); }
+	int getEntityCountOfCategory(EntityCategories::CategoriesMask) const;
 
 	// unused redstone stuff
 	int getSignal(const TilePos& pos, Facing::Name face) const;
@@ -211,5 +214,6 @@ public:
 	uint8_t field_B0C;
 	int field_B10;
 	PathFinder* m_pPathFinder;
+	MobSpawner* m_pMobSpawner;
 };
 

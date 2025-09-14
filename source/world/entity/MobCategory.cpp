@@ -22,7 +22,10 @@ MobCategory::MobCategory(const EntityCategories& baseType, int unknown, int max,
 
 void MobCategory::initMobCategories()
 {
+//assert(Material::air != nullptr);
 	MobCategory::monster.m_pSpawnPositionMaterial       = Material::air;
 	MobCategory::creature.m_pSpawnPositionMaterial      = Material::air;
 	MobCategory::waterCreature.m_pSpawnPositionMaterial = Material::water;
+
+
 }

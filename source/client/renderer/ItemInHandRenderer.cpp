@@ -294,8 +294,8 @@ void ItemInHandRenderer::renderTex(float f, int texture)
 #  define MULT 16 *
 #endif
 	float texX = MULT float(texture % 32), texY = MULT float(texture / 32);
-	float texU_1 = ( texX           / 256.0f - 1 / 128.0f) * 0.5f;
-	float texU_2 = ((texX + 15.99f) / 256.0f + 1 / 128.0f) * 0.5f;
+	float texU_1 = ( texX           / 512.0f - 1 / 128.0f);
+	float texU_2 = ((texX + 15.99f) / 512.0f + 1 / 128.0f);
 	float texV_1 =  texY           / 256.0f - 1 / 128.0f;
 	float texV_2 = (texY + 15.99f) / 256.0f + 1 / 128.0f;
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180D7B1E2E76036500DD491D /* WoodTile.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 180D7B1C2E76036500DD491D /* WoodTile.hpp */; };
+		180D7B1F2E76036500DD491D /* WoodTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180D7B1D2E76036500DD491D /* WoodTile.cpp */; };
+		180D7B222E76037B00DD491D /* MobSpawner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180D7B202E76037B00DD491D /* MobSpawner.cpp */; };
+		180D7B232E76037B00DD491D /* MobSpawner.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 180D7B212E76037B00DD491D /* MobSpawner.hpp */; };
 		18865A3B2E730CBA00CA2A44 /* PaneCraftingScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18865A392E730CBA00CA2A44 /* PaneCraftingScreen.cpp */; };
 		18865A3C2E730CBA00CA2A44 /* PaneCraftingScreen.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 18865A3A2E730CBA00CA2A44 /* PaneCraftingScreen.hpp */; };
 		18865A3F2E730CE900CA2A44 /* AuxDataTileItem.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 18865A3D2E730CE900CA2A44 /* AuxDataTileItem.hpp */; };
@@ -1187,6 +1191,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		180D7B1C2E76036500DD491D /* WoodTile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = WoodTile.hpp; sourceTree = "<group>"; };
+		180D7B1D2E76036500DD491D /* WoodTile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WoodTile.cpp; sourceTree = "<group>"; };
+		180D7B202E76037B00DD491D /* MobSpawner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MobSpawner.cpp; sourceTree = "<group>"; };
+		180D7B212E76037B00DD491D /* MobSpawner.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MobSpawner.hpp; sourceTree = "<group>"; };
 		18865A392E730CBA00CA2A44 /* PaneCraftingScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PaneCraftingScreen.cpp; sourceTree = "<group>"; };
 		18865A3A2E730CBA00CA2A44 /* PaneCraftingScreen.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PaneCraftingScreen.hpp; sourceTree = "<group>"; };
 		18865A3D2E730CE900CA2A44 /* AuxDataTileItem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AuxDataTileItem.hpp; sourceTree = "<group>"; };
@@ -2779,6 +2787,8 @@
 				84AA8B5A2B32F3B5003F5B82 /* Chicken.cpp */,
 				84AA8B5B2B32F3B5003F5B82 /* Chicken.hpp */,
 				84AA8B5C2B32F3B5003F5B82 /* Cow.cpp */,
+				180D7B202E76037B00DD491D /* MobSpawner.cpp */,
+				180D7B212E76037B00DD491D /* MobSpawner.hpp */,
 				84AA8B5D2B32F3B5003F5B82 /* Cow.hpp */,
 				84AA8B5E2B32F3B5003F5B82 /* Creeper.cpp */,
 				84AA8B5F2B32F3B5003F5B82 /* Creeper.hpp */,
@@ -3107,6 +3117,8 @@
 				84E78C862B58B66B00D515EF /* RocketLauncherTile.hpp */,
 				84E78C852B58B66B00D515EF /* RocketLauncherTile.cpp */,
 				840DD7132AC810620006A435 /* SandStoneTile.hpp */,
+				180D7B1D2E76036500DD491D /* WoodTile.cpp */,
+				180D7B1C2E76036500DD491D /* WoodTile.hpp */,
 				840DD7122AC810620006A435 /* SandStoneTile.cpp */,
 				840DD7152AC810620006A435 /* SandTile.hpp */,
 				840DD7142AC810620006A435 /* SandTile.cpp */,
@@ -4265,6 +4277,7 @@
 				84BF638C2AF186C8008A9995 /* Explosion.hpp in Headers */,
 				84BF638D2AF186C8008A9995 /* Level.hpp in Headers */,
 				84BF638E2AF186C8008A9995 /* Biome.hpp in Headers */,
+				180D7B232E76037B00DD491D /* MobSpawner.hpp in Headers */,
 				84BF638F2AF186C8008A9995 /* BiomeSource.hpp in Headers */,
 				84BF63902AF186C8008A9995 /* ChunkCache.hpp in Headers */,
 				84BF63912AF186C8008A9995 /* ChunkSource.hpp in Headers */,
@@ -4349,6 +4362,7 @@
 				84AA8B572B32F39A003F5B82 /* PathFinder.hpp in Headers */,
 				84AA8B792B32F3B5003F5B82 /* Animal.hpp in Headers */,
 				84AA8B7B2B32F3B5003F5B82 /* Chicken.hpp in Headers */,
+				180D7B1E2E76036500DD491D /* WoodTile.hpp in Headers */,
 				84AA8B7D2B32F3B5003F5B82 /* Cow.hpp in Headers */,
 				84AA8B7F2B32F3B5003F5B82 /* Creeper.hpp in Headers */,
 				84AA8B8B2B32F3B5003F5B82 /* Monster.hpp in Headers */,
@@ -5290,6 +5304,7 @@
 				84BF636F2AF18631008A9995 /* StairTile.cpp in Sources */,
 				84BF63702AF18631008A9995 /* StoneSlabTile.cpp in Sources */,
 				84BF63712AF18631008A9995 /* StoneTile.cpp in Sources */,
+				180D7B222E76037B00DD491D /* MobSpawner.cpp in Sources */,
 				84BF63722AF18631008A9995 /* Tile.cpp in Sources */,
 				84BF63732AF18631008A9995 /* TntTile.cpp in Sources */,
 				84BF63742AF18631008A9995 /* TopSnowTile.cpp in Sources */,
@@ -5297,6 +5312,7 @@
 				84BF63752AF18631008A9995 /* TorchTile.cpp in Sources */,
 				84BF63762AF18631008A9995 /* TransparentTile.cpp in Sources */,
 				84BF63772AF18631008A9995 /* TreeTile.cpp in Sources */,
+				180D7B1F2E76036500DD491D /* WoodTile.cpp in Sources */,
 				84BF63782AF18631008A9995 /* WireTile.cpp in Sources */,
 				84AA8B502B32F39A003F5B82 /* BinaryHeap.cpp in Sources */,
 				84AA8B522B32F39A003F5B82 /* Node.cpp in Sources */,

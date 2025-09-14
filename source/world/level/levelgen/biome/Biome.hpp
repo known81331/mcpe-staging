@@ -8,10 +8,13 @@
 
 #pragma once
 
+#include <unordered_map>
 #include <string>
 #include "common/Utils.hpp"
 #include "world/level/levelgen/synth/PerlinNoise.hpp"
 #include "world/level/levelgen/feature/Feature.hpp"
+#include "world/entity/EntityType.hpp"
+#include "world/entity/MobCategory.hpp"
 
 class Biome
 {
@@ -24,6 +27,7 @@ public: // Virtual functions
 	virtual float adjustScale(float scale);
 	virtual int getSkyColor(float x);
 	virtual Feature* getTreeFeature(Random*);
+	virtual std::unordered_map<uint32_t, int> getMobs(MobCategory*);
 
 public: // Instance Functions
 	Biome();
@@ -52,6 +56,9 @@ private: // Private Functions
 	static Biome* _getBiome(float hum, float temp);
 	static void recalc();
 
+	static std::unordered_map<uint32_t, int> monsterList;
+	static std::unordered_map<uint32_t, int> creatureList;
+	static std::unordered_map<uint32_t, int> waterCreatureList;
 public: // Instance Variables
 	std::string m_name;
 	int m_Color;

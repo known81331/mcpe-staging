@@ -61,19 +61,6 @@ int CactusTile::getTexture(Facing::Name face, int data) const
 
 bool CactusTile::isFree(Level* level, const TilePos& pos)
 {
-	TileID tile = level->getTile(pos);
-	if (!tile)
-		return true;
-
-	if (tile == Tile::fire->m_ID)
-		return true;
-
-	if (Tile::tiles[tile]->m_pMaterial == Material::water)
-		return true;
-
-	if (Tile::tiles[tile]->m_pMaterial == Material::lava)
-		return true;
-
 	return false;
 }
 

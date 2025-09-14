@@ -878,6 +878,11 @@ void Mob::swing()
 	}
 }
 
+void Mob::finalizeMobSpawn()
+{
+	
+}
+
 float Mob::rotlerp(float a2, float a3, float a4)
 {
 	float ang = a3 - a2;

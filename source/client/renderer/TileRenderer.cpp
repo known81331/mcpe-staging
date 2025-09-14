@@ -835,20 +835,25 @@ bool TileRenderer::tesselateWaterInWorld(Tile* tile1, const TilePos& pos)
 
 		if (slopeAngle > -999.0f)
 		{
-			int texNorth = tile->getTexture(Facing::NORTH, tileData);
-			texX = texNorth & 0xF0;
-			texY = (texNorth & 0xF) * 16;
+			int texNorth = tile->getTexture(Facing::NORTH, tileData) - 1;
+			texX = (texNorth / 32) * 16;
+			texY = (texNorth % 32) * 16;
+
+			if (texNorth == TEXTURE_LAVA)
+				texY += 16;
+
 		}
 		else
 		{
-			texX = texFaceDown & 0xF0;
-			texY = (texFaceDown & 0xF) * 16;
+			texX = (texFaceDown / 32) * 16;
+			texY = (texFaceDown % 32) * 16;
+
 		}
 
 		float texUV_1, texUV_2, texUV_3, texUV_4, texUV_5, texUV_6, texUV_7, texUV_8;
 		if (slopeAngle >= -999.0f)
 		{
-			texUV_1 = float(texY + 16) * C_RATIO;
+			texUV_1 = float(texY + 16) * C_RATIO * 0.5f;
 			texUV_2 = float(texX + 16) * C_RATIO;
 		}
 		else
@@ -870,10 +875,10 @@ bool TileRenderer::tesselateWaterInWorld(Tile* tile1, const TilePos& pos)
 		texUV_7 = texUV_2 + texUV_4;
 		texUV_8 = texUV_1 + texUV_4;
 
-		t.vertexUV(pos.x + 0.0f, pos.y + fHeight1, pos.z + 0.0f, (texUV_1 - texUV_4) - texUV_3, texUV_6 + texUV_3);
-		t.vertexUV(pos.x + 0.0f, pos.y + fHeight2, pos.z + 1.0f, texUV_3 + texUV_5, texUV_7 + texUV_3);
-		t.vertexUV(pos.x + 1.0f, pos.y + fHeight3, pos.z + 1.0f, texUV_8 + texUV_3, texUV_7 - texUV_3);
-		t.vertexUV(pos.x + 1.0f, pos.y + fHeight4, pos.z + 0.0f, texUV_8 - texUV_3, texUV_6 - texUV_3);
+		t.vertexUV(pos.x + 0.0f, pos.y + fHeight1, pos.z + 0.0f, 0.5f * (texUV_5 - texUV_3), texUV_6 + texUV_3);
+		t.vertexUV(pos.x + 0.0f, pos.y + fHeight2, pos.z + 1.0f, 0.5f * (texUV_5 + texUV_3), texUV_7 + texUV_3);
+		t.vertexUV(pos.x + 1.0f, pos.y + fHeight3, pos.z + 1.0f, 0.5f * (texUV_8 + texUV_3), texUV_7 - texUV_3);
+		t.vertexUV(pos.x + 1.0f, pos.y + fHeight4, pos.z + 0.0f, 0.5f * (texUV_8 - texUV_3), texUV_6 - texUV_3);
 	}
 
 	if (m_bDisableCulling)
@@ -956,8 +961,8 @@ label_8:
 
 		float texU_1, texU_2, texV_1, texV_2, texV_3;
 
-		int texX = (texture & 0xF) * 16;
-		int texY = (texture >> 4) * 16;
+		int texX = (texture % 32) * 16;
+		int texY = (texture / 32) * 16;
 		texU_1 = C_RATIO * float(texX);
 		texU_2 = C_RATIO * (float(texX) + 15.99f);
 		texV_1 = C_RATIO * (float(texY) + (1.0f - height1) * 16.0f);
@@ -969,10 +974,10 @@ label_8:
 		float brightMul = dir >= Facing::WEST ? 0.6f : 0.8f;
 		float bright = tile->getBrightness(m_pLevelSource, TilePos(checkX, pos.y, checkZ));
 		t.color(bright* brightMul, bright* brightMul, bright* brightMul);
-		t.vertexUV(vtxX1, float(pos.y) + height1, vtxZ1, texU_1, texV_1);
-		t.vertexUV(vtxX2, float(pos.y) + height2, vtxZ2, texU_2, texV_2);
-		t.vertexUV(vtxX2, float(pos.y) + 0.0f, vtxZ2, texU_2, texV_3);
-		t.vertexUV(vtxX1, float(pos.y) + 0.0f, vtxZ1, texU_1, texV_3);
+		t.vertexUV(vtxX1, float(pos.y) + height1, vtxZ1, 0.5f*texU_1, texV_1);
+		t.vertexUV(vtxX2, float(pos.y) + height2, vtxZ2, 0.5f*texU_2, texV_2);
+		t.vertexUV(vtxX2, float(pos.y) + 0.0f, vtxZ2,    0.5f*texU_2, texV_3);
+		t.vertexUV(vtxX1, float(pos.y) + 0.0f, vtxZ1,    0.5f*texU_1, texV_3);
 	}
 
 	tile->m_aabb.min.y = 0.0f;

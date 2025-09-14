@@ -46,10 +46,10 @@ TerrainParticle* TerrainParticle::init(const TilePos& tilePos, Facing::Name face
 	m_gCol *= float(GET_GREEN(color)) / 255.0f;
 	m_bCol *= float(GET_BLUE(color)) / 255.0f;
 
-	if (m_pTile == Tile::stairs_stone || m_pTile == Tile::stairs_wood)
-		field_DC = m_pTile->getTexture(Facing::UP, (m_pLevel->getData(tilePos) >> 4 ) & 0x0F);
-	else if (m_pTile == Tile::cloth || Tile::stained_hardened_clay)
-		field_DC += (m_pLevel->getData(tilePos));
+	//if (m_pTile == Tile::stairs_stone || m_pTile == Tile::stairs_wood)
+	//	field_DC = m_pTile->getTexture(Facing::UP, (m_pLevel->getData(tilePos) >> 4 ) & 0x0F);
+	//else if (m_pTile == Tile::cloth || Tile::stained_hardened_clay)
+	//	field_DC += (m_pLevel->getData(tilePos));
 
 	return this;
 }

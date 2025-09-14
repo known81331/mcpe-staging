@@ -131,11 +131,10 @@ Vec3 LiquidTile::getFlow(const LevelSource* level, const TilePos& pos) const
 			shouldRenderFace(level, pos.above().west(), Facing::WEST) ||
 			shouldRenderFace(level, pos.above().east(), Facing::EAST))
 		{
-			result = result.normalize() + Vec3(0, -6, 0);
+		//	result = result.normalize() + Vec3(0, -6, 0);
 		}
 	}
-
-	return result.normalize();
+	return result.normalize() * 0.35f;
 }
 
 int LiquidTile::getRenderLayer() const

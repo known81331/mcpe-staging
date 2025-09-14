@@ -57,8 +57,6 @@ bool AuxDataTileItem::useOn(ItemInstance* instance, Player* player, Level* level
 
 	Tile* pTile = Tile::tiles[m_tile];
 
-		printf("%d %d %d\n", tp.x, tp.y, tp.z);
-
 	if (!level->setTileAndData(tp, m_tile, getLevelDataForAuxValue(instance->getAuxValue())))
 		return true;
 

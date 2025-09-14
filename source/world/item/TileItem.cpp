@@ -30,9 +30,11 @@ std::string TileItem::getDescriptionId(ItemInstance* instance)
 bool TileItem::useOn(ItemInstance* instance, Player* player, Level* level, const TilePos& pos, Facing::Name face)
 {
 	TilePos tp(pos);
+	TileID tile = level->getTile(pos);
 
-	if (level->getTile(pos) == Tile::topSnow->m_ID)
+	if(tile == Tile::shortgrass->m_ID || tile == Tile::topSnow->m_ID)
 	{
+		puts("wtf");
 		face = Facing::DOWN;
 	}
 	else switch (face)
@@ -48,7 +50,6 @@ bool TileItem::useOn(ItemInstance* instance, Player* player, Level* level, const
 	if (!instance->m_count)
 		return false;
 
-		printf("%d %d %d\n", tp.x, tp.y, tp.z);
 	if (!level->mayPlace(m_tile, tp, false))
 		return false;
 

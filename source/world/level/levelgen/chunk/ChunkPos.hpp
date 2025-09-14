@@ -1,5 +1,8 @@
 #pragma once
 
+#include <cstddef>
+
+
 #ifndef __VEC3_HPP
 class Vec3;
 #endif

@@ -660,6 +660,22 @@ void Tile::initTiles()
 		->setSoundType(Tile::SOUND_CLOTH)
 		->setDescriptionId("cloth");
 
+	Tile::cloth_00 = Tile::cloth;
+	Tile::cloth_01 = Tile::cloth;
+	Tile::cloth_10 = Tile::cloth;
+	Tile::cloth_11 = Tile::cloth;
+	Tile::cloth_20 = Tile::cloth;
+	Tile::cloth_21 = Tile::cloth;
+	Tile::cloth_30 = Tile::cloth;
+	Tile::cloth_31 = Tile::cloth;
+	Tile::cloth_40 = Tile::cloth;
+	Tile::cloth_41 = Tile::cloth;
+	Tile::cloth_50 = Tile::cloth;
+	Tile::cloth_51 = Tile::cloth;
+	Tile::cloth_60 = Tile::cloth;
+	Tile::cloth_61 = Tile::cloth;
+	Tile::cloth_70 = Tile::cloth;
+
 	Tile::fire = (new FireTile(TILE_FIRE, TEXTURE_FIRE1))
 		->init()
 		->setDestroyTime(0.0f)

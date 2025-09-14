@@ -9,7 +9,7 @@
 #include "DynamicTexture.hpp"
 #include "world/tile/Tile.hpp"
 
-LavaSideTexture::LavaSideTexture() : DynamicTexture(Tile::lava->m_TextureFrame + 1)
+LavaSideTexture::LavaSideTexture() : DynamicTexture(Tile::lava->m_TextureFrame )
 {
 	field_14 = 0;
 	field_18 = 0;
@@ -40,6 +40,7 @@ LavaSideTexture::~LavaSideTexture()
 
 void LavaSideTexture::tick()
 {
+	//printf("LavaSideTexture::tick(%d)\n", Tile::lava->m_TextureFrame);
 	field_1C++;
 
 	for (int x = 0; x < 16; x++)
