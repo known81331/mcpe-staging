@@ -149,6 +149,9 @@ void TouchscreenInput_TestFps::tick(Player* pPlayer)
 
 	for (int i = 0; i < 8; i++)
 		field_6C[i] = false;
+
+	if (m_pMinecraft->m_pScreen)
+		return;
 	
 	const int* activePointers;
 	int activePointerCount = Multitouch::getActivePointerIds(&activePointers);
@@ -297,6 +300,10 @@ static void RenderTouchButton(Tesselator* t, PolygonArea* pArea, int srcX, int s
 
 void TouchscreenInput_TestFps::render(float f)
 {
+
+	if (m_pMinecraft->m_pScreen)
+		return;
+
 	glDisable(GL_CULL_FACE);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);

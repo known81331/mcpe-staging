@@ -181,6 +181,13 @@ std::string AppPlatform_iOS::getAssetPath(const std::string &path) const
     {
         // asset couldn't be found in bundle's resources.
         // fallback to the desired path so our error message is clear.
+        std::string cpath = [_getAssetPath("gui.png") UTF8String];
+        size_t r = cpath.rfind("/", -1, 1);
+        if (r != std::string::npos) {
+            cpath  = cpath.substr(0, r + 1);
+            cpath = cpath + path;
+            return cpath;
+        }
         return path;
     }
     

@@ -161,7 +161,10 @@ void Gui::render(float f, bool bHaveScreen, int mouseX, int mouseY)
 	Minecraft* mc = m_pMinecraft;
 	GameRenderer* renderer = mc->m_pGameRenderer;
 
+
 	renderer->setupGuiScreen();
+
+	if (bHaveScreen) return;
 
 	LocalPlayer* player = mc->m_pLocalPlayer;
 
