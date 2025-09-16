@@ -9,5 +9,6 @@ set(REMCPE_PLATFORM "${DEFAULT_PLATFORM}" CACHE STRING "ReMCPE Platform (Check <
 message(STATUS "Selected Platform: ${REMCPE_PLATFORM}")
 add_subdirectory("${REMCPE_PLATFORM}")
 
+add_compile_definitions(REMCPE_PLATFORM=${REMCPE_PLATFORM})
 # Load Sound
 add_subdirectory(sound)

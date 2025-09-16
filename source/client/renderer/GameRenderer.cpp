@@ -572,6 +572,7 @@ void GameRenderer::renderLevel(float f)
 		glColorMask(true, true, true, false);
 }
 
+
 void GameRenderer::render(float f)
 {
 	if (m_pMinecraft->m_pLocalPlayer && m_pMinecraft->m_bGrabbedMouse)
@@ -725,10 +726,12 @@ void GameRenderer::render(float f)
 		debugText << (  !m_pMinecraft->getOptions()->m_bFlyCheat && m_pMinecraft->m_pLocalPlayer->m_onGround ? "yes" : "no") << "\n";
 		debugText << m_shownChunkUpdates << "\n";
 		debugText << m_pMinecraft->m_pLevelRenderer->gatherStats1();
+		debugText << m_pMinecraft->m_pLevelRenderer->gatherStats2();
 		debugText << m_pMinecraft->m_pLevel->getTime() << "\n";
 		debugText << "0\n";
 		debugText << m_pMinecraft->m_pLevel->getBiomeSource()->getBiome(pos)->m_name << "\n";
-		debugText << "\nSDL2 OpenAL MacOSX/LE";
+
+		debugText << "\n" << m_pMinecraft->getPlatformString();
 
 
 		const char* label = 
@@ -739,6 +742,7 @@ void GameRenderer::render(float f)
 			"GROUND\n"
 			"CUBES\n"
 			"CHUNKS\n"
+			"ENTS\n"
 			"TIME\n"
 			"QUEUED\n"
 			"BIOME\n"
@@ -755,7 +759,7 @@ void GameRenderer::render(float f)
 		std::stringstream debugText;
 		debugText << m_shownFPS << "\n";
 		debugText << m_pMinecraft->getVersionString();
-		debugText << "\n\nSDL2 OpenAL MacOSX/LE";
+		debugText << "\n\n" << m_pMinecraft->getPlatformString();
 
 		const char* label = 
 			"FPS\n"

@@ -1309,3 +1309,88 @@ void Minecraft::locateMultiplayer()
 	m_pNetEventCallback = new ClientSideNetworkHandler(this, m_pRakNetInstance);
 #endif
 }
+
+
+extern "C" {
+    const char *getBuild() { //Get current architecture, detectx nearly every architecture. Coded by Freak
+
+    }
+}
+
+std::string Minecraft::getPlatformString() const {
+	std::stringstream platformText;
+
+			#ifdef __MACOSX__
+				platformText << "MacOSX";
+			#elif defined(_WIN32)
+				platformText << "Win32";
+			#elif defined(__APPLE__)
+				platformText << "iOS";
+			#elif defined(__ANDROID__)
+				platformText << "Android";
+			#elif defined(__linux__)
+				platformText << "Linux";
+			#elif defined(__HAIKU__)
+				platformText << "Haiku";
+			#elif defined (__unix__)
+				platformText << "Unix";
+			#else
+				platformText << "Unknown";
+			#endif
+
+			platformText << " ";
+
+			#if defined(__x86_64__) || defined(_M_X64)
+				platformText << "x86_64";
+			#elif defined(i386) || defined(__i386__) || defined(__i386) || defined(_M_IX86)
+				platformText << "i386";
+			#elif defined(__ARM_ARCH_2__)
+				platformText << "ARM2";
+			#elif defined(__ARM_ARCH_3__) || defined(__ARM_ARCH_3M__)
+				platformText << "ARM3";
+			#elif defined(__ARM_ARCH_4T__) || defined(__TARGET_ARM_4T)
+				platformText << "ARM4T";
+			#elif defined(__ARM_ARCH_5_) || defined(__ARM_ARCH_5E_)
+				platformText << "ARM5"
+			#elif defined(__ARM_ARCH_6T2_) || defined(__ARM_ARCH_6T2_)
+				platformText << "ARM6T2";
+			#elif defined(__ARM_ARCH_6__) || defined(__ARM_ARCH_6J__) || defined(__ARM_ARCH_6K__) || defined(__ARM_ARCH_6Z__) || defined(__ARM_ARCH_6ZK__)
+				platformText << "ARM6";
+			#elif defined(__ARM_ARCH_7__) || defined(__ARM_ARCH_7A__) || defined(__ARM_ARCH_7R__) || defined(__ARM_ARCH_7M__) || defined(__ARM_ARCH_7S__)
+				platformText << "ARM7";
+			#elif defined(__ARM_ARCH_7A__) || defined(__ARM_ARCH_7R__) || defined(__ARM_ARCH_7M__) || defined(__ARM_ARCH_7S__)
+				platformText << "ARM7A";
+			#elif defined(__ARM_ARCH_7R__) || defined(__ARM_ARCH_7M__) || defined(__ARM_ARCH_7S__)
+				platformText << "ARM7R";
+			#elif defined(__ARM_ARCH_7M__)
+				platformText << "ARM7M";
+			#elif defined(__ARM_ARCH_7S__)
+				platformText << "ARM7S";
+			#elif defined(__aarch64__) || defined(_M_ARM64)
+				platformText << "ARM64";
+			#elif defined(mips) || defined(__mips__) || defined(__mips)
+				platformText << "MIPS";
+			#elif defined(__sh__)
+				platformText << "SUPERH";
+			#elif defined(__powerpc) || defined(__powerpc__) || defined(__powerpc64__) || defined(__POWERPC__) || defined(__ppc__) || defined(__PPC__) || defined(_ARCH_PPC)
+				platformText << "PowerPC";
+			#elif defined(__PPC64__) || defined(__ppc64__) || defined(_ARCH_PPC64)
+				platformText << "PowerPC64";
+			#elif defined(__sparc__) || defined(__sparc)
+				platformText << "SPARC";
+			#elif defined(__m68k__)
+				platformText << "M68K";
+			#else
+				platformText << "ARCH";
+			#endif
+
+			platformText << "/";
+
+			#ifdef REMCPE_ENDIAN_BIG
+				platformText << "BE" << " ";
+			#else
+				platformText << "LE" << " ";
+			#endif
+	
+			return platformText.str();
+}

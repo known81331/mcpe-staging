@@ -63,6 +63,7 @@ public:
 	void resetPlayer(Player* player);
 	void respawnPlayer(Player* player);
 	std::string getVersionString() const;
+	std::string getPlatformString() const;
 	bool isTouchscreen() const;
 	bool useSplitControls() const;
 	bool useController() const;
