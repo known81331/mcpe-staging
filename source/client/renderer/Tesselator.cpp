@@ -109,7 +109,12 @@ void Tesselator::color(int r, int g, int b, int a)
 	if (a < 0) a = 0;
 
 	m_bHasColor = true;
+#if defined(__powerpc__) || defined(__powerpc64__)
+	m_nextVtxColor = r << 24 | g << 16 | b << 8 | a;
+#else
 	m_nextVtxColor = a << 24 | b << 16 | g << 8 | r;
+#endif
+
 }
 
 void Tesselator::color(int r, int g, int b)

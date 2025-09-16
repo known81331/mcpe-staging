@@ -20,7 +20,8 @@ int GrassTile::getColor(const LevelSource* levelSource, const TilePos& pos) cons
 {
 	if (GetPatchManager()->IsGrassTinted())
 	{
-		return 0x339933;
+			   // rgba    //argb   // abgr/BE ( trim a )
+		return 0x339933; // 0xff3399;    0xff3399
 	}
 
 	return 0xffffff;

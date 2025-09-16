@@ -468,7 +468,7 @@ void StartMenuScreen::init()
 
 	// add the buttons to the screen:
 	m_buttons.push_back(&m_startButton);
-	m_buttons.push_back(&m_joinButton);
+//	m_buttons.push_back(&m_joinButton);
 	m_buttons.push_back(&m_optionsButton);
 
 #if defined(DEMO) || defined(CAN_QUIT)

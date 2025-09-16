@@ -799,6 +799,7 @@ void Minecraft::update()
 		tick(); // tick(i, m_timer.m_ticks - 1); // 0.9.2
 		field_DA8++;
 	}
+	static bool backgroundMusic = false;
 
 	if (m_pLevel && !m_bPreparingLevel)
 	{
@@ -818,6 +819,14 @@ void Minecraft::update()
 	double time = getTimeS();
 	m_fDeltaTime = time - m_fLastUpdated;
 	m_fLastUpdated = time;
+
+	if (m_bPreparingLevel && m_pSoundEngine->m_pSoundSystem->isPlayingMusic()) {
+		m_pSoundEngine->m_pSoundSystem->stopMusic();
+	}
+	else if (!m_pLevel && !m_pSoundEngine->m_pSoundSystem->isPlayingMusic()) {
+		m_pSoundEngine->playMusic("menu");
+	}
+	
 }
 
 void Minecraft::init()

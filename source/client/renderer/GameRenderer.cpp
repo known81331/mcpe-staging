@@ -699,6 +699,77 @@ void GameRenderer::render(float f)
 		}
 	}
 
+#define ENH_ATIPLS_F3
+	// atipls debug text
+#ifdef ENH_ATIPLS_F3
+	if (m_pMinecraft->getOptions()->m_bDebugText)
+	if (m_pMinecraft->m_pLocalPlayer)
+	{
+		std::stringstream debugText;
+		debugText  << m_shownFPS << "\n";
+		char posStr[96];
+		Vec3 pos = m_pMinecraft->m_pLocalPlayer->getPos(f);
+		sprintf(posStr, "(%.2f, %.2f, %.2f)", pos.x, pos.y, pos.z);
+
+		debugText << posStr << "\n";
+
+		Vec3 vel = m_pMinecraft->m_pLocalPlayer->m_vel;
+		sprintf(posStr, "(%.2f, %.2f, %.2f)", vel.x, vel.y, vel.z);
+
+		debugText << posStr << "\n";
+
+		Vec2 rot = m_pMinecraft->m_pLocalPlayer->getRot(1.f);
+		sprintf(posStr, "(%.2f, %.2f)", rot.x, rot.y); 
+
+		debugText << posStr << "\n";
+		debugText << (  !m_pMinecraft->getOptions()->m_bFlyCheat && m_pMinecraft->m_pLocalPlayer->m_onGround ? "yes" : "no") << "\n";
+		debugText << m_shownChunkUpdates << "\n";
+		debugText << m_pMinecraft->m_pLevelRenderer->gatherStats1();
+		debugText << m_pMinecraft->m_pLevel->getTime() << "\n";
+		debugText << "0\n";
+		debugText << m_pMinecraft->m_pLevel->getBiomeSource()->getBiome(pos)->m_name << "\n";
+		debugText << "\nSDL2 OpenAL MacOSX/LE";
+
+
+		const char* label = 
+			"FPS\n"
+			"POS\n"
+			"VEL\n"
+			"ROT\n"
+			"GROUND\n"
+			"CUBES\n"
+			"CHUNKS\n"
+			"TIME\n"
+			"QUEUED\n"
+			"BIOME\n"
+			"\n"
+			"PLATFORM\n"
+			;
+
+		m_pMinecraft->m_pFont->drawShadow(label, 10, 20, 0xFFFFFF);
+		m_pMinecraft->m_pFont->drawShadow(debugText.str(), 80, 20, 0xFFFFFF);
+
+	}
+	else {
+
+		std::stringstream debugText;
+		debugText << m_shownFPS << "\n";
+		debugText << m_pMinecraft->getVersionString();
+		debugText << "\n\nSDL2 OpenAL MacOSX/LE";
+
+		const char* label = 
+			"FPS\n"
+			"MCPE\n"
+			"\n"
+			"PLATFORM\n"
+			;
+
+		m_pMinecraft->m_pFont->drawShadow(label, 10, 20, 0xFFFFFF);
+		m_pMinecraft->m_pFont->drawShadow(debugText.str(), 80, 20, 0xFFFFFF);
+		m_pMinecraft->m_pFont->draw(__TIMESTAMP__, m_pMinecraft->m_pScreen->m_width/2 - m_pMinecraft->m_pFont->width(__TIMESTAMP__)/2, 0, 0xff333333);
+	}
+
+#else
 	// @TODO: Move to its own function
 	std::stringstream debugText;
 	debugText << "ReMinecraftPE " << m_pMinecraft->getVersionString();
@@ -717,6 +788,7 @@ void GameRenderer::render(float f)
 			debugText << "XYZ: " << posStr << "\n";
 			debugText << "Biome: " << m_pMinecraft->m_pLevel->getBiomeSource()->getBiome(pos)->m_name << "\n";
 		}
+	
 #ifdef SHOW_VERTEX_COUNTER_GRAPHIC
 		extern int g_nVertices; // Tesselator.cpp
 		debugText << "\nverts: " << g_nVertices;
@@ -777,6 +849,7 @@ void GameRenderer::render(float f)
 		g_nVertices = 0;
 #endif
 	}
+#endif
 
 	int timeMs = getTimeMs();
 	if (timeMs - m_lastUpdatedMS >= 1000)

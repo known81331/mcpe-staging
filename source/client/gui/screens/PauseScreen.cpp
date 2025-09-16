@@ -42,10 +42,11 @@ void PauseScreen::init()
 	if (cramped)
 		inc = 25;
 
-	m_btnQuit.m_width = 120;
-	m_btnBack.m_width = 120;
-	m_btnVisible.m_width = 120;
-	m_btnQuitAndCopy.m_width = 120;
+	int btnWidth = m_width / 3;
+	m_btnQuit.m_width = btnWidth;
+	m_btnBack.m_width = btnWidth;
+	m_btnVisible.m_width = btnWidth;
+	m_btnQuitAndCopy.m_width = btnWidth;
 
 	m_btnQuit.m_height = 32;
 	m_btnBack.m_height = 32;
@@ -65,7 +66,7 @@ void PauseScreen::init()
 
 #ifdef ENH_ADD_OPTIONS_PAUSE
 	// TODO: when visible or quit&copy are on, lower this
-	m_btnOptions.m_width = 120;
+	m_btnOptions.m_width = btnWidth;
 	m_btnOptions.m_yPos = currY;
 	m_btnOptions.m_xPos = m_btnBack.m_xPos;
 #endif

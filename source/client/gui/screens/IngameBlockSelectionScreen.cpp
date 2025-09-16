@@ -221,6 +221,6 @@ void IngameBlockSelectionScreen::selectSlotAndClose()
 	
 	pInv->selectItem(m_selectedSlot, m_pMinecraft->m_gui.getNumUsableSlots());
 
-	m_pMinecraft->m_pSoundEngine->playUI("random.click");
+	m_pMinecraft->m_pSoundEngine->playUI("random.pop2");
 	m_pMinecraft->setScreen(nullptr);
 }

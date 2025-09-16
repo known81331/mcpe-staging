@@ -36,6 +36,10 @@ public:
 
     virtual void startEngine() override;
     virtual void stopEngine() override;
+
+	virtual void stop(const std::string& soundPath);
+	virtual void play(const std::string& soundPath);
+
     
 private:
 	bool _hasMaxSources() const;

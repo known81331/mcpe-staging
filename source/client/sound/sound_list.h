@@ -38,6 +38,7 @@ SOUND(random, fizz, )
 SOUND(random, fuse, )
 SOUND(random, hurt, )
 SOUND(random, pop, )
+SOUND(random, pop2, )
 SOUND(random, splash, )
 
 SOUND(fire, fire, )
@@ -96,3 +97,9 @@ SOUND(mob, zombie, 3)
 SOUND(mob, zombiehurt, 1)
 SOUND(mob, zombiehurt, 2)
 SOUND(mob, zombiedeath, )
+
+
+//SOUND(music, menu1, )
+//SOUND(music, menu2, )
+//SOUND(music, menu3, )
+//SOUND(music, menu4, )

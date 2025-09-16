@@ -444,3 +444,13 @@ void SoundSystemAL::stopEngine()
     // Mark as unloaded
     _initialized = false;
 }
+
+void SoundSystemAL::stop(const std::string& soundPath)
+{
+	
+}
+
+void SoundSystemAL::play(const std::string& soundPath)
+{
+	
+}

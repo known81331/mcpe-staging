@@ -247,7 +247,7 @@ void ItemRenderer::renderGuiItem(Font* font, Textures* textures, ItemInstance* i
 
 		// scale, rotate, and translate the tile onto the correct screen coordinate
 		glTranslatef((GLfloat)x + 8, (GLfloat)y + 8, -8);
-		glScalef(10, 10, 10);
+		glScalef(9, 9, 9);
 		glRotatef(210.0f, 1.0f, 0.0f, 0.0f);
 		glRotatef(45.0f, 0.0f, 1.0f, 0.0f);
 
