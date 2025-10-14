@@ -723,7 +723,7 @@ void GameRenderer::render(float f)
 		sprintf(posStr, "(%.2f, %.2f)", rot.x, rot.y); 
 
 		debugText << posStr << "\n";
-		debugText << (  !m_pMinecraft->getOptions()->m_bFlyCheat && m_pMinecraft->m_pLocalPlayer->m_onGround ? "yes" : "no") << "\n";
+		debugText << (  !m_pMinecraft->getOptions()->m_bFlyCheat && m_pMinecraft->m_pLocalPlayer->m_bOnGround ? "yes" : "no") << "\n";
 		debugText << m_shownChunkUpdates << "\n";
 		debugText << m_pMinecraft->m_pLevelRenderer->gatherStats1();
 		debugText << m_pMinecraft->m_pLevelRenderer->gatherStats2();

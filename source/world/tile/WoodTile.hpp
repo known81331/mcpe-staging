@@ -15,6 +15,7 @@ class WoodTile : public Tile
 public:
 	WoodTile(int id, int type);
 	int getTexture(Facing::Name face) const override;
+	int getTexture(Facing::Name face, TileData data) const override;
 	int getTexture(Facing::Name face, int data) const override;
 	int getSpawnResourcesAuxValue(int val) const override;
 

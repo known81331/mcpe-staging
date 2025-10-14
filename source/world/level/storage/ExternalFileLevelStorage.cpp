@@ -239,7 +239,7 @@ LevelChunk* ExternalFileLevelStorage::load(Level* level, const ChunkPos& pos)
 	pBitStream->Read((char*)pData, 16 * 16 * 128 * sizeof(TileID));
 
 	LevelChunk* pChunk = new LevelChunk(level, pData, pos);
-	pBitStream->Read((char*)pChunk->m_tileData.m_data, 16 * 16 * 128 / 2);
+	pBitStream->Read((char*)pChunk->m_tileData.m_data, 16 * 16 * 128);
 
 	if (m_storageVersion >= 1)
 	{

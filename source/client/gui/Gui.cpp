@@ -637,7 +637,6 @@ int Gui::getNumSlots()
 {
 	if (m_pMinecraft->isTouchscreen())
 		return 8;
-		return 8;
 
 	return 9;
 }

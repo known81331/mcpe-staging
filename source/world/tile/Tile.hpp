@@ -195,10 +195,12 @@ public: // static variables
 		* emeraldOre, //! actually diamond ore
 		* redStoneOre,
 		* redStoneOre_lit,
+		* redstoneBlock,
 		* goldOre,
 		* ironOre,
 		* coalOre,
 		* lapisOre,
+		* rubyOre,
 		* reeds,
 		* ladder,
 		* obsidian,
@@ -211,6 +213,7 @@ public: // static variables
 		* goldBlock,
 		* ironBlock,
 		* emeraldBlock, //! actually diamond block
+		* rubyBlock, //! actually emerald block
 		* stairs_wood,
 		* stairs_stone,
 		* door_wood,
@@ -232,8 +235,6 @@ public: // static variables
 		* mossStone,
 		* cryingObsidian,
 		* rocketLauncher,
-		* cactus,
-		* tallGrass,
 		* deadBush,
 		* pumpkin,
 		* pumpkinLantern,

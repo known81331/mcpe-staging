@@ -110,7 +110,7 @@ int StairTile::getTexture(Facing::Name face, TileData data) const
 {
 	
 	if (m_ID == TILE_STAIRS_WOOD) {
-		switch (b)
+		switch (data)
 		{
 			case 0:
 				return TEXTURE_PLANKS;
@@ -127,7 +127,7 @@ int StairTile::getTexture(Facing::Name face, TileData data) const
 		}
 	}
 	else if (m_ID == TILE_STAIRS_STONE) {
-		switch (b)
+		switch (data)
 		{
 			case 0:
 				return TEXTURE_STONEBRICK;
@@ -150,7 +150,7 @@ int StairTile::getTexture(Facing::Name face, TileData data) const
 
 		}
 	}
-	return m_pParent->getTexture(face, b);
+	return m_pParent->getTexture(face, data);
 }
 
 int StairTile::getTexture(const LevelSource* level, const TilePos& pos, Facing::Name face) const

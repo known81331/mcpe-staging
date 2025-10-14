@@ -17,7 +17,7 @@ std::string g_sNotAvailableInDemoVersion = "Not available in the demo version";
 
 IngameBlockSelectionScreen::IngameBlockSelectionScreen() :
 	m_btnPause(0, "Pause"),
-	m_btnChat(1, "Chat") // Temp chat button,
+	m_btnChat(3, "Chat"), // Temp chat button,
 	m_btnArmor(1, "Armor"),
 	m_btnCrafting(2, "Craft")
 {

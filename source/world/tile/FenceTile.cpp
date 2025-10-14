@@ -26,6 +26,30 @@ AABB* FenceTile::getAABB(const Level* pLevel, const TilePos& pos)
 	return rAABB;
 }
 
+int FenceTile::getTexture(Facing::Name face, TileData data) const
+{
+	return getTexture(face, (int)data);
+}
+
+int FenceTile::getTexture(Facing::Name face, int data) const
+{
+	switch (data)
+	{
+		case 1:
+			return TEXTURE_PLANKS_SPRUCE;
+		case 2:
+			return TEXTURE_PLANKS_BIRCH;
+		case 3:
+			return TEXTURE_PLANKS_JUNGLE;
+		case 4:
+			return TEXTURE_PLANKS_ACACIA;
+		case 5:
+			return TEXTURE_PLANKS_DARK_OAK;
+	}
+	return m_TextureFrame;
+}
+
+
 bool FenceTile::isSolidRender() const
 {
 	return false;

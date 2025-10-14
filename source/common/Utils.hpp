@@ -269,6 +269,9 @@ enum eTileID
 	TILE_CLOTH_41,
 	TILE_CLOTH_51,
 	TILE_CLOTH_61,
+	TILE_BLOCK_RUBY,
+	TILE_ORE_RUBY,
+	TILE_BLOCK_REDSTONE,
 
 	TILE_HARDENED_CLAY = 172,
 	TILE_STAINED_HARDENED_CLAY,
@@ -386,6 +389,8 @@ enum eTileID
 	ITEM_COOKIE,
 	ITEM_RECORD_01,
 	ITEM_RECORD_02,
+
+	ITEM_MONSTER_PLACER = 383,
 	ITEM_CAMERA = 456,
 
 	// Custom items
@@ -767,10 +772,8 @@ enum eRenderShape
 	SHAPE_FIRE,
 	SHAPE_WATER,
 	SHAPE_CHEST,
-	SHAPE_FENCE,
 	SHAPE_DOOR,
 	SHAPE_LADDER,
-	SHAPE_CACTUS,
 	SHAPE_STAIRS,
 	SHAPE_FENCE,
 	SHAPE_CACTUS,
@@ -787,7 +790,7 @@ typedef uint8_t TileID;
 // @TODO: Rename this to "TileTypeId"
 // Rename "Tile" to "TileType"
 // Create "Tile" class containing TileTypeId, and TileData
-typedef uint8_t TileData;
+typedef uint16_t TileData;
 
 /*struct Pos
 {

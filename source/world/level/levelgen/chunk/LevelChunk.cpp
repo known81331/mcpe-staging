@@ -69,7 +69,7 @@ LevelChunk::LevelChunk(Level* pLevel, TileID* pData, const ChunkPos& pos)
 	/*if (pData)
 	{*/
 	field_4 = 16 * 16 * 128;
-	m_tileData = DataLayer(16 * 16 * 128 / 2);
+	m_tileData = DataLayer(16 * 16 * 128);
 	//Space saving measure: Store 2 blocks' light field instead of only one block's, per byte.
 	m_lightSky = DataLayer(16 * 16 * 128 / 2);
 	m_lightBlk = DataLayer(16 * 16 * 128 / 2);

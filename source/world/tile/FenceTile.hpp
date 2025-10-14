@@ -11,4 +11,7 @@ public:
 	bool isSolidRender() const override;
 	bool isCubeShaped() const override;
 	int getRenderShape() const override;
+
+	int getTexture(Facing::Name face, TileData data) const override;
+	int getTexture(Facing::Name face, int data) const override;
 };

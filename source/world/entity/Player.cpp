@@ -202,9 +202,7 @@ ItemInstance* Player::getCarriedItem()
 	if (ItemInstance::isNull(item))
 		return nullptr;
 
-	return item;*/
-
-	return m_pInventory->getSelected();
+	return item;
 }
 
 void Player::updateAi()

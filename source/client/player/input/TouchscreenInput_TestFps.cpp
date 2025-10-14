@@ -39,7 +39,6 @@ void TouchscreenInput_TestFps::releaseAllKeys()
 	m_horzInput = 0.0f;
 	m_vertInput = 0.0f;
 	for (int i = 0; i < 8; i++)
-	for (int i = 0; i < 8; i++)
 		field_6C[i] = false;
 }
 
@@ -143,15 +142,11 @@ void TouchscreenInput_TestFps::setScreenSize(int width, int height)
 
 void TouchscreenInput_TestFps::tick(Player* pPlayer)
 {
-	if (m_pMinecraft->m_pScreen) return; // If we're in another screen, disable d-pad
-	
 	m_horzInput = 0.0f;
 	m_vertInput = 0.0f;
 	m_bJumping = false;
 	//field_40 = false;
-	//field_40 = false;
 
-	for (int i = 0; i < 8; i++)
 	for (int i = 0; i < 8; i++)
 		field_6C[i] = false;
 
@@ -195,7 +190,6 @@ void TouchscreenInput_TestFps::tick(Player* pPlayer)
 				m_vertInput += 1.0f;
 			}
 			bJumpPressed = true;
-			bJumpPressed = true;
 		}
 
 		switch (pointerId)
@@ -211,18 +205,7 @@ void TouchscreenInput_TestFps::tick(Player* pPlayer)
 						m_bJumping = true;
 					else
 						bForwardPressed = true;
-				if (m_bJumpBeingHeld && m_pMinecraft->getOptions()->m_bFlyCheat) {
-					m_bJumpBeingHeld = true;
-					m_bWasJumping = false;
-					bJumpPressed = true;
-				} 
-				else {
-					if (pPlayer->isInWater())
-						m_bJumping = true;
-					else
-						bForwardPressed = true;
 
-				}
 				}
 				m_vertInput += 1.0f;
 				break;
@@ -233,29 +216,8 @@ void TouchscreenInput_TestFps::tick(Player* pPlayer)
 					m_bWasJumping = false;
 					bJumpPressed = true;
 				} 
-				if (m_bJumpBeingHeld && m_pMinecraft->getOptions()->m_bFlyCheat) {
-					m_bJumpBeingHeld = true;
-					m_bWasJumping = false;
-					bJumpPressed = true;
-				} 
 				m_vertInput -= 1.0f;
 				break;
-
-			case 100 + INPUT_FORWARDLEFT:
-				if (field_40) {
-					bForwardPressed = true;
-					m_vertInput += 1.0f;
-					m_horzInput += 1.0f;
-				}
-				break;
-			case 100 + INPUT_FORWARDRIGHT:
-				if (field_40) {
-					bForwardPressed = true;
-					m_vertInput += 1.0f;
-					m_horzInput -= 1.0f;
-				}
-				break;
-
 
 			case 100 + INPUT_FORWARDLEFT:
 				if (field_40) {
@@ -299,21 +261,9 @@ void TouchscreenInput_TestFps::tick(Player* pPlayer)
 			m_bJumpBeingHeld = false;
 		}
 
-
-		if (m_bWasJumping && m_pMinecraft->m_pGameMode->isCreativeType()) {
-			m_pMinecraft->getOptions()->m_bFlyCheat = !m_pMinecraft->getOptions()->m_bFlyCheat;
-			m_bWasJumping = false;
-			m_bJumpBeingHeld = false;
-		}
-
 	}
 	else
 	{
-		if (m_bJumpBeingHeld)
-			m_bWasJumping = true;
-		else
-			m_bWasJumping = false;
-
 		if (m_bJumpBeingHeld)
 			m_bWasJumping = true;
 		else
@@ -427,8 +377,6 @@ RectangleArea TouchscreenInput_TestFps::getRectangleArea()
 
 bool TouchscreenInput_TestFps::isButtonDown(int key)
 {
-	if (key == 7) // mp
-		return m_bJumpBeingHeld;
 	if (key == 7) // mp
 		return m_bJumpBeingHeld;
 	return field_6C[key - 100];

@@ -774,7 +774,7 @@ bool TileRenderer::tesselateCactusInWorld(Tile* tile, const TilePos& pos)
 	bright = tile->getBrightness(m_pLevelSource, pos.above());
 	t.color(bright, bright, bright);
 
-	texture = tile->getTexture(Facing::UP, 0);
+	texture = TEXTURE_CACTUS_TOP; //tile->getTexture(Facing::UP, 0);
 
 	texX = float(16 * (texture % 32));
 	texY = float(16 * (texture / 32));
@@ -793,7 +793,7 @@ bool TileRenderer::tesselateCactusInWorld(Tile* tile, const TilePos& pos)
 	bright = tile->getBrightness(m_pLevelSource, pos.below()) * 0.5f;
 	t.color(bright, bright, bright);
 
-	texture = tile->getTexture(Facing::DOWN, 0);
+	texture = TEXTURE_CACTUS_BOTTOM; //tile->getTexture(Facing::DOWN, 0);
 
 	texX = float(16 * (texture % 32));
 	texY = float(16 * (texture / 32));
@@ -1099,6 +1099,13 @@ bool TileRenderer::tesselateFenceInWorld(Tile* tile, const TilePos& pos)
 	bool tileEast = m_pLevelSource->getTile(pos.east()) == tile->m_ID;
 	bool tileNorth = m_pLevelSource->getTile(pos.north()) == tile->m_ID;
 	bool tileSouth = m_pLevelSource->getTile(pos.south()) == tile->m_ID;
+
+
+
+	tileWest =  tileWest || (Tile::tiles[m_pLevelSource->getTile(pos.west())] && Tile::tiles[m_pLevelSource->getTile(pos.west())]->isCubeShaped());
+	tileEast =  tileEast || (Tile::tiles[m_pLevelSource->getTile(pos.east())] && Tile::tiles[m_pLevelSource->getTile(pos.east())]->isCubeShaped());
+	tileNorth = tileNorth || (Tile::tiles[m_pLevelSource->getTile(pos.north())] && Tile::tiles[m_pLevelSource->getTile(pos.north())]->isCubeShaped());
+	tileSouth = tileSouth || (Tile::tiles[m_pLevelSource->getTile(pos.south())] && Tile::tiles[m_pLevelSource->getTile(pos.south())]->isCubeShaped());
 
 	bool connectsHorizontally = tileWest || tileEast;
 	bool connectsVertically = tileNorth || tileSouth;
@@ -3037,7 +3044,7 @@ int TileRenderer::getTileColor(Tile* tile, const TilePos& pos)
 		return 0xffffff;
 	}
 
-	if ((tile == Tile::grass || tile == Tile::tallGrass) && GrassColor::isAvailable() && m_bBiomeColors)
+	if ((tile == Tile::grass) && GrassColor::isAvailable() && m_bBiomeColors)
 	{
 		m_pLevelSource->getBiomeSource()->getBiomeBlock(pos, 1, 1);
 		return GrassColor::get(m_pLevelSource->getBiomeSource()->field_4[0], m_pLevelSource->getBiomeSource()->field_8[0]);

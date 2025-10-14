@@ -35,6 +35,12 @@ void Inventory::prepareCreativeInventory()
 	addCreativeItem(Tile::wood->m_ID,5);
 	addCreativeItem(Tile::torch->m_ID);
 	addCreativeItem(Tile::stairs_stone->m_ID, 5 );
+	addCreativeItem(Tile::fence->m_ID);
+	addCreativeItem(Tile::fence->m_ID,1);
+	addCreativeItem(Tile::fence->m_ID,2);
+	addCreativeItem(Tile::fence->m_ID,3);
+	addCreativeItem(Tile::fence->m_ID,4);
+	addCreativeItem(Tile::fence->m_ID,5);
 	addCreativeItem(Tile::sandStone->m_ID);
 	addCreativeItem(Tile::stairs_stone->m_ID);
 	addCreativeItem(Tile::stairs_stone->m_ID, 1 );
@@ -57,6 +63,8 @@ void Inventory::prepareCreativeInventory()
 	addCreativeItem(Tile::goldBlock->m_ID);
 	addCreativeItem(Tile::ironBlock->m_ID);
 	addCreativeItem(Tile::emeraldBlock->m_ID);
+	addCreativeItem(Tile::rubyBlock->m_ID);
+	addCreativeItem(Tile::redstoneBlock->m_ID);
 	addCreativeItem(Tile::redBrick->m_ID);
 	addCreativeItem(Tile::leaves->m_ID);
 	addCreativeItem(Tile::leaves->m_ID,1);
@@ -159,6 +167,7 @@ void Inventory::prepareCreativeInventory()
 	addCreativeItem(Tile::ironOre->m_ID);
 	addCreativeItem(Tile::goldOre->m_ID);
 	addCreativeItem(Tile::emeraldOre->m_ID);
+	addCreativeItem(Tile::rubyOre->m_ID);
 	addCreativeItem(Tile::unbreakable->m_ID);
 	
 	// test stuff
@@ -287,16 +296,28 @@ void Inventory::prepareCreativeInventory()
 	addCreativeItem(Item::camera->m_itemID);
 	addCreativeItem(Item::rocket->m_itemID);
 
+
+	addCreativeItem(Item::mobPlacer->m_itemID,0);
+	addCreativeItem(Item::mobPlacer->m_itemID,1);
+	addCreativeItem(Item::mobPlacer->m_itemID,2);
+	addCreativeItem(Item::mobPlacer->m_itemID,3);
+	addCreativeItem(Item::mobPlacer->m_itemID,4);
+	addCreativeItem(Item::mobPlacer->m_itemID,5);
+	addCreativeItem(Item::mobPlacer->m_itemID,6);
+	addCreativeItem(Item::mobPlacer->m_itemID,7);
+	addCreativeItem(Item::mobPlacer->m_itemID,8);
+	addCreativeItem(Item::mobPlacer->m_itemID,9);
+	addCreativeItem(Item::mobPlacer->m_itemID,10);
+	addCreativeItem(Item::mobPlacer->m_itemID,11);
+	addCreativeItem(Item::mobPlacer->m_itemID,12);
+	addCreativeItem(Item::mobPlacer->m_itemID,13);
+	addCreativeItem(Item::mobPlacer->m_itemID,14);
+	addCreativeItem(Item::mobPlacer->m_itemID,15);
+
 	// more stuff
-	addCreativeItem(Tile::cloth->m_ID, 0);
-	addCreativeItem(Tile::cloth->m_ID, 1);
-	addCreativeItem(Tile::cloth->m_ID, 2);
 	addCreativeItem(Tile::stoneSlabHalf->m_ID, 1);
 	addCreativeItem(Tile::stoneSlabHalf->m_ID, 2);
 	addCreativeItem(Tile::stoneSlabHalf->m_ID, 3);
-	addCreativeItem(Tile::treeTrunk->m_ID, 1);
-	addCreativeItem(Tile::treeTrunk->m_ID, 2);
-	addCreativeItem(Tile::cactus->m_ID);
 	addCreativeItem(Tile::deadBush->m_ID);
 	addCreativeItem(Tile::pumpkin->m_ID);
 	addCreativeItem(Tile::pumpkinLantern->m_ID);
@@ -304,7 +325,6 @@ void Inventory::prepareCreativeInventory()
 	addCreativeItem(Tile::soulSand->m_ID);
 	addCreativeItem(Tile::glowstone->m_ID);
 	addCreativeItem(Tile::web->m_ID);
-	addCreativeItem(Tile::fence->m_ID);
 
 	for (int i = 0; i < C_MAX_HOTBAR_ITEMS; i++)
 		m_hotbar[i] = i;

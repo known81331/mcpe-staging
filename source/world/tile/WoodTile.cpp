@@ -19,6 +19,12 @@ int WoodTile::getTexture(Facing::Name face) const
 	return getTexture(face, field_6C);
 }
 
+
+int WoodTile::getTexture(Facing::Name face, TileData data) const
+{
+	return getTexture(face, (int)data);
+}
+
 int WoodTile::getTexture(Facing::Name face, int data) const
 {
 	switch (data)

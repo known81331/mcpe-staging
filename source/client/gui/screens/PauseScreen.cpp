@@ -127,7 +127,7 @@ void PauseScreen::render(int a, int b, float c)
 {
 	renderBackground();
 
-	drawCenteredString(m_pFont, "Game menu", 75, 30, 0xFFFFFF);
+	drawCenteredString(m_pFont, "Game menu", m_width/5, 30, 0xFFFFFF);
 	Screen::render(a, b, c);
 }
 

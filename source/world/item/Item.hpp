@@ -16,7 +16,7 @@
 #include "world/level/TilePos.hpp"
 #include "world/Facing.hpp"
 
-#define C_MAX_ITEMS (C_MAX_TILES * 2)
+#define C_MAX_ITEMS (C_MAX_TILES * 3)
 
 class ItemInstance; // in case we're included from ItemInstance.hpp
 
@@ -189,6 +189,7 @@ public: // Static declarations
 		*minecart_chest,
 		*minecart_furnace,
 		*egg,
+		*mobPlacer,
 		*compass,
 		*fishingRod,
 		*clock,

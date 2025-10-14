@@ -24,6 +24,7 @@ public:
 	bool shouldRenderFace(const LevelSource*, const TilePos& pos, Facing::Name face) const override;
 
 	int getTexture(Facing::Name face) const override;
+	int getTexture(Facing::Name face, TileData data) const override;
 	int getTexture(Facing::Name face, int data) const override;
 
 	static bool isFree(Level* level, const TilePos& pos);

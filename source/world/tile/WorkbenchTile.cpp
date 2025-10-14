@@ -50,10 +50,7 @@ int WorkbenchTile::use(Level* level, const TilePos& pos, Player* player)
 	{
 		return false;
 	}
-	if (level->m_bIsOnline) 
-	{
-		return true;
-	}
+	
 	else 
 	{
 		player->startCrafting(pos);

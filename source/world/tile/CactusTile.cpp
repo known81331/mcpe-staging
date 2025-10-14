@@ -47,6 +47,18 @@ int CactusTile::getResourceCount(Random* random) const
 }
 
 
+int CactusTile::getTexture(Facing::Name face) const
+{
+	if (face == Facing::UP)
+		return TEXTURE_CACTUS_TOP;
+	if (face == Facing::DOWN)
+		return TEXTURE_CACTUS_BOTTOM;
+
+	return TEXTURE_CACTUS_SIDE;
+}
+	
+
+
 int CactusTile::getTexture(Facing::Name face, int data) const
 {
 	if (face == Facing::UP)

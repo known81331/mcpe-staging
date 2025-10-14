@@ -57,6 +57,12 @@
 #include "CactusTile.hpp"
 #include "WoodTile.hpp"
 #include "CarpetTile.hpp"
+#include "FenceTile.hpp"
+#include "DeadBush.hpp"
+#include "PumpkinTile.hpp"
+#include "SoulSandTile.hpp"
+#include "GlowstoneTile.hpp"
+#include "Web.hpp"
 
 std::string Tile::TILE_DESCRIPTION_PREFIX = "tile.";
 
@@ -517,6 +523,31 @@ void Tile::initTiles()
 		->setDescriptionId("blockEmerald");
 
 
+	Tile::rubyOre = (new OreTile(TILE_ORE_RUBY, TEXTURE_ORE_RUBY))
+		->init()
+		->setDestroyTime(3.0f)
+		->setExplodeable(5.0f)
+		->setSoundType(Tile::SOUND_STONE)
+		->setDescriptionId("oreRuby");
+
+	Tile::rubyBlock = (new MetalTile(TILE_BLOCK_RUBY, TEXTURE_RUBY, Material::metal))
+		->init()
+		->setDestroyTime(5.0f)
+		->setExplodeable(10.0f)
+		->setSoundType(Tile::SOUND_METAL)
+		->setDescriptionId("blockRuby");
+
+
+	Tile::redstoneBlock = (new MetalTile(TILE_BLOCK_REDSTONE, TEXTURE_REDSTONE, Material::metal))
+		->init()
+		->setDestroyTime(5.0f)
+		->setExplodeable(10.0f)
+		->setSoundType(Tile::SOUND_METAL)
+		->setDescriptionId("blockRedstone");
+
+
+
+
 	Tile::workbench = (new WorkbenchTile(TILE_WORKBENCH, 0, Material::wood))
 		->init()
 		->setDestroyTime(2.0f)
@@ -656,6 +687,13 @@ void Tile::initTiles()
 	Tile::info_reserved6 = (new Tile(TEXTURE_INFO_UPDATEGAME1, Material::dirt))
 		->init();
 
+
+	Tile::cloth = (new ClothTile(TILE_CLOTH, 0))
+		->init()
+		->setDestroyTime(0.8f)
+		->setSoundType(Tile::SOUND_CLOTH)
+		->setDescriptionId("cloth");
+
 	Tile::fire = (new FireTile(TILE_FIRE, TEXTURE_FIRE1))
 		->init()
 		->setDestroyTime(0.0f)
@@ -664,6 +702,25 @@ void Tile::initTiles()
 		->setDescriptionId("fire");
 
 	// custom additions here
+
+	Tile::sponge = (new SpongeTile(TILE_SPONGE, TEXTURE_SPONGE))
+		->init()
+		->setDestroyTime(0.5f)
+		->setSoundType(Tile::SOUND_CLOTH)
+		->setDescriptionId("sponge");
+
+	Tile::cryingObsidian = (new Tile(TILE_OBSIDIAN_CRYING, TEXTURE_OBSIDIAN_CRYING, Material::stone))
+		->init()
+		->setDestroyTime(10.0f)
+		->setExplodeable(2000.0f)
+		->setSoundType(Tile::SOUND_STONE)
+		->setDescriptionId("cryingObsidian");
+
+	// Jolly
+	Tile::rocketLauncher = (new RocketLauncherTile(TILE_ROCKET_LAUNCHER))
+		->init()
+		->setSoundType(Tile::SOUND_STONE)
+		->setDescriptionId("rocketLauncher");
 
 	Tile::sapling = (new Sapling(TILE_SAPLING, TEXTURE_SAPLING))
 		->init()
@@ -695,7 +752,7 @@ void Tile::initTiles()
 		->setSoundType(Tile::SOUND_CLOTH)
 		->setDescriptionId("carpet");
 
-	Tile::deadBush = (new DeadBush(TILE_DEAD_BUSH, TEXTURE_NONE55))
+	Tile::deadBush = (new DeadBush(TILE_DEAD_BUSH, TEXTURE_DEAD_BUSH))
 		->init()
 		->setSoundType(Tile::SOUND_GRASS)
 		->setDestroyTime(0.0f)
@@ -1180,6 +1237,21 @@ Tile
 	*Tile::stoneSlab,
 	*Tile::stoneSlabHalf,
 	*Tile::cloth,
+	*Tile::cloth_00,
+	*Tile::cloth_10,
+	*Tile::cloth_20,
+	*Tile::cloth_30,
+	*Tile::cloth_40,
+	*Tile::cloth_50,
+	*Tile::cloth_60,
+	*Tile::cloth_70,
+	*Tile::cloth_01,
+	*Tile::cloth_11,
+	*Tile::cloth_21,
+	*Tile::cloth_31,
+	*Tile::cloth_41,
+	*Tile::cloth_51,
+	*Tile::cloth_61,
 	*Tile::flower,
 	*Tile::rose,
 	*Tile::mushroom1,
@@ -1196,6 +1268,7 @@ Tile
 	*Tile::ironOre,
 	*Tile::coalOre,
 	*Tile::lapisOre,
+	*Tile::rubyOre,
 	*Tile::reeds,
 	*Tile::ladder,
 	*Tile::obsidian,
@@ -1209,6 +1282,8 @@ Tile
 	*Tile::goldBlock,
 	*Tile::ironBlock,
 	*Tile::emeraldBlock, //! actually diamond block
+	*Tile::rubyBlock, 
+	*Tile::redstoneBlock, 
 	*Tile::stairs_wood,
 	*Tile::stairs_stone,
 	*Tile::door_wood,
@@ -1226,7 +1301,7 @@ Tile
 	*Tile::cactus,
 	*Tile::cryingObsidian,
 	*Tile::shortgrass,
-	*Tile::rocketLauncher;
+	*Tile::rocketLauncher,
 	*Tile::deadBush,
 	*Tile::pumpkin,
 	*Tile::pumpkinLantern,

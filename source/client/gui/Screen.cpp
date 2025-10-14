@@ -8,6 +8,88 @@
 
 #include "Screen.hpp"
 
+
+namespace QCONSOLE {
+int wndx = 8, wndy = 8;
+int width = 320, height = 240;
+
+bool visible = false;
+Button *closebtn = new Button(32, 32, 0, 15, 15, "X");
+
+void drawBG(Screen *screen) {
+	int m_width = width;
+	int m_height = height;
+
+	Textures* pTexs = screen->m_pMinecraft->m_pTextures;
+
+	pTexs->loadAndBindTexture("gui/spritesheet.png");
+
+	glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+    
+	const int texSize = 12;
+		
+    screen->blit(wndx, wndy, 8, 8, m_width, m_height, 24-8,  24-8);
+    screen->blit(wndx, wndy, 15, 0, m_width, texSize, 1,16);
+    screen->blit(wndx, wndy+m_height-texSize, 15,16, m_width, texSize, 1,16);
+    screen->blit(wndx, wndy, 0, 8, texSize, m_height, 16,  16);
+    screen->blit(wndx+m_width-texSize, wndy, 16, 8, texSize, m_height, 16,  16);
+    screen->blit(wndx, wndy, 0, 0, texSize, texSize, 16,16);
+    screen->blit(wndx+m_width-texSize, wndy, 16, 0, texSize, texSize, 16,  16);
+    screen->blit(wndx, wndy+m_height-texSize, 0, 16, texSize, texSize, 16,  16);
+    screen->blit(wndx+m_width-texSize, wndy+m_height-texSize, 16, 16, texSize, texSize, 16,  16);
+}
+
+void drawConsoleUI(Screen *screen) {
+	if (!visible) return;
+
+	static short heldType = 0;
+
+	drawBG(screen);
+	screen->m_pFont->draw("Console", wndx+20, wndy+6, 0xFFFFFFFF);
+
+	closebtn->m_xPos = wndx+2;
+	closebtn->m_yPos = wndy+2;
+	closebtn->render(screen->m_pMinecraft, wndx+5, wndy+5);
+
+	if (Mouse::isButtonDown(MouseButtonType::BUTTON_LEFT) ) {
+		int mx = screen->m_width * Mouse::getX() / Minecraft::width;
+		int my = screen->m_height * Mouse::getY() / Minecraft::height;
+
+		if (closebtn->clicked(screen->m_pMinecraft, mx, my) && !heldType) {
+			visible = false;
+			return;
+		}
+		
+		static int ox = 0, oy = 0;
+
+		if (!heldType){
+			ox = mx - wndx;
+			oy = my - wndy;
+			if (mx >= wndx && mx <= wndx + width && my >= wndy && my <= wndy + 12) {
+				heldType = 1;
+			}
+			else if (mx >= wndx + width - 12 && mx <= wndx + width && my >= wndy + height - 12 && my <= wndy + height) {
+				heldType = 2;
+			}
+		}
+		else if (heldType == 1) {
+			wndx = mx-ox;
+			wndy = my-oy;
+		}
+		else if (heldType == 2) {
+			width = mx - wndx;
+			height = my - wndy;
+			if (width < 100) width = 100;
+			if (height < 24) height = 24;
+		}
+	}
+	else
+		heldType = 0;
+
+}
+
+}
+
 bool Screen::_isPanoramaAvailable = false;
 
 Screen::Screen()
@@ -203,6 +285,7 @@ void Screen::renderMenuBackground(float f)
 
 void Screen::mouseClicked(int xPos, int yPos, int d) // d = clicked?
 {
+	
 	if (!d) return;
 	
 	for (int i = 0; i < int(m_buttons.size()); i++)
@@ -292,6 +375,8 @@ void Screen::render(int xPos, int yPos, float unused)
 		textInput->render();
 	}
 #endif
+
+	QCONSOLE::drawConsoleUI(this);
 }
 
 void Screen::tick()

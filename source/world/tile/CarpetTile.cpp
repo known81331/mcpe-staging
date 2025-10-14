@@ -42,16 +42,21 @@ int CarpetTile::getTexture(Facing::Name face) const
 	return getTexture(face, 0);
 }
 
+
+int CarpetTile::getTexture(Facing::Name face, TileData data) const
+{
+	return m_TextureFrame + data;
+}
 int CarpetTile::getTexture(Facing::Name face, int data) const
 {
-	return m_TextureFrame + ((0 > 0) ? 0 : data);
+	return m_TextureFrame + data;
 }
 
 bool CarpetTile::mayPlace(const Level* level, const TilePos& pos) const
 {
 	TileID tile = level->getTile(pos.below());
 
-	if ((tile == Tile::carpet->m_ID) )
+	if ((tile == Tile::carpet->m_ID) || (tile == Tile::fence->m_ID))
 		return true;
 		
 	if (!tile || ( !Tile::tiles[tile]->isSolidRender() ) )

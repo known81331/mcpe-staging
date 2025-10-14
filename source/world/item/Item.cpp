@@ -14,6 +14,7 @@
 #include "TilePlanterItem.hpp"
 #include "RocketItem.hpp"
 #include "DyePowderItem.hpp"
+#include "MonsterPlacerItem.hpp"
 
 #define ITEM(x) ((x) - 256)
 
@@ -274,10 +275,6 @@ void Item::initItems()
 	Item::fishingRod = NEW_ITEM(ITEM_FISHING_ROD)
 		->setIcon(5, 4)
 		->setDescriptionId("fishingRod");
-
-	Item::dye_powder = NEW_ITEM(ITEM_DYE_POWDER)
-		->setIcon(14, 4)
-		->setDescriptionId("dyePowder");
 
 	Item::clock = NEW_ITEM(ITEM_CLOCK)
 		->setIcon(11, 13)
@@ -600,7 +597,7 @@ void Item::initItems()
 		->setIcon(8, 5)
 		->setDescriptionId("clock");
 		
-	Item::dye_powder = (new DyePowderItem(ITEM_DYE_POWDER))
+	Item::dye_powder = NEW_X_ITEMN(DyePowderItem,ITEM_DYE_POWDER)
 		->setIcon(11, 3)
 		->setDescriptionId("dye_powder");
 		
@@ -635,6 +632,10 @@ void Item::initItems()
 	Item::record_02 = NEW_ITEM(ITEM_RECORD_02)
 		->setIcon(1, 10)
 		->setDescriptionId("clock");
+
+	Item::mobPlacer = NEW_X_ITEMN(MonsterPlacerItem, ITEM_MONSTER_PLACER)
+		->setIcon(1, 12)
+		->setDescriptionId("spawn_egg");
 }
 
 int Item::getIcon(const ItemInstance* pInstance) const
@@ -843,6 +844,7 @@ Item
 	*Item::minecart_chest,
 	*Item::minecart_furnace,
 	*Item::egg,
+	*Item::mobPlacer,
 	*Item::compass,
 	*Item::fishingRod,
 	*Item::clock,
