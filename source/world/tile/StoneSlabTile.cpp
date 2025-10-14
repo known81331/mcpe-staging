@@ -29,7 +29,7 @@ bool StoneSlabTile::isCubeShaped() const
 	return m_bFull;
 }
 
-int StoneSlabTile::getResource(int data, Random* random) const
+int StoneSlabTile::getResource(TileData data, Random* random) const
 {
 	return Tile::stoneSlabHalf->m_ID;
 }
@@ -50,35 +50,26 @@ int StoneSlabTile::getTexture(Facing::Name face) const
 	return getTexture(face, 0);
 }
 
-int StoneSlabTile::getTexture(Facing::Name face, int data) const
+int StoneSlabTile::getTexture(Facing::Name face, TileData data) const
 {
 	switch (data)
 	{
-		// regular stone slab
-		case 0:
+		case STONE:
 			if (face > Facing::UP)
 				return TEXTURE_STONE_SLAB_SIDE;
 			
 			return TEXTURE_STONE_SLAB_TOP;
-
-		// sandstone slab
-		case 1:
+		case SAND:
 			if (face == Facing::DOWN)
 				return TEXTURE_SANDSTONE_BOTTOM;
 			if (face == Facing::UP)
 				return TEXTURE_SANDSTONE_TOP;
 
 			return TEXTURE_SANDSTONE_SIDE;
-
-		// wood slab
-		case 2:
+		case WOOD:
 			return TEXTURE_PLANKS;
-
-		// stone brick slab
-		case 3:
+		case COBBLE:
 			return TEXTURE_STONEBRICK;
-
-		// unknown slab type
 		default:
 			return TEXTURE_STONE_SLAB_TOP;
 	}

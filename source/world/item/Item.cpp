@@ -102,6 +102,10 @@ void Item::initItems()
 		->setIcon(2, 0)
 		->setDescriptionId("arrow");
 
+	Item::coal = NEW_ITEM(ITEM_COAL)
+		->setIcon(7, 0)
+		->setDescriptionId("coal");
+
 	Item::emerald = NEW_ITEM(ITEM_EMERALD)
 		->setIcon(6, 3)
 		->setDescriptionId("emerald");
@@ -123,6 +127,10 @@ void Item::initItems()
 		->setIcon(8, 1)
 		->setDescriptionId("bowl");
 
+	Item::mushroomStew = NEW_ITEM(ITEM_STEW_MUSHROOM)
+		->setIcon(8, 4)
+		->setDescriptionId("mushroomStew");
+
 	Item::string = NEW_ITEM(ITEM_STRING)
 		->setIcon(3, 13)
 		->setDescriptionId("string");
@@ -135,9 +143,21 @@ void Item::initItems()
 		->setIcon(4, 6)
 		->setDescriptionId("sulphur");
 
+	Item::seeds = NEW_ITEM(ITEM_SEEDS)
+		->setIcon(9, 0)
+		->setDescriptionId("seeds");
+
+	Item::reeds = NEW_X_ITEM(TilePlanterItem, ITEM_REEDS, TILE_REEDS)
+		->setIcon(11, 1)
+		->setDescriptionId("reeds");
+
 	Item::wheat = NEW_ITEM(ITEM_WHEAT)
 		->setIcon(10, 13)
 		->setDescriptionId("wheat");
+
+	Item::bread = NEW_ITEM(ITEM_BREAD)
+		->setIcon(9, 2)
+		->setDescriptionId("bread");
 
 	Item::flint = NEW_ITEM(ITEM_FLINT)
 		->setIcon(12, 5)
@@ -151,17 +171,72 @@ void Item::initItems()
 		->setIcon(1, 9)
 		->setDescriptionId("porkchopCooked");
 
+	Item::apple = NEW_ITEM(ITEM_APPLE)
+		->setIcon(10, 0)
+		->setDescriptionId("appleGold");
+
+	Item::apple_gold = NEW_ITEM(ITEM_APPLE_GOLD)
+		->setIcon(11, 0)
+		->setDescriptionId("appleGold");
+
 	Item::door_wood = NEW_X_ITEM(DoorItem, ITEM_DOOR_WOOD, Material::wood)
 		->setIcon(9, 3)
 		->setDescriptionId("doorWood");
 
+	Item::bucket_empty = NEW_ITEM(ITEM_BUCKET)
+		->setIcon(10, 4)
+		->setDescriptionId("bucket");
+
+	Item::bucket_water = NEW_ITEM(ITEM_BUCKET_WATER)
+		->setIcon(11, 4)
+		->setDescriptionId("bucketWater");
+		//->setCraftingRemainingItem(emptyBucket);
+
+	Item::bucket_lava = NEW_ITEM(ITEM_BUCKET_LAVA)
+		->setIcon(12, 4)
+		->setDescriptionId("bucketLava");
+		//>setCraftingRemainingItem(emptyBucket);
+
+	Item::minecart = NEW_ITEM(ITEM_MINECART)
+		->setIcon(7, 8)
+		->setDescriptionId("minecart");
+
+	Item::minecart_chest = NEW_ITEM(ITEM_MINECART_CHEST)
+		->setIcon(7, 9)
+		->setDescriptionId("minecartChest");
+
+	Item::minecart_furnace = NEW_ITEM(ITEM_MINECART_FURNACE)
+		->setIcon(7, 10)
+		->setDescriptionId("minecartFurnace");
+
+	Item::boat = NEW_ITEM(ITEM_BOAT)
+		->setIcon(8, 8)
+		->setDescriptionId("boat");
+
 	Item::door_iron = NEW_X_ITEM(DoorItem, ITEM_DOOR_IRON, Material::metal)
 		->setIcon(8, 3)
 		->setDescriptionId("doorIron");
+	
+	Item::redStone = NEW_ITEM(ITEM_REDSTONE)
+		->setIcon(8, 3)
+		->setDescriptionId("redstone");
+
+	Item::snowBall = NEW_ITEM(ITEM_SNOWBALL)
+		->setIcon(14, 0)
+		->setDescriptionId("snowball");
+
+	Item::saddle = NEW_ITEM(ITEM_SADDLE)
+		->setIcon(8, 6)
+		->setDescriptionId("saddle");
 
 	Item::leather = NEW_ITEM(ITEM_LEATHER)
 		->setIcon(4, 7)
 		->setDescriptionId("leather");
+
+	Item::milk = NEW_ITEM(ITEM_BUCKET_MILK)
+		->setIcon(13, 4)
+		->setDescriptionId("milk");
+		//->setCraftingRemainingItem(emptyBucket);
 
 	Item::brick = NEW_ITEM(ITEM_BRICK)
 		->setIcon(15, 1)
@@ -196,9 +271,29 @@ void Item::initItems()
 		->setIcon(12, 13)
 		->setDescriptionId("compass");
 
+	Item::fishingRod = NEW_ITEM(ITEM_FISHING_ROD)
+		->setIcon(5, 4)
+		->setDescriptionId("fishingRod");
+
+	Item::dye_powder = NEW_ITEM(ITEM_DYE_POWDER)
+		->setIcon(14, 4)
+		->setDescriptionId("dyePowder");
+
 	Item::clock = NEW_ITEM(ITEM_CLOCK)
 		->setIcon(11, 13)
 		->setDescriptionId("clock");
+
+	Item::yellowDust = NEW_ITEM(ITEM_YELLOW_DUST)
+		->setIcon(9, 4)
+		->setDescriptionId("yellowDust");
+
+	Item::fish_raw = NEW_ITEM(ITEM_FISH_RAW)
+		->setIcon(9, 5)
+		->setDescriptionId("fishRaw");
+
+	Item::fish_cooked = NEW_ITEM(ITEM_FISH_COOKED)
+		->setIcon(10, 5)
+		->setDescriptionId("fishCooked");
 
 	Item::bone = NEW_ITEM(ITEM_BONE)
 		->setIcon(14, 0)
@@ -209,6 +304,40 @@ void Item::initItems()
 		->setIcon(4, 13)
 		->setDescriptionId("sugar")
 		->handEquipped(); // weirdly also in JE
+
+	Item::cake = NEW_ITEM(ITEM_CAKE)
+		->setIcon(13, 1)
+		->setMaxStackSize(1)
+		->setDescriptionId("cake");
+
+	Item::bed = NEW_ITEM(ITEM_BED)
+		->setIcon(13, 2)
+		->setDescriptionId("bed");
+
+	Item::diode = NEW_ITEM(ITEM_DIODE)
+		->setIcon(6, 5)
+		->setDescriptionId("diode");
+
+	Item::cookie = NEW_ITEM(ITEM_COOKIE)
+		->setMaxStackSize(8)
+		->setIcon(12, 5)
+		->setDescriptionId("cookie");
+
+	Item::sign = NEW_ITEM(ITEM_SIGN)
+		->setIcon(10, 2)
+		->setDescriptionId("sign");
+
+	Item::painting = NEW_ITEM(ITEM_PAINTING)
+		->setIcon(10, 1)
+		->setDescriptionId("painting");
+
+	Item::record_01 = NEW_ITEM(ITEM_RECORD_01)
+		->setIcon(0, 15)
+		->setDescriptionId("record");
+
+	Item::record_02 = NEW_ITEM(ITEM_RECORD_02)
+		->setIcon(1, 15)
+		->setDescriptionId("record");
 
 	Item::camera = NEW_X_ITEMN(CameraItem, ITEM_CAMERA)
 		->setIcon(2, 15)
@@ -726,10 +855,12 @@ Item
 	*Item::cake,
 	*Item::bed,
 	*Item::diode,
+	*Item::cookie,
 	*Item::record_01,
 	*Item::record_02,
 	*Item::camera,
-	*Item::rocket;
+	*Item::rocket,
+	*Item::quiver;
 
 Item::Tier
 	Item::Tier::WOOD   (0, 59,   2.0f,  0),

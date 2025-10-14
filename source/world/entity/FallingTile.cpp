@@ -63,9 +63,9 @@ void FallingTile::tick()
 	if (m_pLevel->getTile(tilePos) == m_id)
 		m_pLevel->setTile(tilePos, TILE_AIR);
 
-	if (!m_onGround)
+	if (!m_bOnGround)
 	{
-		if (field_E0 > 100 && !m_pLevel->m_bIsOnline)
+		if (field_E0 > 100 && !m_pLevel->m_bIsClientSide)
 			remove();
 
 		return;

@@ -112,6 +112,9 @@ void closedir(DIR* dir);
 #ifdef MOD_USE_BIGGER_SCREEN_SIZE
 #define C_DEFAULT_SCREEN_WIDTH  (854)
 #define C_DEFAULT_SCREEN_HEIGHT (480)
+#elif defined(__DREAMCAST__)
+#define C_DEFAULT_SCREEN_WIDTH  (800)
+#define C_DEFAULT_SCREEN_HEIGHT (600)
 #else
 #define C_DEFAULT_SCREEN_WIDTH  (1280)
 #define C_DEFAULT_SCREEN_HEIGHT (720)
@@ -251,7 +254,7 @@ enum eTileID
 	TILE_STONE_BRICKS,
 	TILE_MUSHROOM1_BLOCK,
 	TILE_MUSHROOM2_BLOCK,
-	TILE_CLOTH_00 = 101,
+	TILE_CLOTH_00 = 101, // @TODO: make these save on newer worlds
 	TILE_CLOTH_10,
 	TILE_CLOTH_20,
 	TILE_CLOTH_30,
@@ -387,6 +390,7 @@ enum eTileID
 
 	// Custom items
 	ITEM_ROCKET = 470,
+	ITEM_QUIVER = 484,
 };
 
 enum // Textures
@@ -768,6 +772,9 @@ enum eRenderShape
 	SHAPE_LADDER,
 	SHAPE_CACTUS,
 	SHAPE_STAIRS,
+	SHAPE_FENCE,
+	SHAPE_CACTUS,
+	SHAPE_RANDOM_CROSS
 };
 
 enum eRenderLayer
@@ -777,7 +784,10 @@ enum eRenderLayer
 };
 
 typedef uint8_t TileID;
-// TODO: "FullTile" struct with TileID and auxvalue?
+// @TODO: Rename this to "TileTypeId"
+// Rename "Tile" to "TileType"
+// Create "Tile" class containing TileTypeId, and TileData
+typedef uint8_t TileData;
 
 /*struct Pos
 {

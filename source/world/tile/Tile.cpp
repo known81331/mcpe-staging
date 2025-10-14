@@ -10,6 +10,9 @@
 #include "world/item/TileItem.hpp"
 #include "world/item/AuxDataTileItem.hpp"
 #include "world/entity/ItemEntity.hpp"
+#include "world/item/AuxTileItem.hpp"
+#include "world/item/ClothItem.hpp"
+#include "world/item/SlabItem.hpp"
 
 // Include tile definitions here
 #include "SandStoneTile.hpp"
@@ -71,13 +74,13 @@ void Tile::_init()
 	m_TextureFrame = 1;
 	m_pSound = nullptr;
 	field_28 = 1.0f;
-	field_30 = 0.6f;
+	m_friction = 0.6f;
 	m_hardness = 0.0f;
 	m_blastResistance = 0.0f;
 	m_descriptionID = "";
 }
 
-void Tile::_init(int ID, Material* pMaterial, int texture)
+void Tile::_init(TileID ID, Material* pMaterial, int texture)
 {
 	_init();
 
@@ -193,7 +196,7 @@ int Tile::getTexture(Facing::Name face) const
 	return m_TextureFrame;
 }
 
-int Tile::getTexture(Facing::Name face, int data) const
+int Tile::getTexture(Facing::Name face, TileData data) const
 {
 
 	return getTexture(face);
@@ -224,12 +227,12 @@ bool Tile::mayPick() const
 	return true;
 }
 
-bool Tile::mayPick(int x, bool y) const
+bool Tile::mayPick(TileData data, bool y) const
 {
 	return mayPick();
 }
 
-int Tile::getResource(int x, Random* pRandom) const
+int Tile::getResource(TileData data, Random* pRandom) const
 {
 	return m_ID;
 }
@@ -241,7 +244,7 @@ int Tile::getResourceCount(Random* pRandom) const
 
 int Tile::getSpawnResourcesAuxValue(int x) const
 {
-	return 1;
+	return 0;
 }
 
 void Tile::initTiles()
@@ -595,7 +598,7 @@ void Tile::initTiles()
 	Tile::cactus = (new CactusTile(TILE_CACTUS, TEXTURE_CACTUS_SIDE, Material::cactus))
 		->init()
 		->setDestroyTime(0.4f)
-		->setLightBlock(3)
+		//->setLightBlock(3)
 		->setSoundType(Tile::SOUND_CLOTH)
 		->setDescriptionId("cactus");
 
@@ -611,13 +614,12 @@ void Tile::initTiles()
 		->setSoundType(Tile::SOUND_GRASS)
 		->setDescriptionId("reeds");
 
-	// @TODO: FenceTile class
-	/*Tile::fence = (new FenceTile(TILE_WOOD, TEXTURE_PLANKS, Material::wood))
+	Tile::fence = (new FenceTile(TILE_FENCE, TEXTURE_PLANKS))
 		->init()
 		->setDestroyTime(2.0f)
 		->setExplodeable(5.0f)
 		->setSoundType(Tile::SOUND_WOOD)
-		->setDescriptionId("fence");*/
+		->setDescriptionId("fence");
 
 	Tile::invisible_bedrock = (new InvisibleTile(TILE_INVISIBLE, TEXTURE_STONE, Material::stone))
 		->init()
@@ -654,12 +656,20 @@ void Tile::initTiles()
 	Tile::info_reserved6 = (new Tile(TEXTURE_INFO_UPDATEGAME1, Material::dirt))
 		->init();
 
-
-	Tile::cloth = (new ClothTile(TILE_CLOTH, 0))
+	Tile::fire = (new FireTile(TILE_FIRE, TEXTURE_FIRE1))
 		->init()
-		->setDestroyTime(0.8f)
-		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("cloth");
+		->setDestroyTime(0.0f)
+		->setLightEmission(1.0f)
+		->setSoundType(Tile::SOUND_WOOD)  // @NOTE: Setting fire's sound to Wood
+		->setDescriptionId("fire");
+
+	// custom additions here
+
+	Tile::sapling = (new Sapling(TILE_SAPLING, TEXTURE_SAPLING))
+		->init()
+		->setDestroyTime(0.0f)
+		->setSoundType(Tile::SOUND_GRASS)
+		->setDescriptionId("sapling");
 
 	Tile::cloth_00 = Tile::cloth;
 	Tile::cloth_01 = Tile::cloth;
@@ -685,46 +695,66 @@ void Tile::initTiles()
 		->setSoundType(Tile::SOUND_CLOTH)
 		->setDescriptionId("carpet");
 
-	Tile::fire = (new FireTile(TILE_FIRE, TEXTURE_FIRE1))
+	Tile::deadBush = (new DeadBush(TILE_DEAD_BUSH, TEXTURE_NONE55))
 		->init()
-		->setDestroyTime(0.0f)
-		->setLightEmission(1.0f)
-		->setSoundType(Tile::SOUND_WOOD)  // @NOTE: Setting fire's sound to Wood
-		->setDescriptionId("fire");
-	
-	// custom additions here
-
-	Tile::sapling = (new Sapling(TILE_SAPLING, TEXTURE_SAPLING))
-		->init()
-		->setDestroyTime(0.0f)
 		->setSoundType(Tile::SOUND_GRASS)
-		->setDescriptionId("sapling");
+		->setDestroyTime(0.0f)
+		->setDescriptionId("deadBush");
 
-	Tile::sponge = (new SpongeTile(TILE_SPONGE, TEXTURE_SPONGE))
+	Tile::pumpkin = (new PumpkinTile(TILE_PUMPKIN, false))
+		->init()
+		->setDestroyTime(1.0f)
+		->setSoundType(Tile::SOUND_WOOD)
+		->setDescriptionId("pumpkin");
+	
+	Tile::pumpkinLantern = (new PumpkinTile(TILE_PUMPKIN_LIT, true))
+		->init()
+		->setDestroyTime(1.0f)
+		->setLightEmission(1.0f)
+		->setSoundType(Tile::SOUND_WOOD)
+		->setDescriptionId("litPumpkin");
+	
+	Tile::netherrack = (new Tile(TILE_NETHERRACK, TEXTURE_BLOODSTONE, Material::stone))
+		->init()
+		->setDestroyTime(0.4f)
+		->setSoundType(Tile::SOUND_STONE)
+		->setDescriptionId("hellRock");
+
+	Tile::soulSand = (new SoulSandTile(TILE_SOUL_SAND, TEXTURE_SOULSAND))
 		->init()
 		->setDestroyTime(0.5f)
+		->setSoundType(Tile::SOUND_SAND)
+		->setDescriptionId("hellSand");
+
+	Tile::glowstone = (new GlowstoneTile(TILE_GLOWSTONE, TEXTURE_GLOWSTONE, Material::stone))
+		->init()
+		->setDestroyTime(0.3f)
+		->setLightEmission(1.0f)
+		->setSoundType(Tile::SOUND_GLASS)
+		->setDescriptionId("lightGem");
+
+	Tile::web = (new Web(TILE_COBWEB, TEXTURE_COBWEB))
+		->init()
+		->setDestroyTime(4.0f)
+		//->setLightBlock(1)
 		->setSoundType(Tile::SOUND_CLOTH)
-		->setDescriptionId("sponge");
+		->setDescriptionId("web");
 
-	Tile::cryingObsidian = (new Tile(TILE_OBSIDIAN_CRYING, TEXTURE_OBSIDIAN_CRYING, Material::stone))
-		->init()
-		->setDestroyTime(10.0f)
-		->setExplodeable(2000.0f)
-		->setSoundType(Tile::SOUND_STONE)
-		->setDescriptionId("cryingObsidian");
-
-	// Jolly
-	Tile::rocketLauncher = (new RocketLauncherTile(TILE_ROCKET_LAUNCHER))
-		->init()
-		->setSoundType(Tile::SOUND_STONE)
-		->setDescriptionId("rocketLauncher");
-
-	// @TODO: This is from 0.2.1, add this and get rid of the numbered cloth entries.
-	/*Item::items[Tile::cloth->m_ID] = (new ClothTileItem(Tile::cloth->m_ID - C_MAX_TILES))
+	// Great
+	Item::items[Tile::cloth->m_ID] = (new ClothItem(Tile::cloth->m_ID - C_MAX_TILES))
 		->setDescriptionId("cloth");
 
-	Item::items[Tile::treeTrunk->m_ID] = (new AuxDataTileItem(Tile::treeTrunk->m_ID - C_MAX_TILES))
-		->setDescriptionId("log");*/
+	Item::items[Tile::treeTrunk->m_ID] = (new AuxTileItem(Tile::treeTrunk->m_ID - C_MAX_TILES))
+		->setDescriptionId("log");
+
+	Item::items[Tile::stoneSlabHalf->m_ID] = (new SlabItem(Tile::stoneSlabHalf->m_ID - C_MAX_TILES))
+		->setDescriptionId("stoneSlab");
+
+	Item::items[Tile::leaves->m_ID] = (new AuxTileItem(Tile::leaves->m_ID - C_MAX_TILES))
+		->setDescriptionId("leaves");
+
+	Item::items[Tile::sapling->m_ID] = (new AuxTileItem(Tile::sapling->m_ID - C_MAX_TILES))
+		->setDescriptionId("sapling");
 
 	for (int i = 0; i < C_MAX_TILES; i++)
 	{
@@ -737,6 +767,24 @@ void Tile::teardownTiles()
 {
 	for (int i = 0; i < C_MAX_TILES; i++)
 		delete tiles[i];
+}
+
+TileID Tile::TransformToValidBlockId(TileID tileId, TilePos pos)
+{
+	if (tileId != TILE_AIR && !Tile::tiles[tileId])
+	{
+		// Lifted from 0.2.1. Don't ask me what this is doing, or why it's doing it
+		if ((((int8_t)pos.y + (int8_t)pos.x + (int8_t)pos.z) & 1) != 0)
+			return Tile::info_updateGame1->m_ID;
+		else
+			return Tile::info_updateGame2->m_ID;
+	}
+	return tileId;
+}
+
+TileID Tile::TransformToValidBlockId(TileID tileId)
+{
+	return TransformToValidBlockId(tileId, TilePos::ZERO);
 }
 
 void Tile::updateShape(const LevelSource* a, const TilePos& pos)
@@ -853,7 +901,7 @@ void Tile::animateTick(Level* pLevel, const TilePos& pos, Random* pRandom)
 
 }
 
-void Tile::destroy(Level* pLevel, const TilePos& pos, int data)
+void Tile::destroy(Level* pLevel, const TilePos& pos, TileData data)
 {
 
 }
@@ -1008,14 +1056,14 @@ float Tile::getDestroyProgress(Player* player) const
 	return player->getDestroySpeed() / m_hardness / 30.0f;
 }
 
-void Tile::spawnResources(Level* pLevel, const TilePos& pos, int data)
+void Tile::spawnResources(Level* pLevel, const TilePos& pos, TileData data)
 {
 	return spawnResources(pLevel, pos, data, 1.0f);
 }
 
-void Tile::spawnResources(Level* pLevel, const TilePos& pos, int data, float fChance)
+void Tile::spawnResources(Level* pLevel, const TilePos& pos, TileData data, float fChance)
 {
-	if (pLevel->m_bIsOnline)
+	if (pLevel->m_bIsClientSide)
 		return;
 
 	int count = getResourceCount(&pLevel->m_random);
@@ -1085,12 +1133,12 @@ void Tile::attack(Level* pLevel, const TilePos& pos, Player* player)
 
 }
 
-void Tile::playerDestroy(Level* level, Player* player, const TilePos& pos, int data)
+void Tile::playerDestroy(Level* level, Player* player, const TilePos& pos, TileData data)
 {
 	spawnResources(level, pos, data);
 }
 
-void Tile::playerWillDestroy(Player* player, const TilePos& pos, int data)
+void Tile::playerWillDestroy(Player* player, const TilePos& pos, TileData data)
 {
 
 }
@@ -1102,9 +1150,9 @@ const Tile::SoundType
 	Tile::SOUND_GRASS ("grass",  0.5f, 1.0f),
 	Tile::SOUND_STONE ("stone",  1.0f, 1.0f),
 	Tile::SOUND_METAL ("stone",  1.0f, 1.5f),
-	Tile::SOUND_GLASS ("stone",  1.0f, 1.0f),
+	Tile::SOUND_GLASS ("stone",  /*"glass",*/1.0f, 1.0f),
 	Tile::SOUND_CLOTH ("cloth",  1.0f, 1.0f),
-	Tile::SOUND_SAND  ("sand",   1.0f, 1.0f),
+	Tile::SOUND_SAND  ("sand",  /*"gravel",*/ 1.0f, 1.0f),
 	Tile::SOUND_SILENT("",       1.0f, 1.0f);
 
 // @TODO: Refactor this so that Tile::fire is already a FireTile* etc
@@ -1132,21 +1180,6 @@ Tile
 	*Tile::stoneSlab,
 	*Tile::stoneSlabHalf,
 	*Tile::cloth,
-	*Tile::cloth_00,
-	*Tile::cloth_10,
-	*Tile::cloth_20,
-	*Tile::cloth_30,
-	*Tile::cloth_40,
-	*Tile::cloth_50,
-	*Tile::cloth_60,
-	*Tile::cloth_70,
-	*Tile::cloth_01,
-	*Tile::cloth_11,
-	*Tile::cloth_21,
-	*Tile::cloth_31,
-	*Tile::cloth_41,
-	*Tile::cloth_51,
-	*Tile::cloth_61,
 	*Tile::flower,
 	*Tile::rose,
 	*Tile::mushroom1,
@@ -1182,6 +1215,7 @@ Tile
 	*Tile::door_iron,
 	*Tile::info_updateGame1,
 	*Tile::info_updateGame2,
+	// custom additions here
 	*Tile::sapling,
 	*Tile::sponge,
 	*Tile::lapisBlock,
@@ -1193,3 +1227,11 @@ Tile
 	*Tile::cryingObsidian,
 	*Tile::shortgrass,
 	*Tile::rocketLauncher;
+	*Tile::deadBush,
+	*Tile::pumpkin,
+	*Tile::pumpkinLantern,
+	*Tile::netherrack,
+	*Tile::soulSand,
+	*Tile::glowstone,
+	*Tile::web,
+	*Tile::fence;

@@ -24,6 +24,9 @@ void Inventory::prepareCreativeInventory()
 {
 	clear();
 
+	// When we've got a proper creative inventory, use this method for aux tiles/items
+	//for (int i = 0; i < 16; i++) // <-- This is an example for all wool colors in order
+
 	// Original list of items.
 	addCreativeItem(Tile::rock->m_ID);
 	addCreativeItem(Tile::stoneBrick->m_ID);
@@ -284,6 +287,25 @@ void Inventory::prepareCreativeInventory()
 	addCreativeItem(Item::camera->m_itemID);
 	addCreativeItem(Item::rocket->m_itemID);
 
+	// more stuff
+	addCreativeItem(Tile::cloth->m_ID, 0);
+	addCreativeItem(Tile::cloth->m_ID, 1);
+	addCreativeItem(Tile::cloth->m_ID, 2);
+	addCreativeItem(Tile::stoneSlabHalf->m_ID, 1);
+	addCreativeItem(Tile::stoneSlabHalf->m_ID, 2);
+	addCreativeItem(Tile::stoneSlabHalf->m_ID, 3);
+	addCreativeItem(Tile::treeTrunk->m_ID, 1);
+	addCreativeItem(Tile::treeTrunk->m_ID, 2);
+	addCreativeItem(Tile::cactus->m_ID);
+	addCreativeItem(Tile::deadBush->m_ID);
+	addCreativeItem(Tile::pumpkin->m_ID);
+	addCreativeItem(Tile::pumpkinLantern->m_ID);
+	addCreativeItem(Tile::netherrack->m_ID);
+	addCreativeItem(Tile::soulSand->m_ID);
+	addCreativeItem(Tile::glowstone->m_ID);
+	addCreativeItem(Tile::web->m_ID);
+	addCreativeItem(Tile::fence->m_ID);
+
 	for (int i = 0; i < C_MAX_HOTBAR_ITEMS; i++)
 		m_hotbar[i] = i;
 }
@@ -327,12 +349,20 @@ void Inventory::addCreativeItem(int itemID, int auxValue)
 	m_items.push_back(new ItemInstance(itemID, 1, auxValue));
 }
 
+void Inventory::empty()
+{
+	for (int i = 0; i < m_items.size(); i++)
+	{
+		delete m_items[i];
+		m_items[i] = nullptr;
+	}
+}
+
 void Inventory::clear()
 {
-	for (std::vector<ItemInstance*>::iterator it = m_items.begin(); it != m_items.end(); it++)
+	for (int i = 0; i < m_items.size(); i++)
 	{
-		ItemInstance* item = *it;
-		delete item;
+		delete m_items[i];
 	}
 	m_items.clear();
 }
@@ -447,12 +477,8 @@ ItemInstance* Inventory::getItem(int slotNo)
 
 int Inventory::getQuickSlotItemId(int slotNo)
 {
-	if (slotNo < 0 || slotNo >= C_MAX_HOTBAR_ITEMS)
-		return -1;
-	
-	int idx = m_hotbar[slotNo];
-	ItemInstance* pInst = getItem(idx);
-	if (ItemInstance::isNull(pInst))
+	ItemInstance* pInst = getQuickSlotItem(slotNo);
+	if (!pInst)
 		return -1;
 
 	return pInst->m_itemID;
@@ -542,6 +568,21 @@ void Inventory::selectItemById(int itemID, int maxHotBarSlot)
 	}
 
 	LOG_W("selectItemById: %d doesn't exist", itemID);
+}
+
+void Inventory::selectItemByIdAux(int itemID, int auxValue, int maxHotBarSlot)
+{
+	for (int i = 0; i < getNumItems(); i++)
+	{
+		ItemInstance* item = m_items[i];
+		if (!item || item->m_itemID != itemID || item->getAuxValue() != auxValue)
+			continue;
+
+		selectItem(i, maxHotBarSlot);
+		return;
+	}
+
+	LOG_W("selectItemByIdAux: %d:%d doesn't exist", itemID, auxValue);
 }
 
 int Inventory::getAttackDamage(Entity* pEnt)

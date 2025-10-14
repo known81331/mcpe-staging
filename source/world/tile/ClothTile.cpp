@@ -24,7 +24,7 @@ ClothTile::ClothTile(int id, int type) : Tile(id, TEXTURE_CLOTH_RED, Material::c
 	}
 }
 
-int ClothTile::getTexture(Facing::Name face) const
+int ClothTile::getTexture(Facing::Name face, TileData data) const
 {
 	return getTexture(face, field_6C);
 }

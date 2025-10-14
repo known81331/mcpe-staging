@@ -259,6 +259,9 @@ add_library(reminecraftpe-core STATIC
     world/level/levelgen/feature/FlowerFeature.cpp
     world/level/levelgen/feature/GrassFeature.cpp
     world/level/levelgen/feature/SpruceFeature.cpp
+    world/level/levelgen/feature/PumpkinFeature.cpp
+    world/level/levelgen/feature/CactusFeature.cpp
+    world/level/levelgen/feature/VegetationFeature.cpp
     world/level/levelgen/biome/Biome.cpp
     world/level/levelgen/biome/BiomeSource.cpp
     world/level/levelgen/chunk/RandomLevelSource.cpp
@@ -266,6 +269,7 @@ add_library(reminecraftpe-core STATIC
     world/level/levelgen/chunk/ChunkCache.cpp
     world/level/levelgen/chunk/ChunkPos.cpp
     world/level/levelgen/chunk/ChunkSource.cpp
+	world/level/levelgen/chunk/DataLayer.cpp
     world/level/levelgen/chunk/EmptyLevelChunk.cpp
     world/level/levelgen/chunk/PerformanceTestChunkSource.cpp
     world/level/levelgen/chunk/TestChunkSource.cpp
@@ -281,6 +285,9 @@ add_library(reminecraftpe-core STATIC
     world/item/ItemInstance.cpp
     world/item/RocketItem.cpp
     world/item/Item.cpp
+    world/item/AuxTileItem.cpp
+    world/item/ClothItem.cpp
+    world/item/SlabItem.cpp
     world/particle/RedDustParticle.cpp
     world/particle/TerrainParticle.cpp
     world/particle/BubbleParticle.cpp
@@ -334,6 +341,14 @@ add_library(reminecraftpe-core STATIC
     world/tile/FarmTile.cpp
     world/tile/DoorTile.cpp
     world/tile/RocketLauncherTile.cpp
+    world/tile/CactusTile.cpp
+    world/tile/TallGrass.cpp
+    world/tile/DeadBush.cpp
+    world/tile/PumpkinTile.cpp
+    world/tile/SoulSandTile.cpp
+    world/tile/GlowstoneTile.cpp
+    world/tile/Web.cpp
+    world/tile/FenceTile.cpp
     renderer/GL/GL.cpp
 )
 target_include_directories(reminecraftpe-core PUBLIC . ..)

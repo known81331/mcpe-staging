@@ -224,6 +224,7 @@ void Minecraft::setScreen(Screen* pScreen)
 	}
 	else
 	{
+		platform()->recenterMouse();
 		grabMouse();
 	}
 }
@@ -231,6 +232,7 @@ void Minecraft::setScreen(Screen* pScreen)
 void Minecraft::onGraphicsReset()
 {
 	m_pTextures->clear();
+	_initTextures();
 	m_pFont->onGraphicsReset();
 
 	if (m_pLevelRenderer)
@@ -263,7 +265,7 @@ bool Minecraft::isOnlineClient() const
 	if (!m_pLevel)
 		return false;
 
-	return m_pLevel->m_bIsOnline;
+	return m_pLevel->m_bIsClientSide;
 }
 
 bool Minecraft::isTouchscreen() const
@@ -392,7 +394,8 @@ void Minecraft::handleBuildAction(const BuildActionIntention& action)
 		else if (action.isPick())
 		{
 			// Try to pick the tile.
-			player->m_pInventory->selectItemById(pTile->m_ID, C_MAX_HOTBAR_ITEMS);
+			int auxValue = m_pLevel->getData(m_hitResult.m_tilePos);
+			player->m_pInventory->selectItemByIdAux(pTile->m_ID, auxValue, C_MAX_HOTBAR_ITEMS);
 		}
 		else if (action.isPlace() && canInteract)
 		{
@@ -420,7 +423,7 @@ void Minecraft::handleBuildAction(const BuildActionIntention& action)
 						hitSide = Facing::DOWN;
 					}
 
-					m_pRakNetInstance->send(new PlaceBlockPacket(player->m_EntityID, tp.relative(hitSide, 1), TileID(pItem->m_itemID), hitSide));
+					m_pRakNetInstance->send(new PlaceBlockPacket(player->m_EntityID, tp.relative(hitSide, 1), TileID(pItem->m_itemID), hitSide, pItem->getAuxValue()));
 				}
 			}
 		}
@@ -470,7 +473,12 @@ void Minecraft::tickInput()
 			continue;
 
 		if (Mouse::isButtonDown(BUTTON_LEFT))
-			m_gui.handleClick(1, Mouse::getX(), Mouse::getY());
+		{
+			// @HACK: on SDL1, we don't recenter the mouse every tick, meaning the user can
+			// unintentionally click the hotbar while swinging their fist
+			if (platform()->getRecenterMouseEveryTick() || m_pScreen)
+				m_gui.handleClick(1, Mouse::getX(), Mouse::getY());
+		}
 
 		MouseButtonType buttonType = Mouse::getEventButton();
 		bool bPressed = Mouse::getEventButtonState() == true;
@@ -585,7 +593,8 @@ void Minecraft::tickMouse()
 	if (useController() || isTouchscreen())
 		return; // don't actually try to recenter the mouse
 
-	platform()->recenterMouse();
+    if (platform()->getRecenterMouseEveryTick()) // just for SDL1
+        platform()->recenterMouse();
 }
 
 void Minecraft::handleCharInput(char chr)
@@ -709,6 +718,16 @@ void Minecraft::_levelGenerated()
 		m_pNetEventCallback->levelGenerated(m_pLevel);
 }
 
+void Minecraft::_initTextures()
+{
+	m_pTextures->loadAndBindTexture(C_TERRAIN_NAME);
+	GetPatchManager()->PatchTextures(platform(), TYPE_TERRAIN);
+	m_pTextures->loadAndBindTexture(C_ITEMS_NAME);
+	GetPatchManager()->PatchTextures(platform(), TYPE_ITEMS);
+	
+	GetPatchManager()->PatchTiles();	
+}
+
 void Minecraft::tick()
 {
 	if (!m_pScreen)
@@ -738,7 +757,7 @@ void Minecraft::tick()
 		if (m_pLevel && !isGamePaused())
 		{
             m_pLevel->m_difficulty = m_options->m_difficulty;
-            if (m_pLevel->m_bIsOnline)
+            if (m_pLevel->m_bIsClientSide)
             {
                 m_pLevel->m_difficulty = 3;
             }
@@ -852,6 +871,7 @@ void Minecraft::init()
 	m_pTextures->addDynamicTexture(new LavaTexture);
 	m_pTextures->addDynamicTexture(new LavaSideTexture);
 	m_pTextures->addDynamicTexture(new FireTexture(0));
+	m_pTextures->addDynamicTexture(new FireTexture(1));
 
 	if (platform()->hasFileSystemAccess())
 		m_options = new Options(m_externalStorageDir);
@@ -862,13 +882,7 @@ void Minecraft::init()
 	m_options->loadControls();
 
 	_reloadInput();
-
-	m_pTextures->loadAndBindTexture(C_TERRAIN_NAME);
-	GetPatchManager()->PatchTextures(platform(), TYPE_TERRAIN);
-	m_pTextures->loadAndBindTexture(C_ITEMS_NAME);
-	GetPatchManager()->PatchTextures(platform(), TYPE_ITEMS);
-
-	GetPatchManager()->PatchTiles();
+	_initTextures();
 
 	m_pSoundEngine = new SoundEngine(platform()->getSoundSystem(), 20.0f); // 20.0f on 0.7.0
 	m_pSoundEngine->init(m_options, platform());
@@ -1142,14 +1156,15 @@ void Minecraft::setLevel(Level* pLevel, const std::string& text, LocalPlayer* pL
 		{
 			// We're getting a LocalPlayer from a server
 			m_pLocalPlayer = pLocalPlayer;
-			pLocalPlayer->resetPos();
 		}
 		else if (m_pLocalPlayer)
 		{
 			// We're not on any server
-			m_pLocalPlayer->resetPos();
 			pLevel->addEntity(m_pLocalPlayer);
 		}
+
+		if (m_pLocalPlayer)
+			m_pLocalPlayer->resetPos();
 
 		m_pLevel = pLevel;
 		m_bPreparingLevel = true;
@@ -1163,6 +1178,12 @@ void Minecraft::setLevel(Level* pLevel, const std::string& text, LocalPlayer* pL
 	else
 	{
 		m_pLocalPlayer = nullptr;
+	}
+
+	if (!m_pLocalPlayer)
+	{
+		// pLocalPlayer went unused, and *someone* needs to clean it up
+		SAFE_DELETE(pLocalPlayer);
 	}
 }
 

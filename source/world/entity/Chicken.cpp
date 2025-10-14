@@ -25,7 +25,7 @@ void Chicken::aiStep()
 
 	m_oFlap = m_flap;
 	m_oFlapSpeed = m_flapSpeed;
-	m_flapSpeed += (m_onGround ? -1.0f : 4.0f) * 0.3f;
+	m_flapSpeed += (m_bOnGround ? -1.0f : 4.0f) * 0.3f;
 	if (m_flapSpeed >= 0.0f)
 	{
 		if (m_flapSpeed > 1.0f)
@@ -35,15 +35,15 @@ void Chicken::aiStep()
 	{
 		m_flapSpeed = 0.0f;
 	}
-	if (!m_onGround && m_flapping < 1.0f)
+	if (!m_bOnGround && m_flapping < 1.0f)
 		m_flapping = 1.0f;
 
 	m_flapping *= 0.9f;
-	if (!m_onGround && m_vel.y < 0.0f)
+	if (!m_bOnGround && m_vel.y < 0.0f)
 		m_vel.y *= 0.6f;
 
 	m_flap += m_flapping * 2.0f;
-	if (!m_pLevel->m_bIsOnline && isAlive() && !isBaby() /* && !isChickenJockey()*/ && --m_eggTime <= 0)
+	if (!m_pLevel->m_bIsClientSide && isAlive() && !isBaby() /* && !isChickenJockey()*/ && --m_eggTime <= 0)
 	{
 		m_pLevel->playSound(this, "mob.chickenplop", 1.0f, (m_random.nextFloat() - m_random.nextFloat()) * 0.2f + 1.0f);
 		spawnAtLocation(Item::egg->m_itemID, 1);

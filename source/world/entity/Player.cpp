@@ -156,7 +156,7 @@ void Player::aiStep()
 	if (velLen > 0.1f)
 		velLen = 0.1f;
 
-	if (!m_onGround)
+	if (!m_bOnGround)
 	{
 		if (m_health > 0)
 		{
@@ -191,6 +191,9 @@ void Player::aiStep()
 
 		touch(pEnt);
 	}
+
+	// only needed for non-local players for some reason
+	updateAttackAnim();
 }
 
 ItemInstance* Player::getCarriedItem()
@@ -199,26 +202,13 @@ ItemInstance* Player::getCarriedItem()
 	if (ItemInstance::isNull(item))
 		return nullptr;
 
-	return item;
+	return item;*/
+
+	return m_pInventory->getSelected();
 }
 
 void Player::updateAi()
 {
-	if (m_bSwinging)
-	{
-		m_swingTime++;
-		if (m_swingTime >= 8)
-		{
-			m_swingTime = 0;
-			m_bSwinging = false;
-		}
-	}
-	else
-	{
-		m_swingTime = 0;
-	}
-
-	m_attackAnim = m_swingTime / 8.0f;
 }
 
 void Player::addAdditionalSaveData(CompoundTag& tag) const
@@ -265,8 +255,11 @@ void Player::readAdditionalSaveData(const CompoundTag& tag)
 	m_dimension = tag.getInt32("Dimension");
 	//m_sleepTimer = tag.getInt32("SleepTimer");
 
-	if (tag.contains("SpawnX") && tag.contains("SpawnY") && tag.contains("SpawnZ"))
-		setRespawnPos(TilePos(tag.getInt32("SpawnX"), tag.getInt32("SpawnY"), tag.getInt32("SpawnZ")));
+	if (tag.contains("SpawnX") && tag.contains("SpawnY") && tag.contains("SpawnZ")) {
+		setRespawnPos(TilePos(	static_cast<int>(tag.getInt32("SpawnX")),
+								static_cast<int>(tag.getInt32("SpawnY")),
+								static_cast<int>(tag.getInt32("SpawnZ"))));
+	}
 }
 
 void Player::animateRespawn()

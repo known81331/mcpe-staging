@@ -1,6 +1,13 @@
+#include <limits.h>
+
 #include "TilePos.hpp"
 #include "world/phys/Vec3.hpp"
 #include "world/level/levelgen/chunk/ChunkPos.hpp"
+
+const TilePos TilePos::ZERO = TilePos(0, 0, 0);
+const TilePos TilePos::ONE = TilePos(1, 1, 1);
+const TilePos TilePos::MIN = TilePos(INT_MIN, INT_MIN, INT_MIN);
+const TilePos TilePos::MAX = TilePos(INT_MAX, INT_MAX, INT_MAX);
 
 void TilePos::_init(int _x, int _y, int _z)
 {
@@ -26,7 +33,8 @@ TilePos::TilePos(float _x, float _y, float _z)
 
 TilePos::TilePos(const Vec3& pos)
 {
-    _init(pos.x, pos.y, pos.z);
+	//@NOTE: Using floor fixes TilePos instantiation in negative coords
+    _init((int)floorf(pos.x), (int)floorf(pos.y), (int)floorf(pos.z));
 }
 
 TilePos::TilePos(const ChunkPos& pos, int y)

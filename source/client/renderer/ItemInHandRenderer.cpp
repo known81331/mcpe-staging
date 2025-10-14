@@ -50,7 +50,7 @@ void ItemInHandRenderer::renderItem(ItemInstance* inst)
     float bright = m_pMinecraft->m_pLocalPlayer->getBrightness(0.0f);
 #endif
     
-    if (inst->m_itemID <= C_MAX_TILES && TileRenderer::canRender(Tile::tiles[inst->m_itemID]->getRenderShape()))
+    if (inst->m_itemID < C_MAX_TILES && TileRenderer::canRender(Tile::tiles[inst->m_itemID]->getRenderShape()))
     {
         float red, grn, blu, alp = 1.0f;
         
@@ -329,7 +329,7 @@ void ItemInHandRenderer::tick()
 	if (a < -0.4f)
 		a = -0.4f;
 	if (a >= 0.4f)
-		a  = 0.4f;
+		a = 0.4f;
 
 	m_height += a;
 
