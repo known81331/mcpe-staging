@@ -195,7 +195,7 @@ void Player::aiStep()
 
 ItemInstance* Player::getCarriedItem()
 {
-	ItemInstance* item = m_pInventory->getItem(m_pInventory->m_selectedHotbarSlot);
+	ItemInstance* item = m_pInventory->getQuickSlotItem(m_pInventory->m_selectedHotbarSlot);
 	if (ItemInstance::isNull(item))
 		return nullptr;
 

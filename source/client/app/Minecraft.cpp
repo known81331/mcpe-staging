@@ -921,8 +921,8 @@ void Minecraft::prepareLevel(const std::string& unused)
 			float time2 = getTimeS();
 			if (pLevel->field_B0C)
 			{
-				//while (m_pLevel->updateLights());
-				m_pLevel->updateLights();
+				while (m_pLevel->updateLights());
+				//m_pLevel->updateLights();
 			}
 
 			if (time2 != -1.0f)

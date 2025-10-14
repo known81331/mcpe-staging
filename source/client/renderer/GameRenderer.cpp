@@ -770,7 +770,6 @@ void GameRenderer::render(float f)
 
 		m_pMinecraft->m_pFont->drawShadow(label, 10, 20, 0xFFFFFF);
 		m_pMinecraft->m_pFont->drawShadow(debugText.str(), 80, 20, 0xFFFFFF);
-		m_pMinecraft->m_pFont->draw(__TIMESTAMP__, m_pMinecraft->m_pScreen->m_width/2 - m_pMinecraft->m_pFont->width(__TIMESTAMP__)/2, 0, 0xff333333);
 	}
 
 #else

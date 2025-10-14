@@ -409,7 +409,7 @@ void Screen::renderBackground(int unk)
 	}
 	else
 	{
-		renderDirtBackground(unk);
+	//	renderDirtBackground(unk);
 	}
 }
 
