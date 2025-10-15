@@ -17,12 +17,12 @@
 #define C_BIRCH_LEAF 2
 #define C_LEAF_TYPE_MASK 3
 
-LeafTile::LeafTile(TileID id) : TransparentTile(id, TEXTURE_LEAVES_TRANSPARENT, Material::leaves, false)
+LeafTile::LeafTile(TileID id) : TransparentTile(id, TEXTURE_LEAVES_TRANSPARENT_OAK, Material::leaves, false)
 {
 	m_checkBuffer = nullptr;
 
-	m_TextureFrame = TEXTURE_LEAVES_TRANSPARENT;
-	field_74 = TEXTURE_LEAVES_TRANSPARENT;
+	m_TextureFrame = TEXTURE_LEAVES_TRANSPARENT_OAK;
+	field_74 = TEXTURE_LEAVES_TRANSPARENT_OAK;
 
 	setTicking(true);
 }
@@ -201,10 +201,10 @@ int LeafTile::getColor(const LevelSource* level, const TilePos& pos) const
 
 int LeafTile::getTexture(Facing::Name face, TileData data) const
 {
-	if ((data & C_LEAF_TYPE_MASK) == 1)
-		return TEXTURE_LEAVES_TRANSPARENT_SPRUCE;
+	//if ((data & C_LEAF_TYPE_MASK) == 1)
+	//	return TEXTURE_LEAVES_TRANSPARENT_SPRUCE;
 
-	return m_TextureFrame;
+	return m_TextureFrame + data % 4;
 }
 
 bool LeafTile::isSolidRender() const

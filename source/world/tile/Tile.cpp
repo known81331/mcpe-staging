@@ -327,6 +327,12 @@ void Tile::initTiles()
 		->setSoundType(Tile::SOUND_SAND)
 		->setDescriptionId("sand");
 
+	Tile::redSand = (new SandTile(TILE_SAND_RED, TEXTURE_SAND_RED, Material::sand))
+		->init()
+		->setDestroyTime(0.5f)
+		->setSoundType(Tile::SOUND_SAND)
+		->setDescriptionId("red_sand");
+
 	Tile::gravel = (new GravelTile(TILE_GRAVEL, TEXTURE_GRAVEL, Material::sand))
 		->init()
 		->setDestroyTime(0.6f)
@@ -1221,6 +1227,7 @@ const Tile::SoundType
 // @TODO: Refactor this so that Tile::fire is already a FireTile* etc
 Tile
 	*Tile::sand,
+	*Tile::redSand,
 	*Tile::sandStone,
 	*Tile::stoneBrick,
 	*Tile::redBrick,

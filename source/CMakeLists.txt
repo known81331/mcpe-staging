@@ -235,6 +235,7 @@ add_library(reminecraftpe-core STATIC
     world/level/storage/MemoryLevelStorageSource.cpp
     world/level/storage/LevelData.cpp
     world/level/storage/ExternalFileLevelStorage.cpp
+    world/level/storage/ExternalLevelDBStorage.cpp
     world/level/storage/RegionFile.cpp
     world/level/storage/LevelStorage.cpp
     world/level/storage/MemoryLevelStorage.cpp
@@ -242,6 +243,7 @@ add_library(reminecraftpe-core STATIC
     world/level/storage/LevelSource.cpp
     world/level/storage/MemoryChunkStorage.cpp
     world/level/storage/ExternalFileLevelStorageSource.cpp
+    world/level/storage/ExternalLevelDBStorageSource.cpp
     world/level/path/Node.cpp
     world/level/path/Path.cpp
     world/level/path/PathFinder.cpp

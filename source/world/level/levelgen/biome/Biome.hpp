@@ -49,7 +49,16 @@ public: // Static Variables
 		* desert,
 		* plains,
 		* iceDesert,
-		* tundra;
+		* tundra,
+
+		// pe 0.9
+		* jungles,
+		* mesa,
+		* mushroomIslands,
+		* megaTaiga,
+		* megaSpruceTaiga,
+		* deepOcean
+		;
 	static Biome* map[4096];
 
 private: // Private Functions

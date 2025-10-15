@@ -25,7 +25,7 @@ uint32_t FoliageColor::get(double x, double y)
 	return c;
 }
 
-#ifdef EHN_PE_GRASS_COLOR
+#ifndef EHN_PE_GRASS_COLOR
 uint32_t FoliageColor::getEvergreenColor()
 {
 	return 0x619961;

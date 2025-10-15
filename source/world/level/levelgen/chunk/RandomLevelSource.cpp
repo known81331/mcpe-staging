@@ -561,21 +561,21 @@ void RandomLevelSource::postProcess(ChunkSource* src, const ChunkPos& pos)
 	if (pBiome == Biome::desert)
 		vegetationCount += 10;
 
-	for (int i = 0; i < vegetationCount; i++)
-	{
-		int xo = m_random.nextInt(16);
-		int yo = m_random.nextInt(128);
-		int zo = m_random.nextInt(16);
-		CactusFeature().place(m_pLevel, &m_random, TilePos(tp.x + 8 + xo, yo, tp.z + 8 + zo));
-	}
-
-	if (m_random.nextInt(32) == 0)
-	{
-		int xo = m_random.nextInt(16);
-		int yo = m_random.nextInt(128);
-		int zo = m_random.nextInt(16);
-		PumpkinFeature().place(m_pLevel, &m_random, TilePos(tp.x + 8 + xo, yo, tp.z + 8 + zo));
-	}
+	//for (int i = 0; i < vegetationCount; i++)
+	//{
+	//	int xo = m_random.nextInt(16);
+	//	int yo = m_random.nextInt(128);
+	//	int zo = m_random.nextInt(16);
+	//	CactusFeature().place(m_pLevel, &m_random, TilePos(tp.x + 8 + xo, yo, tp.z + 8 + zo));
+	//}
+//
+	//if (m_random.nextInt(32) == 0)
+	//{
+	//	int xo = m_random.nextInt(16);
+	//	int yo = m_random.nextInt(128);
+	//	int zo = m_random.nextInt(16);
+	//	PumpkinFeature().place(m_pLevel, &m_random, TilePos(tp.x + 8 + xo, yo, tp.z + 8 + zo));
+	//}
 #ifdef FEATURE_PLANT_VEGGIES
 	vegetationCount = 0;
 

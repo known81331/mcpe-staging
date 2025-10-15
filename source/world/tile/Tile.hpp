@@ -148,6 +148,7 @@ public: // static variables
 	// TODO
 	static Tile
 		* sand,
+		* redSand,
 		* sandStone,
 		* stoneBrick,
 		* redBrick,

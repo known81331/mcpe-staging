@@ -114,6 +114,7 @@ void Inventory::prepareCreativeInventory()
 	addCreativeItem(Tile::stairs_wood->m_ID,4);
 	addCreativeItem(Tile::stairs_wood->m_ID,5);
 	addCreativeItem(Tile::stoneSlabHalf->m_ID);
+	addCreativeItem(Tile::redSand->m_ID);
 	addCreativeItem(Tile::sand->m_ID);
 	addCreativeItem(Tile::cactus->m_ID);
 	addCreativeItem(Tile::ladder->m_ID);
