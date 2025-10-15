@@ -316,12 +316,24 @@ void ItemInHandRenderer::renderTex(float f, int texture)
 
 void ItemInHandRenderer::tick()
 {
+
 	m_oHeight = m_height;
 
 	int itemID = m_pMinecraft->m_pLocalPlayer->m_pInventory->getSelectedItemId();
-    int auxValue = m_pMinecraft->m_pLocalPlayer->m_pInventory->getSelectedItem()->getAuxValue();
 
-	bool bSameItem = itemID == m_selectedItem.m_itemID && auxValue == m_selectedItem.getAuxValue();
+	ItemInstance* item = m_pMinecraft->m_pLocalPlayer->m_pInventory->getSelectedItem();
+
+	bool bSameItem = m_pMinecraft->m_pLocalPlayer->m_pInventory->m_selectedHotbarSlot == m_lastSlot && ItemInstance::matches(&m_selectedItem, item);
+
+	if (ItemInstance::isNull(item) && ItemInstance::isNull(&m_selectedItem))
+		bSameItem = true;
+
+	// without this, the player hand remains hidden
+	if (!ItemInstance::isNull(item) && !ItemInstance::isNull(&m_selectedItem) && item != &m_selectedItem && item->m_itemID == m_selectedItem.m_itemID && item->getAuxValue() == m_selectedItem.getAuxValue())
+	{
+		bSameItem = true;
+		m_selectedItem = *item;
+	}
 
 	float b = bSameItem ? 1.0f : 0.0f;
 
@@ -334,8 +346,12 @@ void ItemInHandRenderer::tick()
 	m_height += a;
 
 	if (m_height < 0.1f) {
-		m_selectedItem.m_itemID = itemID;
-        m_selectedItem.setAuxValue(auxValue);
+		if (ItemInstance::isNull(item))
+			m_selectedItem.m_itemID = 0;
+		else
+			m_selectedItem = *item;
+
+		m_lastSlot = m_pMinecraft->m_pLocalPlayer->m_pInventory->m_selectedHotbarSlot;
     }
 }
 

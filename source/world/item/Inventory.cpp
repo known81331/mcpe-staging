@@ -408,7 +408,7 @@ bool Inventory::addItem(ItemInstance& instance)
 
 		int maxStackSize = item->getMaxStackSize();
 		bool bIsStackedByData = instance.getItem()->isStackedByData();
-		if (bIsStackedByData && item->getAuxValue() != instance.getAuxValue())
+		if (bIsStackedByData || item->getAuxValue() != instance.getAuxValue())
 			continue;
 
 		// try to collate.
@@ -425,8 +425,8 @@ bool Inventory::addItem(ItemInstance& instance)
 
 		instance.m_count = leftover;
 
-		if (!bIsStackedByData)
-			item->setAuxValue(0);
+		//if (!bIsStackedByData)
+		//	item->setAuxValue(0);
 	}
 
 	// If there's nothing leftover:

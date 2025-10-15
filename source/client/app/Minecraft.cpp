@@ -335,6 +335,7 @@ void Minecraft::handleBuildAction(const BuildActionIntention& action)
 			m_pGameMode->attack(player, m_hitResult.m_pEnt);
 			m_lastBlockBreakTime = getTimeMs();
 
+			if (pItem) 
 			if (Mob* pMob = dynamic_cast<Mob*>(m_hitResult.m_pEnt))
 				pItem->hurtEnemy(pMob);
 		}
@@ -347,6 +348,7 @@ void Minecraft::handleBuildAction(const BuildActionIntention& action)
 			m_pGameMode->interact(player, m_hitResult.m_pEnt);
 			m_lastInteractTime = getTimeMs();
 
+			if (pItem) 
 			if (Mob* pMob = dynamic_cast<Mob*>(m_hitResult.m_pEnt))
 				pItem->interactEnemy(pMob);
 		}

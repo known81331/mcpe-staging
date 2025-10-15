@@ -303,7 +303,7 @@ void Gui::render(float f, bool bHaveScreen, int mouseX, int mouseY)
 			b1 = player->m_invulnerableTime / 3 % 2;
 			emptyHeartX += 9 * b1;
 		}
-#ifdef ANDROID || TARGET_OS_IPHONE
+#if true
 		//@NOTE: Pocket-style health UI.
 		int heartX = 2;
 		int heartYStart = 2;
@@ -415,7 +415,7 @@ void Gui::render(float f, bool bHaveScreen, int mouseX, int mouseY)
 	if (inventory) {
 		ItemInstance* item = inventory->getSelectedItem();
 		static int alpha = 0x00;
-		static int oid = item->getId(), oaux = item->getAuxValue();
+		static int oid = -1, oaux = -1;
 		if (item && (item->getId() != oid || item->getAuxValue() != oaux)) {
 			alpha = 768;
 			oid = item->getId();
@@ -426,6 +426,10 @@ void Gui::render(float f, bool bHaveScreen, int mouseX, int mouseY)
 			std::string str = item ? item->getItem()->getName() : "";
 			m_pMinecraft->m_pFont->drawShadow(str, cenX - m_pMinecraft->m_pFont->width(str) / 2, height-40, 0x00FFFFFF + ((alpha > 0xff ? 0xff : alpha) << 24));
 			alpha -= 8;
+		}
+		else if (!item) {
+			oid = -1;
+			oaux = -1;
 		}
 
 
