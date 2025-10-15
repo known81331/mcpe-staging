@@ -93,7 +93,7 @@ void IngameBlockSelectionScreen::init()
 #endif
 	
 	m_btnChat.m_width = 40;
-	m_btnChat.m_xPos = m_width - m_btnChat.m_width; // Right edge
+	m_btnChat.m_xPos = m_width - m_btnChat.m_width-19-19; // Right edge
     m_btnChat.m_yPos = 0;
 	if (m_pMinecraft->isTouchscreen())
 		m_buttons.push_back(&m_btnChat);

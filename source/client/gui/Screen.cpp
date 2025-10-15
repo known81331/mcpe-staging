@@ -11,7 +11,7 @@
 
 namespace QCONSOLE {
 int wndx = 8, wndy = 8;
-int width = 320, height = 240;
+int width = 255, height = 144;
 
 bool visible = false;
 Button *closebtn = new Button(32, 32, 0, 15, 15, "X");

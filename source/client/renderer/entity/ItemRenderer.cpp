@@ -65,12 +65,12 @@ void ItemRenderer::render(Entity* pEntity, const Vec3& pos, float rot, float a)
 		glRotatef(((float(pItemEntity->m_age) + a) / 20.0f + pItemEntity->m_bobOffs) * 57.296f, 0.0f, 1.0f, 0.0f);
 		bindTexture(C_TERRAIN_NAME);
 
-		float scale = 0.5f;
+		float scale = 0.25f;
 
 		// @BUG: If cacti existed and were able to be dropped, they would be 2x the size of a regular tile.
 		// This bug has been in the main game until Java Edition Beta 1.8.
-		if (Tile::tiles[itemID]->isCubeShaped() || pItemInstance->m_itemID == Tile::stoneSlabHalf->m_ID)
-			scale = 0.25f;
+		//if (Tile::tiles[itemID]->isCubeShaped() || pItemInstance->m_itemID == Tile::stoneSlabHalf->m_ID)
+		//	scale = 0.25f;
 
 		glScalef(scale, scale, scale);
 

@@ -20,7 +20,10 @@ Biome
 * Biome::desert,
 * Biome::plains,
 * Biome::iceDesert,
-* Biome::tundra;
+* Biome::tundra,
+* Biome::jungles,
+* Biome::mesa
+;
 
 
 std::unordered_map<uint32_t, int> Biome::monsterList;
@@ -55,6 +58,7 @@ Biome* Biome::_getBiome(float temp, float hum)
 
 	if (temp >= 0.97f)
 	{
+		return mesa;
 		if (ht < 0.45f)
 			return plains;
 		
@@ -65,7 +69,9 @@ Biome* Biome::_getBiome(float temp, float hum)
 	}
 
 	if (temp >= 0.35f)
-		return forest;
+	//	return forest;
+		return mesa;
+		return mesa;
 	
 	return shrubland;
 }
@@ -105,6 +111,9 @@ void Biome::recalc()
 
 	desert->field_20 = desert->field_21 = Tile::sand->m_ID;
 	iceDesert->field_20 = iceDesert->field_21 = Tile::sand->m_ID;
+
+	mesa->field_21 = Tile::hardened_clay->m_ID;
+	mesa->field_20 = Tile::redSand->m_ID;
 }
 
 Biome::Biome()
@@ -221,6 +230,12 @@ void Biome::initBiomes()
 		->setSnowCovered()
 		->setLeafColor(0xC4D339);
 
+
+	mesa = (new MesaBiome)
+		->setColor(0xFA9418)
+		->setName("Mesa")
+		->setLeafColor(0xC4D339);
+
 		
 
 	recalc();
@@ -270,3 +285,36 @@ Feature* TaigaBiome::getTreeFeature(Random* pRandom)
 	return new SpruceFeature;
 }
 
+
+float MesaBiome::adjustDepth(float f)
+{
+	return f * 8.f;
+}
+
+float MesaBiome::adjustScale(float f)
+{
+	return f * 32.f;
+}
+
+
+TileID MesaBiome::getPrimaryTile(const TilePos &pos)  const { 
+	
+	printf("%d %d %d\n", pos.x, pos.y, pos.z);
+	switch (pos.y) {
+		case 0 ... 59: return Tile::rock->m_ID;
+		case 60 ... 64: return Tile::hardened_clay->m_ID;
+		case 65 ... 66: return Tile::redSand->m_ID;
+		case 67 ... 71: return Tile::hardened_clay->m_ID;
+		case 72: return Tile::stained_hardened_clay->m_ID;
+		case 74: return Tile::stained_hardened_clay->m_ID;
+		case 77 ... 79: return Tile::stained_hardened_clay->m_ID;
+		case 83: return Tile::stained_hardened_clay->m_ID;
+		default: return field_20;
+	}
+
+	return field_20; 
+}
+
+TileID MesaBiome::getSecondaryTile(const TilePos &pos)  const { 
+	return field_21; 
+}

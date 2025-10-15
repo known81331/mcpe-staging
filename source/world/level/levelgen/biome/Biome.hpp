@@ -29,6 +29,12 @@ public: // Virtual functions
 	virtual Feature* getTreeFeature(Random*);
 	virtual std::unordered_map<uint32_t, int> getMobs(MobCategory*);
 
+	virtual TileID getPrimaryTile() const { return field_20; }
+	virtual TileID getSecondaryTile() const { return field_21; }
+
+	virtual TileID getPrimaryTile(const TilePos &pos) const { return getPrimaryTile(); }
+	virtual TileID getSecondaryTile(const TilePos &pos) const { return getSecondaryTile(); }
+
 public: // Instance Functions
 	Biome();
 	virtual ~Biome();
@@ -101,3 +107,13 @@ public:
 class FlatBiome : public Biome
 {
 };
+
+class MesaBiome : public Biome
+{
+	float adjustDepth(float depth) override;
+	float adjustScale(float scale) override;
+
+	TileID getPrimaryTile(const TilePos &pos)  const override;
+	TileID getSecondaryTile(const TilePos &pos)  const override;
+};
+

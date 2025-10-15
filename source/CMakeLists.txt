@@ -304,6 +304,7 @@ add_library(reminecraftpe-core STATIC
     world/tile/InvisibleTile.cpp
     world/tile/Sapling.cpp
     world/tile/TreeTile.cpp
+    world/tile/SignTile.cpp
     world/tile/GrassTile.cpp
     world/tile/HalfTransparentTile.cpp
     world/tile/ClothTile.cpp

@@ -309,6 +309,9 @@ void RandomLevelSource::buildSurfaces(const ChunkPos& pos, TileID* tiles, Biome*
 
 				if (j1 == -1)
 				{
+
+					byte1 = pBiome->getPrimaryTile(TilePos(k, k1, l));
+
 					if (i1 <= 0)
 					{
 						byte1 = 0;
