@@ -348,7 +348,7 @@ void Gui::render(float f, bool bHaveScreen, int mouseX, int mouseY)
 			int breathRaw = player->m_airCapacity;
 			int breathFull  = int(ceilf((float(breathRaw - 2) * 10.0f) / 300.0f));
 			int breathMeter = int(ceilf((float(breathRaw)     * 10.0f) / 300.0f)) - breathFull;
-#ifdef ANDROID || TARGET_OS_IPHONE
+#if true
 			// pe
 			int bubbleX = 2;
 			int bubbleY = 12;

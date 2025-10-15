@@ -818,6 +818,12 @@ void Tile::initTiles()
 		if (Tile::tiles[i] && !Item::items[i])
 			Item::items[i] = new AuxDataTileItem(i - C_MAX_TILES);
 	}
+	
+	for (int i = 0; i < C_MAX_TILES; i++)
+	{
+		if (i != TILE_AIR && !Tile::tiles[i])
+			Tile::tiles[i] = Tile::info_updateGame2;
+	}
 }
 
 void Tile::teardownTiles()

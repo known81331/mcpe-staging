@@ -103,7 +103,7 @@ void ItemInHandRenderer::renderItem(ItemInstance* inst)
         int textureY = inst->getIcon() / (isTerrain ? 32 : 16) * 16;
         
         float texU_1 = float(textureX + 0.0f) * (isTerrain ? C_RATIO_2 : C_RATIO);
-        float texU_2 = float(textureX + 15.99f) * (isTerrain ? C_RATIO_2 : C_RATIO);
+        float texU_2 = float(textureX + 16.f) * (isTerrain ? C_RATIO_2 : C_RATIO);
         float texV_1 = C_RATIO * float(textureY + 0.0f);
         float texV_2 = C_RATIO * float(textureY + 15.99f);
         

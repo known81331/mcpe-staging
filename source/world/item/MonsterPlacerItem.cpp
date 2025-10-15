@@ -67,13 +67,17 @@ bool MonsterPlacerItem::useOn(ItemInstance* instance, Player* player, Level* lev
 	if (level->m_bIsClientSide)
 		return false;
 
-	TilePos placePos = pos;
-	if (face != Facing::DOWN && face != Facing::UP)
-		placePos = placePos.above();
-	else if (face == Facing::UP)
-		placePos = placePos.above();
-	else
-		placePos = placePos.below();
+	TilePos tp = pos;
+
+	switch (face)
+	{
+		case Facing::DOWN: tp.y--; break;
+		case Facing::UP: tp.y++; break;
+		case Facing::NORTH: tp.z--; break;
+		case Facing::SOUTH: tp.z++; break;
+		case Facing::WEST: tp.x--; break;
+		case Facing::EAST: tp.x++; break;
+	}
 
 	int id = instance->getAuxValue();
 	Mob* entity = nullptr;
@@ -84,7 +88,7 @@ bool MonsterPlacerItem::useOn(ItemInstance* instance, Player* player, Level* lev
 		case 1: entity = new Cow(level); break;
 		case 2: entity = new Pig(level); break;
 		case 3: entity = new Sheep(level); break;
-	//	case 4: entity = new Wolf(level); break;
+	//	case 4: entity = new Wolf(level); bsreak;
 	//	case 5: entity = new MushroomCow(level); break;
 		case 6: entity = new Creeper(level); break;
 	//	case 7: entity = new Enderman(level); break;
@@ -100,7 +104,7 @@ bool MonsterPlacerItem::useOn(ItemInstance* instance, Player* player, Level* lev
 
 	if (entity != nullptr)
 	{
-		entity->setPos(Vec3(placePos.x + 0.5f, placePos.y, placePos.z + 0.5f));
+		entity->setPos(Vec3(tp.x + 0.5f, tp.y, tp.z + 0.5f));
 		level->addEntity(entity);
 
 		if (!player->isCreative())
