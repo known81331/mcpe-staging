@@ -183,7 +183,11 @@ void ItemRenderer::renderGuiItemOverlay(Font* font, Textures* textures, ItemInst
 
 	int width = font->width(amtstr), height = font->height(amtstr) + 8;
 
-	font->drawShadow(amtstr, x + 17 - width, y + 17 - height, 0xFFFFFF);
+	font->fontSize = 4;
+	font->fontScale = 0.5f;
+	font->draw(amtstr, x + 1, y + 1, 0xFFFFFF);
+	font->fontSize = 8;
+	font->fontScale = 1.f;
 }
 
 void ItemRenderer::renderGuiItem(Font* font, Textures* textures, ItemInstance* instance, int x, int y, bool b)

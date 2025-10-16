@@ -15,7 +15,8 @@ Font::Font(Options* pOpts, const std::string& fileName, Textures* pTexs) :
 	m_fileName(fileName), m_pOptions(pOpts), m_pTextures(pTexs)
 {
 	field_0 = 0;
-
+	fontSize = 8;
+	fontScale = float(fontSize) / 8.0f;
 	init(pOpts);
 }
 
@@ -54,8 +55,8 @@ void Font::init(Options* pOpts)
 			}
 		}
 
-		m_charWidthInt[i] = widthMax + 2;
-		m_charWidthFloat[i] = float (widthMax) + 2;
+		m_charWidthInt[i] = widthMax * fontSize/8 + 2;
+		m_charWidthFloat[i] = float (widthMax * fontSize/8 ) + 2;
 	}
 }
 
@@ -70,10 +71,10 @@ void Font::buildChar(unsigned char chr, float x, float y)
 
 #define CO (7.99f)
 
-	t.vertexUV(x,      y + CO, 0.0f,  u       * D128, (v + CO) * D128);
-	t.vertexUV(x + CO, y + CO, 0.0f, (u + CO) * D128, (v + CO) * D128);
-	t.vertexUV(x + CO, y,      0.0f, (u + CO) * D128,  v       * D128);
-	t.vertexUV(x,      y,      0.0f,  u       * D128,  v       * D128);
+	t.vertexUV(x,     		 y + fontSize, 0.0f,  u       * D128, (v + CO) * D128);
+	t.vertexUV(x + fontSize, y + fontSize, 0.0f, (u + CO) * D128, (v + CO) * D128);
+	t.vertexUV(x + fontSize, y,      0.0f, (u + CO) * D128,  v       * D128);
+	t.vertexUV(x,     		 y,      0.0f,  u       * D128,  v       * D128);
 
 #undef CO
 }
@@ -143,7 +144,7 @@ void Font::drawSlow(const std::string& str, int x, int y, int colorI, bool bShad
 
 		buildChar(x, cXPos, cYPos);
 
-		cXPos += m_charWidthFloat[x];
+		cXPos += m_charWidthFloat[x] * fontScale;
 	}
 
 	t.draw();

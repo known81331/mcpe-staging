@@ -33,6 +33,8 @@ public:
 	int width(const std::string& str);
 	int height(const std::string& str);
 
+	int fontSize;
+	float fontScale;
 private:
 	int field_0; 
 	int m_charWidthInt[256];

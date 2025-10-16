@@ -728,6 +728,7 @@ void GameRenderer::render(float f)
 		debugText << m_pMinecraft->m_pLevelRenderer->gatherStats1();
 		debugText << m_pMinecraft->m_pLevelRenderer->gatherStats2();
 		debugText << m_pMinecraft->m_pLevel->getTime() << "\n";
+		debugText << Tesselator::instance.getVboCount() << "\n";
 		debugText << "0\n";
 		debugText << m_pMinecraft->m_pLevel->getBiomeSource()->getBiome(pos)->m_name << "\n";
 
@@ -746,6 +747,7 @@ void GameRenderer::render(float f)
 			"TIME\n"
 			"QUEUED\n"
 			"BIOME\n"
+			"POLY\n"
 			"\n"
 			"PLATFORM\n"
 			;
