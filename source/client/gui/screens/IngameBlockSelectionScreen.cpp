@@ -15,6 +15,41 @@
 
 std::string g_sNotAvailableInDemoVersion = "Not available in the demo version";
 
+
+
+const int slotsize = 28;
+
+namespace TouchInventory {
+	int wndx = 32, wndy = 2;
+	int width = 255, height = 144;
+
+	void drawBG(Screen *screen) {
+		int m_width = width;
+		int m_height = height;
+
+		Textures* pTexs = screen->m_pMinecraft->m_pTextures;
+
+		pTexs->loadAndBindTexture("gui/spritesheet.png");
+
+		glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+		
+		const int texSize = 8;
+			
+		screen->blit(wndx, wndy, 				  				  8,  8, m_width, m_height, 16,  16);
+		screen->blit(wndx, wndy, 				  				  15, 0, m_width, texSize, 1,16);
+		screen->blit(wndx, wndy+m_height-texSize, 				  15, 16, m_width, texSize, 1,16);
+		screen->blit(wndx, wndy, 				  				  0,  8, texSize, m_height, 16,  16);
+		screen->blit(wndx+m_width-texSize, wndy,  				  16, 8, texSize, m_height, 16,  16);
+		screen->blit(wndx, wndy, 				  				  0,  0, texSize, texSize, 16,16);
+		screen->blit(wndx+m_width-texSize, wndy,  				  16, 0, texSize, texSize, 16,  16);
+		screen->blit(wndx, wndy+m_height-texSize, 				  0,  16, texSize, texSize, 16,  16);
+		screen->blit(wndx+m_width-texSize, wndy+m_height-texSize, 16, 16, texSize, texSize, 16,  16);
+	}
+
+
+}
+
+
 IngameBlockSelectionScreen::IngameBlockSelectionScreen() :
 	m_btnPause(0, "Pause"),
 	m_btnChat(3, "Chat"), // Temp chat button,
@@ -32,7 +67,7 @@ Inventory* IngameBlockSelectionScreen::getInventory()
 int IngameBlockSelectionScreen::getBottomY()
 {
 	// -1 for some reason, -2 to make it align between top of screen and top of hotbar instead
-	return (m_height - 22 * (getSlotsHeight() - 2)) / 2;
+	return (m_height - slotsize * (getSlotsHeight() - 2)) / 2;
 }
 
 int IngameBlockSelectionScreen::getSelectedSlot(int x, int y)
@@ -41,30 +76,30 @@ int IngameBlockSelectionScreen::getSelectedSlot(int x, int y)
 	int top = slotsHeight * 10;
 	int left = 2;
 
-	if (y < 22)
+	if (y < slotsize)
 		return -1;
 	if (x < left)
 		return -1;
 
-	int idx = (x - left) / 20;
+	int idx = (x - left) / slotsize;
 	int idy = (float)(y)/top * slotsHeight / 2 -1;
 
-	return idx + ((m_width/20) ) * idy;
+	return idx + ((m_width/slotsize) ) * idy;
 }
 
 int IngameBlockSelectionScreen::getSlotPosX(int x)
 {
-	return 20 * x+2;
+	return slotsize * x+2;
 }
 
 int IngameBlockSelectionScreen::getSlotPosY(int y)
 {
-	return 20 * y + 22;
+	return slotsize * y + slotsize;
 }
 
 int IngameBlockSelectionScreen::getSlotsHeight()
 {
-	return getInventory()->getNumSlots() / (m_width/20) + 1;
+	return getInventory()->getNumSlots() / (m_width/slotsize) + 1;
 }
 
 
@@ -135,23 +170,17 @@ void IngameBlockSelectionScreen::renderSlots()
 	glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
 	m_pMinecraft->m_pTextures->loadAndBindTexture("gui/gui.png");
 
-	for (int y = 0; y != -22 * getSlotsHeight(); y -= 22) {
-	//	blit(0, m_height - 3 - getBottomY() + y, 0, 0, 182, 22, 0, 0);
-	//	blit(89, m_height - 3 - getBottomY() + y, 0, 0, 182, 22, 0, 0);
-	}
-
 	if (m_selectedSlot >= 0)
-		blit(20 * (m_selectedSlot % (m_width/20)),  20 * (m_selectedSlot / (m_width/20)) + 22, 0, 22, 24, 22, 0, 0);
+		blit(slotsize * (m_selectedSlot % (m_width/slotsize)),  slotsize * (m_selectedSlot / (m_width/slotsize)) + slotsize, 0, slotsize, slotsize, slotsize, 0, 0);
 
 	for (int y = 0, index = 0; y < getSlotsHeight(); y++)
 	{
 		int posY = getSlotPosY(y) + 4;
 
-		for (int x = 0; x < m_width/20; x++)
+		for (int x = 0; x < m_width/slotsize; x++)
 		{
-			int posX = getSlotPosX(x) + 2;
+			int posX = getSlotPosX(x) + 34;
 			renderSlot(index++, posX, posY, 0.0f);
-		//	m_pMinecraft->m_pFont->drawShadow(std::to_string(x), posX, posY, 0xFFFFFFFF);
 		}
 	}
 }
@@ -173,6 +202,67 @@ void IngameBlockSelectionScreen::render(int x, int y, float f)
 
 	fill(0, 0, m_width, m_height, 0x80000000);
 
+
+	const int invHeight = 28;
+
+	TouchInventory::wndx = 2;
+	TouchInventory::width = invHeight+4;
+	TouchInventory::height = invHeight;
+	TouchInventory::drawBG(this);
+
+	{
+		ItemInstance item( Tile::redBrick->m_ID, 0, 0 );
+
+		TouchInventory::wndx = 2;
+		TouchInventory::wndy = m_height-24-invHeight;
+		TouchInventory::width = invHeight+4;
+		TouchInventory::height = invHeight;
+		TouchInventory::drawBG(this);
+		ItemRenderer::renderGuiItem(m_pMinecraft->m_pFont, m_pMinecraft->m_pTextures, &item, TouchInventory::wndx + 7, TouchInventory::wndy + 6, true);
+	}
+
+	{
+		ItemInstance item( Tile::bookshelf->m_ID, 0, 0 );
+
+		TouchInventory::wndx = 2;
+		TouchInventory::wndy = m_height-24-invHeight*2-2;
+		TouchInventory::width = invHeight+4;
+		TouchInventory::height = invHeight;
+		TouchInventory::drawBG(this);
+		ItemRenderer::renderGuiItem(m_pMinecraft->m_pFont, m_pMinecraft->m_pTextures, &item, TouchInventory::wndx + 7, TouchInventory::wndy + 6, true);
+	}
+
+	{
+		ItemInstance item( Item::sword_iron->m_itemID, 0, 0 );
+
+		TouchInventory::wndx = 2;
+		TouchInventory::wndy = m_height-24-invHeight*3-4;
+		TouchInventory::width = invHeight+4;
+		TouchInventory::height = invHeight;
+		TouchInventory::drawBG(this);
+		ItemRenderer::renderGuiItem(m_pMinecraft->m_pFont, m_pMinecraft->m_pTextures, &item, TouchInventory::wndx + 7, TouchInventory::wndy + 6, true);
+	}
+
+	{
+		ItemInstance item( Item::seeds->m_itemID, 0, 0 );
+
+		TouchInventory::wndx = 2;
+		TouchInventory::wndy = m_height-24-invHeight*4-6;
+		TouchInventory::width = invHeight+4;
+		TouchInventory::height = invHeight;
+		TouchInventory::drawBG(this);
+		ItemRenderer::renderGuiItem(m_pMinecraft->m_pFont, m_pMinecraft->m_pTextures, &item, TouchInventory::wndx + 7, TouchInventory::wndy + 6, true);
+	}
+
+
+	TouchInventory::wndx = invHeight;
+	TouchInventory::wndy = 2;
+	TouchInventory::width = m_width - invHeight-2;
+	TouchInventory::height = m_height - 24;
+	TouchInventory::drawBG(this);
+
+
+	
 	glEnable(GL_BLEND);
 	renderSlots();
 
@@ -234,5 +324,5 @@ void IngameBlockSelectionScreen::selectSlotAndClose()
 	pInv->selectItem(m_selectedSlot, m_pMinecraft->m_gui.getNumUsableSlots());
 
 	m_pMinecraft->m_pSoundEngine->playUI("random.pop2");
-	m_pMinecraft->setScreen(nullptr);
+	//m_pMinecraft->setScreen(nullptr);
 }

@@ -164,7 +164,7 @@ void Gui::render(float f, bool bHaveScreen, int mouseX, int mouseY)
 
 	renderer->setupGuiScreen();
 
-	if (bHaveScreen) return;
+	if (bHaveScreen && !dynamic_cast<IngameBlockSelectionScreen*>(m_pMinecraft->m_pScreen)) return;
 
 	LocalPlayer* player = mc->m_pLocalPlayer;
 
@@ -199,8 +199,9 @@ void Gui::render(float f, bool bHaveScreen, int mouseX, int mouseY)
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 //#endif
 
-	// chat
-	blit(width - 18, 0, 200, 82, 18, 18, 18, 18); // chat
+	blit(width - 36, 0, 200, 82, 18, 18, 18, 18); // chat
+
+	blit(width - 18, 0, 200, 64, 18, 18, 18, 18); // pause
 
 	int nSlots = getNumSlots();
 	int hotbarWidth = 2 + nSlots * 20;
