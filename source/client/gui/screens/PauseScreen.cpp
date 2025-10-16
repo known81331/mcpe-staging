@@ -146,7 +146,7 @@ void PauseScreen::render(int a, int b, float c)
 	for (OnlinePlayerMap::iterator it = pSSNH->m_onlinePlayers.begin(); it !=  pSSNH->m_onlinePlayers.end(); ++it, i++)
 	{
 		fill(ox, oy+i*os, m_width-20, oy+(i+1)*os, 0x40000000);
-		m_pFont->draw(it->second->m_pPlayer->m_name.data(), ox+2, oy+4, 0x888888);
+		m_pFont->draw(it->second->m_pPlayer->m_name.data(), ox+2, oy+4, 0x777777);
 	}
 
 
