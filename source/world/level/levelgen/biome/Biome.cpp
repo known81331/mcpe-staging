@@ -58,7 +58,7 @@ Biome* Biome::_getBiome(float temp, float hum)
 
 	if (temp >= 0.97f)
 	{
-		return mesa;
+	//	return mesa;
 		if (ht < 0.45f)
 			return plains;
 		
@@ -69,9 +69,8 @@ Biome* Biome::_getBiome(float temp, float hum)
 	}
 
 	if (temp >= 0.35f)
-	//	return forest;
-		return mesa;
-		return mesa;
+		return forest;
+	//	return mesa;
 	
 	return shrubland;
 }
