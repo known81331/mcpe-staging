@@ -118,6 +118,8 @@ add_library(reminecraftpe-core STATIC
     client/model/CreeperModel.cpp
     client/model/CowModel.cpp
     client/model/ChickenModel.cpp
+	client/multiplayer/MultiPlayerLevel.cpp
+	client/multiplayer/MultiplayerLocalPlayer.cpp
     client/player/input/Controller.cpp
     client/player/input/ControllerBuildInput.cpp
     client/player/input/ControllerMoveInput.cpp
@@ -143,6 +145,7 @@ add_library(reminecraftpe-core STATIC
     client/player/input/TouchInputHolder.cpp
     client/player/input/TouchscreenInput_TestFps.cpp
     client/player/input/UnifiedTurnBuild.cpp
+    client/player/LocalPlayer.cpp
     client/network/ClientSideNetworkHandler.cpp
     nbt/CompoundTag.cpp
     nbt/DoubleTag.cpp
@@ -162,6 +165,10 @@ add_library(reminecraftpe-core STATIC
     network/packets/UpdateBlockPacket.cpp
     network/packets/RequestChunkPacket.cpp
     network/packets/PlayerEquipmentPacket.cpp
+    network/packets/InteractPacket.cpp
+	network/packets/UseItemPacket.cpp
+    network/packets/SetEntityDataPacket.cpp
+    network/packets/SetHealthPacket.cpp
     network/packets/ChunkDataPacket.cpp
     network/packets/LevelDataPacket.cpp
     network/packets/PlaceBlockPacket.cpp
@@ -171,16 +178,26 @@ add_library(reminecraftpe-core STATIC
     network/packets/SetTimePacket.cpp
     network/packets/StartGamePacket.cpp
     network/packets/RemoveEntityPacket.cpp
+    network/packets/AddItemEntityPacket.cpp
+    network/packets/TakeItemEntityPacket.cpp
     network/packets/AddPlayerPacket.cpp
+    network/packets/AddMobPacket.cpp
     network/packets/RemoveBlockPacket.cpp
     network/packets/MovePlayerPacket.cpp
+    network/packets/MoveEntityPacket.cpp
+    network/packets/MoveEntityPacket_PosRot.cpp
+    network/packets/LevelEventPacket.cpp
+    network/packets/EntityEventPacket.cpp
     network/packets/MessagePacket.cpp
-    network/ServerSideNetworkHandler.cpp
+    network/packets/AnimatePacket.cpp
+    network/packets/RespawnPacket.cpp
     network/RakIO.cpp
     network/RakNetInstance.cpp
     network/MinecraftPackets.cpp
     network/NetEventCallback.cpp
     network/PacketUtil.cpp
+    server/ServerPlayer.cpp
+    server/ServerSideNetworkHandler.cpp
     world/level/levelgen/synth/Synth.cpp
     world/level/levelgen/synth/ImprovedNoise.cpp
     world/level/levelgen/synth/PerlinNoise.cpp
@@ -196,7 +213,6 @@ add_library(reminecraftpe-core STATIC
     world/gamemode/GameMode.cpp
     world/gamemode/CreativeMode.cpp
     world/entity/Mob.cpp
-    world/entity/LocalPlayer.cpp
     world/entity/Player.cpp
     world/entity/PrimedTnt.cpp
     world/entity/Entity.cpp
