@@ -15,7 +15,7 @@ class WorkbenchTile : public Tile
 public:
 	WorkbenchTile(int ID, int texture, Material*);
 
-	int use(Level*, const TilePos& pos, Player*) override;
+	bool use(Level*, const TilePos& pos, Player*) override;
 	
 	int getTexture(Facing::Name face) const override;
 	int getResource(int data, Random* random) const override;

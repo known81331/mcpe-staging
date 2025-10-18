@@ -15,7 +15,7 @@ class FurnaceTile : public Tile
 public:
 	FurnaceTile(int ID, int texture, Material*);
 
-	int use(Level*, const TilePos& pos, Player*) override;
+	bool use(Level*, const TilePos& pos, Player*) override;
 	
 	int getTexture(Facing::Name face) const override;
 	int getTexture(Facing::Name face, int data) const override;

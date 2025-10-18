@@ -85,7 +85,7 @@ void FurnaceTile::setPlacedBy(Level* level, const TilePos& pos, Mob* mob)
 
 
 
-int FurnaceTile::use(Level* level, const TilePos& pos, Player* player)
+bool FurnaceTile::use(Level* level, const TilePos& pos, Player* player)
 {
 	if (player) {
 		

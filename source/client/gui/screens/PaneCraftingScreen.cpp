@@ -8,7 +8,7 @@
 
 #include "PaneCraftingScreen.hpp"
 #include "OptionsScreen.hpp"
-#include "network/ServerSideNetworkHandler.hpp"
+#include "server/ServerSideNetworkHandler.hpp"
 #include "client/app/Minecraft.hpp"
 
 ImageDef btndddef = {

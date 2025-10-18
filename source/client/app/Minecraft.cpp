@@ -818,7 +818,17 @@ void Minecraft::update()
 	double time = getTimeS();
 	m_fDeltaTime = time - m_fLastUpdated;
 	m_fLastUpdated = time;
+
+	static bool backgroundMusic = false;
+
+	if (m_bPreparingLevel && m_pSoundEngine->m_pSoundSystem->isPlayingMusic()) {
+		m_pSoundEngine->m_pSoundSystem->stopMusic();
 	}
+	else if (!m_pLevel && !m_pSoundEngine->m_pSoundSystem->isPlayingMusic()) {
+		m_pSoundEngine->playMusic("menu");
+	}
+	
+}
 	
 void Minecraft::init()
 {

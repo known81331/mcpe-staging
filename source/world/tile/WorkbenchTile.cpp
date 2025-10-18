@@ -44,7 +44,7 @@ int WorkbenchTile::getResourceCount(Random* random) const
 }
 
 
-int WorkbenchTile::use(Level* level, const TilePos& pos, Player* player)
+bool WorkbenchTile::use(Level* level, const TilePos& pos, Player* player)
 {
 	if (player->isSneaking() && player->getSelectedItem())
 	{
