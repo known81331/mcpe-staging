@@ -8,6 +8,7 @@
 
 #include "client/app/Minecraft.hpp"
 #include "client/gui/screens/IngameBlockSelectionScreen.hpp"
+#include "client/gui/screens/PauseScreen.hpp"
 #include "client/gui/screens/ChatScreen.hpp"
 #include "client/renderer/entity/ItemRenderer.hpp"
 
@@ -521,6 +522,25 @@ void Gui::handleClick(int clickID, int mouseX, int mouseY)
 	if (clickID != 1)
 		return;
 
+	if (m_pMinecraft->isTouchscreen() && !m_pMinecraft->m_pScreen) {
+
+		int scaledY = int(InvGuiScale * mouseY);
+		int scaledHeight = int(InvGuiScale * Minecraft::height);
+
+		int scaledX = int(InvGuiScale * mouseX);
+		int scaledWidth = int(InvGuiScale * Minecraft::width);
+
+		int et = 18 * InvGuiScale;
+
+
+		if (scaledX >= scaledWidth - et)
+			m_pMinecraft->setScreen(new PauseScreen);
+
+		if (scaledX >= scaledWidth - et*2 && scaledX < scaledWidth - et)
+			m_pMinecraft->setScreen(new ChatScreen(true));
+
+	}
+
 	int slot = getSlotIdAt(mouseX, mouseY);
 	if (slot == -1)
 		return;
@@ -529,6 +549,7 @@ void Gui::handleClick(int clickID, int mouseX, int mouseY)
 		m_pMinecraft->setScreen(new IngameBlockSelectionScreen);
 	else
 		m_pMinecraft->m_pLocalPlayer->m_pInventory->selectSlot(slot);
+
 }
 
 void Gui::handleScroll(bool down)

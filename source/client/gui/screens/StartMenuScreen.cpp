@@ -466,7 +466,7 @@ void StartMenuScreen::init()
 
 	// add the buttons to the screen:
 	m_buttons.push_back(&m_startButton);
-//	m_buttons.push_back(&m_joinButton);
+	m_buttons.push_back(&m_joinButton);
 	m_buttons.push_back(&m_optionsButton);
 
 #if defined(DEMO) || defined(CAN_QUIT)
@@ -571,7 +571,7 @@ void StartMenuScreen::render(int a, int b, float c)
 
 	// Draw the splash text, if we have enough room.
 #ifndef TITLE_CROP_MODE
-	if (!crampedMode)
+//	if (!crampedMode)
 		drawSplash();
 #endif
 

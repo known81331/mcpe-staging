@@ -73,28 +73,28 @@ int IngameBlockSelectionScreen::getBottomY()
 int IngameBlockSelectionScreen::getSelectedSlot(int x, int y)
 {
 	int slotsHeight = getSlotsHeight();
-	int top = slotsHeight * 10;
-	int left = 2;
+	int top = slotsHeight * slotsize / 2;
+	int left = 32+2;
 
-	if (y < slotsize)
+	if (y < 0)
 		return -1;
 	if (x < left)
 		return -1;
 
 	int idx = (x - left) / slotsize;
-	int idy = (float)(y)/top * slotsHeight / 2 -1;
+	int idy = (float)(y)/top * slotsHeight / 2;
 
 	return idx + ((m_width/slotsize) ) * idy;
 }
 
 int IngameBlockSelectionScreen::getSlotPosX(int x)
 {
-	return slotsize * x+2;
+	return slotsize * x+2+32;
 }
 
 int IngameBlockSelectionScreen::getSlotPosY(int y)
 {
-	return slotsize * y + slotsize;
+	return slotsize * y;
 }
 
 int IngameBlockSelectionScreen::getSlotsHeight()
@@ -111,7 +111,7 @@ bool IngameBlockSelectionScreen::isAllowed(int slot)
 void IngameBlockSelectionScreen::init()
 {
 	
-	m_btnCrafting.m_width = 40;
+	m_btnCrafting.m_width = 30;
 	m_btnCrafting.m_xPos = 0; //m_pMinecraft->width-40;
 	m_btnCrafting.m_yPos = 0;
 
@@ -123,15 +123,15 @@ void IngameBlockSelectionScreen::init()
 	m_btnPause.m_xPos = m_width-19;
 	m_btnPause.m_yPos = 0;
 #if MC_PLATFORM_IOS
-	if (m_pMinecraft->isTouchscreen())
-		m_buttons.push_back(&m_btnPause);
+	//if (m_pMinecraft->isTouchscreen())
+	//	m_buttons.push_back(&m_btnPause);
 #endif
 	
 	m_btnChat.m_width = 40;
 	m_btnChat.m_xPos = m_width - m_btnChat.m_width-19-19; // Right edge
     m_btnChat.m_yPos = 0;
-	if (m_pMinecraft->isTouchscreen())
-		m_buttons.push_back(&m_btnChat);
+	//if (m_pMinecraft->isTouchscreen())
+	//	m_buttons.push_back(&m_btnChat);
 
 	
 	m_buttons.push_back(&m_btnCrafting);
@@ -179,7 +179,7 @@ void IngameBlockSelectionScreen::renderSlots()
 
 		for (int x = 0; x < m_width/slotsize; x++)
 		{
-			int posX = getSlotPosX(x) + 34;
+			int posX = getSlotPosX(x);
 			renderSlot(index++, posX, posY, 0.0f);
 		}
 	}
@@ -283,7 +283,8 @@ void IngameBlockSelectionScreen::buttonClicked(Button* pButton)
 
 
 	if (pButton->m_buttonId == m_btnCrafting.m_buttonId)
-		m_pMinecraft->setScreen(new PaneCraftingScreen);
+	//	m_pMinecraft->setScreen(new PaneCraftingScreen);
+		m_pMinecraft->setScreen(nullptr);
 }
 
 void IngameBlockSelectionScreen::mouseClicked(int x, int y, int type)

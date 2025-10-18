@@ -138,15 +138,16 @@ void PauseScreen::render(int a, int b, float c)
 	drawCenteredString(m_pFont, "Game menu", m_width/5, 30, 0xFFFFFF);
 	Screen::render(a, b, c);
 
-	if (!m_pMinecraft->m_pRakNetInstance) return;
+	if (!m_pMinecraft->m_pRakNetInstance || !m_pMinecraft->m_pRakNetInstance->m_bIsHost) return;
 
 	ServerSideNetworkHandler* pSSNH = (ServerSideNetworkHandler*)m_pMinecraft->m_pNetEventCallback;
+
 
 	int i = 0;
 	for (OnlinePlayerMap::iterator it = pSSNH->m_onlinePlayers.begin(); it !=  pSSNH->m_onlinePlayers.end(); ++it, i++)
 	{
 		fill(ox, oy+i*os, m_width-20, oy+(i+1)*os, 0x40000000);
-		m_pFont->draw(it->second->m_pPlayer->m_name.data(), ox+2, oy+4, 0x777777);
+		m_pFont->draw(it->second->m_pPlayer->m_name.data(), ox+2, oy+4+os*i, 0x777777);
 	}
 
 
