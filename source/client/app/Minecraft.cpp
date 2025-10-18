@@ -14,8 +14,11 @@
 #include "client/gui/screens/DeathScreen.hpp"
 #include "client/gui/screens/ProgressScreen.hpp"
 #include "client/gui/screens/ConvertWorldScreen.hpp"
-#include "network/ServerSideNetworkHandler.hpp"
+
 #include "client/network/ClientSideNetworkHandler.hpp"
+#include "server/ServerSideNetworkHandler.hpp"
+#include "network/packets/PlaceBlockPacket.hpp"
+#include "network/packets/MessagePacket.hpp"
 
 #include "world/gamemode/SurvivalMode.hpp"
 #include "world/gamemode/CreativeMode.hpp"
@@ -329,31 +332,27 @@ void Minecraft::handleBuildAction(const BuildActionIntention& action)
 	switch (m_hitResult.m_hitType)
 	{
 	case HitResult::ENTITY:
+		{
+			Entity* pTarget = m_hitResult.m_pEnt;
 		if (action.isAttack())
 		{
-			ItemInstance* pItem = getSelectedItem();
-			m_pGameMode->attack(player, m_hitResult.m_pEnt);
+				m_pRakNetInstance->send(new InteractPacket(player->m_EntityID, pTarget->m_EntityID, InteractPacket::ATTACK));
+				m_pGameMode->attack(player, pTarget);
 			m_lastBlockBreakTime = getTimeMs();
-
-			if (pItem) 
-			if (Mob* pMob = dynamic_cast<Mob*>(m_hitResult.m_pEnt))
-				pItem->hurtEnemy(pMob);
 		}
 		else if (action.isInteract() && canInteract)
 		{
-			ItemInstance* pItem = getSelectedItem();
-			if (m_hitResult.m_pEnt->interactPreventDefault())
+				if (pTarget->interactPreventDefault())
 				bInteract = false;
 
-			m_pGameMode->interact(player, m_hitResult.m_pEnt);
+				m_pRakNetInstance->send(new InteractPacket(player->m_EntityID, pTarget->m_EntityID, InteractPacket::INTERACT));
+				m_pGameMode->interact(player, pTarget);
 			m_lastInteractTime = getTimeMs();
-
-			if (pItem) 
-			if (Mob* pMob = dynamic_cast<Mob*>(m_hitResult.m_pEnt))
-				pItem->interactEnemy(pMob);
 		}
 		break;
+		}
 	case HitResult::TILE:
+		{
 		Tile* pTile = Tile::tiles[m_pLevel->getTile(m_hitResult.m_tilePos)];
 
 		if (action.isDestroy())
@@ -430,6 +429,7 @@ void Minecraft::handleBuildAction(const BuildActionIntention& action)
 			}
 		}
 		break;
+	}
 	}
 
 	if (bInteract && action.isInteract() && canInteract)
@@ -634,44 +634,13 @@ void Minecraft::sendMessage(const std::string& message)
 	}
 }
 
-void Minecraft::resetPlayer(Player* player)
+void Minecraft::respawnPlayer()
 {
-	m_pLevel->validateSpawn();
-	player->reset();
+	_resetPlayer(m_pLocalPlayer);
 
-	TilePos pos = m_pLevel->getSharedSpawnPos();
-	player->setPos(pos);
-	player->resetPos();
-
-	// Of course we have to add him back into the game, if he isn't already.
-	EntityVector& vec = m_pLevel->m_entities;
-	for (int i = 0; i < int(vec.size()); i++)
-	{
-		if (vec[i] == player)
-			return;
+	// Lets client dictate respawn position. Why?
+	m_pRakNetInstance->send(new RespawnPacket(m_pLocalPlayer->m_EntityID, m_pLocalPlayer->m_pos));
 	}
-
-	std::vector<Player*>& vec2 = m_pLevel->m_players;
-	for (int i = 0; i < int(vec2.size()); i++)
-	{
-		// remove the player if he is already in the player list
-		if (vec2[i] == player)
-		{
-			vec2.erase(vec2.begin() + i);
-			i--;
-		}
-	}
-
-	// add him in!!
-	m_pLevel->addEntity(player);
-}
-
-void Minecraft::respawnPlayer(Player* player)
-{
-	resetPlayer(player);
-
-	// TODO: send a RespawnPacket
-}
 
 std::string Minecraft::getVersionString() const
 {
@@ -728,6 +697,16 @@ void Minecraft::_initTextures()
 	GetPatchManager()->PatchTextures(platform(), TYPE_ITEMS);
 	
 	GetPatchManager()->PatchTiles();	
+}
+
+void Minecraft::_resetPlayer(Player* player)
+{
+	m_pLevel->validateSpawn();
+	player->reset();
+
+	TilePos pos = m_pLevel->getSharedSpawnPos();
+	player->setPos(pos);
+	player->resetPos();
 }
 
 void Minecraft::tick()
@@ -811,7 +790,7 @@ void Minecraft::update()
 
 	if (m_pRakNetInstance)
 	{
-		m_pRakNetInstance->runEvents(m_pNetEventCallback);
+		m_pRakNetInstance->runEvents(*m_pNetEventCallback);
 	}
 
 	for (int i = 0; i < m_timer.m_ticks; i++)
@@ -820,7 +799,6 @@ void Minecraft::update()
 		tick(); // tick(i, m_timer.m_ticks - 1); // 0.9.2
 		field_DA8++;
 	}
-	static bool backgroundMusic = false;
 
 	if (m_pLevel && !m_bPreparingLevel)
 	{
@@ -840,16 +818,8 @@ void Minecraft::update()
 	double time = getTimeS();
 	m_fDeltaTime = time - m_fLastUpdated;
 	m_fLastUpdated = time;
-
-	if (m_bPreparingLevel && m_pSoundEngine->m_pSoundSystem->isPlayingMusic()) {
-		m_pSoundEngine->m_pSoundSystem->stopMusic();
-	}
-	else if (!m_pLevel && !m_pSoundEngine->m_pSoundSystem->isPlayingMusic()) {
-		m_pSoundEngine->playMusic("menu");
 	}
 	
-}
-
 void Minecraft::init()
 {
 	// Optional features that you really should be able to get away with not including.
@@ -1111,7 +1081,7 @@ void Minecraft::generateLevel(const std::string& unused, Level* pLevel)
 
 	m_bPreparingLevel = false;
 
-	if (m_pRakNetInstance->m_bIsHost)
+	if (m_pRakNetInstance && m_pRakNetInstance->m_bIsHost)
 		m_pRakNetInstance->announceServer(m_pUser->field_0);
 }
 
@@ -1154,6 +1124,7 @@ void Minecraft::setLevel(Level* pLevel, const std::string& text, LocalPlayer* pL
 
 	if (pLevel)
 	{
+		pLevel->m_pRakNetInstance = m_pRakNetInstance;
 		if (pLocalPlayer && m_pLocalPlayer == nullptr)
 		{
 			// We're getting a LocalPlayer from a server
@@ -1197,15 +1168,15 @@ void Minecraft::selectLevel(const LevelSummary& ls, bool forceConversion)
         return;
     }
     
-    selectLevel(ls.m_fileName, ls.m_levelName, 0, forceConversion);
+    selectLevel(ls.m_fileName, ls.m_levelName, LevelSettings(), forceConversion);
 }
 
-void Minecraft::selectLevel(const std::string& levelDir, const std::string& levelName, int32_t seed, bool forceConversion)
+void Minecraft::selectLevel(const std::string& levelDir, const std::string& levelName, const LevelSettings& levelSettings, bool forceConversion)
 {
 	LevelStorage* pStor = m_pLevelStorageSource->selectLevel(levelDir, false, forceConversion);
 	Dimension* pDim = Dimension::getNew(0);
 
-	m_pLevel = new Level(pStor, levelName, seed, LEVEL_STORAGE_VERSION_DEFAULT, pDim);
+	m_pLevel = new Level(pStor, levelName, levelSettings, LEVEL_STORAGE_VERSION_DEFAULT, pDim);
 	setLevel(m_pLevel, "Generating level", nullptr);
 
 	field_D9C = 1;
@@ -1251,6 +1222,7 @@ int Minecraft::getFpsIntlCounter()
 void Minecraft::leaveGame(bool bCopyMap)
 {
 	m_bPreparingLevel = false;
+	if (m_pRakNetInstance)
 	m_pRakNetInstance->disconnect();
 	m_pMobPersp = nullptr;
 	m_pLevelRenderer->setLevel(nullptr);
@@ -1297,6 +1269,9 @@ void Minecraft::leaveGame(bool bCopyMap)
 
 void Minecraft::hostMultiplayer()
 {
+	if (!m_pRakNetInstance)
+		return;
+
 #ifndef __EMSCRIPTEN__
 	m_pRakNetInstance->host(m_pUser->field_0, C_DEFAULT_PORT, C_MAX_CONNECTIONS);
 	m_pNetEventCallback = new ServerSideNetworkHandler(this, m_pRakNetInstance);
@@ -1305,6 +1280,9 @@ void Minecraft::hostMultiplayer()
 
 void Minecraft::joinMultiplayer(const PingedCompatibleServer& serverInfo)
 {
+	if (!m_pRakNetInstance)
+		return;
+
 #ifndef __EMSCRIPTEN__
 	if (field_18 && m_pNetEventCallback)
 	{
@@ -1316,6 +1294,9 @@ void Minecraft::joinMultiplayer(const PingedCompatibleServer& serverInfo)
 
 void Minecraft::cancelLocateMultiplayer()
 {
+	if (!m_pRakNetInstance)
+		return;
+
 #ifndef __EMSCRIPTEN__
 	field_18 = false;
 	m_pRakNetInstance->stopPingForHosts();
